@@ -18,6 +18,7 @@ SHOPIFY_PAGE_SIZE = 250
 WOO_PAGE_SIZE = 100
 WP_PAGE_SIZE = 100
 CKAN_PAGE_SIZE = 1000
+LEVER_PAGE_SIZE = 100
 MAX_FIELDS = 15
 
 _FEED_TYPES = {
@@ -52,7 +53,7 @@ _EMBED_TOKEN = {
 }
 BOARD_APIS = {
     "greenhouse": ("greenhouse_api", "https://boards-api.greenhouse.io/v1/boards/{token}/jobs"),
-    "lever": ("lever_api", "https://api.lever.co/v0/postings/{token}?mode=json"),
+    "lever": ("lever_api", "https://api.lever.co/v0/postings/{token}?mode=json&limit=100"),
     "ashby": ("ashby_api", "https://api.ashbyhq.com/posting-api/job-board/{token}"),
 }
 """The documented public job-board APIs of each hosted board."""
@@ -182,9 +183,13 @@ def evaluate(
         if isinstance(data, list):
             result.status = "ok"
             result.items_seen = len(data)
-            result.total_items = len(data)
+            result.page_size = LEVER_PAGE_SIZE
             result.fields = _fields(data[0]) if data else []
-            result.note = "every open posting in one response"
+            if len(data) < LEVER_PAGE_SIZE:
+                result.total_items = len(data)
+                result.note = "every open posting in one response"
+            else:
+                result.note = f"{LEVER_PAGE_SIZE} per page; more with &skip="
         else:
             result.status = "invalid"
             result.note = "expected a JSON list"

@@ -224,6 +224,8 @@ class _Run:
         )
         if self.fetcher.stopped is not None and self.fetcher.stopped.url == page.final_url:
             result.status = "blocked"
+        elif page.truncated and result.status == "invalid":
+            result.note = "response larger than the 5 MB cap; not parsed"
         return result
 
     def _why_skipped(self, url: str) -> str | None:

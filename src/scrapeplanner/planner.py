@@ -173,6 +173,12 @@ def _feed_method(f: Findings, items: int, delay: float) -> MethodPlan:
             if feed.kind == "woo_store_api"
             else "WordPress REST API: posts"
         )
+    elif feed.kind in ("greenhouse_api", "lever_api", "ashby_api") and feed.total_items is None:
+        size = feed.page_size or 100
+        est = max(1, math.ceil(items / size))
+        urls = [feed.url.split("&limit=")[0] + f"&limit={size}&skip={{offset}}"]
+        notes.append(f"{size} postings per request; page with &skip=")
+        summary = "Lever postings API: open jobs with their fields"
     elif feed.kind in ("greenhouse_api", "lever_api", "ashby_api"):
         est = 1
         total = feed.total_items or 0

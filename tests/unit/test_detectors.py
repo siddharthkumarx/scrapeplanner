@@ -413,7 +413,7 @@ def test_wordpress_core_react_is_not_a_react_site() -> None:
 
 
 def test_own_bot_check_page_is_a_challenge() -> None:
-    # Shape of the page amazon.com served in checks/results/004-sites (HTTP 200, 3.8 KB).
+    # Shape of a retailer's own bot-check page seen in a live run (HTTP 200, 3.8 KB).
     body = (
         "<html><body><h4>Click the button below to continue shopping</h4>"
         '<form method="get" action="/errors_page/validateCaptcha"><button>Continue shopping'
@@ -450,7 +450,7 @@ def test_captcha_widget_in_a_normal_page_is_ignored() -> None:
             "https://jobs.lever.co/acme",
             "",
             "lever",
-            "https://api.lever.co/v0/postings/acme?mode=json",
+            "https://api.lever.co/v0/postings/acme?mode=json&limit=100",
         ),
         (
             "https://jobs.ashbyhq.com/acme",
@@ -492,4 +492,7 @@ def test_job_board_api_shapes() -> None:
     assert (gh.status, gh.total_items) == ("ok", 2)
     lever = feeds.evaluate(_cand("lever_api"), 200, "application/json", '[{"id":"a"}]', {})
     assert (lever.status, lever.total_items) == ("ok", 1)
+    full = json.dumps([{"id": i} for i in range(100)])
+    paged = feeds.evaluate(_cand("lever_api"), 200, "application/json", full, {})
+    assert (paged.status, paged.total_items, paged.page_size) == ("ok", None, 100)
     assert feeds.evaluate(_cand("ashby_api"), 200, "application/json", "[]", {}).status == "invalid"

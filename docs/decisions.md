@@ -147,7 +147,7 @@ planned delay to 5 s. Reason: gymshark.com and allbirds.com in the live runs
 
 ## D-012 · 2026-11-04 · Fixtures: all 30 sites of the results run
 
-`tests/fixtures/` holds the exchanges of every site in `003-sites`, byte for
+`tests/fixtures/` holds the exchanges of every site in the results run, byte for
 byte. Git stores identical blobs once, so this adds no size on top of
 `checks/results/`. Only pages the tool fetched itself are stored (robots.txt,
 one public page, sitemaps, feed probes); cookie values are redacted at

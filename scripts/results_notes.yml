@@ -1,0 +1,7 @@
+# Footnotes printed under docs/results.md for specific sites. Facts only, each
+# one checked against the recorded exchanges of the run it names.
+data-gov: >-
+  Labelled CKAN before the run from public knowledge. The page served in this
+  run has no CKAN markers (no generator tag, no /api/3/action/ links, no CKAN
+  assets; the front end is USWDS with htmx), so the label is out of date.
+  See docs/incidents.md, I-008.

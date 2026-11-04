@@ -17,6 +17,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
@@ -81,6 +83,35 @@ def _row(name: str, category: str, report: Report) -> dict[str, Any]:
     }
 
 
+def platform_accuracy(rows: list[dict[str, Any]]) -> list[str]:
+    """Coverage, and agreement with the labels written in request.yml before the run."""
+    checked = [row for row in rows if row["checked"]]
+    named = [row for row in checked if row["platform_key"] != "unknown"]
+    labelled = [row for row in rows if row["expected"]]
+    labelled_checked = [row for row in labelled if row["checked"]]
+    matched = [row for row in labelled_checked if row["platform_key"] == row["expected"]]
+    missed = [row for row in labelled_checked if row["platform_key"] != row["expected"]]
+    lines = [
+        f"- A platform was named on {len(named)} of the {len(checked)} sites that served a "
+        f"page; {len(rows) - len(checked)} sites served no page to look at (blocked, "
+        "challenged or disallowed).",
+        f"- {len(labelled)} sites carry an expected platform written in `checks/request.yml` "
+        "before the run (from the URL, the software a portal publicly runs on, or public "
+        f"knowledge). Of the {len(labelled_checked)} of them that served a page, "
+        f"{len(matched)} matched.",
+    ]
+    if missed:
+        lines.append(
+            "- Mismatches: "
+            + ", ".join(
+                f"{row['name']} (expected {platform_label(row['expected'])}, "
+                f"found {row['platform']})"
+                for row in missed
+            )
+        )
+    return lines
+
+
 def build(check_id: str) -> str:
     run_dir = ROOT / "checks" / "results" / check_id
     summary = json.loads((run_dir / "summary.json").read_text(encoding="utf-8"))
@@ -93,7 +124,11 @@ def build(check_id: str) -> str:
             failed.append(entry["name"])
             continue
         report = Report.model_validate_json(report_path.read_text(encoding="utf-8"))
-        rows.append(_row(entry["name"], entry.get("category", ""), report))
+        row = _row(entry["name"], entry.get("category", ""), report)
+        row["expected"] = entry.get("expected_platform")
+        row["platform_key"] = report.platform.name
+        row["checked"] = report.platform.checked
+        rows.append(row)
 
     total = len(rows)
     verdicts = Counter(row["verdict"] for row in rows)
@@ -110,6 +145,7 @@ def build(check_id: str) -> str:
     seconds = sorted(row["seconds"] for row in rows)
     median = seconds[len(seconds) // 2] if seconds else 0.0
     max_requests = max(requests) if requests else 0
+    accuracy = platform_accuracy(rows)
 
     lines = [
         "# Results",
@@ -144,11 +180,15 @@ def build(check_id: str) -> str:
         f"- Requests per site: {min(requests) if requests else 0} to {max_requests}, "
         f"{sum(requests)} in total; median time {median:.1f} s",
         "",
+        "## Platform detection",
+        "",
+        *accuracy,
+        "",
         "## Per site",
         "",
-        "| Site | Category | Platform | Method found | Anti-bot vendor | Verdict | Requests | "
-        "Time (s) | Why |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| Site | Category | Platform | Expected | Method found | Anti-bot vendor | Verdict | "
+        "Requests | Time (s) | Why |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         platform = row["platform"]
@@ -156,10 +196,17 @@ def build(check_id: str) -> str:
             platform += " (" + ", ".join(row["frameworks"]) + ")"
         why = str(row["why"]).replace("|", "/")
         lines.append(
-            f"| [{row['name']}]({row['url']}) | {row['category']} | {platform} | {row['method']} "
+            f"| [{row['name']}]({row['url']}) | {row['category']} | {platform} "
+            f"| {platform_label(row['expected']) if row['expected'] else '-'} | {row['method']} "
             f"| {', '.join(row['antibot']) or 'none'} | {VERDICT_LABELS[row['verdict']]} "
             f"| {row['requests']} | {row['seconds']:.1f} | {why} |"
         )
+    notes_path = ROOT / "scripts" / "results_notes.yml"
+    notes = yaml.safe_load(notes_path.read_text(encoding="utf-8")) or {}
+    names = {row["name"] for row in rows}
+    footnotes = [f"- **{name}**: {text}" for name, text in notes.items() if name in names]
+    if footnotes:
+        lines += ["", "### Notes", "", *footnotes]
     lines += [
         "",
         "Per-site details: `checks/results/" + check_id + "/<site>/report.txt` (terminal report)",

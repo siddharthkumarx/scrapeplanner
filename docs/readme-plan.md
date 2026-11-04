@@ -24,27 +24,10 @@ Until then, collect material here.
 - Results table summary: counts per platform and method, taken from
   docs/results.md.
 
-## Claims the results table supports (docs/results.md, run 003-sites)
+## Claims the results table supports
 
-Quote these only with a link to docs/results.md. Re-check after any new run.
-
-- 30 public sites (e-commerce 8, jobs 6, news 6, docs 5, listings 5), one
-  page each, 1 to 8 requests per site, 103 requests in total, median 3.8 s
-  per site.
-- Verdicts: 14 good fit, 4 with care, 12 not a fit.
-- Recommended methods: HTML 10, embedded JSON 5, structured data 2, feed /
-  API 1.
-- Anti-bot vendors named: Cloudflare 10 (5 challenge pages), HUMAN 2,
-  Akamai 1 (CDN only), DataDome 1 (challenge), AWS WAF 1 (challenge).
-- Politeness, in the tool's own numbers: Reuters and LinkedIn `/jobs/`
-  disallowed by robots.txt, so one request each (robots.txt only); Hacker
-  News crawl-delay 30 s respected (4 requests in 91 s); Best Buy robots.txt
-  timed out, treated as disallow-all.
-- Shopify example: allbirds.com, `/products.json` returned 250 products per
-  page, plan of 4 requests for 1,000 products.
-
-Do not claim accuracy percentages: the table shows what was detected, not a
-labelled ground truth.
+Written into the README from docs/results.md (run 006-sites) only. Re-check
+after any new run.
 
 ## Animated terminal SVG (later)
 
