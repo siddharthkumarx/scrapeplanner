@@ -92,7 +92,9 @@ def terminal_scene(
     command = f"scrapeplanner {report.input_url}"
     summary = rich_lines(sections["summary"], term.columns)
     plan = rich_lines(sections["plan"], term.columns)
-    lines: list[list[Segment]] = [[], [], *summary, [], *plan]
+    # A command longer than the terminal wraps onto the next row, as in a real terminal.
+    cmd_rows = -(-(2 + len(command)) // term.columns)
+    lines: list[list[Segment]] = [*([[]] * cmd_rows), [], *summary, [], *plan]
     date = report.started_at[:10]
 
     win_x, win_y = 20, 20
@@ -120,7 +122,7 @@ def terminal_scene(
     # Timeline (seconds). Everything settles at least 2 s before the loop restarts.
     t_type, per_char = 0.4, 0.035
     t_typed = t_type + len(command) * per_char
-    times = [0.0, t_typed + 0.3]
+    times = [0.0] * cmd_rows + [t_typed + 0.3]
     t = t_typed + 0.5
     for _ in summary:
         times.append(t)
@@ -134,7 +136,7 @@ def terminal_scene(
     # terminal. When everything is printed the view scrolls back to the top of the
     # plan, and the recommended method is highlighted.
     max_shift = max(0, len(lines) - visible) * term.line
-    plan_top = 2 + len(summary) + 1
+    plan_top = cmd_rows + 1 + len(summary) + 1
     final_shift = min(max_shift, plan_top * term.line)
     t_back = t + 0.3
     t_highlight = t_back + (0.7 if final_shift < max_shift else 0.0)
@@ -167,29 +169,36 @@ def terminal_scene(
     # Line 0: the prompt and the typed command.
     canvas.text_use(MONO, 600, "$")
     canvas.text_use(MONO, 400, command)
+
+    def cell(index: int) -> tuple[float, float]:
+        """Offset (x, y) of character cell ``index`` of the prompt line, wrapping."""
+        return (index % term.columns) * term.char, (index // term.columns) * term.line
+
     chars = []
     for i, ch in enumerate(command):
         cls = canvas.appear(t_type + i * per_char, fade=0.01)
+        dx, dy = cell(2 + i)
         chars.append(
-            f'<tspan class="{cls}" x="{text_x + (2 + i) * term.char:.1f}">{esc(ch)}</tspan>'
+            f'<tspan class="{cls}" x="{text_x + dx:.1f}" y="{first + dy:.1f}">{esc(ch)}</tspan>'
         )
     canvas.body.append(
         f'<text class="m" y="{first:.1f}" xml:space="preserve"><tspan x="{text_x:.1f}" '
         f'fill="{TEAL}" font-weight="600">$</tspan><tspan fill="{MAIN}">{"".join(chars)}'
         "</tspan></text>"
     )
-    cursor_frames = [(0.0, "opacity:1;transform:translateX(0px)")]
+
+    def move(index: int) -> str:
+        dx, dy = cell(index)
+        dx0, _ = cell(2)
+        return f"transform:translate({dx - dx0:.1f}px,{dy:.1f}px)"
+
+    end = move(2 + len(command))
+    cursor_frames = [(0.0, f"opacity:1;{move(2)}")]
     for i in range(len(command) + 1):
-        cursor_frames.append(
-            (t_type + i * per_char, f"opacity:1;transform:translateX({i * term.char:.1f}px)")
-        )
-    cursor_frames.append(
-        (t_typed + 0.3, f"opacity:0;transform:translateX({len(command) * term.char:.1f}px)")
-    )
+        cursor_frames.append((t_type + i * per_char, f"opacity:1;{move(2 + i)}"))
+    cursor_frames.append((t_typed + 0.3, f"opacity:0;{end}"))
     cursor = canvas.anim_class(cursor_frames, easing="step-end")
-    canvas.statics.append(
-        f".{cursor}{{opacity:0;transform:translateX({len(command) * term.char:.1f}px)}}"
-    )
+    canvas.statics.append(f".{cursor}{{opacity:0;{end}}}")
     canvas.body.append(
         f'<rect class="{cursor}" x="{text_x + 2 * term.char:.1f}" '
         f'y="{first - term.size * 0.86:.1f}" width="{term.char * 0.9:.1f}" '
@@ -198,7 +207,7 @@ def terminal_scene(
 
     # The report, line by line; the recommended method is highlighted last.
     rec_index = next((i for i, line in enumerate(lines) if "recommended" in _plain(line)), None)
-    for i, line in enumerate(lines[2:], start=2):
+    for i, line in enumerate(lines[cmd_rows + 1 :], start=cmd_rows + 1):
         y = first + i * term.line
         if i == rec_index:
             hl = canvas.anim_class(

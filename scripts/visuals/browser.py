@@ -18,13 +18,17 @@ Motion = Literal["reduce", "no-preference"]
 
 # Seek every animation to the same point of its loop. ``at`` is a fraction of the loop.
 SEEK_JS = """
-(at) => {
-  for (const a of document.getAnimations()) {
-    const d = a.effect.getComputedTiming().duration;
-    a.pause();
-    a.currentTime = d * at;
+async (at) => {
+  await document.fonts.ready;
+  const anims = document.getAnimations();
+  for (const a of anims) a.pause();
+  // Pending animations reset their time when they start: wait until all are ready.
+  await Promise.all(anims.map((a) => a.ready));
+  for (const a of anims) {
+    a.currentTime = a.effect.getComputedTiming().duration * at;
   }
-  return document.getAnimations().length;
+  await new Promise((done) => requestAnimationFrame(() => requestAnimationFrame(done)));
+  return anims.length;
 }
 """
 
@@ -51,7 +55,7 @@ def open_svg(browser: Browser, path: Path, *, motion: Motion, scale: float = 1.0
         reduced_motion=motion,
     )
     page.goto(path.resolve().as_uri())
-    page.evaluate("document.fonts.ready")
+    page.evaluate("async () => { await document.fonts.ready; }")
     return page
 
 
