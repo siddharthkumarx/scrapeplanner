@@ -56,7 +56,9 @@ def test_challenge_marker_in_big_page_is_not_a_challenge() -> None:
         ({"x-kpsdk-ct": "1"}, [], "", "kasada"),
     ],
 )
-def test_vendor_present(headers: dict[str, str], cookies: list[str], body: str, vendor: str) -> None:
+def test_vendor_present(
+    headers: dict[str, str], cookies: list[str], body: str, vendor: str
+) -> None:
     hits = antibot.detect(200, headers, cookies, body + "x" * 40000)
     assert [h.vendor for h in hits] == [vendor]
     assert hits[0].status == "present"

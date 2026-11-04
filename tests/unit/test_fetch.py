@@ -36,7 +36,9 @@ class FakeClock:
         self.now += seconds
 
 
-def make(routes: Mapping[str, Route], seen: list[str] | None = None, **kwargs: object) -> PoliteFetcher:
+def make(
+    routes: Mapping[str, Route], seen: list[str] | None = None, **kwargs: object
+) -> PoliteFetcher:
     clock = FakeClock()
     return PoliteFetcher(
         transport=transport(routes, seen),
