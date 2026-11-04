@@ -1,0 +1,110 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://books.toscrape.com/robots.txt",
+  "purpose": "robots",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:56:03 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "153"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 339,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://books.toscrape.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:56:04 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "51294"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "last-modified",
+    "Wed, 08 Feb 2023 21:02:32 GMT"
+   ],
+   [
+    "etag",
+    "\"63e40de8-c85e\""
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 183,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://books.toscrape.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:56:05 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "153"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 62,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

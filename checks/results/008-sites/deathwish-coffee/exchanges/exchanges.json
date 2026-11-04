@@ -1,0 +1,766 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.deathwishcoffee.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:19 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:f30537fcf3ceca4ae179494132e6830c0563b6341ff79b3ddaf6c33bc0e71acc\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:19 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:19 GMT; secure; SameSite=None"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "330"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "33"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yGkCfnfCn4Pq951uh9r4UYFyPc70Fog5%2FebyeT%2FbkaSGOYWzArw%2FMv1JtjeeWYJSwSUdfaEC6dngZAaCSAVPi2UDJFLoZXC8wcoClolM7HK4ecZaxM7P49jxL%2FiRCEUy5o5Aot5n48rB\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=34, db;dur=20, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"46pd\", requestID;desc=\"6d107946-4612-47d6-9d16-437188bf31e0-1793825539\", _y;desc=\"a8de6901-181d-454d-b475-15f1af4e0a4c\", _s;desc=\"d8abada8-50b8-4131-80f4-61ad687f07f3\", _cmp;desc=\"3.AMPS_USAZ_f_t_UizeF-OJQVeIwpDvU6ni7A\", _ye;desc=\"1825383139\", _se;desc=\"1793827339\", compressionLevel;desc=\"5\", compressionTime;dur=0.794"
+   ],
+   [
+    "x-request-id",
+    "6d107946-4612-47d6-9d16-437188bf31e0-1793825539"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5568073fbde2ae3-LAX"
+   ]
+  ],
+  "elapsed_ms": 227,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.deathwishcoffee.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:20 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//www.deathwishcoffee.com/cdn/shop/t/562/assets/app-base.css?v=34590020600889305051789576857>; as=\"style\"; rel=\"preload\", <//www.deathwishcoffee.com/cdn/shop/t/562/assets/base.css?v=11169952179932639731792524350>; as=\"style\"; rel=\"preload\", <//www.deathwishcoffee.com/cdn/shop/t/562/assets/app.css?v=59705727689679919831779498832>; as=\"style\"; rel=\"preload\", <https://www.deathwishcoffee.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin, <//www.deathwishcoffee.com/cdn/shop/files/dwc-logo.png?v=1624458280&width=600>; as=\"image\"; rel=\"preload\"; imagesrcset=\"//www.deathwishcoffee.com/cdn/shop/files/dwc-logo.png?v=1624458280&width=150 150w, //www.deathwishcoffee.com/cdn/shop/files/dwc-logo.png?v=1624458280&width=225 225w, //www.deathwishcoffee.com/cdn/shop/files/dwc-logo.png?v=1624458280&width=300 300w\"; imagesizes=\"(min-width: 750px) 150px, 100px\", </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "product-filtering-backend",
+    "bitset_roaring"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:5ff897fc3258d0cb911d7e1656850a12b9ab36ce46ac2bba27f4cd4681c50b8b:7f2d2fe11b2cd726a995817776e71744\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:20 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:20 GMT; secure; SameSite=None"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors *; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "1660"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "166"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-Viewport-Width"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "cache-control",
+    "private, max-age=0, must-revalidate"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cGG9LXmyfS3ZidCVhyw7bkl177LIPjbSfUTZAeO6phAn5Uu9r%2F4iHHL7%2FLyAK%2BzqpRaJEUtfCr5QSf6JbwtCoJYoDyIim%2B3kwPDSdg9yqA4b8UTQP1XUP9QxAT8TzR7XQ6J2yrRl1I0P\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=167, db;dur=68, render;dur=71, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", theme;desc=\"133466587191\", pageType;desc=\"index\", servedBy;desc=\"6452\", requestID;desc=\"8484e39a-a118-428c-815e-78bf83fe06c2-1793825540\", _y;desc=\"4235c183-0830-4fde-9ed6-34da9f9814e1\", _s;desc=\"303476a7-2c4c-43c5-800c-e14d54310dec\", _cmp;desc=\"3.AMPS_USAZ_f_t_KneKUje*RgKSNOasDw*JkQ\", _ye;desc=\"1825383140\", _se;desc=\"1793827340\", compressionLevel;desc=\"5\", compressionTime;dur=12.398"
+   ],
+   [
+    "x-request-id",
+    "8484e39a-a118-428c-815e-78bf83fe06c2-1793825540"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a556807afaaf2ae3-LAX"
+   ]
+  ],
+  "elapsed_ms": 286,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.deathwishcoffee.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:21 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-request-id",
+    "342f0915-d5ba-41d1-b167-a75e07cea699-1793825541"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:2717209:SitemapIndexController:73dd0da40478ef56e6f33a91dfe43a96\""
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:21 GMT"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:21 GMT"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "240"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "24"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=29;desc=\"gc:1\", db;dur=7, db_async;dur=3.261, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"7d8f\", requestID;desc=\"342f0915-d5ba-41d1-b167-a75e07cea699-1793825541\", _y;desc=\"71a4eca7-8c1e-43a1-b704-107812b2a43b\", _s;desc=\"80528ec5-963c-4ca1-a9e2-ef6d00ac9de0\", _cmp;desc=\"3.AMPS_USAZ_f_t_IIclgTk8Skyo1522Br9Usw\", _ye;desc=\"1825383141\", _se;desc=\"1793827341\", compressionLevel;desc=\"5\""
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RzGqCfWkjquaSqzVIjWDKoUm96%2B7dxK0FoIEiCZ9GedQxC7T2hYBH6vD%2BS3mFV4iFy4V9CJhs7mqbiGd2yQ8RtkZLclEkan74iYqHmEUAGDqKtzxJ1OccvkDjUJ95VxLqVJtu7NDuSF%2F\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55680830a752ae3-LAX"
+   ]
+  ],
+  "elapsed_ms": 110,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.deathwishcoffee.com/products.json?limit=250",
+  "purpose": "feed:shopify_products_json",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:22 GMT"
+   ],
+   [
+    "content-type",
+    "application/json; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:30a1ff0b2801441b173f8a558cbba6eb64b3418cd6300fdcb0dcf8e5933a277c\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:22 GMT; secure; SameSite=None"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors *; upgrade-insecure-requests;"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "1020"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "102"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=j8IgVjP79PgD7vX5KtoS1Cil7HUJmPwHrCQmBsqNnfRtVtqF2f1EGymhQRBKIv7ghYeYCE8t8dXlJGfhYsa7IXtR2wG9R7KRVv%2BESJO%2BpjApjhyya3YaEJ03bj7LxMea1Hl2Li%2FFJBBG\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=103, db;dur=85, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"gztq\", requestID;desc=\"26a5dc43-1a73-4044-acee-bbe1504d3647-1793825542\", _y;desc=\"0bf5b60d-9efc-441d-98d0-24021ac7480a\", _s;desc=\"f9499d68-dc8c-443a-bdd5-4a6c4bf2a9f0\", _cmp;desc=\"3.AMPS_USAZ_f_t_waO4qIlHQ7WC6mU5UvAWXg\", _ye;desc=\"1825383142\", _se;desc=\"1793827342\", compressionLevel;desc=\"5\", compressionTime;dur=15.032"
+   ],
+   [
+    "x-request-id",
+    "26a5dc43-1a73-4044-acee-bbe1504d3647-1793825542"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5568089f9092ae3-LAX"
+   ]
+  ],
+  "elapsed_ms": 192,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104582&to=15414106357815",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:24 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-request-id",
+    "69c8c981-368e-4a9d-9b5b-b3e9e7435105-1793825543"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:2717209:SitemapProductsController:d662fe7acbe1700e0ec2f38092313973\""
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:23 GMT"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:23 GMT"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "290"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "29"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=36;desc=\"gc:1\", db;dur=9, db_async;dur=3.847, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"ghlg\", requestID;desc=\"69c8c981-368e-4a9d-9b5b-b3e9e7435105-1793825543\", _y;desc=\"649ca464-464a-4171-a24c-423c21963a02\", _s;desc=\"a62bddce-b775-43b7-af70-3ae8c1c14fa2\", _cmp;desc=\"3.AMPS_USAZ_f_t_bHTdky-8R8WyuY42wxtqCA\", _ye;desc=\"1825383143\", _se;desc=\"1793827343\", compressionLevel;desc=\"5\""
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yRdiK8IYeMWFqr4amt%2FMuGFYfKP2aktLO%2BuECssuZMkNdIGcyVgyBzkr64VYle6iCLknjdPKF70m%2FFlEW1FRk1WLl5WFFKJdAaudQGuVKP57V2HRA3gt511vJUfQZfzz5bjl2mB7MQwB\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5568091689f2ae3-LAX"
+   ]
+  ],
+  "elapsed_ms": 124,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

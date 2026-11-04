@@ -1,0 +1,270 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://www.theguardian.com/international",
+  "site": "www.theguardian.com",
+  "started_at": "2026-11-04T20:53:48+00:00",
+  "duration_seconds": 8.27,
+  "max_requests": 10,
+  "requests_used": 7,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://www.theguardian.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 491,
+      "bytes": 2873,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.theguardian.com/international",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 169,
+      "bytes": 1507180,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "http://www.theguardian.com/robots.txt",
+      "purpose": "robots",
+      "status": 301,
+      "elapsed_ms": 20,
+      "bytes": 0,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.theguardian.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 10,
+      "bytes": 2873,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "http://www.theguardian.com/sitemaps/news.xml",
+      "purpose": "sitemap",
+      "status": 301,
+      "elapsed_ms": 20,
+      "bytes": 0,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.theguardian.com/sitemaps/news.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 563,
+      "bytes": 562733,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.theguardian.com/international/rss",
+      "purpose": "feed:rss",
+      "status": 200,
+      "elapsed_ms": 299,
+      "bytes": 401128,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://www.theguardian.com/international",
+    "final_url": "https://www.theguardian.com/international",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 1507180,
+    "title": "Latest news, sport and opinion from the Guardian",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://www.theguardian.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/international": true,
+      "/international/rss": true,
+      "/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "http://www.theguardian.com/sitemaps/news.xml",
+      "http://www.theguardian.com/sitemaps/video.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "http://www.theguardian.com/sitemaps/news.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "urlset",
+    "url_count": 534,
+    "child_sitemaps": null,
+    "newest_lastmod": "2026-11-04",
+    "oldest_lastmod": "2026-11-04",
+    "with_lastmod": 534,
+    "sample_urls": [
+      "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
+      "https://www.theguardian.com/sport/2026/nov/04/baltimore-ravens-arizona-cardinals-trade-jacoby-brissett",
+      "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates",
+      "https://www.theguardian.com/uk-news/2026/nov/04/uk-government-considers-smart-glasses-ban-over-secret-filming-concerns",
+      "https://www.theguardian.com/world/2026/nov/04/serbia-officers-protesters"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 1507180,
+    "text_chars": 21231,
+    "links": 364,
+    "script_bytes": 21085,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "21,231 characters of text, 364 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "rss",
+        "url": "https://www.theguardian.com/international/rss",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 118,
+        "total_items": null,
+        "page_size": 118,
+        "fields": [],
+        "note": null
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://www.theguardian.com/international/rss"
+        ],
+        "fields": [],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": true,
+        "notes": [
+          "a feed returns only its latest 118 entries; poll it for new ones"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (21,231 chars of text)",
+        "urls": [
+          "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
+          "https://www.theguardian.com/sport/2026/nov/04/baltimore-ravens-arizona-cardinals-trade-jacoby-brissett",
+          "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates"
+        ],
+        "fields": [],
+        "est_requests": 1002,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~534 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

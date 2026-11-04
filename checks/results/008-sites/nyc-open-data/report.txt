@@ -1,0 +1,50 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://data.cityofnewyork.us/ ────────────────────────────────────╮
+│ Verdict      NOT A FIT                                                                           │
+│ Best method  none                                                                                │
+│ Platform     not checked (no page to analyse)                                                    │
+│ Anti-bot     Cloudflare (present), Akamai (CDN only)                                             │
+│ Rendering    not analysed                                                                        │
+│ Polite rate  1 request every 5s, max 5,000/day                                                   │
+│ This run     4/10 requests, 3.9s                                                                 │
+│ Stopped      HTTP 403; akamai in front of the site                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status   Req. for 1,000   Time   Details                                 │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                    -      -   no public feed found                    │
+│   2   Structured data   no                    -      -   no schema.org records on this page      │
+│                                                          (types seen: none)                      │
+│   3   Embedded JSON     no                    -      -   no large inline state                   │
+│   4   HTML              no                    -      -   page not analysed                       │
+│   5   Browser           no                    -      -   not needed: data is available without   │
+│                                                          JavaScript                              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt   found (HTTP 200)                                                                    │
+│ crawl-delay  1s                                                                                  │
+│   /          allowed                                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - stopped at the first block: HTTP 403; akamai in front of the site                              │
+│ (https://www.nyc.gov/opendata)                                                                   │
+│ - Cloudflare bot management is in front of the site: keep to the rate below and stop at the      │
+│ first challenge                                                                                  │
+│ - robots.txt asks for 1s between requests                                                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Ask the site owner for access, an API key or a data export; do not try to get past the block   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                          
+ #   Status   Purpose    ms   URL                                         
+ ──────────────────────────────────────────────────────────────────────── 
+ 1      200   robots    399   https://data.cityofnewyork.us/robots.txt    
+ 2      301   page      128   https://data.cityofnewyork.us/              
+ 3      301   robots    237   http://opendata.cityofnewyork.us/robots.txt 
+ 4      403   robots    124   https://www.nyc.gov/opendata                
+                                                                          

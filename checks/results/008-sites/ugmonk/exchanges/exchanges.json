@@ -1,0 +1,766 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://ugmonk.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:13 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:622e9c8839cd30a23ebf8aa97660aa98df72471fd5cacdd419553bde5475587c\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:13 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:13 GMT; secure; SameSite=None"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "220"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "22"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8rCuS%2BD%2FHf6RGmzmMU2ARVxtvEpb%2B5gRXkZdvSLhC%2B668ihpycZfNPzR27ON6AZRrsyoJrXpMwyXG2PboOj4FpAWQgmtv2F%2FboC1P9z%2BRmhkcNm2hNyC1opMVa4%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=23, db;dur=11, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"8st4\", requestID;desc=\"c794efcd-59ea-48fc-af62-5f9f53017c23-1793825533\", _y;desc=\"b3f1ff43-b2dd-455a-871c-d8e673ad482f\", _s;desc=\"e898630c-519f-40db-ac8e-a2e7e7ad8791\", _cmp;desc=\"3.AMPS_USAZ_f_f_egDLXvc6QjSgcvLYfGh88A\", _ye;desc=\"1825383133\", _se;desc=\"1793827333\", compressionLevel;desc=\"5\", compressionTime;dur=0.406"
+   ],
+   [
+    "x-request-id",
+    "c794efcd-59ea-48fc-af62-5f9f53017c23-1793825533"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55680503feed908-LAX"
+   ]
+  ],
+  "elapsed_ms": 201,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://ugmonk.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:14 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//ugmonk.com/cdn/shop/t/85/assets/base.css?v=86066980279391771451783532532>; as=\"style\"; rel=\"preload\", <https://cdn.shopify.com/extensions/01a182df-3f68-70df-b00f-b684a106c8e3/klaviyo-email-marketing-80/assets/app.css>; as=\"style\"; rel=\"preload\", <//ugmonk.com/cdn/shop/t/85/assets/overflow-list.css?v=16727044177065489451783532532>; as=\"style\"; rel=\"preload\", <https://ugmonk.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin, <//ugmonk.com/cdn/shop/t/85/compiled_assets/styles.css?v=168019842885958443381791391342&subset=QHwABRAoMAAABgCIAAAATQCAUFD8AEAOEBAgBSkA5TQBBA>; as=\"style\"; rel=\"preload\"; crossorigin, </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "product-filtering-backend",
+    "bitset_roaring"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:362922c45ad1ed5957ec0b932cfe5b93a08507bc8adbe16600300f189af88ff1:687981f394066d0f5a9a72f72a20cd46\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:14 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:14 GMT; secure; SameSite=None"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors *; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "1870"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "187"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-Viewport-Width"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "cache-control",
+    "private, max-age=0, must-revalidate"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hM57MxGwZaetNKLW7GNlru%2FPHjb2%2Ba56Qj2GVujvfv3R8Y3bZtaBY8kO8xN6s0bO460hXaxs38kDfaWdIuC6kruwRZtYN5LKFKmQ%2FJIYsSj9Kax8mWcpvD1S1ic%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=189, db;dur=54, render;dur=103, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", theme;desc=\"148114047126\", pageType;desc=\"index\", servedBy;desc=\"4mc7\", requestID;desc=\"8a67ce36-4fee-4baf-bacd-72f3c05a137b-1793825534\", _y;desc=\"9c9cc943-5625-43fd-9fb4-e5b4ce04305f\", _s;desc=\"0903173d-5260-410b-91d3-5d54a90b2b28\", _cmp;desc=\"3.AMPS_USAZ_f_f_f12QyWNqQWizdcQfZUrovg\", _ye;desc=\"1825383134\", _se;desc=\"1793827334\", compressionLevel;desc=\"5\", compressionTime;dur=18.117"
+   ],
+   [
+    "x-request-id",
+    "8a67ce36-4fee-4baf-bacd-72f3c05a137b-1793825534"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55680572f9bd908-LAX"
+   ]
+  ],
+  "elapsed_ms": 323,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://ugmonk.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:16 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:15 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:15 GMT; secure; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "x-request-id",
+    "42e90264-9926-4e0c-aeea-b7242435b6fa-1793825535"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:1674484:SitemapIndexController:a3c341507248a11c7b03c9f1420facb9\""
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "390"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "39"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=44;desc=\"gc:2\", db;dur=14, db_async;dur=3.833, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"ghlg\", requestID;desc=\"42e90264-9926-4e0c-aeea-b7242435b6fa-1793825535\", _y;desc=\"492c4c61-3a82-4003-bcd8-fb96eb528a2a\", _s;desc=\"5cae2923-fe06-488d-896e-bbcff618cda8\", _cmp;desc=\"3.AMPS_USAZ_f_f_4gL4jO2*TO2eaMwAGmVebw\", _ye;desc=\"1825383136\", _se;desc=\"1793827336\", compressionLevel;desc=\"5\", compressionTime;dur=0.259"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mr%2BmSuB2HSdV26pry42FbrzBDERBf0k9kZVV0hPaNoH5UVUdkZH1DlyTtdNNRvbMUH3niMQs9dNGT2JpvrBuES13xaBeqDfJDigZbJXMYRgY3MhQuDb1U5Tlo14%3D\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a556805f7b2ed908-LAX"
+   ]
+  ],
+  "elapsed_ms": 135,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://ugmonk.com/products.json?limit=250",
+  "purpose": "feed:shopify_products_json",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:17 GMT"
+   ],
+   [
+    "content-type",
+    "application/json; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:037bd757c5e703c60dc50881f1c1b49667d2fc3b881961e2801945b718f547ce\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:17 GMT; secure; SameSite=None"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors *; upgrade-insecure-requests;"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "610"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "61"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UNo8g9i%2BDBEUAYGA9J2Kk7jcLIOB17Mj4udvOmVXRRrUb%2B8ybI4C%2BkPyH4yauWXWSUlwXp9sie%2BwrCV3oEZn8BEIPfU0B5%2Fch4U%2B6Gz45Erqf3Sipy1bxEeyaJo%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=62, db;dur=45, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"b95z\", requestID;desc=\"c75e5d9b-6956-4700-ba30-89649451b2e4-1793825537\", _y;desc=\"1dc8ccee-e39f-42e5-9785-669167135ff2\", _s;desc=\"087bcf25-8a58-4f12-b60f-585e9a2b2748\", _cmp;desc=\"3.AMPS_USAZ_f_f_XZ17PjmNTku2iKf47bAiXg\", _ye;desc=\"1825383137\", _se;desc=\"1793827337\", compressionLevel;desc=\"5\", compressionTime;dur=12.516"
+   ],
+   [
+    "x-request-id",
+    "c75e5d9b-6956-4700-ba30-89649451b2e4-1793825537"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55680668a62d908-LAX"
+   ]
+  ],
+  "elapsed_ms": 168,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=15398543851670",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:18 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-request-id",
+    "9aba104b-51ff-41f9-9c23-22b90ded2d4b-1793825538"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:1674484:SitemapProductsController:e2986f8608ca30ea222dc8604d3c4e54\""
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:18 GMT"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:18 GMT"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "310"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "31"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=37;desc=\"gc:2\", db;dur=5, db_async;dur=4.147, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"7d8f\", requestID;desc=\"9aba104b-51ff-41f9-9c23-22b90ded2d4b-1793825538\", _y;desc=\"9dbdd49a-2da5-40d9-879a-cdb750488267\", _s;desc=\"5a8d97e6-ee8e-4f38-ae02-f65d1402a0e0\", _cmp;desc=\"3.AMPS_USAZ_f_f_G*88UtvOSZ-4DoIqHVaPCw\", _ye;desc=\"1825383138\", _se;desc=\"1793827338\", compressionLevel;desc=\"5\""
+   ],
+   [
+    "x-dc",
+    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cgszwyEreFJXFmYY%2BnvGw1eoxLsKF5i9qL4eIyV%2B%2FuEbENI5yhcyEvI0N%2Be0wZtBOdnjX1tgqBpNkaIcsmU0J6fumHrWiwVn7i53Bax1e0vakohWJ5RX0bT8Un4%3D\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a556806ddb71d908-LAX"
+   ]
+  ],
+  "elapsed_ms": 154,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

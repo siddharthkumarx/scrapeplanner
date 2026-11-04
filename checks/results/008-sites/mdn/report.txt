@@ -1,0 +1,66 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://developer.mozilla.org/en-US/ ──────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     Lit                                                                                 │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     5/10 requests, 5.0s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        usable                     1   < 1 min   rss feed                        │
+│                                                                  - a feed returns only its       │
+│                                                                  latest 71 entries; poll it for  │
+│                                                                  new ones                        │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen: none)         │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              recommended            1,002    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (6,085     │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~14,869  │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt             found (HTTP 200)                                                          │
+│   /en-US/              allowed                                                                   │
+│   /sitemap.xml         allowed                                                                   │
+│   /en-US/blog/rss.xml  allowed                                                                   │
+│ Sitemap                index of 10 sitemaps, newest lastmod 2026-11-04                           │
+│                        https://developer.mozilla.org/sitemap.xml                                 │
+│   child                14,869 URLs, newest lastmod 2026-11-03                                    │
+│                        https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ rss         ok, 71 items                                                                         │
+│             https://developer.mozilla.org/en-US/blog/rss.xml                                     │
+│ Rendering   6,085 characters of text, 158 links                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                
+ #   Status   Purpose          ms   URL                                                         
+ ────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots          117   https://developer.mozilla.org/robots.txt                    
+ 2      200   page             12   https://developer.mozilla.org/en-US/                        
+ 3      200   sitemap          36   https://developer.mozilla.org/sitemap.xml                   
+ 4      200   feed:rss         36   https://developer.mozilla.org/en-US/blog/rss.xml            
+ 5      200   sitemap-child    53   https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz 
+                                                                                                

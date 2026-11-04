@@ -1,0 +1,250 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://kubernetes.io/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cache-control",
+    "public,max-age=0,must-revalidate"
+   ],
+   [
+    "cache-status",
+    "\"Netlify Edge\"; fwd=stale; fwd-status=304; stored"
+   ],
+   [
+    "content-length",
+    "148"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=UTF-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:51 GMT"
+   ],
+   [
+    "etag",
+    "\"b18676f7a6b6b1befa66e2e2bc8d9292-ssl\""
+   ],
+   [
+    "server",
+    "Netlify"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "x-nf-request-id",
+    "01M6M5HG1VYW96M7PAD8TZWEAR"
+   ]
+  ],
+  "elapsed_ms": 254,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://kubernetes.io/docs/home/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cache-control",
+    "public,max-age=0,must-revalidate"
+   ],
+   [
+    "cache-status",
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:52 GMT"
+   ],
+   [
+    "etag",
+    "\"62dbc25a03ebc880812897d0824cc3b4-ssl-df\""
+   ],
+   [
+    "server",
+    "Netlify"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-nf-request-id",
+    "01M6M5HH41EZAAZHXKN4E8H894"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 462,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://kubernetes.io/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cache-control",
+    "public,max-age=0,must-revalidate"
+   ],
+   [
+    "cache-status",
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-length",
+    "427"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:53 GMT"
+   ],
+   [
+    "etag",
+    "\"3e28a6b9e293d54d97cf05390cb2f2a1-ssl-df\""
+   ],
+   [
+    "server",
+    "Netlify"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-nf-request-id",
+    "01M6M5HJHQ20DXFRGS6YXV4E1P"
+   ]
+  ],
+  "elapsed_ms": 195,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://kubernetes.io/en/sitemap.xml",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cache-control",
+    "public,max-age=0,must-revalidate"
+   ],
+   [
+    "cache-status",
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:54 GMT"
+   ],
+   [
+    "etag",
+    "\"ef7c6854b380d63e5ce53061c69b832e-ssl-df\""
+   ],
+   [
+    "server",
+    "Netlify"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-nf-request-id",
+    "01M6M5HKQ2Z4ND89SEKVD46C9W"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 166,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

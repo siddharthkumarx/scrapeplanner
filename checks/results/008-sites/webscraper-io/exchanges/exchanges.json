@@ -1,0 +1,366 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://webscraper.io/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "226"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Tue, 03 Nov 2026 22:43:21 GMT"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "last-modified",
+    "Tue, 27 Oct 2026 12:55:22 GMT"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "permissions-policy",
+    "camera=(), geolocation=(), microphone=()"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "etag",
+    "\"6ae09f3a-e2\""
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "utDulzXC6XzensGPvcB2Lv7mKlEG6LfRmCt7UWMR1jLI2KBv6LQxnA=="
+   ],
+   [
+    "age",
+    "79968"
+   ]
+  ],
+  "elapsed_ms": 47,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://webscraper.io/test-sites/e-commerce/allinone",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:56:10 GMT"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cache-control",
+    "max-age=300, public"
+   ],
+   [
+    "content-security-policy",
+    "report-uri /report-csp;default-src 'self';connect-src 'self' https: https://app.termly.io https://us.consent.api.termly.io https://eu.consent.api.termly.io;script-src 'self' https://*.googletagmanager.com https://beacon-v2.helpscout.net https://app.termly.io/ 'nonce-eCO8rMU57617KFcEKt5wWBMd2E6zfTQ5';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css https://beacon-v2.helpscout.net https://app.termly.io;font-src 'self' https://fonts.gstatic.com https://beacon-v2.helpscout.net;frame-src 'self' https://www.youtube-nocookie.com https://*.googletagmanager.com https://d1exrvfwzmo830.cloudfront.net/ https://beacon-v2.helpscout.net https://app.termly.io;img-src 'self' data: https: https://app.termly.io;report-to report-to-csp-group"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"report-to-csp-group\",\"max_age\":432000,\"endpoints\":[{\"url\":\"https:\\/\\/webscraper.io\\/report-csp\"}]}"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "permissions-policy",
+    "camera=(), geolocation=(), microphone=()"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "oJ-zAFNVIyPHblvh2TiwsAYeyhVF1-dafCY-QkyIgIr1YHmMw9zoaA=="
+   ]
+  ],
+  "elapsed_ms": 228,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://webscraper.io/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 17:12:25 GMT"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "last-modified",
+    "Tue, 27 Oct 2026 12:57:20 GMT"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "permissions-policy",
+    "camera=(), geolocation=(), microphone=()"
+   ],
+   [
+    "etag",
+    "W/\"6ae09fb0-232\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "1q_Lpmd4Xqb8RgHS2iOTOgRLqNSgycJiyFg0GE9sUM7pZr8O-Lndyw=="
+   ],
+   [
+    "age",
+    "13426"
+   ]
+  ],
+  "elapsed_ms": 25,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://webscraper.io/pages_sitemap.xml",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 01:36:22 GMT"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "last-modified",
+    "Tue, 27 Oct 2026 12:57:20 GMT"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "permissions-policy",
+    "camera=(), geolocation=(), microphone=()"
+   ],
+   [
+    "etag",
+    "W/\"6ae09fb0-3668\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "Kkn2w_x7Ko4OOTWqr4m5nZYQvcUwMgmmDPVt8V1gvCWRzzsaPkzeNQ=="
+   ],
+   [
+    "age",
+    "69590"
+   ]
+  ],
+  "elapsed_ms": 26,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

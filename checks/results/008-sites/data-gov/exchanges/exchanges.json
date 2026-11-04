@@ -1,0 +1,402 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://catalog.data.gov/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "157"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:53:00 GMT"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "etag",
+    "\"6ae24cb1-9d\""
+   ],
+   [
+    "last-modified",
+    "Wed, 28 Oct 2026 19:27:45 GMT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-vcap-request-id",
+    "f25e586f-c219-4bd3-65c1-abb9c977cc98"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 c9789273e620f4fd5a62b76b35cca80e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX52-P1"
+   ],
+   [
+    "x-amz-cf-id",
+    "OU0MxteTgcexOdYDtHg1cwuhth4wIVgfE1MZ4qizmBia4yWpIYhojw=="
+   ]
+  ],
+  "elapsed_ms": 137,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://catalog.data.gov/dataset",
+  "purpose": "page",
+  "status": 301,
+  "headers": [
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "162"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:12:39 GMT"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "location",
+    "/"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-vcap-request-id",
+    "a1035275-9153-4cec-5321-f3a86a5ea206"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 f90f6e9169afe2a4dc7dc7dbb34b81ca.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX52-P1"
+   ],
+   [
+    "x-amz-cf-id",
+    "rGy5UyCArMV3Yayd4b83AD5inxLuGMnGqKQAwfINFr74gDy_hQrJPQ=="
+   ],
+   [
+    "age",
+    "2431"
+   ]
+  ],
+  "elapsed_ms": 39,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://catalog.data.gov/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:32:59 GMT"
+   ],
+   [
+    "x-vcap-request-id",
+    "a5c331d6-8b33-4943-4007-6555147f47f9"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600, must-revalidate"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; script-src 'self' https://*.googletagmanager.com https://buttons.github.io https://unpkg.com 'unsafe-hashes' 'sha256-osjxnKEPL/pQJbFk1dKsF7PYFmTyMWGmVSiL9inhxJY=' 'sha256-A1KDZ6CTgI16YJ4cUNyyCFExM5+Sv4ApvahuZIQRXPA=' https://static.zdassets.com https://ekr.zdassets.com 'sha256-Ff1SFMp5PHyy62W49sHzg1RI9yL6Y9xoqXeGrJP8TUI=' https://gsa-solutionshelp.zendesk.com 'nonce-x-Rv6RSYtJtWsVoJz3g7O5QQggfoewxh'; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' https://s3-us-gov-west-1.amazonaws.com https://raw.githubusercontent.com data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://api.github.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://static.zdassets.com https://ekr.zdassets.com https://gsa-solutionshelp.zendesk.com https://gov-bam.nr-data.net https://*.ingest.de.sentry.io; frame-src https://www.googletagmanager.com; style-src-attr 'self' 'unsafe-hashes' 'sha256-kELgoK46JmGjLd8UHfzN0qJToDgIB+yMtRHG8PtGL7s='; style-src 'self' https://cdnjs.cloudflare.com; style-src-elem 'self' https://cdnjs.cloudflare.com https://unpkg.com 'unsafe-inline'"
+   ],
+   [
+    "permissions-policy",
+    "browsing-topics=()"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 7d150f36635154864a915eba00666ce6.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX52-P1"
+   ],
+   [
+    "x-amz-cf-id",
+    "vjhvIeLRVdrlZkUBVtWMmZbwJS2pnhanBju7geDtMZqfbG_cGbt-IQ=="
+   ],
+   [
+    "age",
+    "1221"
+   ]
+  ],
+  "elapsed_ms": 17,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://catalog.data.gov/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "content-length",
+    "13295"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:53:30 GMT"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "etag",
+    "\"90635322535a86d50edc81a0389f2cd6\""
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 14:07:47 GMT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-vcap-request-id",
+    "df512a7a-a687-457b-70ab-751d865449d5"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 c9789273e620f4fd5a62b76b35cca80e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX52-P1"
+   ],
+   [
+    "x-amz-cf-id",
+    "M2atGRWj8rrtZQJpgi_pE0ceXe7unWabn183kODT8562rrfEllYYHg=="
+   ]
+  ],
+  "elapsed_ms": 229,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://catalog.data.gov/sitemap/sitemap-0.xml",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "content-length",
+    "748553"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:53:40 GMT"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "etag",
+    "\"d91d8b8243ab8af6add9e45ac4713eaf\""
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 14:07:16 GMT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-vcap-request-id",
+    "c7d28495-7c92-49b2-45d5-2af79c4ceabc"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 f90f6e9169afe2a4dc7dc7dbb34b81ca.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX52-P1"
+   ],
+   [
+    "x-amz-cf-id",
+    "--LyH0au-MvhbTdE_rmaKn7riAtVjB2_j-L6KdSp-IWL6qb-CPN4iA=="
+   ]
+  ],
+  "elapsed_ms": 408,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

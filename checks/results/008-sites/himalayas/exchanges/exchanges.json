@@ -1,0 +1,218 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://himalayas.app/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:59 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wNaBLijFm82SQrT3rEBRfP0Ka9%2FU21BKLD0of8lrFXPj%2BTBi%2FD6uwvOvWenRs77NSj6EdtTrjYvtGu4yw973p7LySzb9GfD8M%2BqdMvXDiyPi6DEqU1j%2BLdrM%2B7iytMc%3D\"}]}"
+   ],
+   [
+    "permissions-policy",
+    "camera=(), microphone=(self), geolocation=()"
+   ],
+   [
+    "referrer-policy",
+    "origin-when-cross-origin"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "vary",
+    "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-nextjs-cache",
+    "HIT"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 20:52:59 GMT"
+   ],
+   [
+    "cf-cache-status",
+    "EXPIRED"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains; preload"
+   ],
+   [
+    "speculation-rules",
+    "\"/cdn-cgi/speculation\""
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a556816b3efd4ea5-LAX"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 370,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://himalayas.app/jobs",
+  "purpose": "page",
+  "status": 403,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:53:00 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "close"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA"
+   ],
+   [
+    "cf-mitigated",
+    "challenge"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'none'; script-src 'nonce-1YzRk3IiFZlMYosukNUnI5' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "critical-ch",
+    "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA"
+   ],
+   [
+    "cross-origin-embedder-policy",
+    "require-corp"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "cross-origin-resource-policy",
+    "same-origin"
+   ],
+   [
+    "origin-agent-cluster",
+    "?1"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "server-timing",
+    "chlray;desc=\"a55681733f974ea5\""
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains; preload"
+   ],
+   [
+    "speculation-rules",
+    "\"/cdn-cgi/speculation\""
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TNQ9fAKXP6Fg1wp3rMbU48BagKK6iDQHWSO1Rssj95QPSY8nBlTQSnPrn37J4JRPx0XC2%2BdIWK2Q27iFyFxoDsVeR60VDI6lqd703s%2FjL9nFj6LA62yhmJ4Mg8LFe4M%3D\"}]}"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55681733f974ea5-LAX"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 25,
+  "truncated": false,
+  "body": "001.body.gz"
+ }
+]

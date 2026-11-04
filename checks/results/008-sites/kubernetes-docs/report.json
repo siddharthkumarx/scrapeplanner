@@ -1,0 +1,252 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://kubernetes.io/docs/home/",
+  "site": "kubernetes.io",
+  "started_at": "2026-11-04T20:55:50+00:00",
+  "duration_seconds": 4.56,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://kubernetes.io/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 254,
+      "bytes": 148,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://kubernetes.io/docs/home/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 462,
+      "bytes": 500889,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://kubernetes.io/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 195,
+      "bytes": 2012,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://kubernetes.io/en/sitemap.xml",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 166,
+      "bytes": 1018759,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://kubernetes.io/docs/home/",
+    "final_url": "https://kubernetes.io/docs/home/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 500889,
+    "title": "Kubernetes Documentation | Kubernetes",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://kubernetes.io/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/docs/home/": true,
+      "/sitemap.xml": true,
+      "/releases/1.37/": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://kubernetes.io/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://kubernetes.io/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 17,
+    "newest_lastmod": "2026-11-04",
+    "oldest_lastmod": "2026-07-24",
+    "with_lastmod": 17,
+    "sample_urls": [
+      "https://kubernetes.io/en/sitemap.xml",
+      "https://kubernetes.io/bn/sitemap.xml",
+      "https://kubernetes.io/zh-cn/sitemap.xml",
+      "https://kubernetes.io/fr/sitemap.xml",
+      "https://kubernetes.io/de/sitemap.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://kubernetes.io/en/sitemap.xml",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 1889,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-10-31",
+      "oldest_lastmod": "2018-05-05",
+      "with_lastmod": 1853,
+      "sample_urls": [
+        "https://kubernetes.io/releases/1.37/",
+        "https://kubernetes.io/releases/1.36/",
+        "https://kubernetes.io/releases/1.35/",
+        "https://kubernetes.io/releases/1.34/",
+        "https://kubernetes.io/releases/1.33/"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "hugo",
+    "confidence": "medium",
+    "evidence": [
+      "Docsy theme (Hugo)"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "microdata_items": 1,
+    "types": {
+      "Organization": 1,
+      "SearchAction": 1,
+      "WebPage": 1
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 500889,
+    "text_chars": 26469,
+    "links": 960,
+    "script_bytes": 1154,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "26,469 characters of text, 960 links"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: Organization, SearchAction, WebPage)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (26,469 chars of text)",
+        "urls": [
+          "https://kubernetes.io/releases/1.37/",
+          "https://kubernetes.io/releases/1.36/",
+          "https://kubernetes.io/releases/1.35/"
+        ],
+        "fields": [],
+        "est_requests": 1002,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~1,889 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://www.deathwishcoffee.com/",
+  "site": "www.deathwishcoffee.com",
+  "started_at": "2026-11-04T20:52:19+00:00",
+  "duration_seconds": 5.25,
+  "max_requests": 10,
+  "requests_used": 5,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://www.deathwishcoffee.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 227,
+      "bytes": 3725,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.deathwishcoffee.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 286,
+      "bytes": 642752,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.deathwishcoffee.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 110,
+      "bytes": 1003,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.deathwishcoffee.com/products.json?limit=250",
+      "purpose": "feed:shopify_products_json",
+      "status": 200,
+      "elapsed_ms": 192,
+      "bytes": 690125,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104582&to=15414106357815",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 124,
+      "bytes": 84614,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://www.deathwishcoffee.com/",
+    "final_url": "https://www.deathwishcoffee.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 642752,
+    "title": "#1 Organic and #1 Fair Trade Coffee – Death Wish Coffee",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://www.deathwishcoffee.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true,
+      "/products.json?limit=250": true,
+      "/products/society-of-strong-coffee-initiation-kit.js": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.deathwishcoffee.com/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://www.deathwishcoffee.com/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 6,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [
+      "https://www.deathwishcoffee.com/sitemap_agentic_discovery.xml",
+      "https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104582&to=15414106357815",
+      "https://www.deathwishcoffee.com/sitemap_pages_1.xml?from=11767228&to=142866251831",
+      "https://www.deathwishcoffee.com/sitemap_collections_1.xml?from=261364940855&to=472425857079",
+      "https://www.deathwishcoffee.com/sitemap_blogs_1.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104582&to=15414106357815",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 162,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-11-04",
+      "oldest_lastmod": "2026-11-04",
+      "with_lastmod": 161,
+      "sample_urls": [
+        "https://www.deathwishcoffee.com/",
+        "https://www.deathwishcoffee.com/products/valhalla-java-single-serve-pods",
+        "https://www.deathwishcoffee.com/products/gift-card",
+        "https://www.deathwishcoffee.com/products/death-wish-coffee",
+        "https://www.deathwishcoffee.com/products/death-cups"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "shopify",
+    "confidence": "high",
+    "evidence": [
+      "header powered-by: Shopify",
+      "assets on cdn.shopify.com",
+      "assets under /cdn/shop/",
+      "Shopify.theme script",
+      "window.Shopify object",
+      "mentions .myshopify.com"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {
+      "Organization": 1,
+      "WebSite": 1,
+      "SearchAction": 1
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 642752,
+    "text_chars": 7794,
+    "links": 317,
+    "script_bytes": 131707,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "7,794 characters of text, 317 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "shopify_products_json",
+        "url": "https://www.deathwishcoffee.com/products.json?limit=250",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 163,
+        "total_items": null,
+        "page_size": 250,
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "note": "whole catalog fits in one page (163 products)"
+      },
+      {
+        "kind": "shopify_product_js",
+        "url": "https://www.deathwishcoffee.com/products/society-of-strong-coffee-initiation-kit.js",
+        "status": "linked",
+        "http_status": null,
+        "items_seen": null,
+        "total_items": null,
+        "page_size": null,
+        "fields": [],
+        "note": "not requested: /products.json already answered"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "feed_api",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "Shopify /products.json: products, variants, prices, images",
+        "urls": [
+          "https://www.deathwishcoffee.com/products.json?limit=250&page={page}"
+        ],
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": false,
+        "notes": [
+          "the store lists 163 products: one request returns all of them"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: Organization, SearchAction, WebSite)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (7,794 chars of text)",
+        "urls": [
+          "https://www.deathwishcoffee.com/",
+          "https://www.deathwishcoffee.com/products/valhalla-java-single-serve-pods",
+          "https://www.deathwishcoffee.com/products/gift-card"
+        ],
+        "fields": [],
+        "est_requests": 1008,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~162 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

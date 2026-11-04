@@ -1,0 +1,75 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://ugmonk.com/ ───────────────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Public feed / JSON API                                                              │
+│ Platform     Shopify                                                                             │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     5/10 requests, 5.5s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        recommended                1   < 1 min   Shopify /products.json:         │
+│                                                                  products, variants, prices,     │
+│                                                                  images                          │
+│                                                                  - the store lists 189           │
+│                                                                  products: one request returns   │
+│                                                                  all of them                     │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen:               │
+│                                                                  Organization)                   │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              usable                 1,007    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (16,713    │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~188     │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /                           allowed                                                            │
+│   /sitemap.xml                allowed                                                            │
+│   /products.json?limit=250    allowed                                                            │
+│   /products/ugmonk-utility-…  allowed                                                            │
+│ Sitemap                       index of 126 sitemaps                                              │
+│                               https://ugmonk.com/sitemap.xml                                     │
+│   child                       188 URLs, newest lastmod 2026-11-04                                │
+│                               https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=153985 │
+│                               43851670                                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured                    no record types (Organization)                                     │
+│ script#shopify-customer-acc…  2,192 bytes: customer, shop, visitor                               │
+│ shopify_products_json         ok, 189 items                                                      │
+│                               https://ugmonk.com/products.json?limit=250                         │
+│ shopify_product_js            linked                                                             │
+│                               https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js       │
+│ Rendering                     16,713 characters of text, 131 links                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ none                                                                                             │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                    
+ #   Status   Purpose                       ms   URL                                                
+ ────────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots                       201   https://ugmonk.com/robots.txt                      
+ 2      200   page                         323   https://ugmonk.com/                                
+ 3      200   sitemap                      135   https://ugmonk.com/sitemap.xml                     
+ 4      200   feed:shopify_products_json   168   https://ugmonk.com/products.json?limit=250         
+ 5      200   sitemap-child                154   https://ugmonk.com/sitemap_products_1.xml?from=167 
+                                                 050992&to=15398543851670                           
+                                                                                                    

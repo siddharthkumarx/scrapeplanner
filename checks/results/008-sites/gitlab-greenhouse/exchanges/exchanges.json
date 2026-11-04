@@ -1,0 +1,454 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://job-boards.greenhouse.io/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0"
+   ],
+   [
+    "last-modified",
+    "Tue, 01 Jan 1980 00:00:01 GMT"
+   ],
+   [
+    "etag",
+    "W/\"ca-49773873e8\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:30 GMT"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "1"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-sigsci-request-id",
+    "6aeb9b0edc1143bbdf0bebb5"
+   ],
+   [
+    "server",
+    "istio-envoy"
+   ],
+   [
+    "x-request-id",
+    "1a9693e3-ac57-48f9-b3e3-09a3f9521dec"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "x-amz-cf-id",
+    "Wvwmji3PrKtHbIy8Y9UvNCej5qEV7ZaRWbZNbo0ZDbks2h_OD1EaPg=="
+   ]
+  ],
+  "elapsed_ms": 92,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://job-boards.greenhouse.io/gitlab",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Origin, Accept-Encoding"
+   ],
+   [
+    "cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "x-xss-protection",
+    "1;mode=block"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; img-src * data: blob:; media-src * data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' accounts.google.com apis.google.com maps.gstatic.com *.appcast.io platform.linkedin.com tagmanager.google.com www.googletagmanager.com www.dropbox.com/static/api/2/dropins.js www.google.com/js/ www.google.com/recaptcha/ www.gstatic.com/recaptcha/ www.gstatic.cn/recaptcha/ www.recaptcha.net www.linkedin.com safari-extension://* *.googleapis.com www.googletagmanager.com/gtm.js *.recruitics.com www.careerarc.com www.google.com www.tiktok.com www.criteo.com dynamic.criteo.com cdn01.basis.net basis.com www.facebook.com www.redditstatic.com adserver.cluep.com bat.bing.com bing.com snapchat.com sc-static.net ads.nextdoor.com flask.nextdoor.com s.pinimg.com ct.pinterest.com ads.x.com platform.twitter.com/oct.js platform.twitter.com/uwt.js static.ads-twitter.com/oct.js static.ads-twitter.com/uwt.js googleads.g.doubleclick.net www.googleadservices.com/pagead/conversion/ connect.facebook.net apply.grsc.io job-boards.cdn.greenhouse.io; style-src 'self' 'unsafe-inline' tagmanager.google.com/ *.googleapis.com https://*.cdn.greenhouse.io job-boards.cdn.greenhouse.io; font-src 'self' data: fonts.gstatic.com safari-extension://* https://*.cdn.greenhouse.io https://job-boards.cdn.greenhouse.io; frame-src 'self' accounts.google.com apis.google.com app.jamyr.com docs.google.com/picker player.vimeo.com www.google.com www.linkedin.com www.youtube.com www.google.com/recaptcha/ www.gstatic.com/recaptcha/ www.gstatic.cn/recaptcha/ www.recaptcha.net *.googleapis.com *.recruitics.com www.facebook.com googletagmanager.com; connect-src 'self' docs.google.com/feeds/download/documents/export/Export *.amazonaws.com *.googleapis.com *.googleusercontent.com api.rollbar.com api.geocode.earth https://api-geocode-earth-proxy.greenhouse.io/ *.dropboxusercontent.com *.dropbox.com *.dropboxapi.com www.google.com auth.seek.com apply-api.gograyscale.com wss://apply-api-realtime.gograyscale.com apply.grsc.io https://prod-jben-internal.prod-usw2-0.gh.internal boards.greenhouse.io job-boards.cdn.greenhouse.io email-address-validator.us.greenhouse.io https://my.greenhouse.io c.spl.greenhouse.io"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:31 GMT"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "33"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ],
+   [
+    "x-sigsci-request-id",
+    "6aeb9b0ff09cee6d0b3f120d"
+   ],
+   [
+    "server",
+    "istio-envoy"
+   ],
+   [
+    "x-request-id",
+    "5c10cb8e-e356-4360-aeff-5f107c72fb41"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "x-amz-cf-id",
+    "st_8XzQIQ0FrqY8a9EMqyAXwpIaDMn6kkCPii1oNH775Gx90hEW6mA=="
+   ]
+  ],
+  "elapsed_ms": 80,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://job-boards.greenhouse.io/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Origin, Accept-Encoding"
+   ],
+   [
+    "cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "x-xss-protection",
+    "1;mode=block"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; img-src * data: blob:; media-src * data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' accounts.google.com apis.google.com maps.gstatic.com *.appcast.io platform.linkedin.com tagmanager.google.com www.googletagmanager.com www.dropbox.com/static/api/2/dropins.js www.google.com/js/ www.google.com/recaptcha/ www.gstatic.com/recaptcha/ www.gstatic.cn/recaptcha/ www.recaptcha.net www.linkedin.com safari-extension://* *.googleapis.com www.googletagmanager.com/gtm.js *.recruitics.com www.careerarc.com www.google.com www.tiktok.com www.criteo.com dynamic.criteo.com cdn01.basis.net basis.com www.facebook.com www.redditstatic.com adserver.cluep.com bat.bing.com bing.com snapchat.com sc-static.net ads.nextdoor.com flask.nextdoor.com s.pinimg.com ct.pinterest.com ads.x.com platform.twitter.com/oct.js platform.twitter.com/uwt.js static.ads-twitter.com/oct.js static.ads-twitter.com/uwt.js googleads.g.doubleclick.net www.googleadservices.com/pagead/conversion/ connect.facebook.net apply.grsc.io job-boards.cdn.greenhouse.io; style-src 'self' 'unsafe-inline' tagmanager.google.com/ *.googleapis.com https://*.cdn.greenhouse.io job-boards.cdn.greenhouse.io; font-src 'self' data: fonts.gstatic.com safari-extension://* https://*.cdn.greenhouse.io https://job-boards.cdn.greenhouse.io; frame-src 'self' accounts.google.com apis.google.com app.jamyr.com docs.google.com/picker player.vimeo.com www.google.com www.linkedin.com www.youtube.com www.google.com/recaptcha/ www.gstatic.com/recaptcha/ www.gstatic.cn/recaptcha/ www.recaptcha.net *.googleapis.com *.recruitics.com www.facebook.com googletagmanager.com; connect-src 'self' docs.google.com/feeds/download/documents/export/Export *.amazonaws.com *.googleapis.com *.googleusercontent.com api.rollbar.com api.geocode.earth https://api-geocode-earth-proxy.greenhouse.io/ *.dropboxusercontent.com *.dropbox.com *.dropboxapi.com www.google.com auth.seek.com apply-api.gograyscale.com wss://apply-api-realtime.gograyscale.com apply.grsc.io https://prod-jben-internal.prod-usw2-0.gh.internal boards.greenhouse.io job-boards.cdn.greenhouse.io email-address-validator.us.greenhouse.io https://my.greenhouse.io c.spl.greenhouse.io"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:32 GMT"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "22"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ],
+   [
+    "x-sigsci-request-id",
+    "6aeb9b10f09cee6d0b3f12c4"
+   ],
+   [
+    "server",
+    "istio-envoy"
+   ],
+   [
+    "x-request-id",
+    "ef72c820-49e9-4426-a965-0ce0f6e0a3a9"
+   ],
+   [
+    "x-cache",
+    "Error from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "x-amz-cf-id",
+    "lIZA19qouAbGl7hdhK7ZxnLteREtfRXtlhNuJuEFocvkRuph6WtcBw=="
+   ]
+  ],
+  "elapsed_ms": 66,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://boards-api.greenhouse.io/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "last-modified",
+    "Tue, 01 Jan 1980 00:00:01 GMT"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "2"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-sigsci-request-id",
+    "6aeb9b11dc1143bbdf0bee36"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:33 GMT"
+   ],
+   [
+    "server",
+    "istio-envoy"
+   ],
+   [
+    "x-request-id",
+    "dd7f4b4b-0756-457a-9961-14450b8a1ff0"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 8c3a327cfabf4b41ac8516033c03dfcc.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "x-amz-cf-id",
+    "ZAexUvXgMs_mcRExlmWCEJG9cJz3zotLIux1ZRtz80jA5tlObUHr_A=="
+   ]
+  ],
+  "elapsed_ms": 290,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://boards-api.greenhouse.io/v1/boards/gitlab/jobs",
+  "purpose": "feed:greenhouse_api",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "application/json"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-farm-id",
+    "us"
+   ],
+   [
+    "vary",
+    "Origin, Accept-Encoding"
+   ],
+   [
+    "etag",
+    "W/\"fbce035a28988e8994f50db64786f722\""
+   ],
+   [
+    "cache-control",
+    "max-age=0, private, must-revalidate"
+   ],
+   [
+    "x-request-id",
+    "f7cf619b-5341-43e7-bcaa-8a1686f85e03"
+   ],
+   [
+    "x-runtime",
+    "0.014723"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "17"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-sigsci-request-id",
+    "6aeb9b12dc1143bbdf0beef5"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:52:34 GMT"
+   ],
+   [
+    "server",
+    "istio-envoy"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 8c3a327cfabf4b41ac8516033c03dfcc.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "PHX50-P2"
+   ],
+   [
+    "x-amz-cf-id",
+    "EOrqFDDro6wW9go9_J1nfB34KEhQ4Ehf8WuDi35yAeusSGlshLNASQ=="
+   ]
+  ],
+  "elapsed_ms": 63,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

@@ -1,0 +1,254 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://docs.python.org/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "221"
+   ],
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 20:54:35 GMT"
+   ],
+   [
+    "etag",
+    "\"6aeb9b8b-205\""
+   ],
+   [
+    "x-clacks-overhead",
+    "GNU Terry Pratchett"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=315360000; includeSubDomains; preload"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "via",
+    "1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "51"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:34 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-lga-kjfk8660048-LGA, cache-hhr-khhr2060033-HHR"
+   ],
+   [
+    "x-cache",
+    "HIT, MISS"
+   ],
+   [
+    "x-cache-hits",
+    "5, 0"
+   ],
+   [
+    "x-timer",
+    "S1793825735.551087,VS0,VE68"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 102,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://docs.python.org/3/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "4039"
+   ],
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 17:08:58 GMT"
+   ],
+   [
+    "etag",
+    "\"6aeb66aa-4cb0\""
+   ],
+   [
+    "x-clacks-overhead",
+    "GNU Terry Pratchett"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=315360000; includeSubDomains; preload"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "via",
+    "1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "2764"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:35 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-lga-kjfk8660071-LGA, cache-hhr-khhr2060033-HHR"
+   ],
+   [
+    "x-cache",
+    "HIT, HIT"
+   ],
+   [
+    "x-cache-hits",
+    "73, 0"
+   ],
+   [
+    "x-timer",
+    "S1793825736.628970,VS0,VE0"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 10,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://docs.python.org/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "836"
+   ],
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "content-type",
+    "text/xml"
+   ],
+   [
+    "last-modified",
+    "Fri, 30 Oct 2026 10:26:06 GMT"
+   ],
+   [
+    "etag",
+    "\"6ae470be-33aa\""
+   ],
+   [
+    "x-clacks-overhead",
+    "GNU Terry Pratchett"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=315360000; includeSubDomains; preload"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "via",
+    "1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "469540"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 20:55:36 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-lga-kjfk8660078-LGA, cache-hhr-khhr2060033-HHR"
+   ],
+   [
+    "x-cache",
+    "HIT, HIT"
+   ],
+   [
+    "x-cache-hits",
+    "39, 0"
+   ],
+   [
+    "x-timer",
+    "S1793825737.639120,VS0,VE0"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 9,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]
