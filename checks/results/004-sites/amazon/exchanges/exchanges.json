@@ -1,0 +1,226 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.amazon.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "content-length",
+    "7947"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:01:45 GMT"
+   ],
+   [
+    "server",
+    "Server"
+   ],
+   [
+    "x-amz-request-id",
+    "PBY63TDES7WBJ8H0"
+   ],
+   [
+    "last-modified",
+    "Fri, 09 Oct 2026 09:46:17 GMT"
+   ],
+   [
+    "etag",
+    "\"9b59b0962b347282c341848d96418e4f\""
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "x-amz-rid",
+    "T3E3J49D4NHQ2D7CJXS6"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "edge-cache-control",
+    "no-store,no-cache,stale-if-error=0,stale-while-revalidate=0"
+   ],
+   [
+    "vary",
+    "User-Agent,Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 7ad3d6571deff4c3c83d7e4476fcc6d0.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "HIO52-P4"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "NLHXHKnLWIfFfePXMsQtOH8TN70AxNaMxcoNyoisme3M_YKzL8R-dA=="
+   ]
+  ],
+  "elapsed_ms": 184,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.amazon.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:01:46 GMT"
+   ],
+   [
+    "x-amz-rid",
+    "5R9Y7FCXK19NGB2A0E49"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "server",
+    "Server"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 7ad3d6571deff4c3c83d7e4476fcc6d0.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "HIO52-P4"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "ioxfFw7FYvc5jbSpEz_I1kw3N3bBMJHlmlaLEybPO0oDemD03BrjzA=="
+   ]
+  ],
+  "elapsed_ms": 98,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.amazon.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 500,
+  "headers": [
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:01:52 GMT"
+   ],
+   [
+    "server",
+    "Server"
+   ],
+   [
+    "x-amz-rid",
+    "KWEZQSGF3TCX3DWH31F7"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=47474747; includeSubDomains; preload"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "edge-cache-control",
+    "no-store,no-cache,stale-if-error=0,stale-while-revalidate=0"
+   ],
+   [
+    "vary",
+    "User-Agent,Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Error from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 7ad3d6571deff4c3c83d7e4476fcc6d0.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "HIO52-P4"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "x-amz-cf-id",
+    "KQxSCKmtilgOkbp9OpgieZtqJOhQ_XiP5uGkXF36G5Z4Rg392eLReg=="
+   ]
+  ],
+  "elapsed_ms": 5098,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

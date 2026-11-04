@@ -1,0 +1,66 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://news.ycombinator.com/ ─────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     unknown                                                                             │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 30s                                                                 │
+│ This run     4/10 requests, 90.7s                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        usable                     1   < 1 min   rss feed                        │
+│                                                                  - a feed returns only its       │
+│                                                                  latest 30 entries; poll it for  │
+│                                                                  new ones                        │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen: none)         │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              recommended            1,000     8.3 h   CSS selectors on                │
+│                                                                  server-rendered HTML (4,064     │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from listing pages (count  │
+│                                                                  not measured)                   │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt      found (HTTP 200)                                                                 │
+│ crawl-delay     30s                                                                              │
+│   /             allowed                                                                          │
+│   /sitemap.xml  allowed                                                                          │
+│   /rss          allowed                                                                          │
+│ Sitemap         HTTP 404                                                                         │
+│                 https://news.ycombinator.com/sitemap.xml                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ rss         ok, 30 items                                                                         │
+│             https://news.ycombinator.com/rss                                                     │
+│ Rendering   4,064 characters of text, 226 links                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - robots.txt asks for 30s between requests                                                       │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                        
+ #   Status   Purpose     ms   URL                                      
+ ────────────────────────────────────────────────────────────────────── 
+ 1      200   robots     169   https://news.ycombinator.com/robots.txt  
+ 2      200   page       143   https://news.ycombinator.com/            
+ 3      404   sitemap    151   https://news.ycombinator.com/sitemap.xml 
+ 4      200   feed:rss   157   https://news.ycombinator.com/rss         
+                                                                        

@@ -1,0 +1,50 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://weworkremotely.com/ ───────────────────────────────────────╮
+│ Verdict      NOT A FIT                                                                           │
+│ Best method  none                                                                                │
+│ Platform     not checked (no page to analyse)                                                    │
+│ Anti-bot     Cloudflare (challenge)                                                              │
+│ Rendering    not analysed                                                                        │
+│ Polite rate  1 request every 5s, max 5,000/day                                                   │
+│ This run     2/10 requests, 1.1s                                                                 │
+│ Stopped      cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt)                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status   Req. for 1,000   Time   Details                                 │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                    -      -   no public feed found                    │
+│   2   Structured data   no                    -      -   no schema.org records on this page      │
+│                                                          (types seen: none)                      │
+│   3   Embedded JSON     no                    -      -   no large inline state                   │
+│   4   HTML              no                    -      -   little content without JavaScript       │
+│   5   Browser           no                    -      -   render pages in a headless browser      │
+│                                                          (highest cost)                          │
+│                                                          - page loads only; each load also       │
+│                                                          fetches scripts and API calls; URLs     │
+│                                                          from listing pages (count not           │
+│                                                          measured)                               │
+│                                                          - check the browser's network tab       │
+│                                                          first: the page may call a JSON API     │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt  found (HTTP 200)                                                                     │
+│   /         allowed                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - stopped at the first block: cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt) │
+│ (https://weworkremotely.com/)                                                                    │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Ask the site owner for access, an API key or a data export; do not try to get past the block   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                    
+ #   Status   Purpose    ms   URL                                   
+ ────────────────────────────────────────────────────────────────── 
+ 1      200   robots    100   https://weworkremotely.com/robots.txt 
+ 2      403   page       13   https://weworkremotely.com/           
+                                                                    

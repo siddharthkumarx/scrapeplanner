@@ -1,0 +1,138 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.ebay.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "rlogid",
+    "t6qjdhwvehmq%3C%3Dqjdhwvehmq%2B2%3Bf1%3F4g1%3E7%28rbpv1%3E.s4qma-1a1a7b97aa9-0x2350"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-ebay-svc-tracking-data",
+    "<a>robot=di%3Dwww%26p%3Dhttps%26s%3D0&serviceCorrelationId=01M6KVJYNC0YSVQP0QX7MNK9ZW&ciid=uXqsi%2Bw*&flgs=AA**</a>"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "64"
+   ],
+   [
+    "server",
+    "ebay-proxy-server"
+   ],
+   [
+    "x-traffic-request-id",
+    "ce861473b6b97f5d496c0da00d3ff3fda"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:01:53 GMT"
+   ],
+   [
+    "content-length",
+    "24164"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-ebay-origin-ip",
+    "209.140.129.99"
+   ],
+   [
+    "x-cdn",
+    "Akamai"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "set-cookie",
+    "bm_s=<redacted>; Domain=.ebay.com; Path=/; Expires=Sat, 05 Dec 2026 18:01:53 GMT; Max-Age=2678400; Secure; HttpOnly"
+   ],
+   [
+    "set-cookie",
+    "bm_so=<redacted>; Domain=.ebay.com; Path=/; Expires=Thu, 05 Nov 2026 18:01:53 GMT; Max-Age=86400; Secure"
+   ]
+  ],
+  "elapsed_ms": 287,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.ebay.com/",
+  "purpose": "page",
+  "status": 403,
+  "headers": [
+   [
+    "server",
+    "AkamaiGHost"
+   ],
+   [
+    "mime-version",
+    "1.0"
+   ],
+   [
+    "content-length",
+    "1740"
+   ],
+   [
+    "cache-control",
+    "no-cache, no-store, must-revalidate"
+   ],
+   [
+    "pragma",
+    "no-cache"
+   ],
+   [
+    "expires",
+    "0"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:01:54 GMT"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-cdn",
+    "Akamai"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "set-cookie",
+    "bm_s=<redacted>; Domain=.ebay.com; Path=/; Expires=Sat, 05 Dec 2026 18:01:54 GMT; Max-Age=2678400; Secure; HttpOnly"
+   ],
+   [
+    "set-cookie",
+    "bm_so=<redacted>; Domain=.ebay.com; Path=/; Expires=Thu, 05 Nov 2026 18:01:54 GMT; Max-Age=86400; Secure"
+   ]
+  ],
+  "elapsed_ms": 37,
+  "truncated": false,
+  "body": "001.body.gz"
+ }
+]

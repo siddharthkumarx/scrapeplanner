@@ -1,0 +1,75 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://remoteok.com/ ─────────────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Structured data (JSON-LD / microdata)                                               │
+│ Platform     unknown                                                                             │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     8/10 requests, 14.6s                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        usable                     1   < 1 min   json link feed                  │
+│                                                                  - a feed returns only its       │
+│                                                                  latest 100 entries; poll it     │
+│                                                                  for new ones                    │
+│   2   Structured data   recommended            1,073    18 min   Product in json-ld (1 on the    │
+│                                                                  page)                           │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~14 per  │
+│                                                                  file)                           │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              usable                 1,073    18 min   CSS selectors on                │
+│                                                                  server-rendered HTML (5,486     │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~14 per  │
+│                                                                  file)                           │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt           found (HTTP 200)                                                            │
+│ crawl-delay          1s                                                                          │
+│   /                  allowed                                                                     │
+│   /sitemap.xml       allowed                                                                     │
+│   /remote-jobs.json  allowed                                                                     │
+│   /hire-remotely     allowed                                                                     │
+│ Sitemap              index of 84 sitemaps                                                        │
+│                      https://remoteok.com/sitemap.xml                                            │
+│   child              14 URLs, newest lastmod 2026-11-04                                          │
+│                      https://remoteok.com/sitemap-predefined-1.xml                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Product x1  json-ld: name, aggregateRating.ratingValue                                           │
+│ json_link   ok, 100 items                                                                        │
+│             https://remoteok.com/remote-jobs.json                                                │
+│ Rendering   schema.org records in the HTML: Product; 5,486 characters of text, 44 links          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - robots.txt asks for 1s between requests                                                        │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                    
+ #   Status   Purpose            ms   URL                                           
+ ────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots            354   https://remoteok.com/robots.txt               
+ 2      200   page              198   https://remoteok.com/                         
+ 3      200   sitemap           755   https://remoteok.com/sitemap.xml              
+ 4      301   feed:json_link    111   https://remoteok.com/remote-jobs.json         
+ 5      200   robots             27   http://remoteok.com/robots.txt                
+ 6      301   feed:json_link     22   http://remoteok.com/api                       
+ 7      200   feed:json_link   5204   https://remoteok.com/api                      
+ 8      200   sitemap-child     764   https://remoteok.com/sitemap-predefined-1.xml 
+                                                                                    
