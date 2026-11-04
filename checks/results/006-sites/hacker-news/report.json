@@ -1,0 +1,233 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://news.ycombinator.com/",
+  "site": "news.ycombinator.com",
+  "started_at": "2026-11-04T18:17:33+00:00",
+  "duration_seconds": 91.2,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://news.ycombinator.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 229,
+      "bytes": 243,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://news.ycombinator.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 279,
+      "bytes": 34289,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://news.ycombinator.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 323,
+      "bytes": 8,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://news.ycombinator.com/rss",
+      "purpose": "feed:rss",
+      "status": 200,
+      "elapsed_ms": 308,
+      "bytes": 11389,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://news.ycombinator.com/",
+    "final_url": "https://news.ycombinator.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 34289,
+    "title": "Hacker News",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://news.ycombinator.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true,
+      "/rss": true
+    },
+    "crawl_delay": 30.0,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://news.ycombinator.com/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 34289,
+    "text_chars": 4024,
+    "links": 226,
+    "script_bytes": 0,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "4,024 characters of text, 226 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "rss",
+        "url": "https://news.ycombinator.com/rss",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 30,
+        "total_items": null,
+        "page_size": 30,
+        "fields": [],
+        "note": "RSS"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 30.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "robots.txt crawl-delay 30s"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://news.ycombinator.com/rss"
+        ],
+        "fields": [],
+        "est_requests": 1,
+        "est_hours": 0.01,
+        "partial": true,
+        "notes": [
+          "a feed returns only its latest 30 entries; poll it for new ones"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (4,024 chars of text)",
+        "urls": [
+          "https://news.ycombinator.com/"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 8.33,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from listing pages (count not measured)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "robots.txt asks for 30s between requests",
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

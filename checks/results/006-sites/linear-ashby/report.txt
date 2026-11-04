@@ -1,0 +1,63 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://jobs.ashbyhq.com/linear ───────────────────────────────────╮
+│ Verdict      POSSIBLE, WITH CARE                                                                 │
+│ Best method  Headless browser                                                                    │
+│ Platform     Ashby                                                                               │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    needs a browser                                                                     │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     4/10 requests, 3.2s                                                                 │
+│ Stopped      HTTP 401; cloudflare in front of the site                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000     Time   Details                          │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -        -   no public feed answered          │
+│   2   Structured data   no                         -        -   no schema.org records on this    │
+│                                                                 page (types seen: none)          │
+│   3   Embedded JSON     no                         -        -   no large inline state            │
+│   4   HTML              no                         -        -   little content without           │
+│                                                                 JavaScript                       │
+│   5   Browser           recommended            1,000   17 min   render pages in a headless       │
+│                                                                 browser (highest cost)           │
+│                                                                 - page loads only; each load     │
+│                                                                 also fetches scripts and API     │
+│                                                                 calls; URLs from listing pages   │
+│                                                                 (count not measured)             │
+│                                                                 - check the browser's network    │
+│                                                                 tab first: the page may call a   │
+│                                                                 JSON API                         │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt      found (HTTP 200)                                                                 │
+│   /linear       allowed                                                                          │
+│   /sitemap.xml  allowed                                                                          │
+│ Sitemap         HTTP 404                                                                         │
+│                 https://jobs.ashbyhq.com/sitemap.xml                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ ashby_api   blocked                                                                              │
+│             https://api.ashbyhq.com/posting-api/job-board/linear                                 │
+│ Rendering   <noscript> asks for JavaScript; only 0 characters of text without JavaScript         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - the site refused https://api.ashbyhq.com/robots.txt (HTTP 401; cloudflare in front of the      │
+│ site); the run stopped there, and a collector must stop at any 403 or 429 too                    │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+│ - Look for a JSON API in the browser's network tab before using a browser                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                  
+ #   Status   Purpose   ms   URL                                  
+ ──────────────────────────────────────────────────────────────── 
+ 1      200   robots    70   https://jobs.ashbyhq.com/robots.txt  
+ 2      200   page      20   https://jobs.ashbyhq.com/linear      
+ 3      404   sitemap   32   https://jobs.ashbyhq.com/sitemap.xml 
+ 4      401   robots    70   https://api.ashbyhq.com/robots.txt   
+                                                                  

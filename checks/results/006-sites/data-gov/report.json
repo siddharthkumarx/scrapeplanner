@@ -1,0 +1,257 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://catalog.data.gov/dataset",
+  "site": "catalog.data.gov",
+  "started_at": "2026-11-04T18:16:30+00:00",
+  "duration_seconds": 41.06,
+  "max_requests": 10,
+  "requests_used": 5,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://catalog.data.gov/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 89,
+      "bytes": 157,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://catalog.data.gov/dataset",
+      "purpose": "page",
+      "status": 301,
+      "elapsed_ms": 14,
+      "bytes": 162,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://catalog.data.gov/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 15,
+      "bytes": 217924,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://catalog.data.gov/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 305,
+      "bytes": 13295,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://catalog.data.gov/sitemap/sitemap-0.xml",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 187,
+      "bytes": 748553,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://catalog.data.gov/dataset",
+    "final_url": "https://catalog.data.gov/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 217924,
+    "title": "Catalog - Data.gov",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://catalog.data.gov/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": 10.0,
+    "request_rate": null,
+    "sitemaps": [
+      "https://catalog.data.gov/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://catalog.data.gov/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 108,
+    "newest_lastmod": "2026-11-04",
+    "oldest_lastmod": "2026-11-04",
+    "with_lastmod": 108,
+    "sample_urls": [
+      "https://catalog.data.gov/sitemap/sitemap-0.xml",
+      "https://catalog.data.gov/sitemap/sitemap-1.xml",
+      "https://catalog.data.gov/sitemap/sitemap-2.xml",
+      "https://catalog.data.gov/sitemap/sitemap-3.xml",
+      "https://catalog.data.gov/sitemap/sitemap-4.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://catalog.data.gov/sitemap/sitemap-0.xml",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 5003,
+      "child_sitemaps": null,
+      "newest_lastmod": "2025-08-04",
+      "oldest_lastmod": "2025-07-28",
+      "with_lastmod": 5000,
+      "sample_urls": [
+        "https://catalog.data.gov/",
+        "https://catalog.data.gov/organization",
+        "https://catalog.data.gov/code",
+        "https://catalog.data.gov/dataset/california-vegetation-burn-severity-data-online-viewer-web-app",
+        "https://catalog.data.gov/dataset/vegetation-state-vehicle-recreation-areas-2020-ds3194"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 217924,
+    "text_chars": 12079,
+    "links": 138,
+    "script_bytes": 81649,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "12,079 characters of text, 138 links"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 10.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "robots.txt crawl-delay 10s"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (12,079 chars of text)",
+        "urls": [
+          "https://catalog.data.gov/",
+          "https://catalog.data.gov/organization",
+          "https://catalog.data.gov/code"
+        ],
+        "fields": [],
+        "est_requests": 1002,
+        "est_hours": 2.78,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~5,003 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "robots.txt asks for 10s between requests",
+      "sitemap looks stale: newest lastmod is 2025-08-04",
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

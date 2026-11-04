@@ -1,0 +1,269 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://job-boards.greenhouse.io/gitlab",
+  "site": "job-boards.greenhouse.io",
+  "started_at": "2026-11-04T18:15:59+00:00",
+  "duration_seconds": 4.68,
+  "max_requests": 10,
+  "requests_used": 5,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://job-boards.greenhouse.io/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 230,
+      "bytes": 202,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://job-boards.greenhouse.io/gitlab",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 115,
+      "bytes": 75576,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://job-boards.greenhouse.io/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 30,
+      "bytes": 12249,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://boards-api.greenhouse.io/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 127,
+      "bytes": 131,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://boards-api.greenhouse.io/v1/boards/gitlab/jobs",
+      "purpose": "feed:greenhouse_api",
+      "status": 200,
+      "elapsed_ms": 30,
+      "bytes": 172638,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://job-boards.greenhouse.io/gitlab",
+    "final_url": "https://job-boards.greenhouse.io/gitlab",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 75576,
+    "title": "Jobs at GitLab",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://job-boards.greenhouse.io/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/gitlab": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://job-boards.greenhouse.io/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "greenhouse",
+    "confidence": "medium",
+    "evidence": [
+      "page on boards.greenhouse.io"
+    ],
+    "frameworks": [
+      "remix"
+    ],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 75576,
+    "text_chars": 3934,
+    "links": 52,
+    "script_bytes": 42137,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "3,934 characters of text, 52 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "greenhouse_api",
+        "url": "https://boards-api.greenhouse.io/v1/boards/gitlab/jobs",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 245,
+        "total_items": 245,
+        "page_size": null,
+        "fields": [
+          "absolute_url",
+          "data_compliance",
+          "internal_job_id",
+          "location",
+          "metadata",
+          "id",
+          "updated_at",
+          "requisition_id",
+          "title",
+          "company_name",
+          "first_published",
+          "language",
+          "application_deadline"
+        ],
+        "note": "every open job in one response"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "feed_api",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "Greenhouse job-board API: every open job with its fields",
+        "urls": [
+          "https://boards-api.greenhouse.io/v1/boards/gitlab/jobs"
+        ],
+        "fields": [
+          "absolute_url",
+          "data_compliance",
+          "internal_job_id",
+          "location",
+          "metadata",
+          "id",
+          "updated_at",
+          "requisition_id",
+          "title",
+          "company_name",
+          "first_published",
+          "language",
+          "application_deadline"
+        ],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": false,
+        "notes": [
+          "one request returns all 245 open jobs; the board lists no more"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (3,934 chars of text)",
+        "urls": [
+          "https://job-boards.greenhouse.io/gitlab"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from listing pages (count not measured)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

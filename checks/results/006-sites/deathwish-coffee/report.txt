@@ -1,0 +1,79 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.deathwishcoffee.com/ ──────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Public feed / JSON API                                                              │
+│ Platform     Shopify                                                                             │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     6/10 requests, 6.4s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        recommended                1   < 1 min   Shopify /products.json:         │
+│                                                                  products, variants, prices,     │
+│                                                                  images                          │
+│                                                                  - the store lists 163           │
+│                                                                  products: one request returns   │
+│                                                                  all of them                     │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen:               │
+│                                                                  Organization, SearchAction,     │
+│                                                                  WebSite)                        │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              usable                 1,008    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (7,794     │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~162     │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /                           allowed                                                            │
+│   /sitemap.xml                allowed                                                            │
+│   /products.json?limit=250    allowed                                                            │
+│   /products/society-of-stro…  allowed                                                            │
+│ Sitemap                       index of 6 sitemaps                                                │
+│                               https://www.deathwishcoffee.com/sitemap.xml                        │
+│   child                       162 URLs, newest lastmod 2026-11-04                                │
+│                               https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104 │
+│                               582&to=15414106357815                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured             no record types (Organization, SearchAction, WebSite)                     │
+│ shopify_products_json  ok, 163 items                                                             │
+│                        https://www.deathwishcoffee.com/products.json?limit=250                   │
+│ shopify_product_js     ok, 1 item                                                                │
+│                        https://www.deathwishcoffee.com/products/society-of-strong-coffee-initiat │
+│                        ion-kit.js                                                                │
+│ Rendering              7,794 characters of text, 317 links                                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ none                                                                                             │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                    
+ #   Status   Purpose                       ms   URL                                                
+ ────────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots                       163   https://www.deathwishcoffee.com/robots.txt         
+ 2      200   page                         250   https://www.deathwishcoffee.com/                   
+ 3      200   sitemap                      135   https://www.deathwishcoffee.com/sitemap.xml        
+ 4      200   feed:shopify_products_json   214   https://www.deathwishcoffee.com/products.json?limi 
+                                                 t=250                                              
+ 5      200   sitemap-child                127   https://www.deathwishcoffee.com/sitemap_products_1 
+                                                 .xml?from=171104582&to=15414106357815              
+ 6      200   feed:shopify_product_js      161   https://www.deathwishcoffee.com/products/society-o 
+                                                 f-strong-coffee-initiation-kit.js                  
+                                                                                                    

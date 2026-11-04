@@ -1,0 +1,590 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://techcrunch.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:28 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "Accept-Encoding, Origin"
+   ],
+   [
+    "x-hacker",
+    "If you're reading this, you should visit https://join.a8c.com/viphacker and apply to join the fun, mention this header."
+   ],
+   [
+    "x-powered-by",
+    "WordPress VIP <https://wpvip.com>"
+   ],
+   [
+    "host-header",
+    "a9130478a60e5f9135f765b23f26593b"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self' *.techcrunch.com; frame-ancestors 'self'; frame-src 'self' https: data:; style-src 'self' 'unsafe-inline' *; img-src 'self' * data:; connect-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * blob:; worker-src 'self' blob:; media-src 'self' * data: blob:; font-src 'self' * data:; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox;"
+   ],
+   [
+    "permissions-policy",
+    "autoplay=(), camera=(), fullscreen=*, geolocation=*, display-capture=(self), microphone=()"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "access-control-allow-origin",
+    "https://techcrunch.com"
+   ],
+   [
+    "access-control-allow-methods",
+    "*"
+   ],
+   [
+    "x-robots-tag",
+    "noindex, follow"
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
+   ],
+   [
+    "x-rq",
+    "jfk2 181 253 80"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "cache-control",
+    "public, max-age=14400"
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=300;includeSubdomains"
+   ],
+   [
+    "x-remembering",
+    "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   ],
+   [
+    "age",
+    "51"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 18:16:36 GMT"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 22:17:28 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5559da1df7e1b39-IAD"
+   ]
+  ],
+  "elapsed_ms": 52,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://techcrunch.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:29 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "Accept-Encoding, Origin"
+   ],
+   [
+    "x-hacker",
+    "If you're reading this, you should visit https://join.a8c.com/viphacker and apply to join the fun, mention this header."
+   ],
+   [
+    "x-powered-by",
+    "WordPress VIP <https://wpvip.com>"
+   ],
+   [
+    "host-header",
+    "a9130478a60e5f9135f765b23f26593b"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self' *.techcrunch.com; frame-ancestors 'self'; frame-src 'self' https: data:; style-src 'self' 'unsafe-inline' *; img-src 'self' * data:; connect-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * blob:; worker-src 'self' blob:; media-src 'self' * data: blob:; font-src 'self' * data:; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox;"
+   ],
+   [
+    "permissions-policy",
+    "autoplay=(), camera=(), fullscreen=*, geolocation=*, display-capture=(self), microphone=()"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "access-control-allow-origin",
+    "https://techcrunch.com"
+   ],
+   [
+    "access-control-allow-methods",
+    "*"
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
+   ],
+   [
+    "cache-control",
+    "max-age=300, must-revalidate"
+   ],
+   [
+    "x-rq",
+    "dca8 181 253 80"
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=300;includeSubdomains"
+   ],
+   [
+    "x-remembering",
+    "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5559da83b331b39-IAD"
+   ]
+  ],
+  "elapsed_ms": 37,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://techcrunch.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:30 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "Accept-Encoding, Origin"
+   ],
+   [
+    "x-hacker",
+    "If you're reading this, you should visit https://join.a8c.com/viphacker and apply to join the fun, mention this header."
+   ],
+   [
+    "x-powered-by",
+    "WordPress VIP <https://wpvip.com>"
+   ],
+   [
+    "host-header",
+    "a9130478a60e5f9135f765b23f26593b"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self' *.techcrunch.com; frame-ancestors 'self'; frame-src 'self' https: data:; style-src 'self' 'unsafe-inline' *; img-src 'self' * data:; connect-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * blob:; worker-src 'self' blob:; media-src 'self' * data: blob:; font-src 'self' * data:; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox;"
+   ],
+   [
+    "permissions-policy",
+    "autoplay=(), camera=(), fullscreen=*, geolocation=*, display-capture=(self), microphone=()"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "access-control-allow-origin",
+    "https://techcrunch.com"
+   ],
+   [
+    "access-control-allow-methods",
+    "*"
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "cache-control",
+    "max-age=300, must-revalidate"
+   ],
+   [
+    "x-rq",
+    "dca8 181 253 80"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=300;includeSubdomains"
+   ],
+   [
+    "x-remembering",
+    "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5559daeb8da1b39-IAD"
+   ]
+  ],
+  "elapsed_ms": 17,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://techcrunch.com/feed/",
+  "purpose": "feed:rss",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:31 GMT"
+   ],
+   [
+    "content-type",
+    "application/rss+xml; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "Accept-Encoding, Origin"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 18:13:09 GMT"
+   ],
+   [
+    "etag",
+    "W/\"1a85019968b974e28586c16ca5f71d31\""
+   ],
+   [
+    "x-hacker",
+    "If you're reading this, you should visit https://join.a8c.com/viphacker and apply to join the fun, mention this header."
+   ],
+   [
+    "x-powered-by",
+    "WordPress VIP <https://wpvip.com>"
+   ],
+   [
+    "host-header",
+    "a9130478a60e5f9135f765b23f26593b"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self' *.techcrunch.com; frame-ancestors 'self'; frame-src 'self' https: data:; style-src 'self' 'unsafe-inline' *; img-src 'self' * data:; connect-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * blob:; worker-src 'self' blob:; media-src 'self' * data: blob:; font-src 'self' * data:; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox;"
+   ],
+   [
+    "permissions-policy",
+    "autoplay=(), camera=(), fullscreen=*, geolocation=*, display-capture=(self), microphone=()"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "access-control-allow-origin",
+    "https://techcrunch.com"
+   ],
+   [
+    "access-control-allow-methods",
+    "*"
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/>; rel=\"canonical\""
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "cache-control",
+    "max-age=300, must-revalidate"
+   ],
+   [
+    "x-rq",
+    "dca8 181 253 80"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=300;includeSubdomains"
+   ],
+   [
+    "x-remembering",
+    "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5559db51d741b39-IAD"
+   ]
+  ],
+  "elapsed_ms": 19,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://techcrunch.com/sitemap-page-1.xml",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:32 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "Accept-Encoding, Origin"
+   ],
+   [
+    "x-hacker",
+    "If you're reading this, you should visit https://join.a8c.com/viphacker and apply to join the fun, mention this header."
+   ],
+   [
+    "x-powered-by",
+    "WordPress VIP <https://wpvip.com>"
+   ],
+   [
+    "host-header",
+    "a9130478a60e5f9135f765b23f26593b"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self' *.techcrunch.com; frame-ancestors 'self'; frame-src 'self' https: data:; style-src 'self' 'unsafe-inline' *; img-src 'self' * data:; connect-src 'self' https: data:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' * blob:; worker-src 'self' blob:; media-src 'self' * data: blob:; font-src 'self' * data:; upgrade-insecure-requests; block-all-mixed-content; sandbox allow-forms allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox;"
+   ],
+   [
+    "permissions-policy",
+    "autoplay=(), camera=(), fullscreen=*, geolocation=*, display-capture=(self), microphone=()"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "access-control-allow-origin",
+    "https://techcrunch.com"
+   ],
+   [
+    "access-control-allow-methods",
+    "*"
+   ],
+   [
+    "link",
+    "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "cache-control",
+    "max-age=300, must-revalidate"
+   ],
+   [
+    "x-rq",
+    "dca8 181 249 80"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=300;includeSubdomains"
+   ],
+   [
+    "x-remembering",
+    "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5559dbb6abe1b39-IAD"
+   ]
+  ],
+  "elapsed_ms": 17,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

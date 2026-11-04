@@ -1,0 +1,208 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://quotes.toscrape.com/",
+  "site": "quotes.toscrape.com",
+  "started_at": "2026-11-04T18:19:34+00:00",
+  "duration_seconds": 2.22,
+  "max_requests": 10,
+  "requests_used": 3,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://quotes.toscrape.com/robots.txt",
+      "purpose": "robots",
+      "status": 404,
+      "elapsed_ms": 142,
+      "bytes": 207,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://quotes.toscrape.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 17,
+      "bytes": 11064,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://quotes.toscrape.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 15,
+      "bytes": 207,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://quotes.toscrape.com/",
+    "final_url": "https://quotes.toscrape.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 11064,
+    "title": "Quotes to Scrape",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://quotes.toscrape.com/robots.txt",
+    "fetched": true,
+    "status": 404,
+    "found": false,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": "no robots.txt (404)"
+  },
+  "sitemap": {
+    "url": "https://quotes.toscrape.com/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 10,
+    "types": {
+      "CreativeWork": 10
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 11064,
+    "text_chars": 1664,
+    "links": 55,
+    "script_bytes": 0,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "1,664 characters of text, 55 links"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: CreativeWork)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (1,664 chars of text)",
+        "urls": [
+          "https://quotes.toscrape.com/"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from listing pages (count not measured)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

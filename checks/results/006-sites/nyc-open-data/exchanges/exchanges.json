@@ -1,0 +1,286 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://data.cityofnewyork.us/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:12 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-xss-protection",
+    "0"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "etag",
+    "W/\"0cb268a68e4fc210b4b7391392a87b19\""
+   ],
+   [
+    "cache-control",
+    "max-age=0, private, must-revalidate"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; base-uri 'self'; frame-ancestors 'self' https: http:; frame-src 'self' https:; font-src 'self' https: data:; img-src 'self' https: http: data: blob:; object-src 'none'; script-src 'self' https: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: blob: 'unsafe-inline'; worker-src 'self' blob:; connect-src 'self' https: http: wss: blob:; media-src 'self' blob: https:; form-action 'self' https:; report-uri /report-csp-violation"
+   ],
+   [
+    "set-cookie",
+    "_frontend_session=<redacted>; path=/; secure; HttpOnly; SameSite=None"
+   ],
+   [
+    "x-runtime",
+    "0.032518"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-socrata-region",
+    "aws-us-east-1-fedramp-prod"
+   ],
+   [
+    "x-socrata-requestid",
+    "95abe5a96312097998ba22006b0b1ea6"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ]
+  ],
+  "elapsed_ms": 402,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://data.cityofnewyork.us/",
+  "purpose": "page",
+  "status": 301,
+  "headers": [
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:13 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-xss-protection",
+    "0"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "location",
+    "http://opendata.cityofnewyork.us"
+   ],
+   [
+    "cache-control",
+    "no-cache"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; base-uri 'self'; frame-ancestors 'self' https: http:; frame-src 'self' https:; font-src 'self' https: data:; img-src 'self' https: http: data: blob:; object-src 'none'; script-src 'self' https: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: blob: 'unsafe-inline'; worker-src 'self' blob:; connect-src 'self' https: http: wss: blob:; media-src 'self' blob: https:; form-action 'self' https:; report-uri /report-csp-violation"
+   ],
+   [
+    "set-cookie",
+    "_frontend_session=<redacted>; path=/; secure; HttpOnly; SameSite=None"
+   ],
+   [
+    "x-runtime",
+    "0.061423"
+   ],
+   [
+    "x-socrata-region",
+    "aws-us-east-1-fedramp-prod"
+   ],
+   [
+    "x-socrata-requestid",
+    "a889c83f733452c2e97e0825e0672ac1"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains"
+   ]
+  ],
+  "elapsed_ms": 99,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "http://opendata.cityofnewyork.us/robots.txt",
+  "purpose": "robots",
+  "status": 301,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:14 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "location",
+    "https://www.nyc.gov/opendata"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; Path=/; Domain=opendata.cityofnewyork.us; Expires=Wed, 04 Nov 2026 18:47:14 GMT"
+   ],
+   [
+    "cf-cache-status",
+    "BYPASS"
+   ],
+   [
+    "cf-ray",
+    "a5559d499998d63d-IAD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 168,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.nyc.gov/opendata",
+  "purpose": "robots",
+  "status": 403,
+  "headers": [
+   [
+    "server",
+    "AkamaiGHost"
+   ],
+   [
+    "mime-version",
+    "1.0"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "373"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 18:17:15 GMT"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:15 GMT"
+   ],
+   [
+    "connection",
+    "close"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=HIT"
+   ],
+   [
+    "server-timing",
+    "edge; dur=1"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=93600"
+   ],
+   [
+    "server-timing",
+    "ak_p; desc=\"1793816235758_399280553_370496071_10_5537_1_4_-\";dur=1"
+   ]
+  ],
+  "elapsed_ms": 128,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

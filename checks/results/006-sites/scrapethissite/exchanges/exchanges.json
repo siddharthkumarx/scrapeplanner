@@ -1,0 +1,230 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.scrapethissite.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:41 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "content-length",
+    "49"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=ycwTAb7XmDi%2FzlM12A9eWnhmSb%2BILZ305ZoZ1dTEE2g%3D\\u0026sid=67ff5de4-ad2b-4112-9289-cf96be89efed\\u0026ts=1793812797\"}],\"max_age\":3600}"
+   ],
+   [
+    "reporting-endpoints",
+    "heroku-nel=\"https://nel.heroku.com/reports?s=ycwTAb7XmDi%2FzlM12A9eWnhmSb%2BILZ305ZoZ1dTEE2g%3D&sid=67ff5de4-ad2b-4112-9289-cf96be89efed&ts=1793812797\""
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "via",
+    "1.1 heroku-router"
+   ],
+   [
+    "age",
+    "3584"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 17:19:57 GMT"
+   ],
+   [
+    "cache-control",
+    "max-age=14400"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"HIT\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=22,cfOrigin;dur=0"
+   ],
+   [
+    "cf-ray",
+    "a555a0de5ae1c407-EWR"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 110,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.scrapethissite.com/pages/simple/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:42 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=0fUMJj7LceJGquew0eya8wlDn53Pip4xB%2B1YdZywHBw%3D\\u0026sid=67ff5de4-ad2b-4112-9289-cf96be89efed\\u0026ts=1793816382\"}],\"max_age\":3600}"
+   ],
+   [
+    "reporting-endpoints",
+    "heroku-nel=\"https://nel.heroku.com/reports?s=0fUMJj7LceJGquew0eya8wlDn53Pip4xB%2B1YdZywHBw%3D&sid=67ff5de4-ad2b-4112-9289-cf96be89efed&ts=1793816382\""
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "via",
+    "1.1 heroku-router"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=21,cfOrigin;dur=277"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a555a0e4df02c407-EWR"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 334,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.scrapethissite.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:43 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=Zz0OkH3L%2Bwg6bbtKr7B61vjNuWI%2FNr60scye%2FW85Tmo%3D\\u0026sid=67ff5de4-ad2b-4112-9289-cf96be89efed\\u0026ts=1793816383\"}],\"max_age\":3600}"
+   ],
+   [
+    "reporting-endpoints",
+    "heroku-nel=\"https://nel.heroku.com/reports?s=Zz0OkH3L%2Bwg6bbtKr7B61vjNuWI%2FNr60scye%2FW85Tmo%3D&sid=67ff5de4-ad2b-4112-9289-cf96be89efed&ts=1793816383\""
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "via",
+    "1.1 heroku-router"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=18,cfOrigin;dur=10"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a555a0ed3e71c407-EWR"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 46,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

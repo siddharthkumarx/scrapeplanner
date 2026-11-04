@@ -1,0 +1,345 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://remoteok.com/",
+  "site": "remoteok.com",
+  "started_at": "2026-11-04T18:16:17+00:00",
+  "duration_seconds": 9.2,
+  "max_requests": 10,
+  "requests_used": 8,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 127,
+      "bytes": 4728,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 41,
+      "bytes": 59366,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 672,
+      "bytes": 6997,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/remote-jobs.json",
+      "purpose": "feed:json_link",
+      "status": 301,
+      "elapsed_ms": 38,
+      "bytes": 545,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "http://remoteok.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 14,
+      "bytes": 2676,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "http://remoteok.com/api",
+      "purpose": "feed:json_link",
+      "status": 301,
+      "elapsed_ms": 29,
+      "bytes": 534,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/api",
+      "purpose": "feed:json_link",
+      "status": 200,
+      "elapsed_ms": 407,
+      "bytes": 666863,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://remoteok.com/sitemap-predefined-1.xml",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 664,
+      "bytes": 1763,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://remoteok.com/",
+    "final_url": "https://remoteok.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 59366,
+    "title": "Remote Jobs in Programming, Design, Sales and more #OpenSalaries",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://remoteok.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true,
+      "/remote-jobs.json": true,
+      "/hire-remotely": true
+    },
+    "crawl_delay": 1.0,
+    "request_rate": null,
+    "sitemaps": [
+      "https://remoteok.com/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://remoteok.com/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 84,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [
+      "https://remoteok.com/sitemap-predefined-1.xml",
+      "https://remoteok.com/sitemap-jobs-1.xml",
+      "https://remoteok.com/sitemap-jobs-2.xml",
+      "https://remoteok.com/sitemap-jobs-3.xml",
+      "https://remoteok.com/sitemap-jobs-4.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://remoteok.com/sitemap-predefined-1.xml",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 14,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-11-04",
+      "oldest_lastmod": "2026-11-04",
+      "with_lastmod": 14,
+      "sample_urls": [
+        "https://remoteok.com/hire-remotely",
+        "https://remoteok.com/remote-workers",
+        "https://remoteok.com/work-from-home-jobs",
+        "https://remoteok.com/digital-nomad-jobs",
+        "https://remoteok.com/highest-paid-remote-jobs"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {
+      "Organization": 1,
+      "Product": 1,
+      "AggregateRating": 1
+    },
+    "items": [
+      {
+        "type": "Product",
+        "source": "json-ld",
+        "count": 1,
+        "fields": [
+          "name",
+          "aggregateRating.ratingValue"
+        ],
+        "sample": {
+          "name": "Remote OK"
+        }
+      }
+    ],
+    "key_types": [
+      "Product"
+    ]
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 59366,
+    "text_chars": 5481,
+    "links": 44,
+    "script_bytes": 13719,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "schema.org records in the HTML: Product",
+      "5,481 characters of text, 44 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "json_link",
+        "url": "https://remoteok.com/remote-jobs.json",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 100,
+        "total_items": null,
+        "page_size": null,
+        "fields": [
+          "last_updated",
+          "legal"
+        ],
+        "note": "Remote Jobs in JSON"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "structured_data",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "json link feed",
+        "urls": [
+          "https://remoteok.com/remote-jobs.json"
+        ],
+        "fields": [
+          "last_updated",
+          "legal"
+        ],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": true,
+        "notes": [
+          "a feed returns only its latest 100 entries; poll it for new ones"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": true,
+        "summary": "Product in json-ld (1 on the page)",
+        "urls": [
+          "https://remoteok.com/hire-remotely",
+          "https://remoteok.com/remote-workers",
+          "https://remoteok.com/work-from-home-jobs"
+        ],
+        "fields": [
+          "name",
+          "aggregateRating.ratingValue"
+        ],
+        "est_requests": 1073,
+        "est_hours": 0.3,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~14 per file)"
+        ]
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (5,481 chars of text)",
+        "urls": [
+          "https://remoteok.com/hire-remotely",
+          "https://remoteok.com/remote-workers",
+          "https://remoteok.com/work-from-home-jobs"
+        ],
+        "fields": [],
+        "est_requests": 1073,
+        "est_hours": 0.3,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~14 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "robots.txt asks for 1s between requests",
+      "platform not recognised: no platform-specific feed was probed"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

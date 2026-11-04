@@ -1,0 +1,62 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://webscraper.io/test-sites/e-commerce/allinone ──────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Structured data (JSON-LD / microdata)                                               │
+│ Platform     unknown                                                                             │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     4/10 requests, 3.5s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000     Time   Details                          │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -        -   no public feed found             │
+│   2   Structured data   recommended              334    5 min   Product in microdata (3 on the   │
+│                                                                 page)                            │
+│                                                                 - 3 records on the analysed      │
+│                                                                 page: about 334 listing pages    │
+│   3   Embedded JSON     no                         -        -   no large inline state            │
+│   4   HTML              usable                 1,009   17 min   CSS selectors on                 │
+│                                                                 server-rendered HTML (1,243      │
+│                                                                 chars of text)                   │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from the sitemap (~133 per  │
+│                                                                 file)                            │
+│                                                                 - selectors break on redesigns;  │
+│                                                                 prefer the methods above when    │
+│                                                                 usable                           │
+│   5   Browser           no                         -        -   not needed: data is available    │
+│                                                                 without JavaScript               │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /test-sites/e-commerce/al…  allowed                                                            │
+│   /sitemap.xml                allowed                                                            │
+│   /                           allowed                                                            │
+│ Sitemap                       index of 3 sitemaps, newest lastmod 2026-10-27                     │
+│                               https://webscraper.io/sitemap.xml                                  │
+│   child                       133 URLs                                                           │
+│                               https://webscraper.io/pages_sitemap.xml                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Product x3  microdata: name, image, description, offers.price, offers.priceCurrency              │
+│ Rendering   schema.org records in the HTML: Product; 1,243 characters of text, 52 links          │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                         
+ #   Status   Purpose          ms   URL                                                  
+ ─────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots          262   https://webscraper.io/robots.txt                     
+ 2      200   page             66   https://webscraper.io/test-sites/e-commerce/allinone 
+ 3      200   sitemap          38   https://webscraper.io/sitemap.xml                    
+ 4      200   sitemap-child    38   https://webscraper.io/pages_sitemap.xml              
+                                                                                         

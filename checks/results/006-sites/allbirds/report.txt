@@ -1,0 +1,72 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.allbirds.com/ ─────────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Public feed / JSON API                                                              │
+│ Platform     Shopify                                                                             │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     6/10 requests, 6.8s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        recommended                4   < 1 min   Shopify /products.json:         │
+│                                                                  products, variants, prices,     │
+│                                                                  images                          │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen: none)         │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              usable                 1,004    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (92,664    │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~353     │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /                           allowed                                                            │
+│   /sitemap.xml                allowed                                                            │
+│   /products.json?limit=250    allowed                                                            │
+│   /products/mens-tree-runne…  allowed                                                            │
+│ Sitemap                       index of 8 sitemaps                                                │
+│                               https://www.allbirds.com/sitemap.xml                               │
+│   child                       353 URLs, newest lastmod 2026-11-04                                │
+│                               https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557 │
+│                               &to=7369944137808                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured             none                                                                      │
+│ shopify_products_json  ok, 250 items                                                             │
+│                        https://www.allbirds.com/products.json?limit=250                          │
+│ shopify_product_js     ok, 1 item                                                                │
+│                        https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js      │
+│ Rendering              92,664 characters of text, 129 links                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ none                                                                                             │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                    
+ #   Status   Purpose                       ms   URL                                                
+ ────────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots                       194   https://www.allbirds.com/robots.txt                
+ 2      200   page                         290   https://www.allbirds.com/                          
+ 3      200   sitemap                       90   https://www.allbirds.com/sitemap.xml               
+ 4      200   feed:shopify_products_json   248   https://www.allbirds.com/products.json?limit=250   
+ 5      200   sitemap-child                116   https://www.allbirds.com/sitemap_products_1.xml?fr 
+                                                 om=1878193471557&to=7369944137808                  
+ 6      200   feed:shopify_product_js      104   https://www.allbirds.com/products/mens-tree-runner 
+                                                 -nz-medium-grey.js                                 
+                                                                                                    

@@ -1,0 +1,686 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://developer.mozilla.org/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "109"
+   ],
+   [
+    "x-goog-hash",
+    "crc32c=09qzgw==, md5=Q1dz/ysoTyijc5ok+NSoSQ=="
+   ],
+   [
+    "x-goog-metageneration",
+    "1"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "last-modified",
+    "Tue, 06 Oct 2026 10:58:28 GMT"
+   ],
+   [
+    "expires",
+    "Mon, 26 Oct 2026 18:48:51 GMT"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "via",
+    "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "x-cloud-trace-context",
+    "82a7199a2e3b1042658d5be4be2ce54a"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-goog-stored-content-encoding",
+    "identity"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "server",
+    "Google Frontend"
+   ],
+   [
+    "x-goog-stored-content-length",
+    "119"
+   ],
+   [
+    "x-goog-storage-class",
+    "STANDARD"
+   ],
+   [
+    "x-goog-meta-goog-reserved-file-mtime",
+    "1755617626"
+   ],
+   [
+    "x-goog-generation",
+    "1791284307939736"
+   ],
+   [
+    "x-guploader-uploadid",
+    "AP6rU81KaATXjirzAh8n0ze6mAXP-xm5KNi0JwQY7UPKbFJPBJ_yVmG-tRK8I1xV2ZavBrgfSWNLtiY"
+   ],
+   [
+    "etag",
+    "\"435773ff2b284f28a3739a24f8d4a849\""
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:07 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-bfi-kbfi7400072-BFI, cache-bfi-kbfi7400072-BFI, cache-bfi-kbfi7400098-BFI, cache-nyc-kteb1890025-NYC"
+   ],
+   [
+    "x-cache",
+    "MISS, HIT, HIT"
+   ],
+   [
+    "x-cache-hits",
+    "0, 5396, 0"
+   ],
+   [
+    "x-timer",
+    "S1793816347.211713,VS0,VE127"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 161,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://developer.mozilla.org/en-US/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "16829"
+   ],
+   [
+    "x-goog-generation",
+    "1793754030565854"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 01:00:30 GMT"
+   ],
+   [
+    "x-cloud-trace-context",
+    "3ed5ca3d29c67e72b388bb37fae263d5"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-goog-stored-content-encoding",
+    "identity"
+   ],
+   [
+    "etag",
+    "\"291519da574a0b1263ee8c83fb0b394d\""
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 02:18:27 GMT"
+   ],
+   [
+    "x-goog-storage-class",
+    "STANDARD"
+   ],
+   [
+    "x-guploader-uploadid",
+    "AFy3sg0rTf7Ai8GHNaqljZlujyYIlH2gwjMSD2OaO3gdGLpHPF_H06sBEK5DddgL35MMXH3poDX84G4"
+   ],
+   [
+    "x-goog-meta-goog-reserved-file-mtime",
+    "1793752412"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-goog-hash",
+    "crc32c=E5j7Xg==, md5=KRUZ2ldKCxJj7oyD+ws5TQ=="
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "x-goog-stored-content-length",
+    "121689"
+   ],
+   [
+    "server",
+    "Google Frontend"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "default-src 'self'; script-src 'report-sample' 'self' 'wasm-unsafe-eval' assets.codepen.io production-assets.codepen.io https://js.stripe.com transcend-cdn.com 'sha256-XNBp89FG76amD8BqrJzyflxOF9PaWPqPqvJfKZPCv7M=' 'sha256-YCNoU9DNiinACbd8n6UPyB/8vj0kXvhkOni9/06SuYw=' 'sha256-PZjP7OR6mBEtnvXIZfCZ5PuOlxoDF1LDZL8aj8c42rw='; script-src-elem 'report-sample' 'self' 'wasm-unsafe-eval' assets.codepen.io production-assets.codepen.io https://js.stripe.com transcend-cdn.com 'sha256-XNBp89FG76amD8BqrJzyflxOF9PaWPqPqvJfKZPCv7M=' 'sha256-YCNoU9DNiinACbd8n6UPyB/8vj0kXvhkOni9/06SuYw=' 'sha256-PZjP7OR6mBEtnvXIZfCZ5PuOlxoDF1LDZL8aj8c42rw='; style-src 'report-sample' 'self' 'unsafe-inline' transcend-cdn.com; object-src 'none'; base-uri 'self'; connect-src 'self' developer.allizom.org bcd.developer.allizom.org bcd.developer.mozilla.org updates.developer.allizom.org updates.developer.mozilla.org https://incoming.telemetry.mozilla.org https://observatory-api.mdn.allizom.net https://observatory-api.mdn.mozilla.net telemetry.transcend.io telemetry.us.transcend.io transcend-cdn.com https://api.github.com/search/issues https://api.stripe.com; font-src 'self'; frame-src 'self' mdn.github.io *.mdnplay.dev *.mdnyalp.dev *.play.test.mdn.allizom.net https://v2.scrimba.com https://scrimba.com jsfiddle.net www.youtube-nocookie.com codepen.io survey.alchemer.com https://js.stripe.com; img-src 'self' data: *.githubusercontent.com *.gravatar.com mozillausercontent.com firefoxusercontent.com profile.stage.mozaws.net profile.accounts.firefox.com developer.mozilla.org mdn.dev wikipedia.org upload.wikimedia.org https://mdn.github.io/shared-assets/ https://mdn.dev/; manifest-src 'self'; media-src 'self' archive.org videos.cdn.mozilla.net https://mdn.github.io/shared-assets/; child-src 'self'; worker-src 'self';"
+   ],
+   [
+    "via",
+    "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "x-goog-metageneration",
+    "1"
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:08 GMT"
+   ],
+   [
+    "age",
+    "1976"
+   ],
+   [
+    "x-served-by",
+    "cache-bfi-krnt7300047-BFI, cache-bfi-krnt7300047-BFI, cache-bfi-krnt7300047-BFI, cache-nyc-kteb1890025-NYC"
+   ],
+   [
+    "x-cache",
+    "MISS, HIT, HIT"
+   ],
+   [
+    "x-cache-hits",
+    "0, 2676, 1"
+   ],
+   [
+    "x-timer",
+    "S1793816348.349299,VS0,VE1"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 11,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://developer.mozilla.org/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "225"
+   ],
+   [
+    "x-goog-generation",
+    "1793754617291287"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 01:10:17 GMT"
+   ],
+   [
+    "x-cloud-trace-context",
+    "16e1bfa07e346256a40c7057a87d208c"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-goog-stored-content-encoding",
+    "identity"
+   ],
+   [
+    "etag",
+    "\"2ba097c4c0364b718a29ec7d1855a26a\""
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 02:12:57 GMT"
+   ],
+   [
+    "x-goog-storage-class",
+    "STANDARD"
+   ],
+   [
+    "x-guploader-uploadid",
+    "AFy3sg1GsA44E_7hv9RwY4qWcQyQWxcjxLZDiHUCWeq5_1V7diwLka-IbqwIcgCqnIC05Ot3"
+   ],
+   [
+    "x-goog-meta-goog-reserved-file-mtime",
+    "1793752398"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-goog-hash",
+    "crc32c=rV8GsA==, md5=K6CXxMA2S3GKKex9GFWiag=="
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "x-goog-stored-content-length",
+    "1282"
+   ],
+   [
+    "server",
+    "Google Frontend"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "via",
+    "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "x-goog-metageneration",
+    "1"
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "2935"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:09 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-bfi-kbfi7400039-BFI, cache-bfi-kbfi7400039-BFI, cache-bfi-kbfi7400110-BFI, cache-nyc-kteb1890025-NYC"
+   ],
+   [
+    "x-cache",
+    "MISS, HIT, MISS"
+   ],
+   [
+    "x-cache-hits",
+    "0, 109, 0"
+   ],
+   [
+    "x-timer",
+    "S1793816349.361047,VS0,VE62"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 72,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+  "purpose": "feed:rss",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "10009"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-goog-generation",
+    "1793753698142411"
+   ],
+   [
+    "server",
+    "Google Frontend"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "x-guploader-uploadid",
+    "AFy3sg0ITbZCr_YNjl27f5wJdTSHgYneEFN85QHbRUQYPlxEDFuJA2PCXeczMgnbLrTSbA4BFNSrYlo"
+   ],
+   [
+    "x-goog-meta-goog-reserved-file-mtime",
+    "1793752398"
+   ],
+   [
+    "x-goog-storage-class",
+    "STANDARD"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 00:54:58 GMT"
+   ],
+   [
+    "via",
+    "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-cloud-trace-context",
+    "f696909011e3d81ac61fbef678d07786"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-goog-stored-content-length",
+    "48847"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 02:46:04 GMT"
+   ],
+   [
+    "etag",
+    "\"79a9a04db0bf6a486311eb6fe5dc5772\""
+   ],
+   [
+    "x-goog-metageneration",
+    "1"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "x-goog-stored-content-encoding",
+    "identity"
+   ],
+   [
+    "x-goog-hash",
+    "crc32c=G5cQvg==, md5=eamgTbC/akhjEetv5dxXcg=="
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:10 GMT"
+   ],
+   [
+    "age",
+    "33"
+   ],
+   [
+    "x-served-by",
+    "cache-bfi-krnt7300084-BFI, cache-bfi-krnt7300084-BFI, cache-bfi-krnt7300115-BFI, cache-nyc-kteb1890025-NYC"
+   ],
+   [
+    "x-cache",
+    "MISS, HIT, HIT"
+   ],
+   [
+    "x-cache-hits",
+    "0, 12, 1"
+   ],
+   [
+    "x-timer",
+    "S1793816350.432666,VS0,VE4"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 12,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "126887"
+   ],
+   [
+    "x-goog-generation",
+    "1793754617319029"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 01:10:17 GMT"
+   ],
+   [
+    "x-cloud-trace-context",
+    "63300da1a804200c469a8ac9f280a62b"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-goog-stored-content-encoding",
+    "identity"
+   ],
+   [
+    "etag",
+    "\"80f76bbe4c928d9a150b48431237416e\""
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 02:12:58 GMT"
+   ],
+   [
+    "x-goog-storage-class",
+    "STANDARD"
+   ],
+   [
+    "x-guploader-uploadid",
+    "AFy3sg2ZGFH0N1p0Mr2HFnuXVilX6r9Jk9qh1E9gD43bZIzln1zxXCIJSbukE7JbavXuFoPvtto4a1w"
+   ],
+   [
+    "x-goog-meta-goog-reserved-file-mtime",
+    "1793752398"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-goog-hash",
+    "crc32c=5JrKJw==, md5=gPdrvkySjZoVC0hDEjdBbg=="
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "x-goog-stored-content-length",
+    "126887"
+   ],
+   [
+    "server",
+    "Google Frontend"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "via",
+    "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+   ],
+   [
+    "x-goog-metageneration",
+    "1"
+   ],
+   [
+    "cache-control",
+    "public, max-age=3600"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "age",
+    "1102"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:19:11 GMT"
+   ],
+   [
+    "x-served-by",
+    "cache-bfi-kbfi7400030-BFI, cache-bfi-kbfi7400030-BFI, cache-bfi-kbfi7400053-BFI, cache-nyc-kteb1890025-NYC"
+   ],
+   [
+    "x-cache",
+    "MISS, HIT, MISS"
+   ],
+   [
+    "x-cache-hits",
+    "0, 99, 0"
+   ],
+   [
+    "x-timer",
+    "S1793816351.445839,VS0,VE62"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ]
+  ],
+  "elapsed_ms": 83,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]
