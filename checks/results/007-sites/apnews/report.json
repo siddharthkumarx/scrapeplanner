@@ -1,0 +1,217 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://apnews.com/",
+  "site": "apnews.com",
+  "started_at": "2026-11-04T18:24:27+00:00",
+  "duration_seconds": 1.13,
+  "max_requests": 10,
+  "requests_used": 2,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://apnews.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 62,
+      "bytes": 1419,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://apnews.com/",
+      "purpose": "page",
+      "status": 403,
+      "elapsed_ms": 21,
+      "bytes": 5581,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": {
+    "reason": "challenge",
+    "url": "https://apnews.com/",
+    "detail": "cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt)"
+  },
+  "page": {
+    "url": "https://apnews.com/",
+    "final_url": "https://apnews.com/",
+    "fetched": true,
+    "status": 403,
+    "content_type": "text/html",
+    "bytes": 5581,
+    "title": null,
+    "lang": null
+  },
+  "robots": {
+    "url": "https://apnews.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://apnews.com/ap-sitemap.xml",
+      "https://apnews.com/news-sitemap-content.xml",
+      "https://apnews.com/hubs-sitemap-content.xml",
+      "https://apnews.com/video-sitemap.xml",
+      "https://apnews.com/author-sitemap-content.xml",
+      "https://apnews.com/projects/elections-2026/sitemap-index.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": null,
+    "source": "none",
+    "fetched": false,
+    "status": null,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": null,
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": false
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "challenge",
+        "bot_management": true,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare",
+          "cookie __cf_bm (bot management)",
+          "header cf-mitigated: challenge",
+          "'Just a moment...' interstitial",
+          "challenge script _cf_chl_opt"
+        ]
+      }
+    ],
+    "challenged": true,
+    "challenge_url": "https://apnews.com/"
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "unknown",
+    "html_bytes": 0,
+    "text_chars": 0,
+    "links": 0,
+    "script_bytes": 0,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "not_a_fit",
+    "recommended": null,
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 5.0,
+      "concurrency": 1,
+      "max_requests_per_day": 5000,
+      "reason": "Cloudflare bot management in front of the site: slow and capped"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": false,
+        "summary": "little content without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "render pages in a headless browser (highest cost)",
+        "urls": [
+          "https://apnews.com/"
+        ],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": [
+          "page loads only; each load also fetches scripts and API calls; URLs from listing pages (count not measured)",
+          "check the browser's network tab first: the page may call a JSON API"
+        ]
+      }
+    ],
+    "risks": [
+      "stopped at the first block: cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt) (https://apnews.com/)"
+    ],
+    "next_steps": [
+      "Ask the site owner for access, an API key or a data export; do not try to get past the block"
+    ]
+  }
+}

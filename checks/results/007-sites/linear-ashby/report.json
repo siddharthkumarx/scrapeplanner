@@ -1,0 +1,251 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://jobs.ashbyhq.com/linear",
+  "site": "jobs.ashbyhq.com",
+  "started_at": "2026-11-04T18:23:08+00:00",
+  "duration_seconds": 3.59,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://jobs.ashbyhq.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 115,
+      "bytes": 63,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://jobs.ashbyhq.com/linear",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 197,
+      "bytes": 25940,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://jobs.ashbyhq.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 118,
+      "bytes": 9125,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://api.ashbyhq.com/robots.txt",
+      "purpose": "robots",
+      "status": 401,
+      "elapsed_ms": 108,
+      "bytes": 12,
+      "error": null
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://api.ashbyhq.com/posting-api/job-board/linear",
+      "purpose": "feed:ashby_api",
+      "reason": "blocked"
+    }
+  ],
+  "stopped": {
+    "reason": "blocked",
+    "url": "https://api.ashbyhq.com/robots.txt",
+    "detail": "HTTP 401; cloudflare in front of the site"
+  },
+  "page": {
+    "url": "https://jobs.ashbyhq.com/linear",
+    "final_url": "https://jobs.ashbyhq.com/linear",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 25940,
+    "title": "Linear Jobs",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://jobs.ashbyhq.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/linear": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://jobs.ashbyhq.com/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "ashby",
+    "confidence": "medium",
+    "evidence": [
+      "page on jobs.ashbyhq.com"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "browser_likely",
+    "html_bytes": 25940,
+    "text_chars": 0,
+    "links": 0,
+    "script_bytes": 21463,
+    "app_shell": false,
+    "noscript_warning": true,
+    "reasons": [
+      "<noscript> asks for JavaScript",
+      "only 0 characters of text without JavaScript"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "ashby_api",
+        "url": "https://api.ashbyhq.com/posting-api/job-board/linear",
+        "status": "blocked",
+        "http_status": null,
+        "items_seen": null,
+        "total_items": null,
+        "page_size": null,
+        "fields": [],
+        "note": null
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "caution",
+    "recommended": "browser",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed answered",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": false,
+        "summary": "little content without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "browser",
+        "usable": true,
+        "summary": "render pages in a headless browser (highest cost)",
+        "urls": [
+          "https://jobs.ashbyhq.com/linear"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "page loads only; each load also fetches scripts and API calls; URLs from listing pages (count not measured)",
+          "check the browser's network tab first: the page may call a JSON API"
+        ]
+      }
+    ],
+    "risks": [
+      "the site refused https://api.ashbyhq.com/robots.txt (HTTP 401; cloudflare in front of the site); the run stopped there, and a collector must stop at any 403 or 429 too",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it",
+      "Look for a JSON API in the browser's network tab before using a browser"
+    ]
+  }
+}

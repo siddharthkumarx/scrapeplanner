@@ -1,0 +1,250 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://react.dev/",
+  "site": "react.dev",
+  "started_at": "2026-11-04T18:26:12+00:00",
+  "duration_seconds": 3.33,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://react.dev/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 109,
+      "bytes": 24,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://react.dev/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 14,
+      "bytes": 272437,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://react.dev/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 56,
+      "bytes": 86027,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://react.dev/rss.xml",
+      "purpose": "feed:rss",
+      "status": 200,
+      "elapsed_ms": 9,
+      "bytes": 18181,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://react.dev/",
+    "final_url": "https://react.dev/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 272437,
+    "title": "React",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://react.dev/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true,
+      "/rss.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://react.dev/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "nextjs",
+    "confidence": "high",
+    "evidence": [
+      "__NEXT_DATA__ script",
+      "assets under /_next/static/"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "kind": "next_data",
+        "locator": "script#__NEXT_DATA__",
+        "bytes": 268,
+        "keys": [
+          "toc",
+          "content",
+          "meta",
+          "languages"
+        ],
+        "details": {
+          "page": "/[[...markdownPath]]",
+          "buildId": "LWnQEFlq5kYflwq-G6NfZ"
+        }
+      }
+    ]
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 272437,
+    "text_chars": 8090,
+    "links": 98,
+    "script_bytes": 4450,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "8,090 characters of text, 98 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "rss",
+        "url": "https://react.dev/rss.xml",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 24,
+        "total_items": null,
+        "page_size": 24,
+        "fields": [],
+        "note": "React Blog RSS Feed"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://react.dev/rss.xml"
+        ],
+        "fields": [],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": true,
+        "notes": [
+          "a feed returns only its latest 24 entries; poll it for new ones"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (8,090 chars of text)",
+        "urls": [
+          "https://react.dev/"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from listing pages (count not measured)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

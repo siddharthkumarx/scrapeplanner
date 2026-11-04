@@ -1,0 +1,466 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.bbc.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "1583"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "x-amzn-requestid",
+    "1b03f574-e9ae-4adb-af2e-63e8e3ff7b2e"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-amz-apigw-id",
+    "GU-ONFbbjoEFfJQ="
+   ],
+   [
+    "cache-control",
+    "max-age=3600, public, stale-if-error=86400, stale-while-revalidate=600"
+   ],
+   [
+    "x-amzn-trace-id",
+    "Root=1-6aeb7727-6772f355116425e32958358c"
+   ],
+   [
+    "origin-agent-cluster",
+    "?0"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"default\",\"max_age\":2592000,\"include_subdomains\":true,\"failure_fraction\":0.25}"
+   ],
+   [
+    "req-svc-chain",
+    "FASTLY,GTM"
+   ],
+   [
+    "via",
+    "1.1 BBC-GTM, 1.1 varnish"
+   ],
+   [
+    "x-bbc-edge-cache-status",
+    "MISS"
+   ],
+   [
+    "x-bbc-origin-response-status",
+    "200"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"default\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://default.bbc-reporting-api.app/report-endpoint\",\"priority\":1}],\"include_subdomains\":true}"
+   ],
+   [
+    "server",
+    "BBC-GTM"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; preload"
+   ],
+   [
+    "x-robots-tag",
+    "bingbot: noarchive"
+   ],
+   [
+    "fastly-restarts",
+    "1"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:24:16 GMT"
+   ],
+   [
+    "x-fastly-cache-status",
+    "HIT-CLUSTER"
+   ],
+   [
+    "x-served-by",
+    "cache-pao-kpao1770083-PAO"
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "x-cache-hits",
+    "0"
+   ],
+   [
+    "x-timer",
+    "S1793816656.216530,VS0,VE59"
+   ],
+   [
+    "x-fastly-pre-flight-cache",
+    "MISS, MISS"
+   ],
+   [
+    "x-fastly-pre-flight-cache-status",
+    "MISS-CLUSTER"
+   ],
+   [
+    "x-cache-age",
+    "297"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+   ]
+  ],
+  "elapsed_ms": 77,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.bbc.com/news",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "85471"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "belfrage-cache-status",
+    "HIT"
+   ],
+   [
+    "bid",
+    "joan"
+   ],
+   [
+    "brequestid",
+    "5ff4d9113f9b41a4b52f506ccd1843ae"
+   ],
+   [
+    "bsig",
+    "dbbc8ba7bc41ff9f463c38fdd7539655"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "etag",
+    "\"5mywcs0hubbgg2\""
+   ],
+   [
+    "referrer-policy",
+    "no-referrer-when-downgrade"
+   ],
+   [
+    "req-svc-chain",
+    "FASTLY,GTM,BELFRAGE,BBCX"
+   ],
+   [
+    "via",
+    "1.1 BBC-GTM, 1.1 Belfrage, 1.1 varnish"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-correlation-id",
+    "f23de257-9649-4769-9cfb-04c68c831621"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "origin-agent-cluster",
+    "?0"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"default\",\"max_age\":2592000,\"include_subdomains\":true,\"failure_fraction\":0.25}"
+   ],
+   [
+    "x-bbc-edge-cache-status",
+    "STALE"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"default\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://default.bbc-reporting-api.app/report-endpoint\",\"priority\":1}],\"include_subdomains\":true}"
+   ],
+   [
+    "server",
+    "BBC-GTM"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; preload"
+   ],
+   [
+    "x-robots-tag",
+    "bingbot: noarchive"
+   ],
+   [
+    "fastly-restarts",
+    "1"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:24:17 GMT"
+   ],
+   [
+    "x-fastly-cache-status",
+    "HIT-STALE-CLUSTER"
+   ],
+   [
+    "x-served-by",
+    "cache-pao-kpao1770083-PAO"
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "x-cache-hits",
+    "1"
+   ],
+   [
+    "x-timer",
+    "S1793816657.278672,VS0,VE3"
+   ],
+   [
+    "x-fastly-pre-flight-cache",
+    "MISS, HIT"
+   ],
+   [
+    "x-fastly-pre-flight-cache-status",
+    "HIT-CLUSTER"
+   ],
+   [
+    "x-cache-age",
+    "48"
+   ],
+   [
+    "x-lb-nocache",
+    "true"
+   ],
+   [
+    "cache-control",
+    "private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalidate"
+   ],
+   [
+    "vary",
+    "X-BBC-Edge-Scheme,bbc-mvt-1,bbc-mvt-2,bbc-mvt-3,bbc-mvt-4,bbc-mvt-5,bbc-mvt-6,bbc-mvt-7,bbc-mvt-8,bbc-mvt-9,bbc-mvt-10,Accept-Encoding"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+   ]
+  ],
+  "elapsed_ms": 7,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.bbc.com/afrique/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-length",
+    "2301"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "belfrage-cache-status",
+    "MISS"
+   ],
+   [
+    "bid",
+    "sally"
+   ],
+   [
+    "brequestid",
+    "1a309a62257a464095e4ec5e0018044a"
+   ],
+   [
+    "bsig",
+    "5aff4f0bae1a8dfd41542c4679df48ee"
+   ],
+   [
+    "cache-control",
+    "public, stale-if-error=90, stale-while-revalidate=30, max-age=30"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "moz-cache-status",
+    "HIT"
+   ],
+   [
+    "req-svc-chain",
+    "FASTLY,GTM,BELFRAGE,MOZART,ARCHIVIST,GWAA"
+   ],
+   [
+    "via",
+    "1.1 BBC-GTM, 1.1 Belfrage, 1.1 varnish"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-mrid",
+    "n1"
+   ],
+   [
+    "x-msig",
+    "462190310064fc8630102e25c568d0fc"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "origin-agent-cluster",
+    "?0"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"default\",\"max_age\":2592000,\"include_subdomains\":true,\"failure_fraction\":0.25}"
+   ],
+   [
+    "x-bbc-edge-cache-status",
+    "EXPIRED"
+   ],
+   [
+    "x-bbc-origin-response-status",
+    "200"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"default\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://default.bbc-reporting-api.app/report-endpoint\",\"priority\":1}],\"include_subdomains\":true}"
+   ],
+   [
+    "server",
+    "BBC-GTM"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; preload"
+   ],
+   [
+    "x-robots-tag",
+    "bingbot: noarchive"
+   ],
+   [
+    "fastly-restarts",
+    "1"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:24:18 GMT"
+   ],
+   [
+    "x-fastly-cache-status",
+    "HIT-STALE-CLUSTER"
+   ],
+   [
+    "x-served-by",
+    "cache-pao-kpao1770083-PAO"
+   ],
+   [
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "x-cache-hits",
+    "0"
+   ],
+   [
+    "x-timer",
+    "S1793816658.286521,VS0,VE2"
+   ],
+   [
+    "x-fastly-pre-flight-cache",
+    "MISS, HIT"
+   ],
+   [
+    "x-fastly-pre-flight-cache-status",
+    "HIT"
+   ],
+   [
+    "x-cache-age",
+    "4881"
+   ],
+   [
+    "x-lb-nocache",
+    "true"
+   ],
+   [
+    "vary",
+    "X-BBC-Edge-Scheme,Accept-Encoding"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+   ]
+  ],
+  "elapsed_ms": 3,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

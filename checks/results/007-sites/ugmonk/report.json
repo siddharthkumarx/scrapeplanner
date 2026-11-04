@@ -1,0 +1,355 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://ugmonk.com/",
+  "site": "ugmonk.com",
+  "started_at": "2026-11-04T18:22:37+00:00",
+  "duration_seconds": 6.72,
+  "max_requests": 10,
+  "requests_used": 6,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 161,
+      "bytes": 3660,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 368,
+      "bytes": 1209398,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 98,
+      "bytes": 13929,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/products.json?limit=250",
+      "purpose": "feed:shopify_products_json",
+      "status": 200,
+      "elapsed_ms": 233,
+      "bytes": 1025132,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=15398543851670",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 122,
+      "bytes": 120438,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js",
+      "purpose": "feed:shopify_product_js",
+      "status": 429,
+      "elapsed_ms": 63,
+      "bytes": 1568,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": {
+    "reason": "rate_limited",
+    "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js",
+    "detail": "HTTP 429 Too Many Requests"
+  },
+  "page": {
+    "url": "https://ugmonk.com/",
+    "final_url": "https://ugmonk.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 1209398,
+    "title": "Ugmonk",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://ugmonk.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true,
+      "/products.json?limit=250": true,
+      "/products/ugmonk-utility-tote-field-tan.js": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://ugmonk.com/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://ugmonk.com/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 126,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [
+      "https://ugmonk.com/sitemap_agentic_discovery.xml",
+      "https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=15398543851670",
+      "https://ugmonk.com/sitemap_pages_1.xml?from=134744647&to=165508153494",
+      "https://ugmonk.com/sitemap_collections_1.xml?from=7891784&to=510079533206",
+      "https://ugmonk.com/sitemap_blogs_1.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=15398543851670",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 188,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-11-04",
+      "oldest_lastmod": "2026-11-04",
+      "with_lastmod": 187,
+      "sample_urls": [
+        "https://ugmonk.com/",
+        "https://ugmonk.com/products/gift-card",
+        "https://ugmonk.com/products/craighill-desk-knife-brass",
+        "https://ugmonk.com/products/craighill-venn-puzzle-stainless-steel",
+        "https://ugmonk.com/products/ugmonk-leather-mousepad-brown"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "shopify",
+    "confidence": "high",
+    "evidence": [
+      "header powered-by: Shopify",
+      "assets on cdn.shopify.com",
+      "assets under /cdn/shop/",
+      "Shopify.theme script",
+      "window.Shopify object",
+      "mentions .myshopify.com"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {
+      "Organization": 1
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "kind": "json_script",
+        "locator": "script#shopify-customer-account-data",
+        "bytes": 2192,
+        "keys": [
+          "customer",
+          "shop",
+          "visitor"
+        ],
+        "details": {}
+      }
+    ]
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 1209398,
+    "text_chars": 16713,
+    "links": 131,
+    "script_bytes": 64108,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "16,713 characters of text, 131 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "shopify_products_json",
+        "url": "https://ugmonk.com/products.json?limit=250",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 189,
+        "total_items": null,
+        "page_size": 250,
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "note": "whole catalog fits in one page (189 products)"
+      },
+      {
+        "kind": "shopify_product_js",
+        "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js",
+        "status": "blocked",
+        "http_status": 429,
+        "items_seen": null,
+        "total_items": null,
+        "page_size": null,
+        "fields": [],
+        "note": "HTTP 429"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "caution",
+    "recommended": "feed_api",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 5.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "the site answered 429 during this run at 1s spacing"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "Shopify /products.json: products, variants, prices, images",
+        "urls": [
+          "https://ugmonk.com/products.json?limit=250&page={page}"
+        ],
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": false,
+        "notes": [
+          "the store lists 189 products: one request returns all of them"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: Organization)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (16,713 chars of text)",
+        "urls": [
+          "https://ugmonk.com/",
+          "https://ugmonk.com/products/gift-card",
+          "https://ugmonk.com/products/craighill-desk-knife-brass"
+        ],
+        "fields": [],
+        "est_requests": 1007,
+        "est_hours": 1.4,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~188 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "the site refused https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js (HTTP 429 Too Many Requests); the run stopped there, and a collector must stop at any 403 or 429 too"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

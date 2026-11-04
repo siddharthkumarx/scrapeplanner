@@ -1,0 +1,67 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.theguardian.com/international ─────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     unknown                                                                             │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     7/10 requests, 7.6s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        usable                     1   < 1 min   rss feed                        │
+│                                                                  - a feed returns only its       │
+│                                                                  latest 122 entries; poll it     │
+│                                                                  for new ones                    │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen: none)         │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              recommended            1,002    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (22,384    │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~529     │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /international              allowed                                                            │
+│   /international/rss          allowed                                                            │
+│   /football/live/2026/nov/0…  allowed                                                            │
+│ Sitemap                       529 URLs, newest lastmod 2026-11-04                                │
+│                               http://www.theguardian.com/sitemaps/news.xml                       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ rss         ok, 122 items                                                                        │
+│             https://www.theguardian.com/international/rss                                        │
+│ Rendering   22,384 characters of text, 379 links                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                             
+ #   Status   Purpose     ms   URL                                           
+ ─────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots     162   https://www.theguardian.com/robots.txt        
+ 2      200   page        10   https://www.theguardian.com/international     
+ 3      301   robots       4   http://www.theguardian.com/robots.txt         
+ 4      200   robots       8   https://www.theguardian.com/robots.txt        
+ 5      301   sitemap      5   http://www.theguardian.com/sitemaps/news.xml  
+ 6      200   sitemap    147   https://www.theguardian.com/sitemaps/news.xml 
+ 7      200   feed:rss   159   https://www.theguardian.com/international/rss 
+                                                                             

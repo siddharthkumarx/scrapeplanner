@@ -1,0 +1,79 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.gymshark.com/ ─────────────────────────────────────────╮
+│ Verdict      POSSIBLE, WITH CARE                                                                 │
+│ Best method  Embedded JSON state                                                                 │
+│ Platform     Shopify (+ Next.js)                                                                 │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     4/10 requests, 5.5s                                                                 │
+│ Stopped      HTTP 403                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000     Time   Details                          │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -        -   no public feed answered          │
+│   2   Structured data   no                         -        -   no schema.org records on this    │
+│                                                                 page (types seen: Organization,  │
+│                                                                 WebSite)                         │
+│   3   Embedded JSON     recommended            1,000   17 min   script#__NEXT_DATA__ (761,662    │
+│                                                                 bytes)                           │
+│                                                                 - buildId changes on every       │
+│                                                                 deploy; read it from the page,   │
+│                                                                 never hard-code it               │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from listing pages (count   │
+│                                                                 not measured)                    │
+│   4   HTML              usable                 1,000   17 min   CSS selectors on                 │
+│                                                                 server-rendered HTML (16,100     │
+│                                                                 chars of text)                   │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from listing pages (count   │
+│                                                                 not measured)                    │
+│                                                                 - selectors break on redesigns;  │
+│                                                                 prefer the methods above when    │
+│                                                                 usable                           │
+│   5   Browser           no                         -        -   not needed: data is available    │
+│                                                                 without JavaScript               │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /                           allowed                                                            │
+│   /sitemap.xml                allowed                                                            │
+│   /products.json?limit=250    allowed                                                            │
+│   /products/gymshark-vengea…  allowed                                                            │
+│ Sitemap                       index of 9 sitemaps                                                │
+│                               https://www.gymshark.com/sitemap.xml                               │
+│   child                       run stopped at a block                                             │
+│                               https://www.gymshark.com/sitemap_products_1.xml                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured             no record types (Organization, WebSite)                                   │
+│ script#__NEXT_DATA__   761,662 bytes: _nextI18Next, initialZustandState, pageContent, preview,   │
+│                        showUSP, previousURL                                                      │
+│ shopify_products_json  blocked                                                                   │
+│                        https://www.gymshark.com/products.json?limit=250                          │
+│ shopify_product_js     blocked                                                                   │
+│                        https://www.gymshark.com/products/gymshark-vengeance-graphic-t-shirt-ss-t │
+│                        ops-black-aw26.js                                                         │
+│ Rendering              16,100 characters of text, 401 links; also in script#__NEXT_DATA__        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - the site refused https://www.gymshark.com/products.json?limit=250 (HTTP 403); the run stopped  │
+│ there, and a collector must stop at any 403 or 429 too                                           │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                   
+ #   Status   Purpose                        ms   URL                                              
+ ───────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots                        191   https://www.gymshark.com/robots.txt              
+ 2      200   page                         1081   https://www.gymshark.com/                        
+ 3      200   sitemap                        85   https://www.gymshark.com/sitemap.xml             
+ 4      403   feed:shopify_products_json      3   https://www.gymshark.com/products.json?limit=250 
+                                                                                                   

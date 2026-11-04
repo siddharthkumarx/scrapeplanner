@@ -1,0 +1,280 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://webscraper.io/test-sites/e-commerce/allinone",
+  "site": "webscraper.io",
+  "started_at": "2026-11-04T18:26:37+00:00",
+  "duration_seconds": 3.43,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://webscraper.io/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 173,
+      "bytes": 226,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://webscraper.io/test-sites/e-commerce/allinone",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 200,
+      "bytes": 30302,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://webscraper.io/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 3,
+      "bytes": 562,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://webscraper.io/pages_sitemap.xml",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 4,
+      "bytes": 13928,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://webscraper.io/test-sites/e-commerce/allinone",
+    "final_url": "https://webscraper.io/test-sites/e-commerce/allinone",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 30302,
+    "title": "Allinone | Web Scraper Test Sites",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://webscraper.io/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/test-sites/e-commerce/allinone": true,
+      "/sitemap.xml": true,
+      "/": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://webscraper.io/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://webscraper.io/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 3,
+    "newest_lastmod": "2026-10-27",
+    "oldest_lastmod": "2026-10-27",
+    "with_lastmod": 3,
+    "sample_urls": [
+      "https://webscraper.io/pages_sitemap.xml",
+      "https://webscraper.io/blog_sitemap.xml",
+      "https://webscraper.io/marketplace_sitemap.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://webscraper.io/pages_sitemap.xml",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 133,
+      "child_sitemaps": null,
+      "newest_lastmod": null,
+      "oldest_lastmod": null,
+      "with_lastmod": 0,
+      "sample_urls": [
+        "https://webscraper.io/",
+        "https://webscraper.io/web-scraper-extension",
+        "https://webscraper.io/pricing",
+        "https://webscraper.io/solutions/ecommerce-web-scraping",
+        "https://webscraper.io/solutions/competitor-price-monitoring"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 4,
+    "types": {
+      "SiteNavigationElement": 1,
+      "Product": 3,
+      "Offer": 3,
+      "AggregateRating": 3
+    },
+    "items": [
+      {
+        "type": "Product",
+        "source": "microdata",
+        "count": 3,
+        "fields": [
+          "name",
+          "image",
+          "description",
+          "offers.price",
+          "offers.priceCurrency"
+        ],
+        "sample": {
+          "name": "/test-sites/e-commerce/allinone/product/102",
+          "offers.price": "$1114.55",
+          "offers.priceCurrency": "USD"
+        }
+      }
+    ],
+    "key_types": [
+      "Product"
+    ]
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 30302,
+    "text_chars": 1288,
+    "links": 52,
+    "script_bytes": 2259,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "schema.org records in the HTML: Product",
+      "1,288 characters of text, 52 links"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "structured_data",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": true,
+        "summary": "Product in microdata (3 on the page)",
+        "urls": [
+          "https://webscraper.io/test-sites/e-commerce/allinone"
+        ],
+        "fields": [
+          "name",
+          "image",
+          "description",
+          "offers.price",
+          "offers.priceCurrency"
+        ],
+        "est_requests": 334,
+        "est_hours": 0.09,
+        "partial": false,
+        "notes": [
+          "3 records on the analysed page: about 334 listing pages"
+        ]
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (1,288 chars of text)",
+        "urls": [
+          "https://webscraper.io/",
+          "https://webscraper.io/web-scraper-extension",
+          "https://webscraper.io/pricing"
+        ],
+        "fields": [],
+        "est_requests": 1009,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~133 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

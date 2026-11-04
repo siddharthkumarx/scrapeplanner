@@ -1,0 +1,238 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://data.cityofnewyork.us/",
+  "site": "data.cityofnewyork.us",
+  "started_at": "2026-11-04T18:24:07+00:00",
+  "duration_seconds": 8.59,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://data.cityofnewyork.us/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 5092,
+      "bytes": 1752,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://data.cityofnewyork.us/",
+      "purpose": "page",
+      "status": 301,
+      "elapsed_ms": 196,
+      "bytes": 0,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "http://opendata.cityofnewyork.us/robots.txt",
+      "purpose": "robots",
+      "status": 301,
+      "elapsed_ms": 152,
+      "bytes": 162,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.nyc.gov/opendata",
+      "purpose": "robots",
+      "status": 403,
+      "elapsed_ms": 106,
+      "bytes": 373,
+      "error": null
+    }
+  ],
+  "skipped": [
+    {
+      "url": "http://opendata.cityofnewyork.us",
+      "purpose": "page",
+      "reason": "blocked"
+    }
+  ],
+  "stopped": {
+    "reason": "blocked",
+    "url": "https://www.nyc.gov/opendata",
+    "detail": "HTTP 403; akamai in front of the site"
+  },
+  "page": {
+    "url": "https://data.cityofnewyork.us/",
+    "final_url": null,
+    "fetched": false,
+    "status": null,
+    "content_type": null,
+    "bytes": 0,
+    "title": null,
+    "lang": null
+  },
+  "robots": {
+    "url": "https://data.cityofnewyork.us/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true
+    },
+    "crawl_delay": 1.0,
+    "request_rate": null,
+    "sitemaps": [
+      "https://sa-socrata-sitemaps-us-east-1-fedramp-prod.s3.us-east-1.amazonaws.com/sitemaps/sitemap-data.cityofnewyork.us.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": null,
+    "source": "none",
+    "fetched": false,
+    "status": null,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": null,
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "checked": false
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": true,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare",
+          "cookie __cf_bm (bot management)"
+        ]
+      },
+      {
+        "vendor": "akamai",
+        "status": "present",
+        "bot_management": false,
+        "evidence": [
+          "header server: AkamaiGHost"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "unknown",
+    "html_bytes": 0,
+    "text_chars": 0,
+    "links": 0,
+    "script_bytes": 0,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "not_a_fit",
+    "recommended": null,
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 5.0,
+      "concurrency": 1,
+      "max_requests_per_day": 5000,
+      "reason": "Cloudflare bot management in front of the site: slow and capped"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": false,
+        "summary": "page not analysed",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "stopped at the first block: HTTP 403; akamai in front of the site (https://www.nyc.gov/opendata)",
+      "Cloudflare bot management is in front of the site: keep to the rate below and stop at the first challenge",
+      "robots.txt asks for 1s between requests"
+    ],
+    "next_steps": [
+      "Ask the site owner for access, an API key or a data export; do not try to get past the block"
+    ]
+  }
+}

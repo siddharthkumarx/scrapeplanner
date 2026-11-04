@@ -1,0 +1,67 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://jobs.lever.co/palantir ────────────────────────────────────╮
+│ Verdict      POSSIBLE, WITH CARE                                                                 │
+│ Best method  Public feed / JSON API                                                              │
+│ Platform     Lever                                                                               │
+│ Anti-bot     Cloudflare (present)                                                                │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 5s, max 5,000/day                                                   │
+│ This run     5/10 requests, 6.5s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        recommended               10   < 1 min   Lever postings API: open jobs   │
+│                                                                  with their fields               │
+│                                                                  - 100 postings per request;     │
+│                                                                  page with &skip=                │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen: none)         │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              usable                 1,000    83 min   CSS selectors on                │
+│                                                                  server-rendered HTML (26,523    │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from listing pages (count  │
+│                                                                  not measured)                   │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt      found (HTTP 200)                                                                 │
+│ crawl-delay     1s                                                                               │
+│   /palantir     allowed                                                                          │
+│   /sitemap.xml  allowed                                                                          │
+│ Sitemap         HTTP 404                                                                         │
+│                 https://jobs.lever.co/sitemap.xml                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ lever_api   ok, 100 items                                                                        │
+│             https://api.lever.co/v0/postings/palantir?mode=json&limit=100                        │
+│ Rendering   26,523 characters of text, 679 links                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - Cloudflare bot management is in front of the site: keep to the rate below and stop at the      │
+│ first challenge                                                                                  │
+│ - robots.txt asks for 1s between requests                                                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+│ - If you need volume, ask the owner for an API or a feed                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                   
+ #   Status   Purpose           ms   URL                                                           
+ ───────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots            30   https://jobs.lever.co/robots.txt                              
+ 2      200   page             101   https://jobs.lever.co/palantir                                
+ 3      404   sitemap          820   https://jobs.lever.co/sitemap.xml                             
+ 4      200   robots            95   https://api.lever.co/robots.txt                               
+ 5      200   feed:lever_api   177   https://api.lever.co/v0/postings/palantir?mode=json&limit=100 
+                                                                                                   

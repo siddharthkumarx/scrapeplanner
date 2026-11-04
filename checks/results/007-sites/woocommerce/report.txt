@@ -1,0 +1,72 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://woocommerce.com/products/ ─────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     WooCommerce                                                                         │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     4/10 requests, 4.2s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000     Time   Details                          │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -        -   no public feed answered (some    │
+│                                                                 disallowed by robots.txt)        │
+│   2   Structured data   no                         -        -   no schema.org records on this    │
+│                                                                 page (types seen: EntryPoint,    │
+│                                                                 ImageObject,                     │
+│                                                                 MerchantReturnPolicy,            │
+│                                                                 Organization, Person,            │
+│                                                                 PropertyValueSpecification,      │
+│                                                                 ReadAction, SearchAction,        │
+│                                                                 WebPage, WebSite)                │
+│   3   Embedded JSON     no                         -        -   no large inline state            │
+│   4   HTML              recommended            1,002   17 min   CSS selectors on                 │
+│                                                                 server-rendered HTML (15,140     │
+│                                                                 chars of text)                   │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from the sitemap (~1,142    │
+│                                                                 per file)                        │
+│                                                                 - selectors break on redesigns;  │
+│                                                                 prefer the methods above when    │
+│                                                                 usable                           │
+│   5   Browser           no                         -        -   not needed: data is available    │
+│                                                                 without JavaScript               │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /products/                  allowed                                                            │
+│   /sitemap_index.xml          allowed                                                            │
+│   /wp-json/wc/store/v1/prod…  disallowed                                                         │
+│   /products/linnworks-advan…  allowed                                                            │
+│ Sitemap                       index of 24 sitemaps, newest lastmod 2026-11-04                    │
+│                               https://woocommerce.com/sitemap_index.xml                          │
+│   child                       1,142 URLs, newest lastmod 2026-10-12                              │
+│                               https://woocommerce.com/product-sitemap.xml                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured     no record types (EntryPoint, ImageObject, MerchantReturnPolicy, Organization,     │
+│                Person, PropertyValueSpecification)                                               │
+│ woo_store_api  skipped robots                                                                    │
+│                https://woocommerce.com/wp-json/wc/store/v1/products?per_page=1                   │
+│ Rendering      15,140 characters of text, 197 links                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - robots.txt disallows: /wp-json/wc/store/v1/products?per_page=1                                 │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                               
+ #   Status   Purpose         ms   URL                                         
+ ───────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots          84   https://woocommerce.com/robots.txt          
+ 2      200   page            26   https://woocommerce.com/products/           
+ 3      200   sitemap         10   https://woocommerce.com/sitemap_index.xml   
+ 4      200   sitemap-child   26   https://woocommerce.com/product-sitemap.xml 
+                                                                               

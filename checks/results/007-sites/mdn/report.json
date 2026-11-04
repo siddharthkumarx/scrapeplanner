@@ -1,0 +1,273 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://developer.mozilla.org/en-US/",
+  "site": "developer.mozilla.org",
+  "started_at": "2026-11-04T18:26:07+00:00",
+  "duration_seconds": 5.13,
+  "max_requests": 10,
+  "requests_used": 5,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://developer.mozilla.org/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 52,
+      "bytes": 119,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://developer.mozilla.org/en-US/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 25,
+      "bytes": 121689,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://developer.mozilla.org/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 27,
+      "bytes": 1282,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+      "purpose": "feed:rss",
+      "status": 200,
+      "elapsed_ms": 22,
+      "bytes": 48847,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 28,
+      "bytes": 1943277,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://developer.mozilla.org/en-US/",
+    "final_url": "https://developer.mozilla.org/en-US/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 121689,
+    "title": "MDN Web Docs",
+    "lang": "en-US"
+  },
+  "robots": {
+    "url": "https://developer.mozilla.org/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/en-US/": true,
+      "/sitemap.xml": true,
+      "/en-US/blog/rss.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://developer.mozilla.org/sitemap.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://developer.mozilla.org/sitemap.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 10,
+    "newest_lastmod": "2026-11-04",
+    "oldest_lastmod": "2026-11-04",
+    "with_lastmod": 10,
+    "sample_urls": [
+      "https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz",
+      "https://developer.mozilla.org/sitemaps/es/sitemap.xml.gz",
+      "https://developer.mozilla.org/sitemaps/fr/sitemap.xml.gz",
+      "https://developer.mozilla.org/sitemaps/ja/sitemap.xml.gz",
+      "https://developer.mozilla.org/sitemaps/ko/sitemap.xml.gz"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://developer.mozilla.org/sitemaps/en-us/sitemap.xml.gz",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 14869,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-11-03",
+      "oldest_lastmod": "2023-02-18",
+      "with_lastmod": 14732,
+      "sample_urls": [
+        "https://developer.mozilla.org/en-US/",
+        "https://developer.mozilla.org/en-US/404",
+        "https://developer.mozilla.org/en-US/about",
+        "https://developer.mozilla.org/en-US/advertising",
+        "https://developer.mozilla.org/en-US/blog/"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "lit",
+    "confidence": "medium",
+    "evidence": [
+      "Lit server-rendered parts"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 121689,
+    "text_chars": 6085,
+    "links": 158,
+    "script_bytes": 341,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "6,085 characters of text, 158 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "rss",
+        "url": "https://developer.mozilla.org/en-US/blog/rss.xml",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 71,
+        "total_items": null,
+        "page_size": 71,
+        "fields": [],
+        "note": "MDN Blog RSS Feed"
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://developer.mozilla.org/en-US/blog/rss.xml"
+        ],
+        "fields": [],
+        "est_requests": 1,
+        "est_hours": 0.0,
+        "partial": true,
+        "notes": [
+          "a feed returns only its latest 71 entries; poll it for new ones"
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (6,085 chars of text)",
+        "urls": [
+          "https://developer.mozilla.org/en-US/",
+          "https://developer.mozilla.org/en-US/404",
+          "https://developer.mozilla.org/en-US/about"
+        ],
+        "fields": [],
+        "est_requests": 1002,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~14,869 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

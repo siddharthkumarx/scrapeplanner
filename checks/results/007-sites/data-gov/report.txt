@@ -1,0 +1,63 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://catalog.data.gov/dataset ──────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     unknown                                                                             │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 10s                                                                 │
+│ This run     5/10 requests, 40.9s                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000    Time   Details                           │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -       -   no public feed found              │
+│   2   Structured data   no                         -       -   no schema.org records on this     │
+│                                                                page (types seen: none)           │
+│   3   Embedded JSON     no                         -       -   no large inline state             │
+│   4   HTML              recommended            1,002   2.8 h   CSS selectors on server-rendered  │
+│                                                                HTML (12,079 chars of text)       │
+│                                                                - one detail page per record;     │
+│                                                                URLs from the sitemap (~5,003     │
+│                                                                per file)                         │
+│                                                                - selectors break on redesigns;   │
+│                                                                prefer the methods above when     │
+│                                                                usable                            │
+│   5   Browser           no                         -       -   not needed: data is available     │
+│                                                                without JavaScript                │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt      found (HTTP 200)                                                                 │
+│ crawl-delay     10s                                                                              │
+│   /             allowed                                                                          │
+│   /sitemap.xml  allowed                                                                          │
+│ Sitemap         index of 108 sitemaps, newest lastmod 2026-11-04                                 │
+│                 https://catalog.data.gov/sitemap.xml                                             │
+│   child         5,003 URLs, newest lastmod 2025-08-04                                            │
+│                 https://catalog.data.gov/sitemap/sitemap-0.xml                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ Rendering   12,079 characters of text, 138 links                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - robots.txt asks for 10s between requests                                                       │
+│ - sitemap looks stale: newest lastmod is 2025-08-04                                              │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                   
+ #   Status   Purpose          ms   URL                                            
+ ───────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots           46   https://catalog.data.gov/robots.txt            
+ 2      301   page             41   https://catalog.data.gov/dataset               
+ 3      200   page             11   https://catalog.data.gov/                      
+ 4      200   sitemap         125   https://catalog.data.gov/sitemap.xml           
+ 5      200   sitemap-child   261   https://catalog.data.gov/sitemap/sitemap-0.xml 
+                                                                                   

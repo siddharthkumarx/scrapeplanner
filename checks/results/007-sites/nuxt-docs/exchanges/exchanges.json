@@ -1,0 +1,294 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://nuxt.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cache-control",
+    "max-age=14400, must-revalidate"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:26:16 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-vercel-cache",
+    "MISS"
+   ],
+   [
+    "x-vercel-id",
+    "sfo1::sfo1::rv4fs-1793816776326-06507a78934d"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 216,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://nuxt.com/docs",
+  "purpose": "page",
+  "status": 307,
+  "headers": [
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:26:17 GMT"
+   ],
+   [
+    "location",
+    "/docs/getting-started/introduction"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-vercel-id",
+    "sfo1::tpnjf-1793816777479-b93836384a7f"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 11,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://nuxt.com/docs/getting-started/introduction",
+  "purpose": "page",
+  "status": 302,
+  "headers": [
+   [
+    "age",
+    "209"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-length",
+    "124"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 17:06:30 GMT"
+   ],
+   [
+    "location",
+    "/docs/4.x/getting-started/introduction"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "vary",
+    "Accept, User-Agent"
+   ],
+   [
+    "x-robots-tag",
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "sfo1::iad1::g8bhl-1793816778490-0dd77a3f11e6"
+   ]
+  ],
+  "elapsed_ms": 227,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://nuxt.com/docs/4.x/getting-started/introduction",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "age",
+    "295"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/html;charset=utf-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:10:02 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "vary",
+    "Accept, User-Agent"
+   ],
+   [
+    "x-powered-by",
+    "Nuxt"
+   ],
+   [
+    "x-robots-tag",
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "sfo1::sin1::k5xgq-1793816779717-3d5ee62e3be9"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 164,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://nuxt.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "age",
+    "558"
+   ],
+   [
+    "cache-control",
+    "public, max-age=600"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/xml; charset=UTF-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:17:02 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-robots-tag",
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+   ],
+   [
+    "x-sitemap-cache-duration",
+    "600s"
+   ],
+   [
+    "x-sitemap-cache-expires",
+    "2026-11-04T18:27:02.104Z"
+   ],
+   [
+    "x-sitemap-cache-remaining",
+    "600s"
+   ],
+   [
+    "x-sitemap-generated",
+    "2026-11-04T18:17:02.104Z"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "sfo1::cdg1::8d8ll-1793816780883-1ee7382d2983"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 136,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

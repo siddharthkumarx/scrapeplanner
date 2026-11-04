@@ -1,0 +1,287 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://jobs.lever.co/palantir",
+  "site": "jobs.lever.co",
+  "started_at": "2026-11-04T18:23:01+00:00",
+  "duration_seconds": 6.53,
+  "max_requests": 10,
+  "requests_used": 5,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://jobs.lever.co/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 30,
+      "bytes": 2714,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://jobs.lever.co/palantir",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 101,
+      "bytes": 973546,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://jobs.lever.co/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 820,
+      "bytes": 297442,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://api.lever.co/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 95,
+      "bytes": 38,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://api.lever.co/v0/postings/palantir?mode=json&limit=100",
+      "purpose": "feed:lever_api",
+      "status": 200,
+      "elapsed_ms": 177,
+      "bytes": 1966972,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://jobs.lever.co/palantir",
+    "final_url": "https://jobs.lever.co/palantir",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 973546,
+    "title": "Palantir Technologies",
+    "lang": null
+  },
+  "robots": {
+    "url": "https://jobs.lever.co/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/palantir": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": 1.0,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://jobs.lever.co/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "lever",
+    "confidence": "high",
+    "evidence": [
+      "page on jobs.lever.co",
+      "links to jobs.lever.co"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "checked": true
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "bot_management": true,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare",
+          "cookie __cf_bm (bot management)"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 973546,
+    "text_chars": 26523,
+    "links": 679,
+    "script_bytes": 5793,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "26,523 characters of text, 679 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "lever_api",
+        "url": "https://api.lever.co/v0/postings/palantir?mode=json&limit=100",
+        "status": "ok",
+        "http_status": 200,
+        "items_seen": 100,
+        "total_items": null,
+        "page_size": 100,
+        "fields": [
+          "additionalPlain",
+          "additional",
+          "categories",
+          "createdAt",
+          "descriptionPlain",
+          "description",
+          "id",
+          "lists",
+          "text",
+          "country",
+          "workplaceType",
+          "opening",
+          "openingPlain",
+          "descriptionBody",
+          "descriptionBodyPlain"
+        ],
+        "note": "100 per page; more with &skip="
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "caution",
+    "recommended": "feed_api",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 5.0,
+      "concurrency": 1,
+      "max_requests_per_day": 5000,
+      "reason": "Cloudflare bot management in front of the site: slow and capped"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": true,
+        "summary": "Lever postings API: open jobs with their fields",
+        "urls": [
+          "https://api.lever.co/v0/postings/palantir?mode=json&limit=100&skip={offset}"
+        ],
+        "fields": [
+          "additionalPlain",
+          "additional",
+          "categories",
+          "createdAt",
+          "descriptionPlain",
+          "description",
+          "id",
+          "lists",
+          "text",
+          "country",
+          "workplaceType",
+          "opening",
+          "openingPlain",
+          "descriptionBody",
+          "descriptionBodyPlain"
+        ],
+        "est_requests": 10,
+        "est_hours": 0.01,
+        "partial": false,
+        "notes": [
+          "100 postings per request; page with &skip="
+        ]
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (26,523 chars of text)",
+        "urls": [
+          "https://jobs.lever.co/palantir"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 1.39,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from listing pages (count not measured)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "Cloudflare bot management is in front of the site: keep to the rate below and stop at the first challenge",
+      "robots.txt asks for 1s between requests"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it",
+      "If you need volume, ask the owner for an API or a feed"
+    ]
+  }
+}

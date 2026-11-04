@@ -1,0 +1,310 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://jobs.ashbyhq.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:08 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-ashby-request-id",
+    "01M6KWSWG2EG7CBZY8KPNH5QW6"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "ashby-session-expiry-alert-level",
+    ""
+   ],
+   [
+    "cache-control",
+    "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "cf-cache-status",
+    "BYPASS"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5efb8e97aeb-SJC"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 115,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://jobs.ashbyhq.com/linear",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:10 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-ashby-request-id",
+    "01M6KWSXJH3ZF3JR63YFWVZ7SF"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "ashby-session-expiry-alert-level",
+    ""
+   ],
+   [
+    "cache-control",
+    "public, max-age=60, stale-if-error=600"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content; connect-src 'self' https://cdn.ashbyprd.com https://*.browser-intake-datadoghq.com https://browser-intake-datadoghq.com https://browser-intake-us3-datadoghq.com https://browser-intake-us5-datadoghq.com https://browser-intake-datadoghq.eu https://browser-intake-ddog-gov.com https://browser-intake-ap1-datadoghq.com https://ashbyhq-infra-prd-main-app-uploaded-files-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-uploaded-files-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://edge.fullstory.com https://rs.fullstory.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://www.recaptcha.net https://www.google.com/recaptcha https://*.livekit.cloud wss://*.livekit.cloud https://*.seondnsresolve.com https://*.seondfresolver.com https://*.deviceinfresolver.com https://*.seonintelligence.com https://assets.unicorn.studio; default-src 'none'; img-src 'self' https://cdn.ashbyprd.com https://rs.fullstory.com https: data:; script-src 'nonce-x1XKw8oZubwzpdZvXbOZMWho401t5jjcePVMRc3FiBs' https://cdn.ashbyprd.com https://edge.fullstory.com https://rs.fullstory.com https://www.recaptcha.net/recaptcha/ https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cdn.jsdelivr.net; style-src 'self' https://cdn.ashbyprd.com https: 'unsafe-inline'; upgrade-insecure-requests; font-src https://cdn.ashbyprd.com https:; child-src blob:; worker-src blob:; media-src https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com; frame-src https://www.recaptcha.net/recaptcha/ https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://embedded-media.ashbyhq.com; frame-ancestors *;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "cf-cache-status",
+    "EXPIRED"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5f6999c7aeb-SJC"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 197,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://jobs.ashbyhq.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:11 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-ashby-request-id",
+    "01M6KWSYR995SQ9ZX2S11EDWAW"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "ashby-session-expiry-alert-level",
+    ""
+   ],
+   [
+    "cache-control",
+    "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content; connect-src 'self' https://cdn.ashbyprd.com https://*.browser-intake-datadoghq.com https://browser-intake-datadoghq.com https://browser-intake-us3-datadoghq.com https://browser-intake-us5-datadoghq.com https://browser-intake-datadoghq.eu https://browser-intake-ddog-gov.com https://browser-intake-ap1-datadoghq.com https://ashbyhq-infra-prd-main-app-uploaded-files-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-uploaded-files-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://edge.fullstory.com https://rs.fullstory.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://www.recaptcha.net https://www.google.com/recaptcha https://*.livekit.cloud wss://*.livekit.cloud https://*.seondnsresolve.com https://*.seondfresolver.com https://*.deviceinfresolver.com https://*.seonintelligence.com https://assets.unicorn.studio; default-src 'none'; img-src 'self' https://cdn.ashbyprd.com https://rs.fullstory.com https: data:; script-src 'nonce-dKWNtCeVD0LitmkHCCAcfCyn1Adp77v-pXW7SCwq5Is' https://cdn.ashbyprd.com https://edge.fullstory.com https://rs.fullstory.com https://www.recaptcha.net/recaptcha/ https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cdn.jsdelivr.net; style-src 'self' https://cdn.ashbyprd.com https: 'unsafe-inline'; upgrade-insecure-requests; font-src https://cdn.ashbyprd.com https:; child-src blob:; worker-src blob:; media-src https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-meeting-recordings-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-demo-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-media-us-east-1.s3.dualstack.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.us-east-1.amazonaws.com https://ashbyhq-infra-prd-main-app-ai-interviewer-assets-us-east-1.s3.dualstack.us-east-1.amazonaws.com; frame-src https://www.recaptcha.net/recaptcha/ https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://embedded-media.ashbyhq.com;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "cf-cache-status",
+    "BYPASS"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5fe1b9d7aeb-SJC"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 118,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://api.ashbyhq.com/robots.txt",
+  "purpose": "robots",
+  "status": 401,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:12 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "12"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-ashby-request-id",
+    "01M6KWSZVC6C9AHXWSFFNPVTVR"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "ashby-session-expiry-alert-level",
+    ""
+   ],
+   [
+    "vary",
+    "Origin"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "cf-cache-status",
+    "BYPASS"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a6053b9fcf05-SJC"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 108,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]
