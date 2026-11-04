@@ -225,21 +225,22 @@ NARROW = 80
 """Below this many columns the report switches to a stacked layout."""
 
 
-def render(report: Report, console: Console) -> None:
-    narrow = console.width < NARROW
+def renderables(report: Report, width: int) -> dict[str, RenderableType]:
+    """The report's sections in print order, laid out for a terminal ``width`` wide."""
+    narrow = width < NARROW
     if narrow:
         title = f"[bold]scrapeplanner[/] · {report.site}"
     else:
         title = f"[bold]scrapeplanner[/] {report.tool.version}  ·  {report.input_url}"
-    console.print(Panel(_summary(report), title=title, title_align="left", box=box.ROUNDED))
     plan_view: RenderableType = _methods_compact(report) if narrow else _methods(report)
-    console.print(
-        Panel(plan_view, title="Plan (cheapest first)", title_align="left", box=box.ROUNDED)
-    )
-    console.print(Panel(_robots(report), title="Rules", title_align="left", box=box.ROUNDED))
-    console.print(Panel(_data(report), title="Data found", title_align="left", box=box.ROUNDED))
-    console.print(
-        Panel(
+    return {
+        "summary": Panel(_summary(report), title=title, title_align="left", box=box.ROUNDED),
+        "plan": Panel(
+            plan_view, title="Plan (cheapest first)", title_align="left", box=box.ROUNDED
+        ),
+        "rules": Panel(_robots(report), title="Rules", title_align="left", box=box.ROUNDED),
+        "data": Panel(_data(report), title="Data found", title_align="left", box=box.ROUNDED),
+        "risks": Panel(
             Group(
                 Text("Risks", style="bold"),
                 _list(report.plan.risks, "yellow"),
@@ -248,19 +249,23 @@ def render(report: Report, console: Console) -> None:
                 _list(report.plan.next_steps, ""),
             ),
             box=box.ROUNDED,
+        ),
+        "requests": _requests_compact(report) if narrow else _requests(report),
+    }
+
+
+def _requests_compact(report: Report) -> Group:
+    lines: list[RenderableType] = [Text("Requests", style="bold")]
+    for index, entry in enumerate(report.requests, 1):
+        status = str(entry.status) if entry.status is not None else "error"
+        lines.append(
+            Text.assemble((f"{index:>2} ", "dim"), (f"{status} ", ""), (entry.purpose, "dim"))
         )
-    )
-    if narrow:
-        console.print(Text("Requests", style="bold"))
-        for index, entry in enumerate(report.requests, 1):
-            status = str(entry.status) if entry.status is not None else "error"
-            console.print(
-                Text.assemble(
-                    (f"{index:>2} ", "dim"), (f"{status} ", ""), (f"{entry.purpose}", "dim")
-                )
-            )
-            console.print(_indent(entry.url, "dim", left=3))
-        return
+        lines.append(_indent(entry.url, "dim", left=3))
+    return Group(*lines)
+
+
+def _requests(report: Report) -> Table:
     log = Table(box=box.SIMPLE, pad_edge=False, show_header=True, header_style="dim")
     log.add_column("#", justify="right", style="dim")
     log.add_column("Status", justify="right")
@@ -275,4 +280,9 @@ def render(report: Report, console: Console) -> None:
             str(entry.elapsed_ms),
             entry.url,
         )
-    console.print(log)
+    return log
+
+
+def render(report: Report, console: Console) -> None:
+    for section in renderables(report, console.width).values():
+        console.print(section)

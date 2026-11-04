@@ -52,6 +52,14 @@ dev = [
     "ruff>=0.17",
     "types-pyyaml>=6.0.12",
 ]
+# Rendering and checking the README visuals (scripts/visuals, tests/visual).
+visual = [
+    "brotli>=1.1",
+    "fonttools>=4.68",
+    "markdown-it-py>=4.0",
+    "pillow>=13.0",
+    "playwright>=1.64",
+]
 
 [tool.hatch.version]
 path = "src/scrapeplanner/__init__.py"
@@ -89,7 +97,12 @@ python_version = "3.11"
 files = ["src", "tests", "scripts", "checks/run_checks.py"]
 warn_unreachable = true
 
+[[tool.mypy.overrides]]
+module = ["fontTools.*"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = ["-ra", "--strict-markers", "--strict-config"]
+addopts = ["-ra", "--strict-markers", "--strict-config", "-m", "not visual"]
+markers = ["visual: renders the README visuals in Chromium (needs the 'visual' group)"]
 xfail_strict = true

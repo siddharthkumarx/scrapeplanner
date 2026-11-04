@@ -410,3 +410,22 @@ def test_wordpress_core_react_is_not_a_react_site() -> None:
     )
     report = platform.detect({}, [], doc(html))
     assert (report.name, report.frameworks) == ("wordpress", [])
+
+
+def test_own_bot_check_page_is_a_challenge() -> None:
+    # Shape of the page amazon.com served in checks/results/004-sites (HTTP 200, 3.8 KB).
+    body = (
+        "<html><body><h4>Click the button below to continue shopping</h4>"
+        '<form method="get" action="/errors_page/validateCaptcha"><button>Continue shopping'
+        "</button></form></body></html>"
+    )
+    block = antibot.classify_block(200, {}, [], body)
+    assert block is not None
+    assert block[0] == "challenge"
+    assert antibot.detect(200, {}, [], body)[0].vendor == "own_check"
+
+
+def test_captcha_widget_in_a_normal_page_is_ignored() -> None:
+    body = '<form class="newsletter"><div class="g-recaptcha"></div></form>' + "<p>x</p>" * 8000
+    assert antibot.detect(200, {}, [], body) == []
+    assert antibot.classify_block(200, {}, [], body) is None

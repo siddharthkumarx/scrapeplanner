@@ -71,3 +71,21 @@ designed; the plan kept recommending 1 s.
 **Fix**: commit after `89c3bcc`: a 429 during the run raises the planned
 delay to 5 s. Golden files carry the new rate; the committed live report
 keeps the old one, which is the only difference between replay and live.
+
+## I-006 · 2026-11-04 · Amazon's own bot check was not recognised (004-sites)
+
+**What**: in `004-sites` amazon.com answered the homepage with HTTP 200 and a
+3.8 KB page: "Click the button below to continue shopping" and a form posting
+to `/errors_page/validateCaptcha`. No vendor header or cookie was present, so
+the tool did not see a challenge, went on to request `/sitemap.xml` (HTTP
+500) and planned "good fit, HTML" on 142 characters of text. That broke the
+"stop at the first challenge" rule.
+
+**Fix**: a vendor-less `own_check` signal group (CAPTCHA forms and widgets,
+"are you a robot" texts, Amazon's validateCaptcha form). Like every
+challenge marker it counts only on a small or 4xx/5xx page, and these
+signals are ignored entirely on a normal large page, so a newsletter
+reCAPTCHA does not mark a site as bot-managed (replaying 003 and 004 showed
+that false positive on allbirds.com and techcrunch.com before the guard).
+Regression tests use the shape of the recorded page. The results table was
+re-run as `005-sites`.

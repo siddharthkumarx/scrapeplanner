@@ -38,7 +38,9 @@ PlatformName = Literal[
     "lit",
     "unknown",
 ]
-VendorName = Literal["cloudflare", "akamai", "datadome", "human", "imperva", "kasada", "aws_waf"]
+VendorName = Literal[
+    "cloudflare", "akamai", "datadome", "human", "imperva", "kasada", "aws_waf", "own_check"
+]
 MethodName = Literal["feed_api", "structured_data", "embedded_json", "html", "browser"]
 RenderVerdict = Literal["raw_html", "embedded_json", "browser_likely", "unknown"]
 FitVerdict = Literal["good", "caution", "not_a_fit", "unknown"]
@@ -88,6 +90,7 @@ VENDOR_LABELS: dict[str, str] = {
     "imperva": "Imperva",
     "kasada": "Kasada",
     "aws_waf": "AWS WAF",
+    "own_check": "Site's own bot check",
 }
 METHOD_LABELS: dict[str, str] = {
     "feed_api": "Public feed / JSON API",

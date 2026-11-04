@@ -125,6 +125,24 @@ SIGNALS: tuple[Signal, ...] = (
         r"awsWafCookieDomainList|AwsWafIntegration",
         "AWS WAF challenge page",
     ),
+    # A site's own bot check (no vendor named): CAPTCHA forms and "are you a robot" pages.
+    # Like every challenge marker these count only on a small or 4xx/5xx page.
+    Signal("own_check", "challenge", r"/errors(?:_page)?/validateCaptcha", "validateCaptcha form"),
+    Signal("own_check", "challenge", r"""<form[^>]+action=["'][^"']*captcha""", "CAPTCHA form"),
+    Signal(
+        "own_check",
+        "challenge",
+        r"g-recaptcha|class=[\"']h-captcha|cf-turnstile|challenges\.cloudflare\.com/turnstile",
+        "CAPTCHA widget",
+    ),
+    Signal(
+        "own_check",
+        "challenge",
+        r"verify (?:that )?you(?:'re| are) (?:a )?human|are you a robot|robot check|"
+        r"unusual traffic from your (?:computer )?network|"
+        r"click the button below to continue shopping",
+        "'are you a robot' page",
+    ),
 )
 
 CDN_ONLY_EVIDENCE = frozenset(
@@ -163,6 +181,8 @@ def detect(
     interstitial = status >= 400 or len(text) <= INTERSTITIAL_MAX_CHARS
     hits: dict[str, VendorHit] = {}
     for signal in SIGNALS:
+        if signal.vendor == "own_check" and not interstitial:
+            continue  # a CAPTCHA widget in a normal page (e.g. a newsletter form) is no block
         fired = False
         challenge = False
         if signal.kind == "header":
