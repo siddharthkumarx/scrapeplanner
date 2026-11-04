@@ -43,8 +43,6 @@ BOT_MANAGED_DELAY = 5.0
 BOT_MANAGED_DAILY_CAP = 5_000
 STALE_SITEMAP_DAYS = 365
 MIN_DATA_BLOB_BYTES = 5_000
-# Cloudflare signals that only show the CDN, not bot management.
-_CDN_ONLY = frozenset({"header cf-ray", "header server: cloudflare"})
 _FEED_RANK = {
     "shopify_products_json": 0,
     "woo_store_api": 1,
@@ -76,12 +74,7 @@ class Findings:
 
 def bot_managed_vendors(antibot: AntiBotReport) -> list[str]:
     """Vendors whose bot management (not just a CDN) is in front of the site."""
-    managed: list[str] = []
-    for hit in antibot.vendors:
-        if hit.vendor == "cloudflare" and set(hit.evidence) <= _CDN_ONLY:
-            continue
-        managed.append(hit.vendor)
-    return managed
+    return [hit.vendor for hit in antibot.vendors if hit.bot_management]
 
 
 def _rate(f: Findings) -> RatePlan:
@@ -147,6 +140,7 @@ def _feed_method(f: Findings, items: int, delay: float) -> MethodPlan:
             summary += " (some disallowed by robots.txt)"
         return MethodPlan(name="feed_api", usable=False, summary=summary)
     notes: list[str] = []
+    partial = False
     urls = [feed.url]
     if feed.kind == "shopify_products_json":
         seen = feed.items_seen or 0
@@ -177,11 +171,13 @@ def _feed_method(f: Findings, items: int, delay: float) -> MethodPlan:
         summary = "Shopify /products/<handle>.js per product"
     else:
         est = 1
+        partial = (feed.items_seen or 0) < items
         notes.append(
             f"a feed returns only its latest {feed.items_seen or 0} entries; poll it for new ones"
         )
         summary = f"{feed.kind.replace('_', ' ')} feed"
     return MethodPlan(
+        partial=partial,
         name="feed_api",
         usable=True,
         summary=summary,
@@ -323,7 +319,7 @@ def build_plan(f: Findings) -> Plan:
         _embedded_method(f, items, delay),
         _html_method(f, items, delay),
     ]
-    found_any = any(m.usable for m in methods)
+    found_any = any(m.usable and not m.partial for m in methods)
     browser_needed = f.page.fetched and not found_any
     methods.append(_browser_method(f, items, delay, browser_needed))
     if verdict == "not_a_fit":
@@ -331,7 +327,10 @@ def build_plan(f: Findings) -> Plan:
             method.usable = False
             method.est_requests = None
             method.est_hours = None
-    recommended = next((m.name for m in methods if m.usable), None)
+    # Cheapest method that reaches all N items; a partial one only if nothing else works.
+    recommended = next((m.name for m in methods if m.usable and not m.partial), None)
+    if recommended is None:
+        recommended = next((m.name for m in methods if m.usable), None)
 
     if verdict != "not_a_fit":
         if not f.page.fetched:

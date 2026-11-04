@@ -64,6 +64,13 @@ METHOD_SHORT: dict[str, str] = {
 }
 
 
+def vendor_label(vendor: str, status: str, bot_management: bool) -> str:
+    """'Cloudflare (CDN only)', 'DataDome (challenge)', 'Akamai (present)'."""
+    if status == "challenge":
+        return f"{VENDOR_LABELS[vendor]} (challenge)"
+    return f"{VENDOR_LABELS[vendor]} ({'present' if bot_management else 'CDN only'})"
+
+
 class _Model(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -157,6 +164,8 @@ class PlatformReport(_Model):
 class VendorHit(_Model):
     vendor: VendorName
     status: Literal["present", "challenge"]
+    bot_management: bool = True
+    """False when only CDN headers were seen (Cloudflare cf-ray / server)."""
     evidence: list[str] = Field(default_factory=list)
 
 
@@ -254,6 +263,8 @@ class MethodPlan(_Model):
     fields: list[str] = Field(default_factory=list)
     est_requests: int | None = None
     est_hours: float | None = None
+    partial: bool = False
+    """The method reaches only part of the N items (e.g. a feed of the latest posts)."""
     notes: list[str] = Field(default_factory=list)
 
 

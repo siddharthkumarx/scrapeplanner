@@ -6,7 +6,7 @@ from collections.abc import Callable, Mapping
 
 import httpx
 
-Route = tuple[int, Mapping[str, str] | list[tuple[str, str]], str | bytes]
+Route = tuple[int, Mapping[str, str], str | bytes]
 
 
 def transport(routes: Mapping[str, Route], seen: list[str] | None = None) -> httpx.MockTransport:

@@ -18,8 +18,8 @@ jobs:
   lint:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - run: uv sync --locked
       - run: uv run ruff check --output-format=github .
       - run: uv run ruff format --check .
@@ -27,8 +27,8 @@ jobs:
   types:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - run: uv sync --locked
       - run: uv run mypy
 
@@ -39,8 +39,8 @@ jobs:
       matrix:
         python: ["3.11", "3.12", "3.13", "3.14"]
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
         with:
           python-version: ${{ matrix.python }}
       - run: uv sync --locked
@@ -49,7 +49,7 @@ jobs:
   commit-policy:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
       - name: No trailers except Signed-off-by, no "Generated with" footer
@@ -58,7 +58,7 @@ jobs:
   gitleaks:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
       - name: Install gitleaks ${{ env.GITLEAKS_VERSION }}
@@ -80,8 +80,8 @@ jobs:
   pip-audit:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - name: Export locked runtime and dev dependencies
         run: uv export --locked --all-groups --no-emit-project --no-hashes -o /tmp/requirements.txt
       - name: Audit
@@ -90,8 +90,8 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
       - run: uv build
       - run: uvx twine check --strict dist/*
       - name: Smoke-test the wheel in a clean environment
@@ -102,15 +102,12 @@ jobs:
           /tmp/wheel-env/bin/scrapeplanner --help
           /tmp/wheel-env/bin/python -c "import scrapeplanner, pathlib; assert (pathlib.Path(scrapeplanner.__file__).parent / 'py.typed').exists()"
 
-  # Temporary: print commit SHAs of the action tags so they can be pinned.
+  # Temporary: print release tags so actions and tools can be pinned to current versions.
   action-pins:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          for spec in actions/checkout:v5 astral-sh/setup-uv:v6 pypa/gh-action-pypi-publish:release/v1 actions/upload-artifact:v4 actions/download-artifact:v4; do
-            repo=${spec%%:*}; ref=${spec#*:}
-            echo "$repo $ref"; git ls-remote "https://github.com/$repo" "refs/tags/$ref" "refs/tags/$ref^{}" "refs/heads/$ref"
-          done
-          for repo in actions/checkout astral-sh/setup-uv; do
-            echo "latest tags of $repo:"; git ls-remote --tags --sort=-v:refname "https://github.com/$repo" | grep -v '\^{}' | head -5
+          for repo in pypa/gh-action-pypi-publish actions/upload-artifact actions/download-artifact gitleaks/gitleaks; do
+            echo "latest tags of $repo:"
+            git ls-remote --tags --sort=-v:refname "https://github.com/$repo" | grep -v '\^{}' | head -4 || true
           done

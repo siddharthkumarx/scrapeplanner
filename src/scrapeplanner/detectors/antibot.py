@@ -113,6 +113,8 @@ SIGNALS: tuple[Signal, ...] = (
     Signal("kasada", "challenge", r"\bKPSDK\b", "Kasada interstitial"),
 )
 
+CDN_ONLY_EVIDENCE = frozenset({"header cf-ray", "header server: cloudflare"})
+"""Cloudflare signals that show the CDN, not bot management."""
 INTERSTITIAL_MAX_CHARS = 30_000
 """Challenge markers in a large 2xx page are an embedded script, not a block."""
 BLOCK_STATUSES = frozenset({401, 403, 429, 503})
@@ -164,7 +166,15 @@ def detect(
             hit.status = "challenge"
     if status == 429 and "kasada" in hits:
         hits["kasada"].status = "challenge"
+    for hit in hits.values():
+        hit.bot_management = _managed(hit)
     return list(hits.values())
+
+
+def _managed(hit: VendorHit) -> bool:
+    if hit.vendor != "cloudflare" or hit.status == "challenge":
+        return True
+    return not set(hit.evidence) <= CDN_ONLY_EVIDENCE
 
 
 def classify_block(
@@ -203,4 +213,5 @@ def merge(responses: Iterable[tuple[str, list[VendorHit]]]) -> AntiBotReport:
                 if not report.challenged:
                     report.challenged = True
                     report.challenge_url = url
+            merged.bot_management = _managed(merged)
     return report

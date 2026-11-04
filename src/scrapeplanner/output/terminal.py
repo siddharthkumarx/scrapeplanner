@@ -8,7 +8,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 
-from scrapeplanner.models import METHOD_LABELS, METHOD_SHORT, VENDOR_LABELS, Report
+from scrapeplanner.models import METHOD_LABELS, METHOD_SHORT, Report, vendor_label
 from scrapeplanner.planner import describe
 
 VERDICT_STYLE = {
@@ -53,7 +53,7 @@ def _summary(report: Report) -> Table:
     plan = report.plan
     label, style = VERDICT_STYLE[plan.verdict]
     antibot = ", ".join(
-        f"{VENDOR_LABELS[hit.vendor]} ({hit.status})" for hit in report.antibot.vendors
+        vendor_label(hit.vendor, hit.status, hit.bot_management) for hit in report.antibot.vendors
     )
     rows: list[tuple[str, RenderableType | str]] = [
         ("Verdict", Text(label, style=style)),

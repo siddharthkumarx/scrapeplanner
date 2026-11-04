@@ -18,6 +18,7 @@ request never repeats traffic.
 
 from __future__ import annotations
 
+import io
 import json
 import os
 import platform
@@ -33,7 +34,7 @@ import yaml
 from rich.console import Console
 
 from scrapeplanner import __version__
-from scrapeplanner.models import METHOD_SHORT, PLATFORM_LABELS, VENDOR_LABELS, Report
+from scrapeplanner.models import METHOD_SHORT, PLATFORM_LABELS, Report, vendor_label
 from scrapeplanner.output.terminal import render
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,13 @@ def load_request(path: Path) -> dict[str, Any]:
     return data
 
 
+def render_text(report: Report) -> str:
+    buffer = io.StringIO()
+    console = Console(file=buffer, width=100, force_terminal=False, color_system=None)
+    render(report, console)
+    return buffer.getvalue()
+
+
 def cli_args(url: str, options: dict[str, Any], exchanges: Path) -> list[str]:
     args = [sys.executable, "-m", "scrapeplanner", url, "--json", "--record", str(exchanges)]
     if "max_requests" in options:
@@ -91,7 +99,9 @@ def summary_row(
     if report is None:
         row["error"] = run.get("stderr_tail", "")[-300:]
         return row
-    vendors = [f"{VENDOR_LABELS[hit.vendor]} ({hit.status})" for hit in report.antibot.vendors]
+    vendors = [
+        vendor_label(hit.vendor, hit.status, hit.bot_management) for hit in report.antibot.vendors
+    ]
     row.update(
         {
             "verdict": report.plan.verdict,
@@ -174,10 +184,7 @@ def main() -> int:
         if exit_code == 0 and stdout.strip():
             (target_dir / "report.json").write_text(stdout, encoding="utf-8")
             report = Report.model_validate_json(stdout)
-            console = Console(record=True, width=100, force_terminal=False, color_system=None)
-            with console.capture():
-                render(report, console)
-            (target_dir / "report.txt").write_text(console.export_text(), encoding="utf-8")
+            (target_dir / "report.txt").write_text(render_text(report), encoding="utf-8")
         row = summary_row(target, run, report)
         rows.append(row)
         print(json.dumps(row))
