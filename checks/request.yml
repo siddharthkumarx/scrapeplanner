@@ -7,7 +7,7 @@
 # independently of this tool: from the URL itself (hosted job boards), from the
 # software a portal publicly runs on, or from public knowledge of the site.
 # docs/results.md compares it with what the tool found.
-id: 007-sites
+id: 008-sites
 options:
   max_requests: 10
   delay: 1.0
