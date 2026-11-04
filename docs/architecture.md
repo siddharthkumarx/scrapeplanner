@@ -61,7 +61,8 @@ src/scrapeplanner/
     platform.py      Shopify, WooCommerce, Magento, BigCommerce, Wix,
                      Squarespace, Next.js, Nuxt, else unknown
     antibot.py       Cloudflare, Akamai, DataDome, HUMAN/PerimeterX,
-                     Imperva, Kasada: presence vs active challenge
+                     Imperva, Kasada, AWS WAF: CDN only, present, or
+                     active challenge
     structured.py    JSON-LD and microdata (own parser, see decisions)
     embedded.py      __NEXT_DATA__, Next flight data, Nuxt state, other
                      inline JSON state blobs
@@ -107,7 +108,9 @@ All network I/O goes through one `PoliteFetcher` per run.
 ## Recording and replay (record.py)
 
 `--record DIR` writes each exchange: `DIR/exchanges.json` (method, URL,
-status, headers, elapsed, body file name) plus gzipped bodies. Replay feeds
+status, headers, elapsed, body file name) plus gzipped bodies. Requests
+that got no response (timeouts) are stored with the exception name and are
+raised again on replay. Replay feeds
 these back through an `httpx.MockTransport`, keyed by URL, so the analyzer
 runs offline exactly as it did live. A URL that was not recorded returns a
 synthetic 599 and fails tests loudly. Golden tests use replay. Live runs
@@ -124,8 +127,11 @@ data, so they can be extended without touching the logic.
 - Platform: commerce platforms win over frameworks (a headless Shopify on
   Next.js reports `shopify`, with `nextjs` listed under `frameworks`).
 - Anti-bot: `present` (sensor, cookie or header seen, page served) or
-  `challenge` (block or interstitial page). Cloudflare as a plain CDN
-  (`server: cloudflare`, `cf-ray`) counts as present, not as a challenge.
+  `challenge` (block or interstitial page). `bot_management` is false when
+  only CDN headers were seen (Cloudflare `cf-ray` / `server: cloudflare`,
+  Akamai `server: AkamaiGHost`, `akamai-grn`); the report labels that
+  "CDN only" and the planner does not slow down for it. Challenge markers in
+  a large 2xx page are an embedded sensor script, not a block.
 - Rendering verdict: `raw_html` (key data in the HTML), `embedded_json`
   (data in an inline state blob), `browser_likely` (empty app shell, little
   visible text, no structured data), `unknown` (page not fetched).
@@ -142,15 +148,21 @@ Candidate methods, cheapest first:
 5. `browser`: a headless browser. Last resort, highest cost.
 
 Only methods with evidence are listed as usable. Others appear as `not
-found`. The request estimate for N items (`--items`, default 1000) uses the
+found`. A method that reaches only part of N (an RSS feed of the latest 24
+posts) is marked `partial` and is recommended only when no full method
+exists. The request estimate for N items (`--items`, default 1000) uses the
 page size of the method (e.g. 250 per products.json page, 100 per Store API
 page, 1 detail page per item for HTML or structured data, plus listing or
 sitemap pages to find them). Time = requests × polite delay.
 
 Polite delay: max(1 s, crawl-delay). With an anti-bot vendor present it is
-raised to 5 s and the plan caps pages per day. With a challenge seen, the
-verdict is `not_a_fit`: the advice is to ask the site owner for access or a
-data export, never to get past the check.
+raised to 5 s and the plan caps requests per day. With a challenge seen
+anywhere, or the page itself blocked (401/403/429), the verdict is
+`not_a_fit`: the advice is to ask the site owner for access or a data
+export, never to get past the check. A plain 403/429 on one optional probe
+(e.g. a store that switched off `/products.json`) also stops the run, but
+the plan still uses the page already fetched; the verdict drops to
+`caution` and the refusal is listed as a risk.
 
 ## Live checks
 
