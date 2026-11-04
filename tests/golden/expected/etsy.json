@@ -110,12 +110,12 @@
     },
     "recommended": null,
     "risks": [
-      "stopped at the first block: datadome challenge page (HTTP 403: DataDome captcha-delivery page) (https://www.etsy.com/)",
-      "platform not recognised: no platform-specific feed was probed"
+      "stopped at the first block: datadome challenge page (HTTP 403: DataDome captcha-delivery page) (https://www.etsy.com/)"
     ],
     "verdict": "not_a_fit"
   },
   "platform": {
+    "checked": false,
     "confidence": null,
     "evidence": [],
     "frameworks": [],

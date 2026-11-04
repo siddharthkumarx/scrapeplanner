@@ -118,14 +118,13 @@
     "verdict": "good"
   },
   "platform": {
+    "checked": true,
     "confidence": "high",
     "evidence": [
       "WooCommerce plugin assets",
       "woocommerce CSS class"
     ],
-    "frameworks": [
-      "wordpress"
-    ],
+    "frameworks": [],
     "generator": "WordPress 7.1.4",
     "name": "woocommerce"
   },

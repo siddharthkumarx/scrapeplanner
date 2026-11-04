@@ -110,12 +110,12 @@
     },
     "recommended": null,
     "risks": [
-      "stopped at the first block: cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt) (https://weworkremotely.com/)",
-      "platform not recognised: no platform-specific feed was probed"
+      "stopped at the first block: cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt) (https://weworkremotely.com/)"
     ],
     "verdict": "not_a_fit"
   },
   "platform": {
+    "checked": false,
     "confidence": null,
     "evidence": [],
     "frameworks": [],

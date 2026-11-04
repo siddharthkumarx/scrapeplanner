@@ -149,19 +149,23 @@
     "recommended": "html",
     "risks": [
       "robots.txt disallows: /wp-json/wp/v2/posts?per_page=1",
-      "platform not recognised: no platform-specific feed was probed",
       "page-layout methods break when the site changes; monitor field coverage"
     ],
     "verdict": "good"
   },
   "platform": {
-    "confidence": null,
-    "evidence": [],
-    "frameworks": [
-      "wordpress"
+    "checked": true,
+    "confidence": "high",
+    "evidence": [
+      "meta generator WordPress",
+      "/wp-content/ assets",
+      "WordPress REST API link",
+      "header link: api.w.org",
+      "header x-powered-by: WordPress"
     ],
+    "frameworks": [],
     "generator": "WordPress 6.9.11",
-    "name": "unknown"
+    "name": "wordpress"
   },
   "rendering": {
     "app_shell": false,

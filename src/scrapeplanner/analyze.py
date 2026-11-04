@@ -272,10 +272,16 @@ def analyze(
             structured_report = structured.detect(run.doc)
             embedded_report = embedded.detect(run.doc)
             rendering_report = rendering.detect(run.doc, structured_report, embedded_report)
+            stop = fetcher.stopped
+            if stop is not None and stop.url == run.page.final_url:
+                # The "page" was a block or challenge page: nothing of the site to look at.
+                platform_report.checked = False
         elif run.page is not None:
+            # Headers only (blocked or non-HTML page): a name is possible, a full check is not.
             platform_report = platform.detect(
                 run.page.headers, run.page.cookie_names, HtmlDoc("", run.base)
             )
+            platform_report.checked = False
 
         sitemap_report = SitemapReport()
         children: list[str] = []

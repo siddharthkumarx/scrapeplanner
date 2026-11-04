@@ -109,12 +109,12 @@
     "recommended": null,
     "risks": [
       "stopped at the first block: HTTP 403; cloudflare in front of the site (https://www.glassdoor.com/)",
-      "Cloudflare bot management is in front of the site: keep to the rate below and stop at the first challenge",
-      "platform not recognised: no platform-specific feed was probed"
+      "Cloudflare bot management is in front of the site: keep to the rate below and stop at the first challenge"
     ],
     "verdict": "not_a_fit"
   },
   "platform": {
+    "checked": false,
     "confidence": null,
     "evidence": [],
     "frameworks": [],

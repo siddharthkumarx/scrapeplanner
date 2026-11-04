@@ -17,10 +17,25 @@ PlatformName = Literal[
     "woocommerce",
     "magento",
     "bigcommerce",
+    "sfcc",
     "wix",
     "squarespace",
+    "webflow",
+    "wordpress",
+    "drupal",
+    "hugo",
+    "sphinx",
+    "docusaurus",
     "nextjs",
     "nuxt",
+    "gatsby",
+    "remix",
+    "sveltekit",
+    "astro",
+    "angular",
+    "react",
+    "vue",
+    "lit",
     "unknown",
 ]
 VendorName = Literal["cloudflare", "akamai", "datadome", "human", "imperva", "kasada", "aws_waf"]
@@ -31,14 +46,40 @@ FitVerdict = Literal["good", "caution", "not_a_fit", "unknown"]
 PLATFORM_LABELS: dict[str, str] = {
     "shopify": "Shopify",
     "woocommerce": "WooCommerce",
-    "magento": "Magento",
+    "magento": "Magento 2",
     "bigcommerce": "BigCommerce",
+    "sfcc": "Salesforce Commerce Cloud",
     "wix": "Wix",
     "squarespace": "Squarespace",
+    "webflow": "Webflow",
+    "wordpress": "WordPress",
+    "drupal": "Drupal",
+    "hugo": "Hugo",
+    "sphinx": "Sphinx",
+    "docusaurus": "Docusaurus",
     "nextjs": "Next.js",
     "nuxt": "Nuxt",
+    "gatsby": "Gatsby",
+    "remix": "Remix",
+    "sveltekit": "SvelteKit",
+    "astro": "Astro",
+    "angular": "Angular",
+    "react": "React",
+    "vue": "Vue",
+    "lit": "Lit",
     "unknown": "unknown",
 }
+"""Display names; also used for entries in ``PlatformReport.frameworks``."""
+
+
+def platform_label(name: str) -> str:
+    return PLATFORM_LABELS.get(name, name)
+
+
+NOT_CHECKED = "not checked"
+"""Platform cell when no page of the site was served to analyse."""
+
+
 VENDOR_LABELS: dict[str, str] = {
     "cloudflare": "Cloudflare",
     "akamai": "Akamai",
@@ -158,8 +199,10 @@ class PlatformReport(_Model):
     confidence: Confidence | None = None
     evidence: list[str] = Field(default_factory=list)
     frameworks: list[str] = Field(default_factory=list)
-    """Other stacks seen (e.g. ``nextjs`` under a headless Shopify, ``wordpress``)."""
+    """Other stacks seen (e.g. ``nextjs`` under a headless Shopify)."""
     generator: str | None = None
+    checked: bool = False
+    """False when no HTML page was served to look at (blocked, disallowed, error)."""
 
 
 class VendorHit(_Model):

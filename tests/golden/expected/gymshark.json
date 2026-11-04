@@ -157,6 +157,7 @@
     "verdict": "caution"
   },
   "platform": {
+    "checked": true,
     "confidence": "medium",
     "evidence": [
       "assets on cdn.shopify.com",

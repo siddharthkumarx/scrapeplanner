@@ -100,17 +100,19 @@
     },
     "recommended": "html",
     "risks": [
-      "platform not recognised: no platform-specific feed was probed",
       "page-layout methods break when the site changes; monitor field coverage"
     ],
     "verdict": "good"
   },
   "platform": {
-    "confidence": null,
-    "evidence": [],
+    "checked": true,
+    "confidence": "medium",
+    "evidence": [
+      "Docsy theme (Hugo)"
+    ],
     "frameworks": [],
     "generator": null,
-    "name": "unknown"
+    "name": "hugo"
   },
   "rendering": {
     "app_shell": false,

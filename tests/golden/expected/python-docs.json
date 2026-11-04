@@ -100,19 +100,20 @@
     },
     "recommended": "html",
     "risks": [
-      "platform not recognised: no platform-specific feed was probed",
       "page-layout methods break when the site changes; monitor field coverage"
     ],
     "verdict": "good"
   },
   "platform": {
-    "confidence": null,
-    "evidence": [],
-    "frameworks": [
-      "sphinx"
+    "checked": true,
+    "confidence": "high",
+    "evidence": [
+      "Sphinx static assets",
+      "Created using Sphinx"
     ],
+    "frameworks": [],
     "generator": null,
-    "name": "unknown"
+    "name": "sphinx"
   },
   "rendering": {
     "app_shell": false,

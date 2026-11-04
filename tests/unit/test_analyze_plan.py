@@ -142,6 +142,7 @@ def test_challenge_stops_and_plans_politely() -> None:
     assert report.stopped.reason == "challenge"
     assert report.antibot.challenged
     assert report.antibot.vendors[0].vendor == "datadome"
+    assert not report.platform.checked
     plan = report.plan
     assert plan.verdict == "not_a_fit"
     assert all(not m.usable for m in plan.methods)

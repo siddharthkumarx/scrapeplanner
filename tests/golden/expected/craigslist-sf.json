@@ -106,6 +106,7 @@
     "verdict": "good"
   },
   "platform": {
+    "checked": true,
     "confidence": null,
     "evidence": [],
     "frameworks": [],

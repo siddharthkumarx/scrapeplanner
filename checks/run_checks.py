@@ -34,7 +34,14 @@ import yaml
 from rich.console import Console
 
 from scrapeplanner import __version__
-from scrapeplanner.models import METHOD_SHORT, PLATFORM_LABELS, Report, vendor_label
+from scrapeplanner.models import (
+    METHOD_SHORT,
+    NOT_CHECKED,
+    PLATFORM_LABELS,
+    Report,
+    platform_label,
+    vendor_label,
+)
 from scrapeplanner.output.terminal import render
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +50,12 @@ RESULTS = ROOT / "checks" / "results"
 SLUG = re.compile(r"^[a-z0-9][a-z0-9._-]{0,63}$")
 TARGET_TIMEOUT = 240
 ALLOWED_OPTIONS = {"max_requests", "delay", "items"}
+
+
+def platform_cell(report: Report) -> str:
+    if not report.platform.checked and report.platform.name == "unknown":
+        return NOT_CHECKED
+    return PLATFORM_LABELS[report.platform.name]
 
 
 def load_request(path: Path) -> dict[str, Any]:
@@ -105,8 +118,8 @@ def summary_row(
     row.update(
         {
             "verdict": report.plan.verdict,
-            "platform": PLATFORM_LABELS[report.platform.name],
-            "frameworks": report.platform.frameworks,
+            "platform": platform_cell(report),
+            "frameworks": [platform_label(n) for n in report.platform.frameworks],
             "method": METHOD_SHORT[report.plan.recommended] if report.plan.recommended else None,
             "antibot": vendors,
             "rendering": report.rendering.verdict,

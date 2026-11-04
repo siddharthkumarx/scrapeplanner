@@ -22,9 +22,11 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from scrapeplanner.models import (  # noqa: E402
     METHOD_SHORT,
+    NOT_CHECKED,
     PLATFORM_LABELS,
     VENDOR_LABELS,
     Report,
+    platform_label,
     vendor_label,
 )
 
@@ -34,6 +36,12 @@ VERDICT_LABELS = {
     "not_a_fit": "not a fit",
     "unknown": "unknown",
 }
+
+
+def platform_cell(report: Report) -> str:
+    if not report.platform.checked and report.platform.name == "unknown":
+        return NOT_CHECKED
+    return PLATFORM_LABELS[report.platform.name]
 
 
 def _why(report: Report) -> str:
@@ -58,8 +66,8 @@ def _row(name: str, category: str, report: Report) -> dict[str, Any]:
         "name": name,
         "category": category,
         "url": report.input_url,
-        "platform": PLATFORM_LABELS[report.platform.name],
-        "frameworks": report.platform.frameworks,
+        "platform": platform_cell(report),
+        "frameworks": [platform_label(n) for n in report.platform.frameworks],
         "method": METHOD_SHORT[plan.recommended] if plan.recommended else "-",
         "antibot": [
             vendor_label(hit.vendor, hit.status, hit.bot_management)

@@ -38,6 +38,7 @@ from scrapeplanner.models import (
     SitemapReport,
     StopInfo,
     StructuredDataReport,
+    platform_label,
 )
 
 BOT_MANAGED_DELAY = 5.0
@@ -378,7 +379,7 @@ def build_plan(f: Findings) -> Plan:
     stale = _stale(f.sitemap, f.today)
     if stale:
         risks.append(stale)
-    if f.page.fetched and f.platform.name == "unknown":
+    if f.page.fetched and f.platform.checked and f.platform.name == "unknown":
         risks.append("platform not recognised: no platform-specific feed was probed")
     if recommended in ("html", "browser", "embedded_json"):
         risks.append("page-layout methods break when the site changes; monitor field coverage")
@@ -427,9 +428,12 @@ def _stale(sitemap: SitemapReport, today: date) -> str | None:
 
 
 def describe(platform: PlatformReport) -> str:
+    """'Shopify (+ Next.js)', 'unknown', or 'not checked' when no page was analysed."""
+    if not platform.checked and platform.name == "unknown":
+        return "not checked (no page to analyse)"
     label = PLATFORM_LABELS[platform.name]
     if platform.frameworks:
-        return f"{label} (+ {', '.join(platform.frameworks)})"
+        return f"{label} (+ {', '.join(platform_label(n) for n in platform.frameworks)})"
     return label
 
 

@@ -139,15 +139,64 @@ def test_single_hint_is_not_enough() -> None:
     assert report.name == "unknown"
 
 
-def test_wordpress_reported_as_framework() -> None:
+def test_wordpress_is_a_platform() -> None:
     html = (
         '<meta name="generator" content="WordPress 6.8">'
         '<link rel="https://api.w.org/" href="/wp-json/">'
     )
     report = platform.detect({}, [], doc(html))
-    assert report.name == "unknown"
-    assert report.frameworks == ["wordpress"]
+    assert report.name == "wordpress"
     assert report.generator == "WordPress 6.8"
+    assert report.checked
+
+
+@pytest.mark.parametrize(
+    ("headers", "cookies", "html", "name"),
+    [
+        ({"x-powered-by": "WordPress VIP <https://wpvip.com>"}, [], "", "wordpress"),
+        ({"link": '<https://a.test/wp-json/>; rel="https://api.w.org/"'}, [], "", "wordpress"),
+        ({}, [], '<meta name="Generator" content="Drupal 10">', "drupal"),
+        ({"x-drupal-cache": "HIT"}, [], "", "drupal"),
+        ({}, [], '<html data-wf-page="1" data-wf-site="2">', "webflow"),
+        ({}, [], '<meta name="generator" content="Webflow">', "webflow"),
+        ({}, [], '<div id="___gatsby"></div>', "gatsby"),
+        ({}, [], '<script src="/on/demandware.store/Sites-x/en/Page"></script>', "sfcc"),
+        ({}, ["dwsid", "dwanonymous_abc"], "", "sfcc"),
+        ({}, [], '<script type="text/x-magento-init">{}</script>', "magento"),
+        ({}, [], '<app-root ng-version="17.3.0"></app-root>', "angular"),
+        ({}, [], '<div id="root"></div><script src="/static/js/main.1a2b3c4d.js">', "react"),
+        ({}, [], '<div data-reactroot=""><p>hi</p></div>', "react"),
+        ({}, [], '<div data-v-1a2b3c4d class="x"></div>', "vue"),
+        ({}, [], '<div id="app" data-server-rendered="true"></div>', "vue"),
+        ({}, [], "<!--lit-part abc--><p>x</p>", "lit"),
+        ({}, [], "<meta name=generator content='Hugo 0.140.0'>", "hugo"),
+        ({}, [], '<nav class="td-navbar navbar">', "hugo"),
+        ({}, [], '<script src="_static/documentation_options.js"></script>', "sphinx"),
+        ({}, [], '<meta name="generator" content="Docusaurus v3.5">', "docusaurus"),
+        ({"x-wix-renderer-server": "1"}, [], "", "wix"),
+        ({}, ["svSession"], '<script src="https://static.parastorage.com/x.js">', "wix"),
+        ({}, [], '<img src="https://images.squarespace-cdn.com/a.jpg">', "unknown"),
+        ({}, ["ss_cvr"], '<img src="https://images.squarespace-cdn.com/a.jpg">', "squarespace"),
+    ],
+)
+def test_more_platforms(headers: dict[str, str], cookies: list[str], html: str, name: str) -> None:
+    assert platform.detect(headers, cookies, doc(html)).name == name
+
+
+def test_group_order_and_implied_libraries() -> None:
+    next_page = '<script id="__NEXT_DATA__" type="application/json">{}</script><div data-reactroot>'
+    report = platform.detect({}, [], doc(next_page))
+    assert report.name == "nextjs"
+    assert report.frameworks == []  # React is implied by Next.js
+    woo = (
+        '<link href="/wp-content/plugins/woocommerce/a.css">'
+        '<meta name="generator" content="WordPress 6.8">'
+    )
+    report = platform.detect({}, [], doc(woo))
+    assert (report.name, report.frameworks) == ("woocommerce", [])
+    wp_react = '<meta name="generator" content="WordPress 6.8"><div data-reactroot></div>'
+    report = platform.detect({}, [], doc(wp_react))
+    assert (report.name, report.frameworks) == ("wordpress", ["react"])
 
 
 # -- structured data ----------------------------------------------------------
@@ -352,3 +401,12 @@ def test_evaluate_shapes() -> None:
     assert html.status == "invalid"
     wrong = feeds.evaluate(_cand("woo_store_api"), 200, "application/json", "{}", {})
     assert wrong.status == "invalid"
+
+
+def test_wordpress_core_react_is_not_a_react_site() -> None:
+    html = (
+        '<meta name="generator" content="WordPress 6.8">'
+        '<script src="https://a.test/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1"></script>'
+    )
+    report = platform.detect({}, [], doc(html))
+    assert (report.name, report.frameworks) == ("wordpress", [])

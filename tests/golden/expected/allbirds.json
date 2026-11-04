@@ -168,6 +168,7 @@
     "verdict": "caution"
   },
   "platform": {
+    "checked": true,
     "confidence": "high",
     "evidence": [
       "header powered-by: Shopify",

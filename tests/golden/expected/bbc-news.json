@@ -152,6 +152,7 @@
     "verdict": "good"
   },
   "platform": {
+    "checked": true,
     "confidence": "high",
     "evidence": [
       "__NEXT_DATA__ script",

@@ -50,7 +50,9 @@ def candidates(platform: PlatformReport, doc: HtmlDoc | None, page_url: str) -> 
         if all(existing.url != url for existing in found):
             found.append(FeedCandidate(kind=kind, url=url, status="linked", note=note))  # type: ignore[arg-type]
 
-    is_wordpress = platform.name == "woocommerce" or "wordpress" in platform.frameworks
+    is_wordpress = platform.name in ("woocommerce", "wordpress") or (
+        "wordpress" in platform.frameworks
+    )
     if platform.name == "shopify":
         add("shopify_products_json", f"{origin}/products.json?limit={SHOPIFY_PAGE_SIZE}")
         handle = shopify_handle(doc) if doc else None

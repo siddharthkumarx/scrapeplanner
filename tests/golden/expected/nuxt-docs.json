@@ -140,6 +140,7 @@
     "verdict": "good"
   },
   "platform": {
+    "checked": true,
     "confidence": "high",
     "evidence": [
       "window.__NUXT__ state",

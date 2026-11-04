@@ -96,6 +96,7 @@
     "verdict": "not_a_fit"
   },
   "platform": {
+    "checked": false,
     "confidence": null,
     "evidence": [],
     "frameworks": [],

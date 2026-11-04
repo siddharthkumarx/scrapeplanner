@@ -1,9 +1,11 @@
-"""Which platform runs the site: commerce platforms, site builders, JS frameworks.
+"""Which platform runs the site: commerce platforms, site builders and CMSs,
+documentation generators, meta-frameworks, client-side libraries.
 
 Each signal has a weight: 3 = decisive on its own, 2 = strong, 1 = hint.
-A platform needs a score of 2 or more. Commerce platforms and site builders
-win over frameworks, so a headless Shopify store on Next.js reports
-``shopify`` with ``nextjs`` under ``frameworks``.
+A platform needs a score of 2 or more. The groups in ``GROUPS`` are checked in
+order, so a headless Shopify store on Next.js reports ``shopify`` with
+``nextjs`` under ``frameworks``, and a WordPress site built with React
+reports ``wordpress``.
 """
 
 from __future__ import annotations
@@ -95,6 +97,79 @@ SIGNALS: tuple[Signal, ...] = (
         "squarespace", "html", r"static1\.squarespace\.com", 2, "assets on static1.squarespace.com"
     ),
     Signal("squarespace", "header_value", r"server=^squarespace", 3, "header server: Squarespace"),
+    Signal(
+        "squarespace", "html", r"images\.squarespace-cdn\.com", 1, "images on squarespace-cdn.com"
+    ),
+    Signal("squarespace", "cookie", r"^ss_cv[rt]$", 2, "cookie ss_cvr/ss_cvt"),
+    # Wix (re-checked: Thunderbolt renderer and its cookies)
+    Signal("wix", "header", "x-wix-renderer-server", 3, "header x-wix-renderer-server"),
+    Signal("wix", "html", r"wix-thunderbolt|thunderbolt-commons", 3, "Wix Thunderbolt renderer"),
+    Signal("wix", "cookie", r"^svSession$", 2, "cookie svSession"),
+    # Salesforce Commerce Cloud (Demandware)
+    Signal("sfcc", "html", r"/on/demandware\.store/", 3, "/on/demandware.store/ URLs"),
+    Signal("sfcc", "html", r"demandware\.static|/dw/image/v2/", 3, "Demandware static/image URLs"),
+    Signal("sfcc", "cookie", r"^dwanonymous_|^dwsid$|^dwac_", 3, "cookie dwsid/dwanonymous_"),
+    Signal("sfcc", "header", "x-dw-request-base-id", 3, "header x-dw-request-base-id"),
+    # Webflow
+    Signal("webflow", "generator", r"^Webflow", 3, "meta generator Webflow"),
+    Signal("webflow", "html", r"""data-wf-(?:page|site)=["']""", 3, "data-wf-page/data-wf-site"),
+    Signal(
+        "webflow",
+        "html",
+        r"(?:assets|cdn\.prod)\.website-files\.com",
+        2,
+        "assets on website-files.com",
+    ),
+    # WordPress (WooCommerce, when present, wins as the commerce platform)
+    Signal("wordpress", "generator", r"^WordPress", 3, "meta generator WordPress"),
+    Signal(
+        "wordpress", "html", r"/wp-content/(?:themes|plugins|uploads)/", 2, "/wp-content/ assets"
+    ),
+    Signal(
+        "wordpress", "html", r"""rel=["']https://api\.w\.org/["']""", 3, "WordPress REST API link"
+    ),
+    Signal(
+        "wordpress",
+        "header_value",
+        r"link=rel=\"https://api\.w\.org/\"",
+        3,
+        "header link: api.w.org",
+    ),
+    Signal(
+        "wordpress", "header_value", r"x-powered-by=wordpress", 3, "header x-powered-by: WordPress"
+    ),
+    # Drupal
+    Signal("drupal", "generator", r"^Drupal", 3, "meta generator Drupal"),
+    Signal("drupal", "header", "x-drupal-cache", 3, "header x-drupal-cache"),
+    Signal("drupal", "header", "x-drupal-dynamic-cache", 3, "header x-drupal-dynamic-cache"),
+    Signal("drupal", "header_value", r"x-generator=^drupal", 3, "header x-generator: Drupal"),
+    Signal("drupal", "html", r"drupalSettings|data-drupal-selector", 3, "drupalSettings script"),
+    Signal(
+        "drupal",
+        "html",
+        r"/sites/(?:default|all)/(?:files|themes|modules)/",
+        2,
+        "/sites/default/ assets",
+    ),
+    # Documentation generators
+    Signal("hugo", "generator", r"^Hugo", 3, "meta generator Hugo"),
+    Signal(
+        "hugo",
+        "html",
+        r"""class=["'][^"']*\btd-(?:navbar|sidebar|main)\b""",
+        3,
+        "Docsy theme (Hugo)",
+    ),
+    Signal(
+        "sphinx",
+        "html",
+        r"_static/(?:sphinx_highlight|documentation_options)\.js",
+        3,
+        "Sphinx static assets",
+    ),
+    Signal("sphinx", "html", r"Created using <a[^>]*>Sphinx</a>", 2, "Created using Sphinx"),
+    Signal("docusaurus", "generator", r"^Docusaurus", 3, "meta generator Docusaurus"),
+    Signal("docusaurus", "html", r"""id=["']__docusaurus""", 3, "#__docusaurus root"),
     # Next.js
     Signal(
         "nextjs", "html", r"""<script[^>]+id=["']__NEXT_DATA__["']""", 3, "__NEXT_DATA__ script"
@@ -110,42 +185,72 @@ SIGNALS: tuple[Signal, ...] = (
     Signal("nuxt", "html", r"""["'][^"']*/_nuxt/""", 3, "assets under /_nuxt/"),
     Signal("nuxt", "html", r"""id=["']__nuxt["']""", 2, "#__nuxt root"),
     Signal("nuxt", "header_value", r"x-powered-by=nuxt", 3, "header x-powered-by: Nuxt"),
-    # Other stacks, reported under ``frameworks`` only.
-    Signal("wordpress", "generator", r"^WordPress", 3, "meta generator WordPress"),
-    Signal(
-        "wordpress", "html", r"/wp-content/(?:themes|plugins|uploads)/", 2, "/wp-content/ assets"
-    ),
-    Signal(
-        "wordpress", "html", r"""rel=["']https://api\.w\.org/["']""", 3, "WordPress REST API link"
-    ),
-    Signal("drupal", "generator", r"^Drupal", 3, "meta generator Drupal"),
-    Signal("drupal", "header", "x-drupal-cache", 3, "header x-drupal-cache"),
-    Signal("drupal", "html", r"drupalSettings", 2, "drupalSettings script"),
+    # Gatsby
     Signal("gatsby", "html", r"""id=["']___gatsby["']""", 3, "#___gatsby root"),
+    Signal("gatsby", "generator", r"^Gatsby", 3, "meta generator Gatsby"),
+    Signal("gatsby", "html", r"/page-data/[^\"']*page-data\.json", 2, "page-data.json links"),
+    # Other meta-frameworks
     Signal("sveltekit", "html", r"__sveltekit_", 3, "SvelteKit bootstrap"),
     Signal("astro", "html", r"<astro-island\b", 3, "astro-island element"),
     Signal("remix", "html", r"__remixContext", 3, "Remix context"),
+    # Angular
     Signal("angular", "html", r"\bng-version=", 3, "Angular ng-version"),
-    Signal("hugo", "generator", r"^Hugo", 3, "meta generator Hugo"),
-    Signal("docusaurus", "generator", r"^Docusaurus", 3, "meta generator Docusaurus"),
+    Signal("angular", "html", r"\b_ng(?:host|content)-[a-z0-9-]+", 3, "Angular _nghost attributes"),
+    Signal("angular", "html", r"ng-server-context=", 3, "Angular ng-server-context"),
+    Signal("angular", "html", r"<app-root\b", 2, "<app-root> element"),
+    # Generic single-page apps and component libraries
+    Signal("react", "html", r"\bdata-reactroot\b", 3, "data-reactroot attribute"),
     Signal(
-        "sphinx",
+        "react",
         "html",
-        r"_static/(?:sphinx_highlight|documentation_options)\.js",
-        3,
-        "Sphinx static assets",
+        r"""id=["']react-(?:root|app|application)["']""",
+        2,
+        "#react-root container",
     ),
+    Signal(
+        "react",
+        "html",
+        r"React@\d+\.\d+|(?<!/wp-includes/js/dist/vendor/)react-dom(?:\.production)?(?:\.min)?\.js",
+        2,
+        "React build marker",
+    ),
+    Signal("react", "html", r"""<div id=["']root["']>\s*</div>""", 1, "empty #root container"),
+    Signal("react", "html", r"/static/js/main\.[0-9a-f]{8}\.js", 2, "create-react-app bundle"),
+    Signal("vue", "html", r"\bdata-v-[0-9a-f]{8}\b", 3, "Vue scoped-style attributes"),
+    Signal("vue", "html", r"""data-server-rendered=["']true["']""", 3, "Vue SSR marker"),
+    Signal(
+        "vue",
+        "html",
+        r"vue(?:\.runtime)?(?:\.global)?(?:\.prod)?(?:\.min)?\.js|__VUE__",
+        3,
+        "Vue runtime script",
+    ),
+    Signal("vue", "html", r"""<div id=["']app["']>\s*</div>""", 1, "empty #app container"),
+    Signal("lit", "html", r"<!--lit-part\b", 3, "Lit server-rendered parts"),
 )
 
-COMMERCE_AND_BUILDERS: tuple[PlatformName, ...] = (
-    "shopify",
-    "woocommerce",
-    "magento",
-    "bigcommerce",
-    "wix",
-    "squarespace",
+GROUPS: tuple[tuple[PlatformName, ...], ...] = (
+    # 1. commerce platforms: they decide which public feeds exist
+    ("shopify", "woocommerce", "magento", "bigcommerce", "sfcc"),
+    # 2. site builders and CMSs
+    ("wix", "squarespace", "webflow", "wordpress", "drupal"),
+    # 3. documentation generators
+    ("hugo", "sphinx", "docusaurus"),
+    # 4. meta-frameworks
+    ("nextjs", "nuxt", "gatsby", "remix", "sveltekit", "astro", "angular"),
+    # 5. client-side libraries (generic single-page apps)
+    ("react", "vue", "lit"),
 )
-FRAMEWORKS: tuple[PlatformName, ...] = ("nextjs", "nuxt")
+"""The first group with a match names the platform; the rest go to ``frameworks``."""
+IMPLIED: dict[str, frozenset[str]] = {
+    "nextjs": frozenset({"react"}),
+    "gatsby": frozenset({"react"}),
+    "remix": frozenset({"react"}),
+    "docusaurus": frozenset({"react"}),
+    "nuxt": frozenset({"vue"}),
+    "woocommerce": frozenset({"wordpress"}),
+}
+"""Libraries a platform always brings; not repeated under ``frameworks``."""
 MIN_SCORE = 2
 
 
@@ -181,18 +286,22 @@ def detect(headers: Mapping[str, str], cookie_names: Sequence[str], doc: HtmlDoc
             evidence.setdefault(signal.name, []).append(signal.label)
 
     found = {name: score for name, score in scores.items() if score >= MIN_SCORE}
-    report = PlatformReport(generator=generator)
-    chosen: str | None = None
-    for group in (COMMERCE_AND_BUILDERS, FRAMEWORKS):
-        candidates = [name for name in group if name in found]
+    report = PlatformReport(generator=generator, checked=True)
+    chosen: PlatformName | None = None
+    for group in GROUPS:
+        candidates: list[PlatformName] = [name for name in group if name in found]
         if candidates:
-            chosen = max(candidates, key=lambda name: found[name])
+            scores_in_group = [found[name] for name in candidates]
+            chosen = candidates[scores_in_group.index(max(scores_in_group))]
             break
+    implied: frozenset[str] = frozenset()
     if chosen is not None:
-        report.name = chosen  # type: ignore[assignment]
+        report.name = chosen
         report.confidence = _confidence(found[chosen])
         report.evidence = evidence[chosen]
+        implied = IMPLIED.get(chosen, frozenset())
     report.frameworks = sorted(
-        (name for name in found if name != chosen), key=lambda name: (-found[name], name)
+        (name for name in found if name != chosen and name not in implied),
+        key=lambda name: (-found[name], name),
     )
     return report
