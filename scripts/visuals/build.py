@@ -99,8 +99,10 @@ def terminal_scene(
 
     win_x, win_y = 20, 20
     win_w = width - 2 * win_x
-    text_x = win_x + (win_w - term.columns * term.char) / 2
-    first = win_y + 76 + term.size * 1.55
+    # Whole-pixel positions: text in an animated (composited) layer is snapped to the
+    # pixel grid, static text is not, so fractional positions render differently.
+    text_x = round(win_x + (win_w - term.columns * term.char) / 2)
+    first = round(win_y + 76 + term.size * 1.55)
     view_h = visible * term.line
     win_h = 76 + term.size * 0.55 + view_h + term.size * 0.6
     total_h = height or int(win_y + win_h + caption_size * 2.6)

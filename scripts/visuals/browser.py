@@ -48,7 +48,12 @@ async (at) => {
 def chromium() -> Iterator[Browser]:
     executable = os.environ.get("SCRAPEPLANNER_CHROMIUM") or None
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(executable_path=executable)
+        # Grayscale antialiasing everywhere: without a GPU, text inside animated
+        # (composited) layers loses LCD antialiasing while static text keeps it.
+        browser = pw.chromium.launch(
+            executable_path=executable,
+            args=["--disable-lcd-text", "--font-render-hinting=none"],
+        )
         try:
             yield browser
         finally:
