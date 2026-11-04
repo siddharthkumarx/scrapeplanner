@@ -46,7 +46,7 @@ from svgkit import (
 from scrapeplanner.models import Report
 from scrapeplanner.output.terminal import renderables
 
-RUN = "007-sites"
+RUN = "008-sites"
 HERO_SITE = "deathwish-coffee"
 ASSETS = ROOT / "assets"
 MEDIA = ROOT / "media"
