@@ -2,7 +2,7 @@
 # Change `id` and push to run; results land in checks/results/<id>/.
 # One homepage or public listing page per site. The tool itself reads
 # robots.txt first and skips anything it disallows.
-id: 002-sites
+id: 003-sites
 options:
   max_requests: 10
   delay: 1.0
