@@ -1,0 +1,12 @@
+#!/bin/sh
+# Commit-message policy: no trailers except Signed-off-by, no "Generated with"
+# footer. See docs/decisions.md (D-008). Enable with:
+#   git config core.hooksPath .githooks
+root=$(git rev-parse --show-toplevel) || exit 1
+for py in python3 python; do
+    if command -v "$py" >/dev/null 2>&1; then
+        exec "$py" "$root/scripts/check_commit_msg.py" "$1"
+    fi
+done
+echo "commit-msg: python3 not found, cannot check the message" >&2
+exit 1
