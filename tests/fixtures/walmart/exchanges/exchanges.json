@@ -1,0 +1,406 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.walmart.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "last-modified",
+    "Mon, 12 Oct 2026 07:09:45 GMT"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "48"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-tb",
+    "0"
+   ],
+   [
+    "content-length",
+    "767"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 15:04:50 GMT"
+   ],
+   [
+    "cache-control",
+    "max-age=0, no-cache, no-store"
+   ],
+   [
+    "pragma",
+    "no-cache"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:50 GMT"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "set-cookie",
+    "isoLoc=<redacted>; path=/; domain=.www.walmart.com"
+   ],
+   [
+    "cache-status",
+    "Hit"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=HIT"
+   ],
+   [
+    "server-timing",
+    "edge; dur=1"
+   ],
+   [
+    "server-timing",
+    "product;desc=\"edge\",host;desc=\"632bc5efb8aa\",dc;desc=\"a652627\",fetch-ms;dur=180,req-proc-ms;dur=40,resp-proc-ms;dur=4"
+   ],
+   [
+    "origin-ex",
+    ""
+   ],
+   [
+    "origin-cc",
+    ""
+   ],
+   [
+    "permissions-policy",
+    "ch-dpr=(self \"https://i5.walmartimages.com\"), ch-device-memory=(self \"https://i5.walmartimages.com\")"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-DPR, DPR, Sec-CH-Device-Memory, Device-Memory, Downlink"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "server-timing",
+    "ak_p; desc=\"1793804690867_389073146_1773340392_37_14873_5_40_-\";dur=1"
+   ]
+  ],
+  "elapsed_ms": 134,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.walmart.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-length",
+    "113677"
+   ],
+   [
+    "content-security-policy",
+    "frame-ancestors 'self' *.wal.co *.walmart-customcards.com *.walmart.com:* *.walmart.net *.walmartimages.com www.samsclub.com; report-uri https://csp.walmart.com/c/r/gl"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "traceparent",
+    "00-b71a82196d90a12668526daff4829f6f-5f3bb9b60fdcf37c-00"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "1157"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-opt-inj",
+    "true"
+   ],
+   [
+    "x-tb",
+    "0"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 15:04:51 GMT"
+   ],
+   [
+    "cache-control",
+    "max-age=0, no-cache, no-store"
+   ],
+   [
+    "pragma",
+    "no-cache"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:51 GMT"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "set-cookie",
+    "isoLoc=<redacted>; path=/; domain=.www.walmart.com"
+   ],
+   [
+    "cache-status",
+    "Hit"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=HIT"
+   ],
+   [
+    "server-timing",
+    "edge; dur=1"
+   ],
+   [
+    "server-timing",
+    "product;desc=\"edge\",host;desc=\"0207d6186e8c\",dc;desc=\"e836123\",fetch-ms;dur=1158,req-proc-ms;dur=97,resp-proc-ms;dur=2"
+   ],
+   [
+    "origin-ex",
+    ""
+   ],
+   [
+    "origin-cc",
+    ""
+   ],
+   [
+    "set-cookie",
+    "akavpau_p2=<redacted>; Path=/; HttpOnly; Secure; SameSite=None"
+   ],
+   [
+    "permissions-policy",
+    "ch-dpr=(self \"https://i5.walmartimages.com\"), ch-device-memory=(self \"https://i5.walmartimages.com\")"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-DPR, DPR, Sec-CH-Device-Memory, Device-Memory, Downlink"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "server-timing",
+    "ak_p; desc=\"1793804691958_389073146_1773340446_2234_15741_5_0_-\";dur=1"
+   ]
+  ],
+  "elapsed_ms": 77,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.walmart.com/sitemap_category.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-length",
+    "197879"
+   ],
+   [
+    "content-type",
+    "text/xml"
+   ],
+   [
+    "last-modified",
+    "Mon, 02 Nov 2026 01:46:25 GMT"
+   ],
+   [
+    "server-timing",
+    "product;desc=\"edge\",host;desc=\"637f8b316299\",dc;desc=\"a652627\",fetch-ms;dur=242,req-proc-ms;dur=61,resp-proc-ms;dur=313"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "129"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-tb",
+    "0"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 15:04:53 GMT"
+   ],
+   [
+    "cache-control",
+    "max-age=0, no-cache, no-store"
+   ],
+   [
+    "pragma",
+    "no-cache"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:53 GMT"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "set-cookie",
+    "abqme=<redacted>; Path=/; Domain=www.walmart.com; Max-Age=2592000"
+   ],
+   [
+    "set-cookie",
+    "svtc=<redacted>;Path=/;Domain=.www.walmart.com;Expires=Tue, 04 Nov 2036 03:04:53 GMT;Max-Age=315576000"
+   ],
+   [
+    "set-cookie",
+    "vtc=<redacted>;Path=/;Domain=.walmart.com;Expires=Tue, 04 Nov 2036 03:04:53 GMT;Max-Age=315576000"
+   ],
+   [
+    "set-cookie",
+    "sbstc=<redacted>;Path=/;Domain=.www.walmart.com;Expires=Wed, 04 Nov 2026 15:34:53 GMT;Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "bstc=<redacted>;Path=/;Domain=.walmart.com;Expires=Wed, 04 Nov 2026 15:34:53 GMT;Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "xptc=<redacted>; Max-Age=-1; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Path=/; Domain=.walmart.com"
+   ],
+   [
+    "set-cookie",
+    "xpth=<redacted>; Path=/; Domain=walmart.com; Expires=Wed, 04 Nov 2026 15:34:53 GMT; Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "xpa=<redacted>; Path=/; Domain=walmart.com; Expires=Wed, 04 Nov 2026 15:34:53 GMT; Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "xpm=<redacted>; Path=/; Domain=walmart.com; Expires=Wed, 04 Nov 2026 15:34:53 GMT; Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "exp-ck=<redacted>; Path=/; Domain=walmart.com; Expires=Wed, 04 Nov 2026 15:34:53 GMT; Max-Age=1800"
+   ],
+   [
+    "set-cookie",
+    "_pxhd=<redacted>; Path=/; Expires=Thu, 04 Nov 2027 15:04:53 GMT"
+   ],
+   [
+    "set-cookie",
+    "TS012768cf=<redacted>; Path=/; Domain=.www.walmart.com"
+   ],
+   [
+    "set-cookie",
+    "TS01a90220=<redacted>; path=/; domain=walmart.com"
+   ],
+   [
+    "set-cookie",
+    "isoLoc=<redacted>; path=/; domain=.www.walmart.com"
+   ],
+   [
+    "cache-status",
+    "Miss"
+   ],
+   [
+    "server-timing",
+    "edge; dur=1"
+   ],
+   [
+    "server-timing",
+    "origin; dur=629"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=MISS"
+   ],
+   [
+    "origin-ex",
+    ""
+   ],
+   [
+    "origin-cc",
+    "no-cache,no-store"
+   ],
+   [
+    "permissions-policy",
+    "ch-dpr=(self \"https://i5.walmartimages.com\"), ch-device-memory=(self \"https://i5.walmartimages.com\")"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-DPR, DPR, Sec-CH-Device-Memory, Device-Memory, Downlink"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "server-timing",
+    "ak_p; desc=\"1793804693009_389073146_1773343930_62951_47020_5_0_-\";dur=1"
+   ]
+  ],
+  "elapsed_ms": 694,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

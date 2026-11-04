@@ -1,0 +1,175 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://www.bestbuy.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 0,
+    "content_type": null,
+    "fetched": false,
+    "final_url": null,
+    "lang": null,
+    "status": null,
+    "title": null,
+    "url": "https://www.bestbuy.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "html",
+        "notes": [],
+        "partial": false,
+        "summary": "page not analysed",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": null,
+    "risks": [
+      "robots.txt could not be read (network error: The read operation timed out): treated as 'disallow everything'",
+      "robots.txt disallows the requested page for our user agent"
+    ],
+    "verdict": "not_a_fit"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 0,
+    "links": 0,
+    "noscript_warning": false,
+    "reasons": [],
+    "script_bytes": 0,
+    "text_chars": 0,
+    "verdict": "unknown"
+  },
+  "requests": [
+    {
+      "bytes": 0,
+      "error": "ReadTimeout: The read operation timed out",
+      "method": "GET",
+      "purpose": "robots",
+      "status": null,
+      "url": "https://www.bestbuy.com/robots.txt"
+    }
+  ],
+  "requests_used": 1,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": true,
+    "fetched": false,
+    "found": false,
+    "note": "network error: The read operation timed out",
+    "paths": {
+      "/": false
+    },
+    "request_rate": null,
+    "sitemaps": [],
+    "status": null,
+    "url": "https://www.bestbuy.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.bestbuy.com",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": false,
+    "kind": null,
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [],
+    "source": "none",
+    "status": null,
+    "truncated": false,
+    "url": null,
+    "url_count": null,
+    "with_lastmod": 0
+  },
+  "skipped": [
+    {
+      "purpose": "page",
+      "reason": "robots",
+      "url": "https://www.bestbuy.com/"
+    }
+  ],
+  "started_at": "2026-11-04T15:04:54+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {}
+  }
+}

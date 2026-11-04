@@ -1,0 +1,558 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://remoteok.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:23 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "cache-control",
+    "no-store, no-cache, must-revalidate, max-age=0"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"BYPASS\""
+   ],
+   [
+    "cf-cache-status",
+    "BYPASS"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=A%2Fm1BfZNU3VDv3WiFHa7I5fbtrJ%2FdwGaLz3D3BMWv3Wv%2FZEGt0QPYuW%2BZgLufnMDEPFDqpAL6Qct5oFOusWbj6OZruz%2BoIcF6s63bbsuHKV8pDmIE5v3BtXfqx54iPA%3D\"}]}"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a554843f2ea0a513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 900,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://remoteok.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:24 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=15,cfOrigin;dur=145"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=PweQZcPN3ImdDLyyZfVaKrkFjofkUWlFv3ZWkmBWzefCkSsKfYaaJz5KDbimdgxDh5K%2FtVoCX83tW0yVHmcgd1yPgVVNjCfgIW9WH7tiWSiMm7TUqenQaPBVgONmXFM%3D\"}]}"
+   ],
+   [
+    "link",
+    "</global.css?1792805192>; rel=preload; as=style"
+   ],
+   [
+    "link",
+    "</index.css?1793227299>; rel=preload; as=style"
+   ],
+   [
+    "link",
+    "</jquery.js?1755892213>; rel=preload; as=script"
+   ],
+   [
+    "link",
+    "</functions.js?1757013080>; rel=preload; as=script"
+   ],
+   [
+    "link",
+    "</showdown.js?1755892214>; rel=preload; as=script"
+   ],
+   [
+    "link",
+    "</index.js?1787779185>; rel=preload; as=script"
+   ],
+   [
+    "link",
+    "</assets/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2>; rel=preload; as=font; crossorigin=anonymous"
+   ],
+   [
+    "link",
+    "</assets/nunito-webfont/XRXW3I6Li01BKofAjsOUYevIWzgPDA.woff2>; rel=preload; as=font; crossorigin=anonymous"
+   ],
+   [
+    "link",
+    "</assets/nunito-webfont/XRXV3I6Li01BKofINeaBTMnFcQ.woff2>; rel=preload; as=font; crossorigin=anonymous"
+   ],
+   [
+    "link",
+    "</assets/nunito-webfont/XRXW3I6Li01BKofAksCUYevIWzgPDA.woff2>; rel=preload; as=font; crossorigin=anonymous"
+   ],
+   [
+    "link",
+    "</assets/search-black.png>; rel=preload; as=image"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55484490e09a513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 316,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://remoteok.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:26 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qe2J89zYVlIFwLCDBPT9WfuhVCKjYFdrRL17mOCk8OFOyG4K%2BRkZTSBkwwuz%2F6HfLiQv3HdpCSdReIRLqyAMpYm3etFBV9DFifNxVmvyNw0F2eo9mDUw2LT4uXxcLqw%3D\"}]}"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=7,cfOrigin;dur=797"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55484514b5fa513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 944,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://remoteok.com/remote-jobs.json",
+  "purpose": "feed:json_link",
+  "status": 301,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:28 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "location",
+    "http://remoteok.com/api"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=7,cfOrigin;dur=137"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4L5dpCqCyGZmdcW%2BraS2izGt9nh4Ud%2ByHjN1Go2mBbqcACXYz0t6vwBPbqZ%2FvpRbBtaBwfuqn%2By564lmFfc6FfjhRxFptVvn7%2BTHDVVFM17F%2FV1F%2BJHmbGSYJLAAmrY%3D\"}]}"
+   ],
+   [
+    "cf-ray",
+    "a554845d6b5ea513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 287,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "http://remoteok.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:29 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "location",
+    "https://remoteok.com/robots.txt"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=37P09F3uzA8u0MsIRAvTMu13W7EORSNqvDLaI8%2Boksfzb23R0DYql12bL6LmFtPr3hnegWngyx7djPw5bv0eF5m95JjI5ojnOdti3Q5vuVOfclnJa4Xg%2Bz68ORXqbYo%3D\"}]}"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a55484650c1f3126-IAD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 20,
+  "truncated": false,
+  "body": "004.body.gz"
+ },
+ {
+  "index": 5,
+  "method": "GET",
+  "url": "http://remoteok.com/api",
+  "purpose": "feed:json_link",
+  "status": 301,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:30 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=3,cfOrigin;dur=0"
+   ],
+   [
+    "location",
+    "https://remoteok.com/api"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RPxRoq%2FyyDSe8X5nuDafIjf11iJnu45HrKZW1QX35uCIqwpbmHcuS%2FAfGhNmjU7Y%2FHRyLc33C4Ql%2BmWR9BhRXzb1wWgIQR8lPy0RRZOdTqWjX4aV3hq%2FKPciWgl9ozU%3D\"}]}"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a554846b6ce83126-IAD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 14,
+  "truncated": false,
+  "body": "005.body.gz"
+ },
+ {
+  "index": 6,
+  "method": "GET",
+  "url": "https://remoteok.com/api",
+  "purpose": "feed:json_link",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:31 GMT"
+   ],
+   [
+    "content-type",
+    "application/json"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GUDuC0Q59iChFBgHUOL1YXxj%2B7xnrTQ2QYC36lu9x3l0ad2OAi1vdun7pDvFdQ2Uymxu6bHP1B6Pgw2D1Y1Uy1dGuk4k0A0Ak7VZeKe7tdfV%2FTtg8Xv%2B98AaZ%2BmgBSs%3D\"}]}"
+   ],
+   [
+    "access-control-allow-methods",
+    "GET"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=14,cfOrigin;dur=431"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55484722a2ca513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 795,
+  "truncated": false,
+  "body": "006.body.gz"
+ },
+ {
+  "index": 7,
+  "method": "GET",
+  "url": "https://remoteok.com/sitemap-predefined-1.xml",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:33 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JaTP1aMI6iyKHkgNi0zRZqQyA0pqeoIEg2EADHVms%2BYPgW7mFgJ6MQVlfQWspIs%2FbLd7%2BvYQeDGPhxPpYem4ZmhikozkQHaEBr%2BrnNrME%2FCcg4vZNkE2f%2BHcgPjHE%2F4%3D\"}]}"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+   ],
+   [
+    "server-timing",
+    "cfCacheStatus;desc=\"DYNAMIC\""
+   ],
+   [
+    "server-timing",
+    "cfEdge;dur=30,cfOrigin;dur=788"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a554847d6a1aa513-GRU"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 961,
+  "truncated": false,
+  "body": "007.body.gz"
+ }
+]

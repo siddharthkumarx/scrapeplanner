@@ -1,0 +1,297 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": []
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "bytes": 143199,
+        "details": {
+          "buildId": "ucIVEZCJOb7mWOSdECe6w",
+          "page": "/[[...slug]]"
+        },
+        "keys": [
+          "state",
+          "featureFlags",
+          "userAgent",
+          "authInfo",
+          "navigation",
+          "isSubscriptionAllowed",
+          "metadata",
+          "pageKey",
+          "page",
+          "type",
+          "subtype",
+          "slug",
+          "analytics"
+        ],
+        "kind": "next_data",
+        "locator": "script#__NEXT_DATA__"
+      }
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://www.bbc.com/news",
+  "max_requests": 10,
+  "page": {
+    "bytes": 529022,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://www.bbc.com/news",
+    "lang": "en-GB",
+    "status": 200,
+    "title": "BBC News - Breaking news, video and the latest top stories from the U.S. and around the world",
+    "url": "https://www.bbc.com/news"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: NewsMediaOrganization, WebPage)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.28,
+        "est_requests": 1010,
+        "fields": [
+          "state",
+          "featureFlags",
+          "userAgent",
+          "authInfo",
+          "navigation",
+          "isSubscriptionAllowed",
+          "metadata",
+          "pageKey",
+          "page",
+          "type",
+          "subtype",
+          "slug",
+          "analytics"
+        ],
+        "name": "embedded_json",
+        "notes": [
+          "buildId changes on every deploy; read it from the page, never hard-code it",
+          "one detail page per record; URLs from the sitemap (~100 per file)"
+        ],
+        "partial": false,
+        "summary": "script#__NEXT_DATA__ (143,199 bytes)",
+        "urls": [
+          "http://www.bbc.co.uk/afrique/institutionelles/2014/09/140924_test.shtml",
+          "http://www.bbc.co.uk/afrique/nos_emissions/2014/09/140924_india_arrives_on_mars.shtml",
+          "http://www.bbc.co.uk/afrique/region/2014/09/140924_south_sudan_hunger_crisis.shtml"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": 0.28,
+        "est_requests": 1010,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~100 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (11,471 chars of text)",
+        "urls": [
+          "http://www.bbc.co.uk/afrique/institutionelles/2014/09/140924_test.shtml",
+          "http://www.bbc.co.uk/afrique/nos_emissions/2014/09/140924_india_arrives_on_mars.shtml",
+          "http://www.bbc.co.uk/afrique/region/2014/09/140924_south_sudan_hunger_crisis.shtml"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "embedded_json",
+    "risks": [
+      "sitemap looks stale: newest lastmod is 2014-09-24",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": "high",
+    "evidence": [
+      "__NEXT_DATA__ script",
+      "assets under /_next/static/"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "name": "nextjs"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 529022,
+    "links": 250,
+    "noscript_warning": false,
+    "reasons": [
+      "11471 characters of text, 250 links",
+      "also in script#__NEXT_DATA__"
+    ],
+    "script_bytes": 147352,
+    "text_chars": 11471,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 6250,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.bbc.com/robots.txt"
+    },
+    {
+      "bytes": 529022,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "bytes": 16330,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://www.bbc.com/afrique/sitemap.xml"
+    }
+  ],
+  "requests_used": 3,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/afrique/sitemap.xml": true,
+      "/news": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.bbc.com/afrique/sitemap.xml",
+      "https://www.bbc.com/arabic/sitemap.xml",
+      "https://www.bbc.com/bbcx/audio_archive_sitemap.xml",
+      "https://www.bbc.com/bbcx/content_index_sitemap.xml",
+      "https://www.bbc.com/bbcx/index_sitemap.xml",
+      "https://www.bbc.com/bbcx/video_documentaries_sitemap.xml",
+      "https://www.bbc.com/bengali/sitemap.xml",
+      "https://www.bbc.com/burmese/sitemap.xml",
+      "https://www.bbc.com/gahuza/sitemap.xml",
+      "https://www.bbc.com/hausa/sitemap.xml",
+      "https://www.bbc.com/hindi/sitemap.xml",
+      "https://www.bbc.com/indonesia/sitemap.xml",
+      "https://www.bbc.com/mundo/sitemap.xml",
+      "https://www.bbc.com/pashto/sitemap.xml",
+      "https://www.bbc.com/persian/sitemap.xml",
+      "https://www.bbc.com/portuguese/sitemap.xml",
+      "https://www.bbc.com/russian/sitemap.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-archive_video.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-archive.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-mundo-archive_video.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-mundo-archive.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-mundo-news.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-mundo-video.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-news.xml",
+      "https://www.bbc.com/sitemaps/https-index-com-video.xml",
+      "https://www.bbc.com/sitemaps/sitemap-com-ws-topics.xml",
+      "https://www.bbc.com/sitemaps/sitemap-com-ws-topics.xml",
+      "https://www.bbc.com/sitemaps/world-service-homepages.xml",
+      "https://www.bbc.com/sport/sitemap.xml",
+      "https://www.bbc.com/swahili/sitemap.xml",
+      "https://www.bbc.com/tajik/sitemap.xml",
+      "https://www.bbc.com/turkce/sitemap.xml",
+      "https://www.bbc.com/ukchina/simp/sitemap.xml",
+      "https://www.bbc.com/ukrainian/sitemap.xml",
+      "https://www.bbc.com/urdu/sitemap.xml",
+      "https://www.bbc.com/uzbek/sitemap.xml",
+      "https://www.bbc.com/vietnamese/sitemap.xml",
+      "https://www.bbc.com/zhongwen/simp/sitemap.xml",
+      "https://www.bbc.com/zhongwen/trad/sitemap.xml"
+    ],
+    "status": 200,
+    "url": "https://www.bbc.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.bbc.com",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": true,
+    "kind": "urlset",
+    "newest_lastmod": "2014-09-24",
+    "note": null,
+    "oldest_lastmod": "2014-09-18",
+    "sample_urls": [
+      "http://www.bbc.co.uk/afrique/institutionelles/2014/09/140924_test.shtml",
+      "http://www.bbc.co.uk/afrique/nos_emissions/2014/09/140924_india_arrives_on_mars.shtml",
+      "http://www.bbc.co.uk/afrique/region/2014/09/140924_south_sudan_hunger_crisis.shtml",
+      "http://www.bbc.co.uk/afrique/region/2014/09/140924_guinea_ebola_arrests.shtml",
+      "http://www.bbc.co.uk/afrique/region/2014/09/140923_refugees.shtml"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://www.bbc.com/afrique/sitemap.xml",
+    "url_count": 100,
+    "with_lastmod": 100
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:05:37+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {
+      "NewsMediaOrganization": 1,
+      "WebPage": 1
+    }
+  }
+}

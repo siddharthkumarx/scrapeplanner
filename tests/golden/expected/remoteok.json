@@ -1,0 +1,330 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": [
+      {
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ],
+        "status": "present",
+        "vendor": "cloudflare"
+      }
+    ]
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "fields": [
+          "last_updated",
+          "legal"
+        ],
+        "http_status": 200,
+        "items_seen": 100,
+        "kind": "json_link",
+        "note": "Remote Jobs in JSON",
+        "page_size": null,
+        "status": "ok",
+        "total_items": null,
+        "url": "https://remoteok.com/remote-jobs.json"
+      }
+    ]
+  },
+  "input_url": "https://remoteok.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 59273,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://remoteok.com/",
+    "lang": "en",
+    "status": 200,
+    "title": "Remote Jobs in Programming, Design, Sales and more #OpenSalaries",
+    "url": "https://remoteok.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": 0.0,
+        "est_requests": 1,
+        "fields": [
+          "last_updated",
+          "legal"
+        ],
+        "name": "feed_api",
+        "notes": [
+          "a feed returns only its latest 100 entries; poll it for new ones"
+        ],
+        "partial": true,
+        "summary": "json link feed",
+        "urls": [
+          "https://remoteok.com/remote-jobs.json"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": 0.3,
+        "est_requests": 1073,
+        "fields": [
+          "name",
+          "aggregateRating.ratingValue"
+        ],
+        "name": "structured_data",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~14 per file)"
+        ],
+        "partial": false,
+        "summary": "Product in json-ld (1 on the page)",
+        "urls": [
+          "https://remoteok.com/hire-remotely",
+          "https://remoteok.com/remote-workers",
+          "https://remoteok.com/work-from-home-jobs"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.3,
+        "est_requests": 1073,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~14 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (5,481 chars of text)",
+        "urls": [
+          "https://remoteok.com/hire-remotely",
+          "https://remoteok.com/remote-workers",
+          "https://remoteok.com/work-from-home-jobs"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "structured_data",
+    "risks": [
+      "robots.txt asks for 1s between requests",
+      "platform not recognised: no platform-specific feed was probed"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 59273,
+    "links": 44,
+    "noscript_warning": false,
+    "reasons": [
+      "schema.org records in the HTML: Product",
+      "5481 characters of text, 44 links"
+    ],
+    "script_bytes": 13719,
+    "text_chars": 5481,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 4728,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://remoteok.com/robots.txt"
+    },
+    {
+      "bytes": 59273,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://remoteok.com/"
+    },
+    {
+      "bytes": 6997,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://remoteok.com/sitemap.xml"
+    },
+    {
+      "bytes": 545,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:json_link",
+      "status": 301,
+      "url": "https://remoteok.com/remote-jobs.json"
+    },
+    {
+      "bytes": 2676,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "http://remoteok.com/robots.txt"
+    },
+    {
+      "bytes": 534,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:json_link",
+      "status": 301,
+      "url": "http://remoteok.com/api"
+    },
+    {
+      "bytes": 652282,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:json_link",
+      "status": 200,
+      "url": "https://remoteok.com/api"
+    },
+    {
+      "bytes": 1763,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "url": "https://remoteok.com/sitemap-predefined-1.xml"
+    }
+  ],
+  "requests_used": 8,
+  "robots": {
+    "crawl_delay": 1.0,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/": true,
+      "/hire-remotely": true,
+      "/remote-jobs.json": true,
+      "/sitemap.xml": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://remoteok.com/sitemap.xml"
+    ],
+    "status": 200,
+    "url": "https://remoteok.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "remoteok.com",
+  "sitemap": {
+    "child": {
+      "child": null,
+      "child_sitemaps": null,
+      "fetched": true,
+      "kind": "urlset",
+      "newest_lastmod": "2026-11-04",
+      "note": null,
+      "oldest_lastmod": "2026-11-04",
+      "sample_urls": [
+        "https://remoteok.com/hire-remotely",
+        "https://remoteok.com/remote-workers",
+        "https://remoteok.com/work-from-home-jobs",
+        "https://remoteok.com/digital-nomad-jobs",
+        "https://remoteok.com/highest-paid-remote-jobs"
+      ],
+      "source": "robots",
+      "status": 200,
+      "truncated": false,
+      "url": "https://remoteok.com/sitemap-predefined-1.xml",
+      "url_count": 14,
+      "with_lastmod": 14
+    },
+    "child_sitemaps": 84,
+    "fetched": true,
+    "kind": "sitemapindex",
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [
+      "https://remoteok.com/sitemap-predefined-1.xml",
+      "https://remoteok.com/sitemap-jobs-1.xml",
+      "https://remoteok.com/sitemap-jobs-2.xml",
+      "https://remoteok.com/sitemap-jobs-3.xml",
+      "https://remoteok.com/sitemap-jobs-4.xml"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://remoteok.com/sitemap.xml",
+    "url_count": null,
+    "with_lastmod": 0
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:05:22+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [
+      {
+        "count": 1,
+        "fields": [
+          "name",
+          "aggregateRating.ratingValue"
+        ],
+        "sample": {
+          "name": "Remote OK"
+        },
+        "source": "json-ld",
+        "type": "Product"
+      }
+    ],
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "key_types": [
+      "Product"
+    ],
+    "microdata_items": 0,
+    "types": {
+      "AggregateRating": 1,
+      "Organization": 1,
+      "Product": 1
+    }
+  }
+}

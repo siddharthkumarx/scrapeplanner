@@ -1,0 +1,398 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.gymshark.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:29 GMT"
+   ],
+   [
+    "cache-control",
+    "s-maxage=3600, stale-while-revalidate=2592000, stale-if-error=31536000"
+   ],
+   [
+    "x-opennext",
+    "1"
+   ],
+   [
+    "x-region",
+    "us-east-1"
+   ],
+   [
+    "apigw-requestid",
+    "GUhrui5VIAMEYew="
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "via",
+    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content ; child-src 'self' blob: *.algolia.io *.braze.eu *.mparticle.com *.google.com *.doubleclick.net *.googlesyndication.com ct.pinterest.com platform.twitter.com www.googletagmanager.com *.adsrvr.org *.studentbeans.com *.snapchat.com www.youthdiscount.com form.typeform.com creatives.attn.tv *.netlify.com *.dynamicyield.com *.tiktok.com; form-action 'self' *.twitter.com *.google.com *.pinterest.com *.facebook.com; frame-ancestors 'self' twitter facebook t.co *.studentbeans.com https://app.contentful.com www.tiktok.com; frame-src *.facebook.com creatives.attn.tv *.studentbeans.com *.adsrvr.org ct.pinterest.com *.creativecdn.com tr.snapchat.com *.doubleclick.net *.netlify.com form.typeform.com optimize.google.com www.youthdiscount.com intercom-sheets.com *.rewardstyle.com *.youtube.com *.smartzer.com *.tiktok.com https://open.spotify.com https://platform.twitter.com https://www.instagram.com/ www.googletagmanager.com www.google.com *.gymshark.com checkout.shopify.com shopify-private-shop-assets.storage.googleapis.com *.mention-me.com https://mention-me.com *.storystream.ai *.gocertify.me; media-src assets.ctfassets.net videos.ctfassets.net cdn.shopify.com *.gymshark.com d3hx72133uo2am.cloudfront.net; object-src *.googlesyndication.com; script-src 'self' 'report-sample' 'unsafe-inline' 'unsafe-eval' https://*.algolia.io https://*.braze.eu https://*.mparticle.com https://*.googletagservices.com https://*.googlesyndication.com https://*.googleadservices.com https://*.doubleclick.net https://*.rmp.rakuten.com https://*.ep-mimecast.ads-twitter.com https://*.google.com https://analytics.tiktok.com https://analytics.twitter.com https://content.linkedin.com https://cdn.cookielaw.org https://google-analytics.com https://googletagmanager.com https://platform.linkedin.com https://static-exp1.licdn.com https://snap.licdn.com https://sc-static.net https://static.ads-twitter.com https://ssl.google-analytics.com https://s.pinimg.com https://t.co https://www.google-analytics.com https://www.googletagmanager.com https://*.studentbeans.com http://*.studentbeans.com https://widget.intercom.io https://connect.facebook.net *.gymshark.com *.adsrvr.org *.intercomcdn.com *.bazaarvoice.com *.snapchat.com *.attn.tv tags.creativecdn.com bat.bing.com https://*.clarity.ms *.dwin1.com www.redditstatic.com *.netlify.app *.rewardstyle.com *.smartzer.com *.dynamicyield.com *.mention-me.com www.tiktok.com https://platform.twitter.com https://open.spotify.com/embed/iframe-api/v1 http://www.instagram.com/embed.js https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/ https://beacon.riskified.com https://ct.pinterest.com/static/ct/token_create.js js.appboycdn.com www.gstatic.com *.axon.ai *.albss.com https://10ef4229c7d0.edge.sdk.awswaf.com https://ca652792458b.edge.sdk.awswaf.com https://c.amazon-adsystem.com/aat/amzn.js https://res4.applovin.com/p/104/b/bs.c9e1074f5b3f9fc8ea15d152add07294-1.iife.js https://res4.applovin.com/p/104/hs/hs.iife.js https://*.storystream.ai *.gocertify.me; style-src 'self' 'report-sample' 'unsafe-inline' *.google.com *.licdn.com platform.twitter.com www.googletagmanager.com *.gymshark.com *.fontawesome.com *.dynamicyield.com *.tiktok.com instagram.com/embed.js sf16-website-login.neutral.ttwstatic.com cdn.braze.eu cdnjs.cloudflare.com https://d7c4jjeuqag9w.cloudfront.net *.googleapis.com; worker-src 'self' blob: www.google.com;"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+   ],
+   [
+    "vary",
+    "Origin"
+   ],
+   [
+    "set-cookie",
+    "gs-experiment-id=<redacted>; Path=/; Domain=.gymshark.com"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD89-P3"
+   ],
+   [
+    "x-amz-cf-id",
+    "_HzGw9gVIO8dKx3D7VMi4lqe6SbK1Lc0jBRSyFMpbhdMBjDtTo1rFg=="
+   ]
+  ],
+  "elapsed_ms": 237,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.gymshark.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:31 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "etag",
+    "W/\"e2kgayv4ve12rwz\""
+   ],
+   [
+    "cache-control",
+    "public, s-maxage=60, stale-while-revalidate=1000"
+   ],
+   [
+    "x-powered-by",
+    "Next.js"
+   ],
+   [
+    "x-opennext",
+    "1"
+   ],
+   [
+    "x-region",
+    "us-east-1"
+   ],
+   [
+    "apigw-requestid",
+    "GUhr5hKEoAMESxg="
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "via",
+    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content ; child-src 'self' blob: *.algolia.io *.braze.eu *.mparticle.com *.google.com *.doubleclick.net *.googlesyndication.com ct.pinterest.com platform.twitter.com www.googletagmanager.com *.adsrvr.org *.studentbeans.com *.snapchat.com www.youthdiscount.com form.typeform.com creatives.attn.tv *.netlify.com *.dynamicyield.com *.tiktok.com; form-action 'self' *.twitter.com *.google.com *.pinterest.com *.facebook.com; frame-ancestors 'self' twitter facebook t.co *.studentbeans.com https://app.contentful.com www.tiktok.com; frame-src *.facebook.com creatives.attn.tv *.studentbeans.com *.adsrvr.org ct.pinterest.com *.creativecdn.com tr.snapchat.com *.doubleclick.net *.netlify.com form.typeform.com optimize.google.com www.youthdiscount.com intercom-sheets.com *.rewardstyle.com *.youtube.com *.smartzer.com *.tiktok.com https://open.spotify.com https://platform.twitter.com https://www.instagram.com/ www.googletagmanager.com www.google.com *.gymshark.com checkout.shopify.com shopify-private-shop-assets.storage.googleapis.com *.mention-me.com https://mention-me.com *.storystream.ai *.gocertify.me; media-src assets.ctfassets.net videos.ctfassets.net cdn.shopify.com *.gymshark.com d3hx72133uo2am.cloudfront.net; object-src *.googlesyndication.com; script-src 'self' 'report-sample' 'unsafe-inline' 'unsafe-eval' https://*.algolia.io https://*.braze.eu https://*.mparticle.com https://*.googletagservices.com https://*.googlesyndication.com https://*.googleadservices.com https://*.doubleclick.net https://*.rmp.rakuten.com https://*.ep-mimecast.ads-twitter.com https://*.google.com https://analytics.tiktok.com https://analytics.twitter.com https://content.linkedin.com https://cdn.cookielaw.org https://google-analytics.com https://googletagmanager.com https://platform.linkedin.com https://static-exp1.licdn.com https://snap.licdn.com https://sc-static.net https://static.ads-twitter.com https://ssl.google-analytics.com https://s.pinimg.com https://t.co https://www.google-analytics.com https://www.googletagmanager.com https://*.studentbeans.com http://*.studentbeans.com https://widget.intercom.io https://connect.facebook.net *.gymshark.com *.adsrvr.org *.intercomcdn.com *.bazaarvoice.com *.snapchat.com *.attn.tv tags.creativecdn.com bat.bing.com https://*.clarity.ms *.dwin1.com www.redditstatic.com *.netlify.app *.rewardstyle.com *.smartzer.com *.dynamicyield.com *.mention-me.com www.tiktok.com https://platform.twitter.com https://open.spotify.com/embed/iframe-api/v1 http://www.instagram.com/embed.js https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/ https://beacon.riskified.com https://ct.pinterest.com/static/ct/token_create.js js.appboycdn.com www.gstatic.com *.axon.ai *.albss.com https://10ef4229c7d0.edge.sdk.awswaf.com https://ca652792458b.edge.sdk.awswaf.com https://c.amazon-adsystem.com/aat/amzn.js https://res4.applovin.com/p/104/b/bs.c9e1074f5b3f9fc8ea15d152add07294-1.iife.js https://res4.applovin.com/p/104/hs/hs.iife.js https://*.storystream.ai *.gocertify.me; style-src 'self' 'report-sample' 'unsafe-inline' *.google.com *.licdn.com platform.twitter.com www.googletagmanager.com *.gymshark.com *.fontawesome.com *.dynamicyield.com *.tiktok.com instagram.com/embed.js sf16-website-login.neutral.ttwstatic.com cdn.braze.eu cdnjs.cloudflare.com https://d7c4jjeuqag9w.cloudfront.net *.googleapis.com; worker-src 'self' blob: www.google.com;"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+   ],
+   [
+    "vary",
+    "Origin"
+   ],
+   [
+    "set-cookie",
+    "gs-experiment-id=<redacted>; Path=/; Domain=.gymshark.com"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD89-P3"
+   ],
+   [
+    "x-amz-cf-id",
+    "FEgeLCI7b4QpXdISTy7pN5YIjgdjDlDQUDCRS1gZcfrkfvyrroLNjQ=="
+   ]
+  ],
+  "elapsed_ms": 753,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.gymshark.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/xml"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:32 GMT"
+   ],
+   [
+    "cache-control",
+    "public, s-maxage=3600, stale-while-revalidate=3660"
+   ],
+   [
+    "x-opennext",
+    "1"
+   ],
+   [
+    "x-region",
+    "us-east-1"
+   ],
+   [
+    "apigw-requestid",
+    "GUhsMhe_IAMEPlA="
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "via",
+    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content ; child-src 'self' blob: *.algolia.io *.braze.eu *.mparticle.com *.google.com *.doubleclick.net *.googlesyndication.com ct.pinterest.com platform.twitter.com www.googletagmanager.com *.adsrvr.org *.studentbeans.com *.snapchat.com www.youthdiscount.com form.typeform.com creatives.attn.tv *.netlify.com *.dynamicyield.com *.tiktok.com; form-action 'self' *.twitter.com *.google.com *.pinterest.com *.facebook.com; frame-ancestors 'self' twitter facebook t.co *.studentbeans.com https://app.contentful.com www.tiktok.com; frame-src *.facebook.com creatives.attn.tv *.studentbeans.com *.adsrvr.org ct.pinterest.com *.creativecdn.com tr.snapchat.com *.doubleclick.net *.netlify.com form.typeform.com optimize.google.com www.youthdiscount.com intercom-sheets.com *.rewardstyle.com *.youtube.com *.smartzer.com *.tiktok.com https://open.spotify.com https://platform.twitter.com https://www.instagram.com/ www.googletagmanager.com www.google.com *.gymshark.com checkout.shopify.com shopify-private-shop-assets.storage.googleapis.com *.mention-me.com https://mention-me.com *.storystream.ai *.gocertify.me; media-src assets.ctfassets.net videos.ctfassets.net cdn.shopify.com *.gymshark.com d3hx72133uo2am.cloudfront.net; object-src *.googlesyndication.com; script-src 'self' 'report-sample' 'unsafe-inline' 'unsafe-eval' https://*.algolia.io https://*.braze.eu https://*.mparticle.com https://*.googletagservices.com https://*.googlesyndication.com https://*.googleadservices.com https://*.doubleclick.net https://*.rmp.rakuten.com https://*.ep-mimecast.ads-twitter.com https://*.google.com https://analytics.tiktok.com https://analytics.twitter.com https://content.linkedin.com https://cdn.cookielaw.org https://google-analytics.com https://googletagmanager.com https://platform.linkedin.com https://static-exp1.licdn.com https://snap.licdn.com https://sc-static.net https://static.ads-twitter.com https://ssl.google-analytics.com https://s.pinimg.com https://t.co https://www.google-analytics.com https://www.googletagmanager.com https://*.studentbeans.com http://*.studentbeans.com https://widget.intercom.io https://connect.facebook.net *.gymshark.com *.adsrvr.org *.intercomcdn.com *.bazaarvoice.com *.snapchat.com *.attn.tv tags.creativecdn.com bat.bing.com https://*.clarity.ms *.dwin1.com www.redditstatic.com *.netlify.app *.rewardstyle.com *.smartzer.com *.dynamicyield.com *.mention-me.com www.tiktok.com https://platform.twitter.com https://open.spotify.com/embed/iframe-api/v1 http://www.instagram.com/embed.js https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/ https://beacon.riskified.com https://ct.pinterest.com/static/ct/token_create.js js.appboycdn.com www.gstatic.com *.axon.ai *.albss.com https://10ef4229c7d0.edge.sdk.awswaf.com https://ca652792458b.edge.sdk.awswaf.com https://c.amazon-adsystem.com/aat/amzn.js https://res4.applovin.com/p/104/b/bs.c9e1074f5b3f9fc8ea15d152add07294-1.iife.js https://res4.applovin.com/p/104/hs/hs.iife.js https://*.storystream.ai *.gocertify.me; style-src 'self' 'report-sample' 'unsafe-inline' *.google.com *.licdn.com platform.twitter.com www.googletagmanager.com *.gymshark.com *.fontawesome.com *.dynamicyield.com *.tiktok.com instagram.com/embed.js sf16-website-login.neutral.ttwstatic.com cdn.braze.eu cdnjs.cloudflare.com https://d7c4jjeuqag9w.cloudfront.net *.googleapis.com; worker-src 'self' blob: www.google.com;"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+   ],
+   [
+    "vary",
+    "Origin"
+   ],
+   [
+    "set-cookie",
+    "gs-experiment-id=<redacted>; Path=/; Domain=.gymshark.com"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD89-P3"
+   ],
+   [
+    "x-amz-cf-id",
+    "Bn3xf-yEMl4qFxzAZmRFM4ebiU2r2hxI2b_7aBPvJ6hvZSbUuG8gZA=="
+   ]
+  ],
+  "elapsed_ms": 129,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.gymshark.com/products.json?limit=250",
+  "purpose": "feed:shopify_products_json",
+  "status": 403,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:04:33 GMT"
+   ],
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "919"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-cache",
+    "Error from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD89-P3"
+   ],
+   [
+    "x-amz-cf-id",
+    "Y73Ge6Fq84cKy7hBSBpjJnw63aR3Kxk8WQ9RlANWoykIDPB3RrGJnA=="
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "content-security-policy",
+    "base-uri 'self'; block-all-mixed-content ; child-src 'self' blob: *.algolia.io *.braze.eu *.mparticle.com *.google.com *.doubleclick.net *.googlesyndication.com ct.pinterest.com platform.twitter.com www.googletagmanager.com *.adsrvr.org *.studentbeans.com *.snapchat.com www.youthdiscount.com form.typeform.com creatives.attn.tv *.netlify.com *.dynamicyield.com *.tiktok.com; form-action 'self' *.twitter.com *.google.com *.pinterest.com *.facebook.com; frame-ancestors 'self' twitter facebook t.co *.studentbeans.com https://app.contentful.com www.tiktok.com; frame-src *.facebook.com creatives.attn.tv *.studentbeans.com *.adsrvr.org ct.pinterest.com *.creativecdn.com tr.snapchat.com *.doubleclick.net *.netlify.com form.typeform.com optimize.google.com www.youthdiscount.com intercom-sheets.com *.rewardstyle.com *.youtube.com *.smartzer.com *.tiktok.com https://open.spotify.com https://platform.twitter.com https://www.instagram.com/ www.googletagmanager.com www.google.com *.gymshark.com checkout.shopify.com shopify-private-shop-assets.storage.googleapis.com *.mention-me.com https://mention-me.com *.storystream.ai *.gocertify.me; media-src assets.ctfassets.net videos.ctfassets.net cdn.shopify.com *.gymshark.com d3hx72133uo2am.cloudfront.net; object-src *.googlesyndication.com; script-src 'self' 'report-sample' 'unsafe-inline' 'unsafe-eval' https://*.algolia.io https://*.braze.eu https://*.mparticle.com https://*.googletagservices.com https://*.googlesyndication.com https://*.googleadservices.com https://*.doubleclick.net https://*.rmp.rakuten.com https://*.ep-mimecast.ads-twitter.com https://*.google.com https://analytics.tiktok.com https://analytics.twitter.com https://content.linkedin.com https://cdn.cookielaw.org https://google-analytics.com https://googletagmanager.com https://platform.linkedin.com https://static-exp1.licdn.com https://snap.licdn.com https://sc-static.net https://static.ads-twitter.com https://ssl.google-analytics.com https://s.pinimg.com https://t.co https://www.google-analytics.com https://www.googletagmanager.com https://*.studentbeans.com http://*.studentbeans.com https://widget.intercom.io https://connect.facebook.net *.gymshark.com *.adsrvr.org *.intercomcdn.com *.bazaarvoice.com *.snapchat.com *.attn.tv tags.creativecdn.com bat.bing.com https://*.clarity.ms *.dwin1.com www.redditstatic.com *.netlify.app *.rewardstyle.com *.smartzer.com *.dynamicyield.com *.mention-me.com www.tiktok.com https://platform.twitter.com https://open.spotify.com/embed/iframe-api/v1 http://www.instagram.com/embed.js https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/ https://beacon.riskified.com https://ct.pinterest.com/static/ct/token_create.js js.appboycdn.com www.gstatic.com *.axon.ai *.albss.com https://10ef4229c7d0.edge.sdk.awswaf.com https://ca652792458b.edge.sdk.awswaf.com https://c.amazon-adsystem.com/aat/amzn.js https://res4.applovin.com/p/104/b/bs.c9e1074f5b3f9fc8ea15d152add07294-1.iife.js https://res4.applovin.com/p/104/hs/hs.iife.js https://*.storystream.ai *.gocertify.me; style-src 'self' 'report-sample' 'unsafe-inline' *.google.com *.licdn.com platform.twitter.com www.googletagmanager.com *.gymshark.com *.fontawesome.com *.dynamicyield.com *.tiktok.com instagram.com/embed.js sf16-website-login.neutral.ttwstatic.com cdn.braze.eu cdnjs.cloudflare.com https://d7c4jjeuqag9w.cloudfront.net *.googleapis.com; worker-src 'self' blob: www.google.com;"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000; includeSubDomains; preload"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+   ],
+   [
+    "vary",
+    "Origin"
+   ]
+  ],
+  "elapsed_ms": 8,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

@@ -1,0 +1,209 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://docs.python.org/3/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 19632,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://docs.python.org/3/",
+    "lang": "en",
+    "status": 200,
+    "title": "Python 3.15.2 documentation",
+    "url": "https://docs.python.org/3/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.32,
+        "est_requests": 1143,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~7 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (3,196 chars of text)",
+        "urls": [
+          "https://docs.python.org/3.11/",
+          "https://docs.python.org/3.12/",
+          "https://docs.python.org/3.13/"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "html",
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [
+      "sphinx"
+    ],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 19632,
+    "links": 93,
+    "noscript_warning": false,
+    "reasons": [
+      "3196 characters of text, 93 links"
+    ],
+    "script_bytes": 0,
+    "text_chars": 3196,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 517,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://docs.python.org/robots.txt"
+    },
+    {
+      "bytes": 19632,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://docs.python.org/3/"
+    },
+    {
+      "bytes": 13226,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://docs.python.org/sitemap.xml"
+    }
+  ],
+  "requests_used": 3,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/3.11/": true,
+      "/3/": true,
+      "/sitemap.xml": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://docs.python.org/sitemap.xml"
+    ],
+    "status": 200,
+    "url": "https://docs.python.org/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "docs.python.org",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": true,
+    "kind": "urlset",
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [
+      "https://docs.python.org/3.11/",
+      "https://docs.python.org/3.12/",
+      "https://docs.python.org/3.13/",
+      "https://docs.python.org/3.14/",
+      "https://docs.python.org/3.15/"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://docs.python.org/sitemap.xml",
+    "url_count": 7,
+    "with_lastmod": 0
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:07:25+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {}
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "fields": [],
+        "http_status": 200,
+        "items_seen": 121,
+        "kind": "rss",
+        "note": null,
+        "page_size": 121,
+        "status": "ok",
+        "total_items": null,
+        "url": "https://www.theguardian.com/international/rss"
+      }
+    ]
+  },
+  "input_url": "https://www.theguardian.com/international",
+  "max_requests": 10,
+  "page": {
+    "bytes": 1407500,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://www.theguardian.com/international",
+    "lang": "en",
+    "status": 200,
+    "title": "Latest news, sport and opinion from the Guardian",
+    "url": "https://www.theguardian.com/international"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": 0.0,
+        "est_requests": 1,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [
+          "a feed returns only its latest 121 entries; poll it for new ones"
+        ],
+        "partial": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://www.theguardian.com/international/rss"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.28,
+        "est_requests": 1002,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~525 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (21,646 chars of text)",
+        "urls": [
+          "https://www.theguardian.com/politics/live/2026/nov/04/ed-miliband-andy-burnham-king-charles-labour-louise-haigh-alex-burghart-pmqs-conservatives-uk-politics-latest-news",
+          "https://www.theguardian.com/games/2026/nov/04/why-the-weirdest-game-of-2026-is-also-one-of-my-favourites",
+          "https://www.theguardian.com/commentisfree/2026/nov/04/the-worst-two-words-in-the-dead-of-night-motorway-closed"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "html",
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 1407500,
+    "links": 373,
+    "noscript_warning": false,
+    "reasons": [
+      "21646 characters of text, 373 links"
+    ],
+    "script_bytes": 21085,
+    "text_chars": 21646,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 2873,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.theguardian.com/robots.txt"
+    },
+    {
+      "bytes": 1407500,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://www.theguardian.com/international"
+    },
+    {
+      "bytes": 0,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 301,
+      "url": "http://www.theguardian.com/robots.txt"
+    },
+    {
+      "bytes": 2873,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.theguardian.com/robots.txt"
+    },
+    {
+      "bytes": 0,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 301,
+      "url": "http://www.theguardian.com/sitemaps/news.xml"
+    },
+    {
+      "bytes": 553647,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://www.theguardian.com/sitemaps/news.xml"
+    },
+    {
+      "bytes": 419425,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:rss",
+      "status": 200,
+      "url": "https://www.theguardian.com/international/rss"
+    }
+  ],
+  "requests_used": 7,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/international": true,
+      "/international/rss": true,
+      "/politics/live/2026/nov/04/ed-miliband-andy-burnham-king-charles-labour-louise-haigh-alex-burghart-pmqs-conservatives-uk-politics-latest-news": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "http://www.theguardian.com/sitemaps/news.xml",
+      "http://www.theguardian.com/sitemaps/video.xml"
+    ],
+    "status": 200,
+    "url": "https://www.theguardian.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.theguardian.com",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": true,
+    "kind": "urlset",
+    "newest_lastmod": "2026-11-04",
+    "note": null,
+    "oldest_lastmod": "2026-11-04",
+    "sample_urls": [
+      "https://www.theguardian.com/politics/live/2026/nov/04/ed-miliband-andy-burnham-king-charles-labour-louise-haigh-alex-burghart-pmqs-conservatives-uk-politics-latest-news",
+      "https://www.theguardian.com/games/2026/nov/04/why-the-weirdest-game-of-2026-is-also-one-of-my-favourites",
+      "https://www.theguardian.com/commentisfree/2026/nov/04/the-worst-two-words-in-the-dead-of-night-motorway-closed",
+      "https://www.theguardian.com/us-news/2026/nov/04/democrats-warn-trump-officials-preserve-records",
+      "https://www.theguardian.com/thefilter/2026/nov/04/best-christmas-gifts-mums-grannies-aunties-friends-uk"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "http://www.theguardian.com/sitemaps/news.xml",
+    "url_count": 525,
+    "with_lastmod": 525
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:05:40+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {}
+  }
+}

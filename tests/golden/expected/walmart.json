@@ -1,0 +1,309 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": [
+      {
+        "bot_management": true,
+        "evidence": [
+          "HUMAN sensor script",
+          "HUMAN _pxAppId",
+          "cookie _px* (HUMAN)"
+        ],
+        "status": "present",
+        "vendor": "human"
+      }
+    ]
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "bytes": 311747,
+        "details": {
+          "buildId": "production_20261102T030850131Z-en-US",
+          "page": "/"
+        },
+        "keys": [
+          "initialTempoData",
+          "countryRegion",
+          "headerObj",
+          "traceparents",
+          "psych",
+          "isomorphicSessionId",
+          "trace",
+          "isCaching",
+          "queryContextCacheId",
+          "bootstrapData",
+          "enableGqlCsrRedirect",
+          "nonce",
+          "persistedQueriesConfig",
+          "errorLoggingConfig",
+          "excludeBeacon"
+        ],
+        "kind": "next_data",
+        "locator": "script#__NEXT_DATA__"
+      }
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://www.walmart.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 504813,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://www.walmart.com/",
+    "lang": "en-US",
+    "status": 200,
+    "title": "Walmart | Save Money. Live better.",
+    "url": "https://www.walmart.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: EntryPoint, Organization, SearchAction, WebSite)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 1.39,
+        "est_requests": 1001,
+        "fields": [
+          "initialTempoData",
+          "countryRegion",
+          "headerObj",
+          "traceparents",
+          "psych",
+          "isomorphicSessionId",
+          "trace",
+          "isCaching",
+          "queryContextCacheId",
+          "bootstrapData",
+          "enableGqlCsrRedirect",
+          "nonce",
+          "persistedQueriesConfig",
+          "errorLoggingConfig",
+          "excludeBeacon"
+        ],
+        "name": "embedded_json",
+        "notes": [
+          "buildId changes on every deploy; read it from the page, never hard-code it",
+          "one detail page per record; URLs from the sitemap (~12720 per file)"
+        ],
+        "partial": false,
+        "summary": "script#__NEXT_DATA__ (311,747 bytes)",
+        "urls": [
+          "https://www.walmart.com/cp/baseball-socks/8502411",
+          "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+          "https://www.walmart.com/cp/coleman-camping/6320218"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": 1.39,
+        "est_requests": 1001,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~12720 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (3,020 chars of text)",
+        "urls": [
+          "https://www.walmart.com/cp/baseball-socks/8502411",
+          "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+          "https://www.walmart.com/cp/coleman-camping/6320218"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it",
+      "If you need volume, ask the owner for an API or a feed"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 5.0,
+      "max_requests_per_day": 5000,
+      "reason": "HUMAN/PerimeterX bot management in front of the site: slow and capped"
+    },
+    "recommended": "embedded_json",
+    "risks": [
+      "HUMAN/PerimeterX bot management is in front of the site: keep to the rate below and stop at the first challenge",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "caution"
+  },
+  "platform": {
+    "confidence": "high",
+    "evidence": [
+      "__NEXT_DATA__ script",
+      "assets under /_next/static/"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "name": "nextjs"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 504813,
+    "links": 79,
+    "noscript_warning": false,
+    "reasons": [
+      "3020 characters of text, 79 links",
+      "also in script#__NEXT_DATA__"
+    ],
+    "script_bytes": 331789,
+    "text_chars": 3020,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 3479,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.walmart.com/robots.txt"
+    },
+    {
+      "bytes": 504813,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://www.walmart.com/"
+    },
+    {
+      "bytes": 1324850,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://www.walmart.com/sitemap_category.xml"
+    }
+  ],
+  "requests_used": 3,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/": true,
+      "/cp/baseball-socks/8502411": true,
+      "/sitemap_category.xml": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.walmart.com/sitemap_category.xml",
+      "https://www.walmart.com/sitemap_store_main.xml",
+      "https://www.walmart.com/help/sitemap_gm.xml",
+      "https://www.walmart.com/sitemap_browse_fst.xml",
+      "https://www.walmart.com/sitemap_store_dept.xml",
+      "https://www.walmart.com/sitemap_tp_legacy.xml",
+      "https://www.walmart.com/sitemap_tp_at.xml",
+      "https://www.walmart.com/sitemap_tp_br.xml",
+      "https://www.walmart.com/sitemap_tp_kp.xml",
+      "https://www.walmart.com/sitemap_brp_02.xml",
+      "https://www.walmart.com/sitemap_brp_03.xml",
+      "https://www.walmart.com/sitemap_brp_04.xml",
+      "https://www.walmart.com/sitemap_brp_05.xml",
+      "https://www.walmart.com/sitemap_brp_06.xml",
+      "https://www.walmart.com/sitemap_brp_07.xml",
+      "https://www.walmart.com/sitemap_brp_08.xml",
+      "https://www.walmart.com/sitemap_brp_09.xml",
+      "https://www.walmart.com/sitemap_itp_01.xml",
+      "https://www.walmart.com/sitemap_itp_02.xml",
+      "https://www.walmart.com/sitemap_product_03.xml",
+      "https://www.walmart.com/sitemap_rp_01.xml",
+      "https://www.walmart.com/sitemap_rp_02.xml",
+      "https://www.walmart.com/sitemap_rp_03.xml",
+      "https://www.walmart.com/sitemap_rp_04.xml",
+      "https://www.walmart.com/sitemap_rp_05.xml",
+      "https://www.walmart.com/sitemap_auto_dir.xml",
+      "https://www.walmart.com/sitemap_brndshp_brand.xml",
+      "https://www.walmart.com/sitemap_sp.xml",
+      "https://www.walmart.com/sitemap_hi_ip.xml",
+      "https://www.walmart.com/sitemap_hi_tp.xml",
+      "https://www.walmart.com/sitemap_hi_bp.xml",
+      "https://www.walmart.com/sitemap_hi_mp.xml"
+    ],
+    "status": 200,
+    "url": "https://www.walmart.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.walmart.com",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": true,
+    "kind": "urlset",
+    "newest_lastmod": "2026-11-02",
+    "note": null,
+    "oldest_lastmod": "2026-11-02",
+    "sample_urls": [
+      "https://www.walmart.com/cp/baseball-socks/8502411",
+      "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+      "https://www.walmart.com/cp/coleman-camping/6320218",
+      "https://www.walmart.com/cp/fall/8378519",
+      "https://www.walmart.com/cp/j-kara/2841770"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://www.walmart.com/sitemap_category.xml",
+    "url_count": 12720,
+    "with_lastmod": 12720
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:04:50+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {
+      "EntryPoint": 1,
+      "Organization": 1,
+      "SearchAction": 1,
+      "WebSite": 1
+    }
+  }
+}

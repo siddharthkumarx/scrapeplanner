@@ -1,0 +1,286 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://sfbay.craigslist.org/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 60703,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://www.craigslist.org/area/sfbay",
+    "lang": null,
+    "status": 200,
+    "title": "craigslist: SF bay area jobs, apartments, for sale, services, community, and events",
+    "url": "https://sfbay.craigslist.org/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: SearchAction, WebSite)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.28,
+        "est_requests": 1005,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~265 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (4,617 chars of text)",
+        "urls": [
+          "https://www.craigslist.org/search/area/sfbay?cat=acc",
+          "https://www.craigslist.org/search/area/sfbay?cat=act",
+          "https://www.craigslist.org/search/area/sfbay?cat=aos"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "html",
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 60703,
+    "links": 457,
+    "noscript_warning": true,
+    "reasons": [
+      "<noscript> asks for JavaScript",
+      "4617 characters of text, 457 links"
+    ],
+    "script_bytes": 1724,
+    "text_chars": 4617,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 151,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://sfbay.craigslist.org/robots.txt"
+    },
+    {
+      "bytes": 0,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 301,
+      "url": "https://sfbay.craigslist.org/"
+    },
+    {
+      "bytes": 2185,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.craigslist.org/robots.txt"
+    },
+    {
+      "bytes": 60703,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://www.craigslist.org/area/sfbay"
+    },
+    {
+      "bytes": 94391,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://www.craigslist.org/sitemap-index-categories-and-hubs.xml"
+    },
+    {
+      "bytes": 25805,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "url": "https://www.craigslist.org/sitemap-categories-and-hubs-area-sfo.xml"
+    }
+  ],
+  "requests_used": 6,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/area/sfbay": true,
+      "/search/area/sfbay?cat=acc": true,
+      "/sitemap-index-categories-and-hubs.xml": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.craigslist.org/sitemap-index-categories-and-hubs.xml",
+      "https://www.craigslist.org/sitemap-index-postings-00.xml",
+      "https://www.craigslist.org/sitemap-index-postings-01.xml",
+      "https://www.craigslist.org/sitemap-index-postings-02.xml",
+      "https://www.craigslist.org/sitemap-index-postings-03.xml",
+      "https://www.craigslist.org/sitemap-index-postings-04.xml",
+      "https://www.craigslist.org/sitemap-index-postings-05.xml",
+      "https://www.craigslist.org/sitemap-index-postings-06.xml",
+      "https://www.craigslist.org/sitemap-index-postings-07.xml",
+      "https://www.craigslist.org/sitemap-index-postings-08.xml",
+      "https://www.craigslist.org/sitemap-index-postings-09.xml",
+      "https://www.craigslist.org/sitemap-index-postings-10.xml",
+      "https://www.craigslist.org/sitemap-index-postings-11.xml",
+      "https://www.craigslist.org/sitemap-index-postings-12.xml",
+      "https://www.craigslist.org/sitemap-index-postings-13.xml",
+      "https://www.craigslist.org/sitemap-index-postings-14.xml",
+      "https://www.craigslist.org/sitemap-index-postings-15.xml",
+      "https://www.craigslist.org/sitemap-index-postings-16.xml",
+      "https://www.craigslist.org/sitemap-index-postings-17.xml",
+      "https://www.craigslist.org/sitemap-index-postings-18.xml",
+      "https://www.craigslist.org/sitemap-index-postings-19.xml",
+      "https://www.craigslist.org/sitemap-index-postings-20.xml",
+      "https://www.craigslist.org/sitemap-index-postings-21.xml",
+      "https://www.craigslist.org/sitemap-index-postings-22.xml",
+      "https://www.craigslist.org/sitemap-index-postings-23.xml",
+      "https://www.craigslist.org/sitemap-index-postings-24.xml",
+      "https://www.craigslist.org/sitemap-index-postings-25.xml",
+      "https://www.craigslist.org/sitemap-index-postings-26.xml",
+      "https://www.craigslist.org/sitemap-index-postings-27.xml",
+      "https://www.craigslist.org/sitemap-index-postings-28.xml",
+      "https://www.craigslist.org/sitemap-index-postings-29.xml"
+    ],
+    "status": 200,
+    "url": "https://www.craigslist.org/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.craigslist.org",
+  "sitemap": {
+    "child": {
+      "child": null,
+      "child_sitemaps": null,
+      "fetched": true,
+      "kind": "urlset",
+      "newest_lastmod": null,
+      "note": null,
+      "oldest_lastmod": null,
+      "sample_urls": [
+        "https://www.craigslist.org/search/area/sfbay?cat=acc",
+        "https://www.craigslist.org/search/area/sfbay?cat=act",
+        "https://www.craigslist.org/search/area/sfbay?cat=aos",
+        "https://www.craigslist.org/search/area/sfbay?cat=apa",
+        "https://www.craigslist.org/search/area/sfbay?cat=ara"
+      ],
+      "source": "robots",
+      "status": 200,
+      "truncated": false,
+      "url": "https://www.craigslist.org/sitemap-categories-and-hubs-area-sfo.xml",
+      "url_count": 265,
+      "with_lastmod": 0
+    },
+    "child_sitemaps": 810,
+    "fetched": true,
+    "kind": "sitemapindex",
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [
+      "https://www.craigslist.org/sitemap-categories-and-hubs-area-sfo.xml",
+      "https://www.craigslist.org/sitemap-categories-and-hubs-subarea-sfc.xml",
+      "https://www.craigslist.org/sitemap-categories-and-hubs-subarea-sby.xml",
+      "https://www.craigslist.org/sitemap-categories-and-hubs-subarea-eby.xml",
+      "https://www.craigslist.org/sitemap-categories-and-hubs-subarea-pen.xml"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://www.craigslist.org/sitemap-index-categories-and-hubs.xml",
+    "url_count": null,
+    "with_lastmod": 0
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:07:46+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {
+      "SearchAction": 1,
+      "WebSite": 1
+    }
+  }
+}

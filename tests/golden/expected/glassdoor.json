@@ -1,0 +1,200 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": [
+      {
+        "bot_management": true,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare",
+          "cookie __cf_bm (bot management)"
+        ],
+        "status": "present",
+        "vendor": "cloudflare"
+      }
+    ]
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "input_url": "https://www.glassdoor.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 9,
+    "content_type": "text/plain",
+    "fetched": true,
+    "final_url": "https://www.glassdoor.com/",
+    "lang": null,
+    "status": 403,
+    "title": null,
+    "url": "https://www.glassdoor.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "html",
+        "notes": [],
+        "partial": false,
+        "summary": "little content without JavaScript",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [
+          "page loads only; each load also fetches scripts and API calls; URLs from listing pages (count not measured)",
+          "check the browser's network tab first: the page may call a JSON API"
+        ],
+        "partial": false,
+        "summary": "render pages in a headless browser (highest cost)",
+        "urls": [
+          "https://www.glassdoor.com/"
+        ],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Ask the site owner for access, an API key or a data export; do not try to get past the block"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 5.0,
+      "max_requests_per_day": 5000,
+      "reason": "Cloudflare bot management in front of the site: slow and capped"
+    },
+    "recommended": null,
+    "risks": [
+      "stopped at the first block: HTTP 403; cloudflare in front of the site (https://www.glassdoor.com/)",
+      "Cloudflare bot management is in front of the site: keep to the rate below and stop at the first challenge",
+      "platform not recognised: no platform-specific feed was probed"
+    ],
+    "verdict": "not_a_fit"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null,
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 0,
+    "links": 0,
+    "noscript_warning": false,
+    "reasons": [],
+    "script_bytes": 0,
+    "text_chars": 0,
+    "verdict": "unknown"
+  },
+  "requests": [
+    {
+      "bytes": 6300,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.glassdoor.com/robots.txt"
+    },
+    {
+      "bytes": 9,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 403,
+      "url": "https://www.glassdoor.com/"
+    }
+  ],
+  "requests_used": 2,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/": true
+    },
+    "request_rate": null,
+    "sitemaps": [],
+    "status": 200,
+    "url": "https://www.glassdoor.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.glassdoor.com",
+  "sitemap": {
+    "child": null,
+    "child_sitemaps": null,
+    "fetched": false,
+    "kind": null,
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [],
+    "source": "none",
+    "status": null,
+    "truncated": false,
+    "url": null,
+    "url_count": null,
+    "with_lastmod": 0
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:05:21+00:00",
+  "stopped": {
+    "detail": "HTTP 403; cloudflare in front of the site",
+    "reason": "blocked",
+    "url": "https://www.glassdoor.com/"
+  },
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {}
+  }
+}

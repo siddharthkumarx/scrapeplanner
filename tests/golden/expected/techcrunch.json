@@ -1,0 +1,313 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": [
+      {
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ],
+        "status": "present",
+        "vendor": "cloudflare"
+      }
+    ]
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "bytes": 2860,
+        "details": {},
+        "keys": [
+          "config",
+          "state"
+        ],
+        "kind": "json_script",
+        "locator": "script#wp-script-module-data-@wordpress/interactivity"
+      }
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "fields": [],
+        "http_status": 200,
+        "items_seen": 20,
+        "kind": "rss",
+        "note": "TechCrunch \u00bb Feed",
+        "page_size": 20,
+        "status": "ok",
+        "total_items": null,
+        "url": "https://techcrunch.com/feed/"
+      },
+      {
+        "fields": [],
+        "http_status": null,
+        "items_seen": null,
+        "kind": "wp_rest",
+        "note": null,
+        "page_size": null,
+        "status": "skipped_robots",
+        "total_items": null,
+        "url": "https://techcrunch.com/wp-json/wp/v2/posts?per_page=1"
+      }
+    ]
+  },
+  "input_url": "https://techcrunch.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 449020,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://techcrunch.com/",
+    "lang": "en-US",
+    "status": 200,
+    "title": "TechCrunch | Startup and Technology News",
+    "url": "https://techcrunch.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": 0.0,
+        "est_requests": 1,
+        "fields": [],
+        "name": "feed_api",
+        "notes": [
+          "a feed returns only its latest 20 entries; poll it for new ones"
+        ],
+        "partial": true,
+        "summary": "rss feed",
+        "urls": [
+          "https://techcrunch.com/feed/"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: BreadcrumbList, CollectionPage, EntryPoint, ImageObject, ListItem, Organization, PropertyValueSpecification, SearchAction, WebSite)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 0.28,
+        "est_requests": 1006,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~200 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (12,768 chars of text)",
+        "urls": [
+          "https://techcrunch.com",
+          "https://techcrunch.com/contributor-content/revekka-palaiologou-wants-dion-to-be-your-gateway-to-people-places-and-experiences/",
+          "https://techcrunch.com/contributor-content/knowidea-launches-veripie-1-0-designed-to-replace-opinion-with-predictions-businesses-can-trust/"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 1.0,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "recommended": "html",
+    "risks": [
+      "robots.txt disallows: /wp-json/wp/v2/posts?per_page=1",
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "verdict": "good"
+  },
+  "platform": {
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [
+      "wordpress"
+    ],
+    "generator": "WordPress 6.9.11",
+    "name": "unknown"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 449020,
+    "links": 328,
+    "noscript_warning": false,
+    "reasons": [
+      "12768 characters of text, 328 links"
+    ],
+    "script_bytes": 23057,
+    "text_chars": 12768,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 710,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://techcrunch.com/robots.txt"
+    },
+    {
+      "bytes": 449020,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://techcrunch.com/"
+    },
+    {
+      "bytes": 242450,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://techcrunch.com/sitemap.xml"
+    },
+    {
+      "bytes": 16829,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:rss",
+      "status": 200,
+      "url": "https://techcrunch.com/feed/"
+    },
+    {
+      "bytes": 90836,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "url": "https://techcrunch.com/sitemap-page-1.xml"
+    }
+  ],
+  "requests_used": 5,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/": true,
+      "/feed/": true,
+      "/sitemap.xml": true,
+      "/wp-json/wp/v2/posts?per_page=1": false
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://techcrunch.com/sitemap.xml",
+      "https://techcrunch.com/news-sitemap.xml"
+    ],
+    "status": 200,
+    "url": "https://techcrunch.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "techcrunch.com",
+  "sitemap": {
+    "child": {
+      "child": null,
+      "child_sitemaps": null,
+      "fetched": true,
+      "kind": "urlset",
+      "newest_lastmod": "2026-11-04",
+      "note": null,
+      "oldest_lastmod": "2024-05-04",
+      "sample_urls": [
+        "https://techcrunch.com",
+        "https://techcrunch.com/contributor-content/revekka-palaiologou-wants-dion-to-be-your-gateway-to-people-places-and-experiences/",
+        "https://techcrunch.com/contributor-content/knowidea-launches-veripie-1-0-designed-to-replace-opinion-with-predictions-businesses-can-trust/",
+        "https://techcrunch.com/contributor-content/ai-data-center-development-is-moving-toward-a-manufacturing-mode/",
+        "https://techcrunch.com/contributor-content/ai-made-legal-content-cheaper-law-firms-are-exploring-case-files-as-a-search-resource/"
+      ],
+      "source": "robots",
+      "status": 200,
+      "truncated": false,
+      "url": "https://techcrunch.com/sitemap-page-1.xml",
+      "url_count": 200,
+      "with_lastmod": 200
+    },
+    "child_sitemaps": 2063,
+    "fetched": true,
+    "kind": "sitemapindex",
+    "newest_lastmod": "2026-11-04",
+    "note": null,
+    "oldest_lastmod": "2026-11-04",
+    "sample_urls": [
+      "https://techcrunch.com/sitemap-page-1.xml",
+      "https://techcrunch.com/sitemap-page-2.xml",
+      "https://techcrunch.com/sitemap-page-3.xml",
+      "https://techcrunch.com/sitemap-page-4.xml",
+      "https://techcrunch.com/sitemap-page-5.xml"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://techcrunch.com/sitemap.xml",
+    "url_count": null,
+    "with_lastmod": 2063
+  },
+  "skipped": [
+    {
+      "purpose": "feed:wp_rest",
+      "reason": "robots",
+      "url": "https://techcrunch.com/wp-json/wp/v2/posts?per_page=1"
+    }
+  ],
+  "started_at": "2026-11-04T15:05:49+00:00",
+  "stopped": null,
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {
+      "BreadcrumbList": 1,
+      "CollectionPage": 1,
+      "EntryPoint": 1,
+      "ImageObject": 1,
+      "ListItem": 1,
+      "Organization": 1,
+      "PropertyValueSpecification": 1,
+      "SearchAction": 1,
+      "WebSite": 1
+    }
+  }
+}

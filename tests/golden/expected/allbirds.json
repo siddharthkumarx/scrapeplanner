@@ -1,0 +1,326 @@
+{
+  "antibot": {
+    "challenge_url": null,
+    "challenged": false,
+    "vendors": [
+      {
+        "bot_management": false,
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ],
+        "status": "present",
+        "vendor": "cloudflare"
+      }
+    ]
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "http_status": 200,
+        "items_seen": 250,
+        "kind": "shopify_products_json",
+        "note": null,
+        "page_size": 250,
+        "status": "ok",
+        "total_items": null,
+        "url": "https://www.allbirds.com/products.json?limit=250"
+      },
+      {
+        "fields": [],
+        "http_status": 429,
+        "items_seen": null,
+        "kind": "shopify_product_js",
+        "note": "HTTP 429",
+        "page_size": null,
+        "status": "blocked",
+        "total_items": null,
+        "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
+      }
+    ]
+  },
+  "input_url": "https://www.allbirds.com/",
+  "max_requests": 10,
+  "page": {
+    "bytes": 693916,
+    "content_type": "text/html",
+    "fetched": true,
+    "final_url": "https://www.allbirds.com/",
+    "lang": "en-US",
+    "status": 200,
+    "title": "Allbirds: Comfortable, Sustainable Shoes & Apparel",
+    "url": "https://www.allbirds.com/"
+  },
+  "plan": {
+    "items": 1000,
+    "methods": [
+      {
+        "est_hours": 0.01,
+        "est_requests": 4,
+        "fields": [
+          "id",
+          "title",
+          "handle",
+          "body_html",
+          "published_at",
+          "created_at",
+          "updated_at",
+          "vendor",
+          "product_type",
+          "tags",
+          "variants",
+          "images",
+          "options"
+        ],
+        "name": "feed_api",
+        "notes": [],
+        "partial": false,
+        "summary": "Shopify /products.json: products, variants, prices, images",
+        "urls": [
+          "https://www.allbirds.com/products.json?limit=250&page={page}"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "structured_data",
+        "notes": [],
+        "partial": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "embedded_json",
+        "notes": [],
+        "partial": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "usable": false
+      },
+      {
+        "est_hours": 1.39,
+        "est_requests": 1004,
+        "fields": [],
+        "name": "html",
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~353 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ],
+        "partial": false,
+        "summary": "CSS selectors on server-rendered HTML (92,664 chars of text)",
+        "urls": [
+          "https://www.allbirds.com/",
+          "https://www.allbirds.com/products/mens-wool-runners",
+          "https://www.allbirds.com/products/womens-wool-runners-natural-black"
+        ],
+        "usable": true
+      },
+      {
+        "est_hours": null,
+        "est_requests": null,
+        "fields": [],
+        "name": "browser",
+        "notes": [],
+        "partial": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "usable": false
+      }
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ],
+    "rate": {
+      "concurrency": 1,
+      "delay_seconds": 5.0,
+      "max_requests_per_day": null,
+      "reason": "the site answered 429 during this run at 1s spacing"
+    },
+    "recommended": "feed_api",
+    "risks": [
+      "the site refused https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js (HTTP 429 Too Many Requests); the run stopped there, and a collector must stop at any 403 or 429 too"
+    ],
+    "verdict": "caution"
+  },
+  "platform": {
+    "confidence": "high",
+    "evidence": [
+      "header powered-by: Shopify",
+      "assets on cdn.shopify.com",
+      "assets under /cdn/shop/",
+      "Shopify.theme script",
+      "window.Shopify object",
+      "mentions .myshopify.com"
+    ],
+    "frameworks": [],
+    "generator": null,
+    "name": "shopify"
+  },
+  "rendering": {
+    "app_shell": false,
+    "html_bytes": 693916,
+    "links": 129,
+    "noscript_warning": false,
+    "reasons": [
+      "92664 characters of text, 129 links"
+    ],
+    "script_bytes": 80147,
+    "text_chars": 92664,
+    "verdict": "raw_html"
+  },
+  "requests": [
+    {
+      "bytes": 2285,
+      "error": null,
+      "method": "GET",
+      "purpose": "robots",
+      "status": 200,
+      "url": "https://www.allbirds.com/robots.txt"
+    },
+    {
+      "bytes": 693916,
+      "error": null,
+      "method": "GET",
+      "purpose": "page",
+      "status": 200,
+      "url": "https://www.allbirds.com/"
+    },
+    {
+      "bytes": 1186,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap",
+      "status": 200,
+      "url": "https://www.allbirds.com/sitemap.xml"
+    },
+    {
+      "bytes": 1816195,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:shopify_products_json",
+      "status": 200,
+      "url": "https://www.allbirds.com/products.json?limit=250"
+    },
+    {
+      "bytes": 183610,
+      "error": null,
+      "method": "GET",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "url": "https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557&to=7369944137808"
+    },
+    {
+      "bytes": 1568,
+      "error": null,
+      "method": "GET",
+      "purpose": "feed:shopify_product_js",
+      "status": 429,
+      "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
+    }
+  ],
+  "requests_used": 6,
+  "robots": {
+    "crawl_delay": null,
+    "disallow_all": false,
+    "fetched": true,
+    "found": true,
+    "note": null,
+    "paths": {
+      "/": true,
+      "/products.json?limit=250": true,
+      "/products/mens-tree-runner-nz-medium-grey.js": true,
+      "/sitemap.xml": true
+    },
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.allbirds.com/sitemap.xml"
+    ],
+    "status": 200,
+    "url": "https://www.allbirds.com/robots.txt"
+  },
+  "schema_version": "1",
+  "site": "www.allbirds.com",
+  "sitemap": {
+    "child": {
+      "child": null,
+      "child_sitemaps": null,
+      "fetched": true,
+      "kind": "urlset",
+      "newest_lastmod": "2026-11-03",
+      "note": null,
+      "oldest_lastmod": "2026-11-03",
+      "sample_urls": [
+        "https://www.allbirds.com/",
+        "https://www.allbirds.com/products/mens-wool-runners",
+        "https://www.allbirds.com/products/womens-wool-runners-natural-black",
+        "https://www.allbirds.com/products/womens-wool-runner-up-mizzles-natural-grey",
+        "https://www.allbirds.com/products/womens-tree-breezers"
+      ],
+      "source": "robots",
+      "status": 200,
+      "truncated": false,
+      "url": "https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557&to=7369944137808",
+      "url_count": 353,
+      "with_lastmod": 352
+    },
+    "child_sitemaps": 8,
+    "fetched": true,
+    "kind": "sitemapindex",
+    "newest_lastmod": null,
+    "note": null,
+    "oldest_lastmod": null,
+    "sample_urls": [
+      "https://www.allbirds.com/sitemap_agentic_discovery.xml",
+      "https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557&to=7369944137808",
+      "https://www.allbirds.com/sitemap_pages_1.xml?from=248230535&to=94637621328",
+      "https://www.allbirds.com/sitemap_collections_1.xml?from=423410055&to=274901696592",
+      "https://www.allbirds.com/sitemap_collections_2.xml?from=274901925968&to=279444029520"
+    ],
+    "source": "robots",
+    "status": 200,
+    "truncated": false,
+    "url": "https://www.allbirds.com/sitemap.xml",
+    "url_count": null,
+    "with_lastmod": 0
+  },
+  "skipped": [],
+  "started_at": "2026-11-04T15:04:22+00:00",
+  "stopped": {
+    "detail": "HTTP 429 Too Many Requests",
+    "reason": "rate_limited",
+    "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
+  },
+  "structured": {
+    "items": [],
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "key_types": [],
+    "microdata_items": 0,
+    "types": {}
+  }
+}

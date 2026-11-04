@@ -1,0 +1,378 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.zillow.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "last-modified",
+    "Thu, 29 Oct 2026 00:06:15 GMT"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:07:53 GMT"
+   ],
+   [
+    "etag",
+    "W/\"82994ed8e88422bb4d38492827a893aa\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "RefreshHit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 01e2110cbab4e85fc866324c9ddb3d6e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD55-P9"
+   ],
+   [
+    "x-amz-cf-id",
+    "6wSz4oqZvaZfo5IDqHMAEraN77y0zAOfbcTXpVXyiJ5l1y8xH4z8fw=="
+   ],
+   [
+    "x-xss-protection",
+    "1"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "x-dns-prefetch-control",
+    "off"
+   ]
+  ],
+  "elapsed_ms": 211,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.zillow.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:07:53 GMT"
+   ],
+   [
+    "set-cookie",
+    "zguid=<redacted>; Max-Age=315576000; Expires=Tue, 04 Nov 2036 03:07:53 GMT; Path=/; Domain=.zillow.com"
+   ],
+   [
+    "set-cookie",
+    "zgsession=<redacted>; Path=/; Domain=.zillow.com; HTTPOnly"
+   ],
+   [
+    "via",
+    "1.1 zgs, 1.1 01e2110cbab4e85fc866324c9ddb3d6e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "content-security-policy",
+    "frame-ancestors none"
+   ],
+   [
+    "cache-control",
+    "private, max-age=0, must-revalidate"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "etag",
+    "\"8ekiz4rjsta2xg\""
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "109"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD55-P9"
+   ],
+   [
+    "x-amz-cf-id",
+    "lZL1DMut8prFDy7y1prGSy_dlv5-xEMKSUUKuQyxJCSRURodDH1a9g=="
+   ],
+   [
+    "x-xss-protection",
+    "1"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "x-dns-prefetch-control",
+    "off"
+   ]
+  ],
+  "elapsed_ms": 385,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.zillow.com/xml/indexes/us/static.xml.gz",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/xml"
+   ],
+   [
+    "content-length",
+    "353"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "last-modified",
+    "Fri, 02 Oct 2026 21:42:26 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:07:32 GMT"
+   ],
+   [
+    "etag",
+    "\"eb64e763b59cbb973850b57cd4875f7b\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 01e2110cbab4e85fc866324c9ddb3d6e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD55-P9"
+   ],
+   [
+    "x-amz-cf-id",
+    "pRyPaaXYGMTwiEwxN-N6kBHo81bwht-I9tvR-JBmtXOdAxQ1kdKf7A=="
+   ],
+   [
+    "age",
+    "23"
+   ],
+   [
+    "x-xss-protection",
+    "1"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "x-dns-prefetch-control",
+    "off"
+   ]
+  ],
+  "elapsed_ms": 11,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.zillow.com/xml/sitemaps/us/static/Midwest_Home_Values_sitemap.xml.gz",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "CloudFront"
+   ],
+   [
+    "content-type",
+    "text/xml"
+   ],
+   [
+    "content-length",
+    "405973"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "last-modified",
+    "Thu, 29 Oct 2026 00:05:59 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:07:57 GMT"
+   ],
+   [
+    "etag",
+    "\"db1a34395bfa8167a21f775ed38dc110\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "RefreshHit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 01e2110cbab4e85fc866324c9ddb3d6e.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD55-P9"
+   ],
+   [
+    "x-amz-cf-id",
+    "lzxvWlOUK4vxxMvHssPKPyBE-tsEPR9a4MuqzzmaoUHE-FdKXLhrrA=="
+   ],
+   [
+    "x-xss-protection",
+    "1"
+   ],
+   [
+    "referrer-policy",
+    "strict-origin-when-cross-origin"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "x-dns-prefetch-control",
+    "off"
+   ]
+  ],
+  "elapsed_ms": 251,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

@@ -1,0 +1,11 @@
+{
+  "url": "https://woocommerce.com/products/",
+  "recorded_at": "2026-11-04T15:05:10+00:00",
+  "source": "checks/results/003-sites/woocommerce",
+  "commit": "67918dd65fdd7d0786c0d2539eb5c92c42aef6af",
+  "options": {
+    "max_requests": 10,
+    "delay": 1.0,
+    "items": 1000
+  }
+}
