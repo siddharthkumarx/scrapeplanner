@@ -1,0 +1,55 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.booking.com/ ──────────────────────────────────────────╮
+│ Verdict      NOT A FIT                                                                           │
+│ Best method  none                                                                                │
+│ Platform     unknown                                                                             │
+│ Anti-bot     AWS WAF (challenge)                                                                 │
+│ Rendering    needs a browser                                                                     │
+│ Polite rate  1 request every 5s, max 5,000/day                                                   │
+│ This run     2/10 requests, 1.3s                                                                 │
+│ Stopped      aws_waf challenge page (HTTP 202: AWS WAF challenge page)                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status   Req. for 1,000   Time   Details                                 │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                    -      -   no public feed found                    │
+│   2   Structured data   no                    -      -   no schema.org records on this page      │
+│                                                          (types seen: none)                      │
+│   3   Embedded JSON     no                    -      -   no large inline state                   │
+│   4   HTML              no                    -      -   little content without JavaScript       │
+│   5   Browser           no                    -      -   render pages in a headless browser      │
+│                                                          (highest cost)                          │
+│                                                          - page loads only; each load also       │
+│                                                          fetches scripts and API calls; URLs     │
+│                                                          from listing pages (count not           │
+│                                                          measured)                               │
+│                                                          - check the browser's network tab       │
+│                                                          first: the page may call a JSON API     │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                    found (HTTP 200)                                                   │
+│   /                           allowed                                                            │
+│   /sitembk-airport-index.xml  allowed                                                            │
+│ Sitemap                       run stopped at a block                                             │
+│                               https://www.booking.com/sitembk-airport-index.xml                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured  none                                                                                 │
+│ Rendering   <noscript> asks for JavaScript; only 0 characters of text without JavaScript         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - stopped at the first block: aws_waf challenge page (HTTP 202: AWS WAF challenge page)          │
+│ (https://www.booking.com/)                                                                       │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Ask the site owner for access, an API key or a data export; do not try to get past the block   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                 
+ #   Status   Purpose    ms   URL                                
+ ─────────────────────────────────────────────────────────────── 
+ 1      200   robots    102   https://www.booking.com/robots.txt 
+ 2      202   page      170   https://www.booking.com/           
+                                                                 

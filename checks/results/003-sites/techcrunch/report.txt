@@ -1,0 +1,81 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://techcrunch.com/ ───────────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  HTML parsing                                                                        │
+│ Platform     unknown (+ wordpress)                                                               │
+│ Anti-bot     Cloudflare (CDN only)                                                               │
+│ Rendering    data in the raw HTML                                                                │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     5/10 requests, 4.4s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000      Time   Details                         │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        usable                     1   < 1 min   rss feed                        │
+│                                                                  - a feed returns only its       │
+│                                                                  latest 20 entries; poll it for  │
+│                                                                  new ones                        │
+│   2   Structured data   no                         -         -   no schema.org records on this   │
+│                                                                  page (types seen:               │
+│                                                                  BreadcrumbList,                 │
+│                                                                  CollectionPage, EntryPoint,     │
+│                                                                  ImageObject, ListItem,          │
+│                                                                  Organization,                   │
+│                                                                  PropertyValueSpecification,     │
+│                                                                  SearchAction, WebSite)          │
+│   3   Embedded JSON     no                         -         -   no large inline state           │
+│   4   HTML              recommended            1,006    17 min   CSS selectors on                │
+│                                                                  server-rendered HTML (12,768    │
+│                                                                  chars of text)                  │
+│                                                                  - one detail page per record;   │
+│                                                                  URLs from the sitemap (~200     │
+│                                                                  per file)                       │
+│                                                                  - selectors break on            │
+│                                                                  redesigns; prefer the methods   │
+│                                                                  above when usable               │
+│   5   Browser           no                         -         -   not needed: data is available   │
+│                                                                  without JavaScript              │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                         found (HTTP 200)                                              │
+│   /                                allowed                                                       │
+│   /sitemap.xml                     allowed                                                       │
+│   /feed/                           allowed                                                       │
+│   /wp-json/wp/v2/posts?per_page=1  disallowed                                                    │
+│ Sitemap                            index of 2,063 sitemaps, newest lastmod 2026-11-04            │
+│                                    https://techcrunch.com/sitemap.xml                            │
+│   child                            200 URLs, newest lastmod 2026-11-04                           │
+│                                    https://techcrunch.com/sitemap-page-1.xml                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured                                             no record types (BreadcrumbList,          │
+│                                                        CollectionPage, EntryPoint, ImageObject,  │
+│                                                        ListItem, Organization)                   │
+│ script#wp-script-module-data-@wordpress/interactivity  2,860 bytes: config, state                │
+│ rss                                                    ok, 20 items                              │
+│                                                        https://techcrunch.com/feed/              │
+│ wp_rest                                                skipped robots                            │
+│                                                        https://techcrunch.com/wp-json/wp/v2/post │
+│                                                        s?per_page=1                              │
+│ Rendering                                              12768 characters of text, 328 links       │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - robots.txt disallows: /wp-json/wp/v2/posts?per_page=1                                          │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                             
+ #   Status   Purpose         ms   URL                                       
+ ─────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots          55   https://techcrunch.com/robots.txt         
+ 2      200   page            40   https://techcrunch.com/                   
+ 3      200   sitemap         15   https://techcrunch.com/sitemap.xml        
+ 4      200   feed:rss        17   https://techcrunch.com/feed/              
+ 5      200   sitemap-child   18   https://techcrunch.com/sitemap-page-1.xml 
+                                                                             

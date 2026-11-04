@@ -1,0 +1,282 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://woocommerce.com/products/",
+  "site": "woocommerce.com",
+  "started_at": "2026-11-04T15:05:10+00:00",
+  "duration_seconds": 8.43,
+  "max_requests": 10,
+  "requests_used": 4,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://woocommerce.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 68,
+      "bytes": 679,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://woocommerce.com/products/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 16,
+      "bytes": 537248,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://woocommerce.com/sitemap_index.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 8,
+      "bytes": 3492,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://woocommerce.com/product-sitemap.xml",
+      "purpose": "sitemap-child",
+      "status": 200,
+      "elapsed_ms": 4256,
+      "bytes": 2044649,
+      "error": null
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://woocommerce.com/wp-json/wc/store/v1/products?per_page=1",
+      "purpose": "feed:woo_store_api",
+      "reason": "robots"
+    }
+  ],
+  "stopped": null,
+  "page": {
+    "url": "https://woocommerce.com/products/",
+    "final_url": "https://woocommerce.com/products/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 537248,
+    "title": "WooCommerce Extensions, Themes, Plugins, and More",
+    "lang": "en-US"
+  },
+  "robots": {
+    "url": "https://woocommerce.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/products/": true,
+      "/sitemap_index.xml": true,
+      "/wp-json/wc/store/v1/products?per_page=1": false,
+      "/products/linnworks-advanced/": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://woocommerce.com/sitemap_index.xml",
+      "https://woocommerce.com/sitemap_index.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://woocommerce.com/sitemap_index.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "sitemapindex",
+    "url_count": null,
+    "child_sitemaps": 24,
+    "newest_lastmod": "2026-11-04",
+    "oldest_lastmod": "2021-02-03",
+    "with_lastmod": 24,
+    "sample_urls": [
+      "https://woocommerce.com/post-sitemap.xml",
+      "https://woocommerce.com/page-sitemap.xml",
+      "https://woocommerce.com/product_updates-sitemap.xml",
+      "https://woocommerce.com/product-sitemap.xml",
+      "https://woocommerce.com/product-sitemap2.xml"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": {
+      "url": "https://woocommerce.com/product-sitemap.xml",
+      "source": "robots",
+      "fetched": true,
+      "status": 200,
+      "kind": "urlset",
+      "url_count": 1143,
+      "child_sitemaps": null,
+      "newest_lastmod": "2026-10-12",
+      "oldest_lastmod": "2025-01-14",
+      "with_lastmod": 1143,
+      "sample_urls": [
+        "https://woocommerce.com/products/linnworks-advanced/",
+        "https://woocommerce.com/products/jetpack-social/",
+        "https://woocommerce.com/products/server-gtm-hosting/",
+        "https://woocommerce.com/products/lebesgue-marketing-ltv/",
+        "https://woocommerce.com/products/woo-agency-partners/"
+      ],
+      "truncated": false,
+      "note": null,
+      "child": null
+    }
+  },
+  "platform": {
+    "name": "woocommerce",
+    "confidence": "high",
+    "evidence": [
+      "WooCommerce plugin assets",
+      "woocommerce CSS class"
+    ],
+    "frameworks": [
+      "wordpress"
+    ],
+    "generator": "WordPress 7.1.4"
+  },
+  "antibot": {
+    "vendors": [],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "microdata_items": 1,
+    "types": {
+      "WebPage": 4,
+      "ReadAction": 1,
+      "ImageObject": 3,
+      "WebSite": 1,
+      "SearchAction": 1,
+      "EntryPoint": 1,
+      "PropertyValueSpecification": 1,
+      "Organization": 2,
+      "MerchantReturnPolicy": 1,
+      "Person": 1
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 537248,
+    "text_chars": 15017,
+    "links": 195,
+    "script_bytes": 95046,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "15017 characters of text, 195 links"
+    ]
+  },
+  "feeds": {
+    "candidates": [
+      {
+        "kind": "woo_store_api",
+        "url": "https://woocommerce.com/wp-json/wc/store/v1/products?per_page=1",
+        "status": "skipped_robots",
+        "http_status": null,
+        "items_seen": null,
+        "total_items": null,
+        "page_size": null,
+        "fields": [],
+        "note": null
+      }
+    ]
+  },
+  "plan": {
+    "verdict": "good",
+    "recommended": "html",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed answered (some disallowed by robots.txt)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: EntryPoint, ImageObject, MerchantReturnPolicy, Organization, Person, PropertyValueSpecification, ReadAction, SearchAction, WebPage, WebSite)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (15,017 chars of text)",
+        "urls": [
+          "https://woocommerce.com/products/linnworks-advanced/",
+          "https://woocommerce.com/products/jetpack-social/",
+          "https://woocommerce.com/products/server-gtm-hosting/"
+        ],
+        "fields": [],
+        "est_requests": 1002,
+        "est_hours": 0.28,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~1143 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "robots.txt disallows: /wp-json/wc/store/v1/products?per_page=1",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it"
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.reuters.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "1458"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "openresty"
+   ],
+   [
+    "x-arc-pb-edge",
+    "0"
+   ],
+   [
+    "etag",
+    "W/\"11fd-zR6+LKawd/ldCbJcxE1RfbeA08Q\""
+   ],
+   [
+    "x-arc-pb-mx-id",
+    "00000000"
+   ],
+   [
+    "x-arc-pb-request-id",
+    "c453194d-22a9-40ec-964f-3f44d665256d"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 15:05:28 GMT"
+   ],
+   [
+    "cache-control",
+    "private, max-age=101"
+   ],
+   [
+    "expires",
+    "Wed, 04 Nov 2026 15:07:28 GMT"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:05:47 GMT"
+   ],
+   [
+    "x-arc-edgecontroller",
+    "1.8.5"
+   ],
+   [
+    "content-security-policy",
+    "frame-ancestors 'self'; report-uri https://reuters.report-uri.com/r/t/csp/enforce; report-to report-uri"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=31536000"
+   ],
+   [
+    "x-arc-ttl",
+    "120"
+   ],
+   [
+    "x-arc-request-id",
+    "0.3cdbda17.1793804747.175308a"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 d6b0796641ad9e40cce4a9874d43cd3a.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD55-P10"
+   ],
+   [
+    "x-amz-cf-id",
+    "GLM6ZnHt4XY0ZR6fqWh1KzkM9qHNrdUp069tvLQsftovCy3xNAXYEg=="
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "report-to",
+    "{\"endpoints\":[{\"url\":\"https://reuters.report-uri.com/a/t/g\"}],\"group\":\"report-uri\",\"include_subdomains\":true,\"max_age\":31536000}"
+   ]
+  ],
+  "elapsed_ms": 290,
+  "truncated": false,
+  "body": "000.body.gz"
+ }
+]

@@ -1,0 +1,174 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.booking.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "content-type",
+    "text/plain"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "AmazonS3"
+   ],
+   [
+    "last-modified",
+    "Fri, 30 Oct 2026 09:01:04 GMT"
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "x-amz-version-id",
+    "EpO2BSfIB6AKoRxbDjJTOXMMCrWMRIvI"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:49:15 GMT"
+   ],
+   [
+    "cache-control",
+    "max-age=3600, public"
+   ],
+   [
+    "etag",
+    "W/\"ca478ad0bfb6b0da2e56efdc74329368\""
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "x-cache",
+    "Hit from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 a863373015dd073e91a52d99d8ad6bfc.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD61-P10"
+   ],
+   [
+    "x-amz-cf-id",
+    "c5ozAkr4tImpaWt0Y86jOvphPXZPpixZQ3IWCIUWU6L170IalGZJ2g=="
+   ],
+   [
+    "age",
+    "1129"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "accept-ch",
+    "ECT"
+   ],
+   [
+    "server-timing",
+    "cdn-cache-hit,cdn-pop;desc=\"IAD61-P10\",cdn-rid;desc=\"c5ozAkr4tImpaWt0Y86jOvphPXZPpixZQ3IWCIUWU6L170IalGZJ2g==\",cdn-hit-layer;desc=\"EDGE\",cdn-downstream-fbl;dur=4"
+   ]
+  ],
+  "elapsed_ms": 102,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.booking.com/",
+  "purpose": "page",
+  "status": 202,
+  "headers": [
+   [
+    "content-type",
+    "text/html"
+   ],
+   [
+    "content-length",
+    "3962"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:08:04 GMT"
+   ],
+   [
+    "set-cookie",
+    "bkng=<redacted>; domain=.booking.com; path=/; expires=Mon, 03-Nov-2031 15:08:04 GMT; Secure; HTTPOnly; SameSite=None"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "content-security-policy-report-only",
+    "frame-ancestors 'none'; report-uri https://nellie.booking.com/csp-report-uri?type=report&tag=112&pid=33466a6a220d006c&e=UmFuZG9tSVYkc2RlIyh9YXZqW3zWGZ0-83NRqMN73UJJdl-hwzM6D40-fBzNrQT75oKIZbtNdT4"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "bkng_sso_auth=<redacted>; Domain=.booking.com; Path=/; Expires=Fri, 03 Nov 2028 15:08:04 GMT; HttpOnly; Secure; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "pcm_consent=<redacted>; Domain=.booking.com; Path=/; Expires=Thu, 04 Nov 2027 15:08:04 GMT; HttpOnly; Secure; SameSite=Lax"
+   ],
+   [
+    "x-cache",
+    "Miss from cloudfront"
+   ],
+   [
+    "via",
+    "1.1 a863373015dd073e91a52d99d8ad6bfc.cloudfront.net (CloudFront)"
+   ],
+   [
+    "x-amz-cf-pop",
+    "IAD61-P10"
+   ],
+   [
+    "x-amz-cf-id",
+    "Jr5b5g1Do9JxFotXrBmpy57BTluW9InzAHSf8QfVzs44pssPNTGuqw=="
+   ],
+   [
+    "accept-ch",
+    "ECT"
+   ],
+   [
+    "server-timing",
+    "cdn-upstream-layer;desc=\"REC\",cdn-upstream-dns;dur=0,cdn-upstream-connect;dur=0,cdn-upstream-fbl;dur=130,cdn-cache-miss,cdn-pop;desc=\"IAD61-P10\",cdn-rid;desc=\"Jr5b5g1Do9JxFotXrBmpy57BTluW9InzAHSf8QfVzs44pssPNTGuqw==\",cdn-downstream-fbl;dur=163"
+   ]
+  ],
+  "elapsed_ms": 170,
+  "truncated": false,
+  "body": "001.body.gz"
+ }
+]

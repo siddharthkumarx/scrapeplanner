@@ -1,0 +1,10 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.bestbuy.com/robots.txt",
+  "purpose": "robots",
+  "error": "ReadTimeout",
+  "message": "The read operation timed out"
+ }
+]

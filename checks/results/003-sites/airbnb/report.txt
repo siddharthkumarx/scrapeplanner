@@ -1,0 +1,75 @@
+╭─ scrapeplanner 0.1.0.dev0  ·  https://www.airbnb.com/ ───────────────────────────────────────────╮
+│ Verdict      GOOD FIT                                                                            │
+│ Best method  Embedded JSON state                                                                 │
+│ Platform     unknown                                                                             │
+│ Anti-bot     none seen                                                                           │
+│ Rendering    data in embedded JSON                                                               │
+│ Polite rate  1 request every 1s                                                                  │
+│ This run     4/10 requests, 4.5s                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   #   Method            Status        Req. for 1,000     Time   Details                          │
+│  ──────────────────────────────────────────────────────────────────────────────────────────────  │
+│   1   Feed / API        no                         -        -   no public feed found             │
+│   2   Structured data   no                         -        -   no schema.org records on this    │
+│                                                                 page (types seen: SearchAction,  │
+│                                                                 WebSite)                         │
+│   3   Embedded JSON     recommended            1,011   17 min   script#data-deferred-state-0     │
+│                                                                 (216,945 bytes)                  │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from the sitemap (~105 per  │
+│                                                                 file)                            │
+│   4   HTML              usable                 1,011   17 min   CSS selectors on                 │
+│                                                                 server-rendered HTML (460 chars  │
+│                                                                 of text)                         │
+│                                                                 - one detail page per record;    │
+│                                                                 URLs from the sitemap (~105 per  │
+│                                                                 file)                            │
+│                                                                 - selectors break on redesigns;  │
+│                                                                 prefer the methods above when    │
+│                                                                 usable                           │
+│   5   Browser           no                         -        -   not needed: data is available    │
+│                                                                 without JavaScript               │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Rules ──────────────────────────────────────────────────────────────────────────────────────────╮
+│ robots.txt                      found (HTTP 200)                                                 │
+│   /                             allowed                                                          │
+│   /sitemap-master-index.xml.gz  allowed                                                          │
+│ Sitemap                         index of 177 sitemaps, newest lastmod 2026-11-04                 │
+│                                 https://www.airbnb.com/sitemap-master-index.xml.gz               │
+│   child                         105 URLs, newest lastmod 2026-11-04                              │
+│                                 https://www.airbnb.com/sitemap-airbnb_friendly_apartment_geomark │
+│                                 et-urls-1.xml.gz                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
+│ Structured                         no record types (SearchAction, WebSite)                       │
+│ script#data-deferred-state-0       216,945 bytes: niobeClientData                                │
+│ script#data-injector-instances     153,142 bytes: server, initializer, root, root >              │
+│                                    core-guest-spa, root > core-guest-spa > app, root >           │
+│                                    core-guest-spa > app >                                        │
+│                                    /,/homes,/hotels,/experiences,/services                       │
+│ script#data-initializer-bootstrap  1,617 bytes: disable_google_recaptcha,                        │
+│                                    disable_google_tag_manager, enable_partytown_gtm,             │
+│                                    layout-init, no_flash_alerts                                  │
+│ Rendering                          data in script#data-deferred-state-0 (216945 bytes)           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Risks                                                                                            │
+│ - platform not recognised: no platform-specific feed was probed                                  │
+│ - page-layout methods break when the site changes; monitor field coverage                        │
+│                                                                                                  │
+│ Next steps                                                                                       │
+│ - Check the site's terms of service for data collection and reuse                                │
+│ - Write a starter profile with --profile profile.yaml and review it                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                                                                    
+ #   Status   Purpose          ms   URL                                                             
+ ────────────────────────────────────────────────────────────────────────────────────────────────── 
+ 1      200   robots          216   https://www.airbnb.com/robots.txt                               
+ 2      200   page            516   https://www.airbnb.com/                                         
+ 3      200   sitemap         343   https://www.airbnb.com/sitemap-master-index.xml.gz              
+ 4      200   sitemap-child   224   https://www.airbnb.com/sitemap-airbnb_friendly_apartment_geomar 
+                                    ket-urls-1.xml.gz                                               
+                                                                                                    
