@@ -20,6 +20,7 @@ import re
 import subprocess
 import sys
 from collections.abc import Sequence
+from pathlib import Path
 
 ALLOWED_TRAILERS = frozenset({"signed-off-by"})
 
@@ -101,9 +102,7 @@ def check_message(message: str) -> list[str]:
 
 
 def _git(*args: str) -> str:
-    return subprocess.run(
-        ["git", *args], check=True, capture_output=True, text=True
-    ).stdout
+    return subprocess.run(["git", *args], check=True, capture_output=True, text=True).stdout
 
 
 def check_revisions(revs: Sequence[str]) -> int:
@@ -128,8 +127,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     if len(args) != 1:
         print(__doc__, file=sys.stderr)
         return 2
-    with open(args[0], encoding="utf-8") as handle:
-        problems = check_message(handle.read())
+    problems = check_message(Path(args[0]).read_text(encoding="utf-8"))
     for problem in problems:
         print(f"commit-msg: {problem}", file=sys.stderr)
     if problems:

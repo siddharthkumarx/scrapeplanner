@@ -17,7 +17,8 @@ def _load() -> ModuleType:
     spec = importlib.util.spec_from_file_location(
         "check_commit_msg", ROOT / "scripts" / "check_commit_msg.py"
     )
-    assert spec and spec.loader
+    assert spec is not None
+    assert spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -79,9 +80,9 @@ def test_cli_exit_codes(tmp_path: Path) -> None:
     good.write_text("fix: fine\n", encoding="utf-8")
     bad.write_text("fix: no\n\nBody.\n\nReviewed-by: A\n", encoding="utf-8")
     script = str(ROOT / "scripts" / "check_commit_msg.py")
-    assert subprocess.run([sys.executable, script, str(good)]).returncode == 0
+    assert subprocess.run([sys.executable, script, str(good)], check=False).returncode == 0
     result = subprocess.run(
-        [sys.executable, script, str(bad)], capture_output=True, text=True
+        [sys.executable, script, str(bad)], check=False, capture_output=True, text=True
     )
     assert result.returncode == 1
     assert "Reviewed-by" in result.stderr
