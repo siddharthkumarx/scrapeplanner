@@ -134,3 +134,23 @@ annotated-tag objects:
 
 gitleaks runs as the released binary, not the gitleaks GitHub Action, so no
 license key is needed if the repository moves to an organisation.
+
+## D-011 · 2026-11-04 · What a refusal means for the verdict
+
+Any 401/403/429/503 or challenge stops the run (rule unchanged). For the
+verdict: a challenge anywhere, or a refusal of the page itself, gives "not a
+fit". A plain 403/429 on one optional probe gives "caution": the page we
+already have is still evidence, the refused endpoint is unusable, and the
+risk says a collector must stop at any 403/429. A 429 also raises the
+planned delay to 5 s. Reason: gymshark.com and allbirds.com in the live runs
+(I-004, I-005).
+
+## D-012 · 2026-11-04 · Fixtures: all 30 sites of the results run
+
+`tests/fixtures/` holds the exchanges of every site in `003-sites`, byte for
+byte. Git stores identical blobs once, so this adds no size on top of
+`checks/results/`. Only pages the tool fetched itself are stored (robots.txt,
+one public page, sitemaps, feed probes); cookie values are redacted at
+record time. When a detector changes on purpose, regenerate the golden files
+and review the diff; when the web changes, record a new run instead of
+editing fixtures.

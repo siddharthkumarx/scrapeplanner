@@ -38,3 +38,36 @@ posts, for 1,000 items.
 browser-dependent only with an app shell or heavy scripts. Methods that
 reach only part of N are marked `partial` and are recommended only when
 nothing else works. (Commit `911e622`.)
+
+## I-004 · 2026-11-04 · First 30-site run (002-sites): four planner bugs
+
+**What**: reviewing every row of `checks/results/002-sites` against its
+recorded exchanges showed:
+
+1. booking.com answered the page with HTTP 202 and an AWS WAF challenge
+   page; the tool did not recognise it and went on to fetch two sitemaps.
+   That broke "stop at the first challenge".
+2. gymshark.com answered `/products.json` with 403; the whole site was
+   marked "not a fit" although the page (with a 760 KB `__NEXT_DATA__`) had
+   been served.
+3. eBay's `server: AkamaiGHost` alone was reported as Akamai bot management.
+4. woocommerce.com: a WordPress per-page `/wp-json/` link was treated as a
+   feed, and the child-sitemap choice picked `product_updates-sitemap.xml`.
+
+Also, two requests that timed out (Amazon sitemap, Best Buy robots.txt) were
+not recorded, so they could not be replayed.
+
+**Fix**: commit `0c4ae55` (see D-011), then a fresh run `003-sites` on the
+fixed code. That run is the source of `docs/results.md` and of
+`tests/fixtures/`.
+
+## I-005 · 2026-11-04 · allbirds.com answered 429 in the second run
+
+**What**: in `003-sites` (about seven minutes after `002-sites`, both from
+GitHub Actions), allbirds.com answered the sixth request
+(`/products/<handle>.js`) with 429 at 1 s spacing. The run stopped there as
+designed; the plan kept recommending 1 s.
+
+**Fix**: commit after `89c3bcc`: a 429 during the run raises the planned
+delay to 5 s. Golden files carry the new rate; the committed live report
+keeps the old one, which is the only difference between replay and live.
