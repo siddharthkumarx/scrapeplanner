@@ -4,7 +4,8 @@ Every number the planner prints is either measured (counts from the page,
 the sitemap or a feed) or derived from a stated rule below. The rules:
 
 * polite delay = max(1 s, the --delay option, robots crawl-delay, robots
-  request-rate); 5 s when a bot-management vendor is in front of the site;
+  request-rate); 5 s when a bot-management vendor is in front of the site or
+  the site answered 429 during the run;
 * request estimate = pages needed for N items at the method's page size, plus
   the sitemap files needed to discover detail pages;
 * time = requests x delay, one request at a time.
@@ -99,6 +100,9 @@ def _rate(f: Findings) -> RatePlan:
         reasons = [f"{names} bot management in front of the site: slow and capped"]
     elif managed:
         cap = BOT_MANAGED_DAILY_CAP
+    if f.stopped is not None and f.stopped.reason == "rate_limited" and delay < BOT_MANAGED_DELAY:
+        delay = BOT_MANAGED_DELAY
+        reasons = [f"the site answered 429 during this run at {max(1.0, f.base_delay):g}s spacing"]
     return RatePlan(
         delay_seconds=delay, concurrency=1, max_requests_per_day=cap, reason="; ".join(reasons)
     )

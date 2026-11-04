@@ -281,3 +281,13 @@ def test_aws_waf_challenge_stops() -> None:
     assert report.requests_used == 2
     assert report.antibot.vendors[0].vendor == "aws_waf"
     assert report.plan.verdict == "not_a_fit"
+
+
+def test_429_on_a_probe_slows_the_plan() -> None:
+    routes = shopify_routes()
+    routes["https://shop.test/products/red-cap.js"] = (429, JSON, "{}")
+    plan = run(routes).plan
+    assert plan.verdict == "caution"
+    assert plan.recommended == "feed_api"
+    assert plan.rate.delay_seconds == 5.0
+    assert "429" in plan.rate.reason
