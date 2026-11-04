@@ -1,0 +1,1274 @@
+{
+  "$defs": {
+    "AntiBotReport": {
+      "additionalProperties": false,
+      "properties": {
+        "challenge_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Challenge Url"
+        },
+        "challenged": {
+          "default": false,
+          "title": "Challenged",
+          "type": "boolean"
+        },
+        "vendors": {
+          "items": {
+            "$ref": "#/$defs/VendorHit"
+          },
+          "title": "Vendors",
+          "type": "array"
+        }
+      },
+      "title": "AntiBotReport",
+      "type": "object"
+    },
+    "EmbeddedBlob": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "details": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Details",
+          "type": "object"
+        },
+        "keys": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Keys",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "next_data",
+            "next_flight",
+            "nuxt_data",
+            "nuxt_state",
+            "apollo_state",
+            "redux_state",
+            "json_script"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "bytes"
+      ],
+      "title": "EmbeddedBlob",
+      "type": "object"
+    },
+    "EmbeddedStateReport": {
+      "additionalProperties": false,
+      "properties": {
+        "blobs": {
+          "items": {
+            "$ref": "#/$defs/EmbeddedBlob"
+          },
+          "title": "Blobs",
+          "type": "array"
+        }
+      },
+      "title": "EmbeddedStateReport",
+      "type": "object"
+    },
+    "FeedCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "array"
+        },
+        "http_status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Http Status"
+        },
+        "items_seen": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Items Seen"
+        },
+        "kind": {
+          "enum": [
+            "shopify_products_json",
+            "shopify_product_js",
+            "woo_store_api",
+            "greenhouse_api",
+            "lever_api",
+            "ashby_api",
+            "ckan_api",
+            "wp_rest",
+            "json_link",
+            "json_feed",
+            "rss",
+            "atom"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "page_size": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Size"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "not_found",
+            "invalid",
+            "skipped_robots",
+            "skipped_budget",
+            "blocked",
+            "linked"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "total_items": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Total Items"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "url",
+        "status"
+      ],
+      "title": "FeedCandidate",
+      "type": "object"
+    },
+    "FeedsReport": {
+      "additionalProperties": false,
+      "properties": {
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/FeedCandidate"
+          },
+          "title": "Candidates",
+          "type": "array"
+        }
+      },
+      "title": "FeedsReport",
+      "type": "object"
+    },
+    "MethodPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "est_hours": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Est Hours"
+        },
+        "est_requests": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Est Requests"
+        },
+        "fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "array"
+        },
+        "name": {
+          "enum": [
+            "feed_api",
+            "structured_data",
+            "embedded_json",
+            "html",
+            "browser"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        },
+        "partial": {
+          "default": false,
+          "title": "Partial",
+          "type": "boolean"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Urls",
+          "type": "array"
+        },
+        "usable": {
+          "title": "Usable",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "usable",
+        "summary"
+      ],
+      "title": "MethodPlan",
+      "type": "object"
+    },
+    "PageInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "default": 0,
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "content_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Content Type"
+        },
+        "fetched": {
+          "default": false,
+          "title": "Fetched",
+          "type": "boolean"
+        },
+        "final_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final Url"
+        },
+        "lang": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lang"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "PageInfo",
+      "type": "object"
+    },
+    "Plan": {
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "title": "Items",
+          "type": "integer"
+        },
+        "methods": {
+          "items": {
+            "$ref": "#/$defs/MethodPlan"
+          },
+          "title": "Methods",
+          "type": "array"
+        },
+        "next_steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Next Steps",
+          "type": "array"
+        },
+        "rate": {
+          "$ref": "#/$defs/RatePlan"
+        },
+        "recommended": {
+          "anyOf": [
+            {
+              "enum": [
+                "feed_api",
+                "structured_data",
+                "embedded_json",
+                "html",
+                "browser"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommended"
+        },
+        "risks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Risks",
+          "type": "array"
+        },
+        "verdict": {
+          "enum": [
+            "good",
+            "caution",
+            "not_a_fit",
+            "unknown"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        }
+      },
+      "required": [
+        "verdict",
+        "items",
+        "rate",
+        "methods"
+      ],
+      "title": "Plan",
+      "type": "object"
+    },
+    "PlatformReport": {
+      "additionalProperties": false,
+      "properties": {
+        "checked": {
+          "default": false,
+          "title": "Checked",
+          "type": "boolean"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "frameworks": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Frameworks",
+          "type": "array"
+        },
+        "generator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Generator"
+        },
+        "name": {
+          "default": "unknown",
+          "enum": [
+            "shopify",
+            "woocommerce",
+            "magento",
+            "bigcommerce",
+            "sfcc",
+            "greenhouse",
+            "lever",
+            "ashby",
+            "ckan",
+            "socrata",
+            "wix",
+            "squarespace",
+            "webflow",
+            "wordpress",
+            "drupal",
+            "hugo",
+            "sphinx",
+            "docusaurus",
+            "nextjs",
+            "nuxt",
+            "gatsby",
+            "remix",
+            "sveltekit",
+            "astro",
+            "angular",
+            "react",
+            "vue",
+            "lit",
+            "unknown"
+          ],
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "title": "PlatformReport",
+      "type": "object"
+    },
+    "RatePlan": {
+      "additionalProperties": false,
+      "properties": {
+        "concurrency": {
+          "default": 1,
+          "title": "Concurrency",
+          "type": "integer"
+        },
+        "delay_seconds": {
+          "title": "Delay Seconds",
+          "type": "number"
+        },
+        "max_requests_per_day": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Requests Per Day"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "delay_seconds",
+        "reason"
+      ],
+      "title": "RatePlan",
+      "type": "object"
+    },
+    "RenderingReport": {
+      "additionalProperties": false,
+      "properties": {
+        "app_shell": {
+          "default": false,
+          "title": "App Shell",
+          "type": "boolean"
+        },
+        "html_bytes": {
+          "default": 0,
+          "title": "Html Bytes",
+          "type": "integer"
+        },
+        "links": {
+          "default": 0,
+          "title": "Links",
+          "type": "integer"
+        },
+        "noscript_warning": {
+          "default": false,
+          "title": "Noscript Warning",
+          "type": "boolean"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "script_bytes": {
+          "default": 0,
+          "title": "Script Bytes",
+          "type": "integer"
+        },
+        "text_chars": {
+          "default": 0,
+          "title": "Text Chars",
+          "type": "integer"
+        },
+        "verdict": {
+          "default": "unknown",
+          "enum": [
+            "raw_html",
+            "embedded_json",
+            "browser_likely",
+            "unknown"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        }
+      },
+      "title": "RenderingReport",
+      "type": "object"
+    },
+    "RequestLogEntry": {
+      "additionalProperties": false,
+      "description": "One HTTP request the tool actually sent.",
+      "properties": {
+        "bytes": {
+          "default": 0,
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "default": 0,
+          "title": "Elapsed Ms",
+          "type": "integer"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "method": {
+          "default": "GET",
+          "title": "Method",
+          "type": "string"
+        },
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "purpose"
+      ],
+      "title": "RequestLogEntry",
+      "type": "object"
+    },
+    "RobotsReport": {
+      "additionalProperties": false,
+      "properties": {
+        "crawl_delay": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Crawl Delay"
+        },
+        "disallow_all": {
+          "default": false,
+          "title": "Disallow All",
+          "type": "boolean"
+        },
+        "fetched": {
+          "default": false,
+          "title": "Fetched",
+          "type": "boolean"
+        },
+        "found": {
+          "default": false,
+          "title": "Found",
+          "type": "boolean"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "paths": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "title": "Paths",
+          "type": "object"
+        },
+        "request_rate": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request Rate"
+        },
+        "sitemaps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sitemaps",
+          "type": "array"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "RobotsReport",
+      "type": "object"
+    },
+    "SitemapReport": {
+      "additionalProperties": false,
+      "properties": {
+        "child": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SitemapReport"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "child_sitemaps": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Child Sitemaps"
+        },
+        "fetched": {
+          "default": false,
+          "title": "Fetched",
+          "type": "boolean"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "urlset",
+                "sitemapindex",
+                "invalid"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kind"
+        },
+        "newest_lastmod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Newest Lastmod"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "oldest_lastmod": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Oldest Lastmod"
+        },
+        "sample_urls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sample Urls",
+          "type": "array"
+        },
+        "source": {
+          "default": "none",
+          "enum": [
+            "robots",
+            "default",
+            "none"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        },
+        "truncated": {
+          "default": false,
+          "title": "Truncated",
+          "type": "boolean"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "url_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url Count"
+        },
+        "with_lastmod": {
+          "default": 0,
+          "title": "With Lastmod",
+          "type": "integer"
+        }
+      },
+      "title": "SitemapReport",
+      "type": "object"
+    },
+    "SkippedRequest": {
+      "additionalProperties": false,
+      "description": "A request the tool wanted to send but did not.",
+      "properties": {
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "robots",
+            "budget",
+            "blocked",
+            "crawl_delay"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "purpose",
+        "reason"
+      ],
+      "title": "SkippedRequest",
+      "type": "object"
+    },
+    "StopInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "blocked",
+            "challenge",
+            "rate_limited",
+            "robots",
+            "crawl_delay",
+            "error"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reason",
+        "url",
+        "detail"
+      ],
+      "title": "StopInfo",
+      "type": "object"
+    },
+    "StructuredDataReport": {
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "items": {
+            "$ref": "#/$defs/StructuredItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "jsonld_blocks": {
+          "default": 0,
+          "title": "Jsonld Blocks",
+          "type": "integer"
+        },
+        "jsonld_invalid": {
+          "default": 0,
+          "title": "Jsonld Invalid",
+          "type": "integer"
+        },
+        "key_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Key Types",
+          "type": "array"
+        },
+        "microdata_items": {
+          "default": 0,
+          "title": "Microdata Items",
+          "type": "integer"
+        },
+        "types": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Types",
+          "type": "object"
+        }
+      },
+      "title": "StructuredDataReport",
+      "type": "object"
+    },
+    "StructuredItem": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "title": "Count",
+          "type": "integer"
+        },
+        "fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "array"
+        },
+        "sample": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Sample",
+          "type": "object"
+        },
+        "source": {
+          "enum": [
+            "json-ld",
+            "microdata"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "source",
+        "count"
+      ],
+      "title": "StructuredItem",
+      "type": "object"
+    },
+    "ToolInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "scrapeplanner",
+          "title": "Name",
+          "type": "string"
+        },
+        "user_agent": {
+          "title": "User Agent",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "user_agent"
+      ],
+      "title": "ToolInfo",
+      "type": "object"
+    },
+    "VendorHit": {
+      "additionalProperties": false,
+      "properties": {
+        "bot_management": {
+          "default": true,
+          "title": "Bot Management",
+          "type": "boolean"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "present",
+            "challenge"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "vendor": {
+          "enum": [
+            "cloudflare",
+            "akamai",
+            "datadome",
+            "human",
+            "imperva",
+            "kasada",
+            "aws_waf",
+            "own_check"
+          ],
+          "title": "Vendor",
+          "type": "string"
+        }
+      },
+      "required": [
+        "vendor",
+        "status"
+      ],
+      "title": "VendorHit",
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/siddharthkumarx/scrapeplanner/blob/main/docs/report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Output of `scrapeplanner URL --json`, schema_version 1.",
+  "properties": {
+    "antibot": {
+      "$ref": "#/$defs/AntiBotReport"
+    },
+    "duration_seconds": {
+      "title": "Duration Seconds",
+      "type": "number"
+    },
+    "embedded": {
+      "$ref": "#/$defs/EmbeddedStateReport"
+    },
+    "feeds": {
+      "$ref": "#/$defs/FeedsReport"
+    },
+    "input_url": {
+      "title": "Input Url",
+      "type": "string"
+    },
+    "max_requests": {
+      "title": "Max Requests",
+      "type": "integer"
+    },
+    "page": {
+      "$ref": "#/$defs/PageInfo"
+    },
+    "plan": {
+      "$ref": "#/$defs/Plan"
+    },
+    "platform": {
+      "$ref": "#/$defs/PlatformReport"
+    },
+    "rendering": {
+      "$ref": "#/$defs/RenderingReport"
+    },
+    "requests": {
+      "items": {
+        "$ref": "#/$defs/RequestLogEntry"
+      },
+      "title": "Requests",
+      "type": "array"
+    },
+    "requests_used": {
+      "title": "Requests Used",
+      "type": "integer"
+    },
+    "robots": {
+      "$ref": "#/$defs/RobotsReport"
+    },
+    "schema_version": {
+      "const": "1",
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "site": {
+      "title": "Site",
+      "type": "string"
+    },
+    "sitemap": {
+      "$ref": "#/$defs/SitemapReport"
+    },
+    "skipped": {
+      "items": {
+        "$ref": "#/$defs/SkippedRequest"
+      },
+      "title": "Skipped",
+      "type": "array"
+    },
+    "started_at": {
+      "title": "Started At",
+      "type": "string"
+    },
+    "stopped": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/StopInfo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "structured": {
+      "$ref": "#/$defs/StructuredDataReport"
+    },
+    "tool": {
+      "$ref": "#/$defs/ToolInfo"
+    }
+  },
+  "required": [
+    "tool",
+    "input_url",
+    "site",
+    "started_at",
+    "duration_seconds",
+    "max_requests",
+    "requests_used",
+    "page",
+    "robots",
+    "sitemap",
+    "platform",
+    "antibot",
+    "structured",
+    "embedded",
+    "rendering",
+    "feeds",
+    "plan"
+  ],
+  "title": "Report",
+  "type": "object"
+}
