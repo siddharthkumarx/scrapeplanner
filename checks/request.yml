@@ -1,17 +1,45 @@
 # Live checks run in GitHub Actions only (docs/architecture.md, "Live checks").
 # Change `id` and push to run; results land in checks/results/<id>/.
-id: 001-smoke
+# One homepage or public listing page per site. The tool itself reads
+# robots.txt first and skips anything it disallows.
+id: 002-sites
 options:
   max_requests: 10
   delay: 1.0
   items: 1000
 targets:
-  - name: example-com
-    category: docs
-    url: https://example.com/
-  - name: allbirds
-    category: e-commerce
-    url: https://www.allbirds.com/
-  - name: react-dev
-    category: docs
-    url: https://react.dev/
+  # e-commerce
+  - {name: allbirds, category: e-commerce, url: "https://www.allbirds.com/"}
+  - {name: gymshark, category: e-commerce, url: "https://www.gymshark.com/"}
+  - {name: amazon, category: e-commerce, url: "https://www.amazon.com/"}
+  - {name: ebay, category: e-commerce, url: "https://www.ebay.com/"}
+  - {name: etsy, category: e-commerce, url: "https://www.etsy.com/"}
+  - {name: walmart, category: e-commerce, url: "https://www.walmart.com/"}
+  - {name: bestbuy, category: e-commerce, url: "https://www.bestbuy.com/"}
+  - {name: woocommerce, category: e-commerce, url: "https://woocommerce.com/products/"}
+  # job boards
+  - {name: indeed, category: jobs, url: "https://www.indeed.com/"}
+  - {name: linkedin-jobs, category: jobs, url: "https://www.linkedin.com/jobs/"}
+  - {name: glassdoor, category: jobs, url: "https://www.glassdoor.com/"}
+  - {name: remoteok, category: jobs, url: "https://remoteok.com/"}
+  - {name: weworkremotely, category: jobs, url: "https://weworkremotely.com/"}
+  - {name: himalayas, category: jobs, url: "https://himalayas.app/jobs"}
+  # news
+  - {name: bbc-news, category: news, url: "https://www.bbc.com/news"}
+  - {name: guardian, category: news, url: "https://www.theguardian.com/international"}
+  - {name: reuters, category: news, url: "https://www.reuters.com/"}
+  - {name: apnews, category: news, url: "https://apnews.com/"}
+  - {name: techcrunch, category: news, url: "https://techcrunch.com/"}
+  - {name: hacker-news, category: news, url: "https://news.ycombinator.com/"}
+  # docs
+  - {name: python-docs, category: docs, url: "https://docs.python.org/3/"}
+  - {name: mdn, category: docs, url: "https://developer.mozilla.org/en-US/"}
+  - {name: react-dev, category: docs, url: "https://react.dev/"}
+  - {name: nuxt-docs, category: docs, url: "https://nuxt.com/docs"}
+  - {name: kubernetes-docs, category: docs, url: "https://kubernetes.io/docs/home/"}
+  # listings
+  - {name: craigslist-sf, category: listings, url: "https://sfbay.craigslist.org/"}
+  - {name: zillow, category: listings, url: "https://www.zillow.com/"}
+  - {name: airbnb, category: listings, url: "https://www.airbnb.com/"}
+  - {name: booking, category: listings, url: "https://www.booking.com/"}
+  - {name: producthunt, category: listings, url: "https://www.producthunt.com/"}
