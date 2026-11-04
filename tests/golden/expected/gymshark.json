@@ -7,9 +7,9 @@
   "embedded": {
     "blobs": [
       {
-        "bytes": 761661,
+        "bytes": 761662,
         "details": {
-          "buildId": "lnw-6_DXWZOIJ2tt2Q8u_",
+          "buildId": "PTFkDGMVniIdlZ3g8Vr0z",
           "page": "/"
         },
         "keys": [
@@ -54,7 +54,7 @@
   "input_url": "https://www.gymshark.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 1809780,
+    "bytes": 1809781,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.gymshark.com/",
@@ -105,7 +105,7 @@
           "one detail page per record; URLs from listing pages (count not measured)"
         ],
         "partial": false,
-        "summary": "script#__NEXT_DATA__ (761,661 bytes)",
+        "summary": "script#__NEXT_DATA__ (761,662 bytes)",
         "urls": [
           "https://www.gymshark.com/"
         ],
@@ -171,14 +171,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 1809780,
+    "html_bytes": 1809781,
     "links": 401,
     "noscript_warning": false,
     "reasons": [
       "16,100 characters of text, 401 links",
       "also in script#__NEXT_DATA__"
     ],
-    "script_bytes": 767617,
+    "script_bytes": 767618,
     "text_chars": 16100,
     "verdict": "raw_html"
   },
@@ -192,7 +192,7 @@
       "url": "https://www.gymshark.com/robots.txt"
     },
     {
-      "bytes": 1809780,
+      "bytes": 1809781,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -289,7 +289,7 @@
       "url": "https://www.gymshark.com/products/gymshark-vengeance-graphic-t-shirt-ss-tops-black-aw26.js"
     }
   ],
-  "started_at": "2026-11-04T15:04:29+00:00",
+  "started_at": "2026-11-04T18:22:31+00:00",
   "stopped": {
     "detail": "HTTP 403",
     "reason": "blocked",

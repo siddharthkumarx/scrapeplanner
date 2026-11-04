@@ -20,7 +20,7 @@
    ],
    [
     "x-amzn-requestid",
-    "84fa40b5-1c4f-4700-a927-cf407ee62f17"
+    "1b03f574-e9ae-4adb-af2e-63e8e3ff7b2e"
    ],
    [
     "content-encoding",
@@ -28,7 +28,7 @@
    ],
    [
     "x-amz-apigw-id",
-    "GUfW1GF0joEFupQ="
+    "GU-ONFbbjoEFfJQ="
    ],
    [
     "cache-control",
@@ -36,7 +36,7 @@
    ],
    [
     "x-amzn-trace-id",
-    "Root=1-6aeb45c4-d914305938da1608057b79b7"
+    "Root=1-6aeb7727-6772f355116425e32958358c"
    ],
    [
     "origin-agent-cluster",
@@ -56,7 +56,11 @@
    ],
    [
     "x-bbc-edge-cache-status",
-    "HIT"
+    "MISS"
+   ],
+   [
+    "x-bbc-origin-response-status",
+    "200"
    ],
    [
     "report-to",
@@ -84,7 +88,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:37 GMT"
+    "Wed, 04 Nov 2026 18:24:16 GMT"
    ],
    [
     "x-fastly-cache-status",
@@ -92,7 +96,7 @@
    ],
    [
     "x-served-by",
-    "cache-iad-khef600083-IAD"
+    "cache-pao-kpao1770083-PAO"
    ],
    [
     "x-cache",
@@ -100,23 +104,23 @@
    ],
    [
     "x-cache-hits",
-    "1"
+    "0"
    ],
    [
     "x-timer",
-    "S1793804738.779772,VS0,VE8"
+    "S1793816656.216530,VS0,VE59"
    ],
    [
     "x-fastly-pre-flight-cache",
-    "MISS, HIT"
+    "MISS, MISS"
    ],
    [
     "x-fastly-pre-flight-cache-status",
-    "HIT-STALE-CLUSTER"
+    "MISS-CLUSTER"
    ],
    [
     "x-cache-age",
-    "768"
+    "297"
    ],
    [
     "vary",
@@ -127,7 +131,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 143,
+  "elapsed_ms": 77,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -144,7 +148,7 @@
    ],
    [
     "content-length",
-    "83143"
+    "85471"
    ],
    [
     "content-type",
@@ -152,7 +156,7 @@
    ],
    [
     "belfrage-cache-status",
-    "MISS"
+    "HIT"
    ],
    [
     "bid",
@@ -160,7 +164,7 @@
    ],
    [
     "brequestid",
-    "4bfa38dc97a54f2c8720cd72821f20b2"
+    "5ff4d9113f9b41a4b52f506ccd1843ae"
    ],
    [
     "bsig",
@@ -172,7 +176,7 @@
    ],
    [
     "etag",
-    "\"6tet2nsxvfbbtr\""
+    "\"5mywcs0hubbgg2\""
    ],
    [
     "referrer-policy",
@@ -192,7 +196,7 @@
    ],
    [
     "x-correlation-id",
-    "bf6062ce-c0f0-4842-857d-3402ceb9a880"
+    "f23de257-9649-4769-9cfb-04c68c831621"
    ],
    [
     "x-frame-options",
@@ -236,15 +240,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:38 GMT"
+    "Wed, 04 Nov 2026 18:24:17 GMT"
    ],
    [
     "x-fastly-cache-status",
-    "HIT-CLUSTER"
+    "HIT-STALE-CLUSTER"
    ],
    [
     "x-served-by",
-    "cache-iad-khef600083-IAD"
+    "cache-pao-kpao1770083-PAO"
    ],
    [
     "x-cache",
@@ -256,7 +260,7 @@
    ],
    [
     "x-timer",
-    "S1793804739.795622,VS0,VE3"
+    "S1793816657.278672,VS0,VE3"
    ],
    [
     "x-fastly-pre-flight-cache",
@@ -268,7 +272,7 @@
    ],
    [
     "x-cache-age",
-    "9"
+    "48"
    ],
    [
     "x-lb-nocache",
@@ -287,7 +291,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 16,
+  "elapsed_ms": 7,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -312,7 +316,7 @@
    ],
    [
     "belfrage-cache-status",
-    "HIT"
+    "MISS"
    ],
    [
     "bid",
@@ -320,7 +324,7 @@
    ],
    [
     "brequestid",
-    "f44541750be648a9b6014a93fe907c8d"
+    "1a309a62257a464095e4ec5e0018044a"
    ],
    [
     "bsig",
@@ -336,7 +340,7 @@
    ],
    [
     "moz-cache-status",
-    "MISS"
+    "HIT"
    ],
    [
     "req-svc-chain",
@@ -376,7 +380,7 @@
    ],
    [
     "x-bbc-edge-cache-status",
-    "MISS"
+    "EXPIRED"
    ],
    [
     "x-bbc-origin-response-status",
@@ -408,7 +412,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:39 GMT"
+    "Wed, 04 Nov 2026 18:24:18 GMT"
    ],
    [
     "x-fastly-cache-status",
@@ -416,7 +420,7 @@
    ],
    [
     "x-served-by",
-    "cache-iad-khef600083-IAD"
+    "cache-pao-kpao1770083-PAO"
    ],
    [
     "x-cache",
@@ -428,7 +432,7 @@
    ],
    [
     "x-timer",
-    "S1793804740.812417,VS0,VE2"
+    "S1793816658.286521,VS0,VE2"
    ],
    [
     "x-fastly-pre-flight-cache",
@@ -440,7 +444,7 @@
    ],
    [
     "x-cache-age",
-    "195"
+    "4881"
    ],
    [
     "x-lb-nocache",
@@ -455,7 +459,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 9,
+  "elapsed_ms": 3,
   "truncated": false,
   "body": "002.body.gz"
  }

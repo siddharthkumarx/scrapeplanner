@@ -32,15 +32,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:01:29 GMT"
+    "Wed, 04 Nov 2026 18:00:03 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 16:01:29 GMT"
+    "Wed, 04 Nov 2026 19:00:03 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 15:01:29 GMT"
+    "Wed, 04 Nov 2026 18:00:03 GMT"
    ],
    [
     "vary",
@@ -55,7 +55,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 227,
+  "elapsed_ms": 243,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -80,15 +80,15 @@
    ],
    [
     "content-security-policy",
-    "base-uri 'self' https://hcaptcha.com https://*.hcaptcha.com; child-src https://*.craigslist.org; connect-src https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; font-src data:; form-action https://*.craigslist.org; frame-ancestors https://*.craigslist.org; frame-src https://*.craigslist.org; media-src data:; object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; style-src 'unsafe-inline' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com"
+    "base-uri 'self' https://hcaptcha.com https://*.hcaptcha.com; child-src https://*.craigslist.org; connect-src https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; font-src data:; form-action https://*.craigslist.org; frame-ancestors https://*.craigslist.org; frame-src https://*.craigslist.org https://craigslist.org https://hcaptcha.com https://*.hcaptcha.com; media-src data:; object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; style-src 'unsafe-inline' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com"
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:07:47 GMT"
+    "Wed, 04 Nov 2026 18:26:26 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 15:07:47 GMT"
+    "Wed, 04 Nov 2026 18:26:26 GMT"
    ],
    [
     "location",
@@ -96,7 +96,7 @@
    ],
    [
     "set-cookie",
-    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 15:12:47 GMT; secure"
+    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:31:26 GMT; secure"
    ],
    [
     "vary",
@@ -111,7 +111,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 16,
+  "elapsed_ms": 13,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -148,15 +148,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 14:13:06 GMT"
+    "Wed, 04 Nov 2026 18:26:28 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 15:13:06 GMT"
+    "Wed, 04 Nov 2026 19:26:28 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 14:13:06 GMT"
+    "Wed, 04 Nov 2026 18:26:28 GMT"
    ],
    [
     "vary",
@@ -171,7 +171,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 418,
+  "elapsed_ms": 447,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -196,11 +196,11 @@
    ],
    [
     "content-length",
-    "10037"
+    "10042"
    ],
    [
     "content-security-policy",
-    "base-uri 'self' https://hcaptcha.com https://*.hcaptcha.com; child-src https://*.craigslist.org; connect-src https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; font-src data:; form-action https://*.craigslist.org; frame-ancestors https://*.craigslist.org; frame-src https://*.craigslist.org https://craigslist.org https://hcaptcha.com https://*.hcaptcha.com; media-src data:; object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; style-src 'unsafe-inline' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com"
+    "base-uri 'self' https://hcaptcha.com https://*.hcaptcha.com; child-src https://*.craigslist.org; connect-src https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; font-src data:; form-action https://*.craigslist.org; frame-ancestors https://*.craigslist.org; frame-src https://*.craigslist.org; media-src data:; object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com; style-src 'unsafe-inline' https://*.craigslist.org https://hcaptcha.com https://*.hcaptcha.com"
    ],
    [
     "content-type",
@@ -208,27 +208,27 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:03:56 GMT"
+    "Wed, 04 Nov 2026 18:04:30 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 16:03:56 GMT"
+    "Wed, 04 Nov 2026 19:04:30 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 15:03:56 GMT"
+    "Wed, 04 Nov 2026 18:04:30 GMT"
    ],
    [
     "set-cookie",
-    "cl_def_hp_www=<redacted>; domain=.craigslist.org; path=/; expires=Thu, 04-Nov-2027 15:03:56 GMT; secure"
+    "cl_def_hp_www=<redacted>; domain=.craigslist.org; path=/; expires=Thu, 04-Nov-2027 18:04:30 GMT; secure"
    ],
    [
     "set-cookie",
-    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 15:03:56 GMT; secure"
+    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:04:30 GMT; secure"
    ],
    [
     "set-cookie",
-    "cl_def_hp=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 15:03:56 GMT; secure"
+    "cl_def_hp=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:04:30 GMT; secure"
    ],
    [
     "vary",
@@ -243,7 +243,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 11,
+  "elapsed_ms": 7,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -280,15 +280,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:15 GMT"
+    "Wed, 04 Nov 2026 18:26:30 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 16:04:15 GMT"
+    "Wed, 04 Nov 2026 19:26:30 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 15:04:15 GMT"
+    "Wed, 04 Nov 2026 18:26:30 GMT"
    ],
    [
     "vary",
@@ -303,7 +303,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 12,
+  "elapsed_ms": 45,
   "truncated": false,
   "body": "004.body.gz"
  },
@@ -340,15 +340,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:16 GMT"
+    "Wed, 04 Nov 2026 18:04:53 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 16:04:16 GMT"
+    "Wed, 04 Nov 2026 19:04:53 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 15:04:16 GMT"
+    "Wed, 04 Nov 2026 18:04:53 GMT"
    ],
    [
     "vary",

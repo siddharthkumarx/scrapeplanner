@@ -1,0 +1,314 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://jobs.lever.co/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:01 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=lever.co; Expires=Wed, 04 Nov 2026 18:53:01 GMT"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-stream-path",
+    "jobs"
+   ],
+   [
+    "cache-control",
+    "public, max-age=86400"
+   ],
+   [
+    "age",
+    "67645"
+   ],
+   [
+    "expires",
+    "Thu, 05 Nov 2026 18:23:01 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5c529695476-SJC"
+   ]
+  ],
+  "elapsed_ms": 30,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://jobs.lever.co/palantir",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:03 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=lever.co; Expires=Wed, 04 Nov 2026 18:53:03 GMT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-stream-path",
+    "jobs"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5cb7b555476-SJC"
+   ]
+  ],
+  "elapsed_ms": 101,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://jobs.lever.co/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:04 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=lever.co; Expires=Wed, 04 Nov 2026 18:53:04 GMT"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-stream-path",
+    "jobs"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a555a5d25ff05476-SJC"
+   ]
+  ],
+  "elapsed_ms": 820,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://api.lever.co/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:05 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=UTF-8"
+   ],
+   [
+    "content-length",
+    "38"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-stream-path",
+    "dapi"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "cache-control",
+    "public, max-age=86400"
+   ],
+   [
+    "last-modified",
+    "Thu, 29 Oct 2026 20:27:21 GMT"
+   ],
+   [
+    "etag",
+    "W/\"26-1a189588028\""
+   ]
+  ],
+  "elapsed_ms": 95,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://api.lever.co/v0/postings/palantir?mode=json&limit=100",
+  "purpose": "feed:lever_api",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:23:07 GMT"
+   ],
+   [
+    "content-type",
+    "application/json; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "1966972"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=15552000; includeSubDomains"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-stream-path",
+    "dapi"
+   ],
+   [
+    "etag",
+    "W/\"1e037c-SAuc3uHrTwGjfrYCZqN0voq/fLA\""
+   ]
+  ],
+  "elapsed_ms": 177,
+  "truncated": false,
+  "body": "004.body.gz"
+ }
+]

@@ -1,0 +1,11 @@
+{
+  "url": "https://books.toscrape.com/",
+  "recorded_at": "2026-11-04T18:26:31+00:00",
+  "source": "checks/results/007-sites/books-toscrape",
+  "commit": "12bb4602f53bd7a6016d6a9ee81877174a6355a0",
+  "options": {
+    "max_requests": 10,
+    "delay": 1.0,
+    "items": 1000
+  }
+}

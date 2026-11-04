@@ -1,0 +1,98 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://quotes.toscrape.com/robots.txt",
+  "purpose": "robots",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:26:34 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "207"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 328,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://quotes.toscrape.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:26:36 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "11064"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 79,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://quotes.toscrape.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 18:26:37 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "content-length",
+    "207"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=0; includeSubDomains; preload"
+   ]
+  ],
+  "elapsed_ms": 76,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

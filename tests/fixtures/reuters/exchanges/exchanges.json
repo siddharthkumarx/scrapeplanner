@@ -23,6 +23,14 @@
     "openresty"
    ],
    [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-arc-pb-request-id",
+    "a700135a-088e-4bb7-9f99-aac15fb9c0cd"
+   ],
+   [
     "x-arc-pb-edge",
     "0"
    ],
@@ -35,28 +43,20 @@
     "00000000"
    ],
    [
-    "x-arc-pb-request-id",
-    "c453194d-22a9-40ec-964f-3f44d665256d"
-   ],
-   [
-    "content-encoding",
-    "gzip"
-   ],
-   [
     "last-modified",
-    "Wed, 04 Nov 2026 15:05:28 GMT"
+    "Wed, 04 Nov 2026 18:23:28 GMT"
    ],
    [
     "cache-control",
-    "private, max-age=101"
+    "private, max-age=62"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 15:07:28 GMT"
+    "Wed, 04 Nov 2026 18:25:28 GMT"
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:47 GMT"
+    "Wed, 04 Nov 2026 18:24:26 GMT"
    ],
    [
     "x-arc-edgecontroller",
@@ -76,7 +76,7 @@
    ],
    [
     "x-arc-request-id",
-    "0.3cdbda17.1793804747.175308a"
+    "0.cea2c117.1793816666.7c6873ab"
    ],
    [
     "vary",
@@ -88,15 +88,15 @@
    ],
    [
     "via",
-    "1.1 d6b0796641ad9e40cce4a9874d43cd3a.cloudfront.net (CloudFront)"
+    "1.1 1b3830d707f4ac60e56d5750ec483784.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "IAD55-P10"
+    "SFO53-P10"
    ],
    [
     "x-amz-cf-id",
-    "GLM6ZnHt4XY0ZR6fqWh1KzkM9qHNrdUp069tvLQsftovCy3xNAXYEg=="
+    "x-X6h9pdYLMGhFvbwliNxVcFmMBcCF_V-4TiKT1DoGXliGYlV0AyFg=="
    ],
    [
     "x-content-type-options",
@@ -107,7 +107,7 @@
     "{\"endpoints\":[{\"url\":\"https://reuters.report-uri.com/a/t/g\"}],\"group\":\"report-uri\",\"include_subdomains\":true,\"max_age\":31536000}"
    ]
   ],
-  "elapsed_ms": 290,
+  "elapsed_ms": 70,
   "truncated": false,
   "body": "000.body.gz"
  }

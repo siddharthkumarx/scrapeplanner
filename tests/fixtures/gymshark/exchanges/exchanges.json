@@ -24,7 +24,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:29 GMT"
+    "Wed, 04 Nov 2026 18:22:31 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
    ],
    [
     "cache-control",
@@ -36,15 +40,11 @@
    ],
    [
     "x-region",
-    "us-east-1"
+    "us-west-2"
    ],
    [
     "apigw-requestid",
-    "GUhrui5VIAMEYew="
-   ],
-   [
-    "content-encoding",
-    "gzip"
+    "GU-sQjnBvHcEJog="
    ],
    [
     "vary",
@@ -52,7 +52,7 @@
    ],
    [
     "via",
-    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+    "1.1 e2d5a859464f1c14443d86227be20672.cloudfront.net (CloudFront)"
    ],
    [
     "x-frame-options",
@@ -92,14 +92,14 @@
    ],
    [
     "x-amz-cf-pop",
-    "IAD89-P3"
+    "SFO53-P6"
    ],
    [
     "x-amz-cf-id",
-    "_HzGw9gVIO8dKx3D7VMi4lqe6SbK1Lc0jBRSyFMpbhdMBjDtTo1rFg=="
+    "B2zYWOR4CNrUW8aoJyyHPHxcmC1HBhbxEXAS6Okm3KK5xAcpsJmLDw=="
    ]
   ],
-  "elapsed_ms": 237,
+  "elapsed_ms": 191,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -128,7 +128,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:31 GMT"
+    "Wed, 04 Nov 2026 18:22:33 GMT"
    ],
    [
     "content-encoding",
@@ -136,11 +136,7 @@
    ],
    [
     "etag",
-    "W/\"e2kgayv4ve12rwz\""
-   ],
-   [
-    "cache-control",
-    "public, s-maxage=60, stale-while-revalidate=1000"
+    "W/\"99g5x7w2re12rx0\""
    ],
    [
     "x-powered-by",
@@ -151,12 +147,16 @@
     "1"
    ],
    [
+    "cache-control",
+    "public, s-maxage=60, stale-while-revalidate=1000"
+   ],
+   [
     "x-region",
-    "us-east-1"
+    "us-west-2"
    ],
    [
     "apigw-requestid",
-    "GUhr5hKEoAMESxg="
+    "GU-sciKBvHcEMFA="
    ],
    [
     "vary",
@@ -164,7 +164,7 @@
    ],
    [
     "via",
-    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+    "1.1 e2d5a859464f1c14443d86227be20672.cloudfront.net (CloudFront)"
    ],
    [
     "x-frame-options",
@@ -204,14 +204,14 @@
    ],
    [
     "x-amz-cf-pop",
-    "IAD89-P3"
+    "SFO53-P6"
    ],
    [
     "x-amz-cf-id",
-    "FEgeLCI7b4QpXdISTy7pN5YIjgdjDlDQUDCRS1gZcfrkfvyrroLNjQ=="
+    "7GuMWODiR1Y5Xdma4PCpeHcICZ-J_1xpw_M2sGS3cmtRIqL6MLD65A=="
    ]
   ],
-  "elapsed_ms": 753,
+  "elapsed_ms": 1081,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -240,7 +240,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:32 GMT"
+    "Wed, 04 Nov 2026 18:22:35 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
    ],
    [
     "cache-control",
@@ -252,15 +256,11 @@
    ],
    [
     "x-region",
-    "us-east-1"
+    "us-west-2"
    ],
    [
     "apigw-requestid",
-    "GUhsMhe_IAMEPlA="
-   ],
-   [
-    "content-encoding",
-    "gzip"
+    "GU-s3g0HvHcEJ4g="
    ],
    [
     "vary",
@@ -268,7 +268,7 @@
    ],
    [
     "via",
-    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+    "1.1 e2d5a859464f1c14443d86227be20672.cloudfront.net (CloudFront)"
    ],
    [
     "x-frame-options",
@@ -308,14 +308,14 @@
    ],
    [
     "x-amz-cf-pop",
-    "IAD89-P3"
+    "SFO53-P6"
    ],
    [
     "x-amz-cf-id",
-    "Bn3xf-yEMl4qFxzAZmRFM4ebiU2r2hxI2b_7aBPvJ6hvZSbUuG8gZA=="
+    "cEYWQiQwRk8pZW-RMXWcwPcPgA0qTF49H7K--1B52-Ah5cIcMZPUnQ=="
    ]
   ],
-  "elapsed_ms": 129,
+  "elapsed_ms": 85,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -332,7 +332,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:04:33 GMT"
+    "Wed, 04 Nov 2026 18:22:36 GMT"
    ],
    [
     "content-type",
@@ -352,15 +352,15 @@
    ],
    [
     "via",
-    "1.1 04eae9f89d461f79682103da6d0e3f4e.cloudfront.net (CloudFront)"
+    "1.1 e2d5a859464f1c14443d86227be20672.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "IAD89-P3"
+    "SFO53-P6"
    ],
    [
     "x-amz-cf-id",
-    "Y73Ge6Fq84cKy7hBSBpjJnw63aR3Kxk8WQ9RlANWoykIDPB3RrGJnA=="
+    "zbX5Jn4NfmRsQ8dyoR0pGKkuNSyLCETq8XhovIYOdCu_BOOWJZMIxw=="
    ],
    [
     "x-frame-options",
@@ -391,7 +391,7 @@
     "Origin"
    ]
   ],
-  "elapsed_ms": 8,
+  "elapsed_ms": 3,
   "truncated": false,
   "body": "003.body.gz"
  }

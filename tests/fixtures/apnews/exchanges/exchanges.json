@@ -8,7 +8,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:48 GMT"
+    "Wed, 04 Nov 2026 18:24:27 GMT"
    ],
    [
     "content-type",
@@ -43,12 +43,8 @@
     "Accept-Encoding"
    ],
    [
-    "set-cookie",
-    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=apnews.com; Expires=Wed, 04 Nov 2026 15:35:48 GMT"
-   ],
-   [
     "x-envoy-upstream-service-time",
-    "19"
+    "20"
    ],
    [
     "x-envoy-decorator-operation",
@@ -63,12 +59,16 @@
     "h3=\":443\"; ma=86400"
    ],
    [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=apnews.com; Expires=Wed, 04 Nov 2026 18:54:27 GMT"
+   ],
+   [
     "age",
-    "1616"
+    "60"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 14:38:51 GMT"
+    "Wed, 04 Nov 2026 18:24:11 GMT"
    ],
    [
     "cf-cache-status",
@@ -80,10 +80,10 @@
    ],
    [
     "cf-ray",
-    "a55484dc6ae612b7-IAD"
+    "a555a7d94b43398e-LAX"
    ]
   ],
-  "elapsed_ms": 49,
+  "elapsed_ms": 62,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -96,7 +96,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:49 GMT"
+    "Wed, 04 Nov 2026 18:24:28 GMT"
    ],
    [
     "content-type",
@@ -120,7 +120,7 @@
    ],
    [
     "content-security-policy",
-    "default-src 'none'; script-src 'nonce-V0sYm1hDJOGA27IhO36Yoi' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'"
+    "default-src 'none'; script-src 'nonce-YOPS4w0h3rHrNVLEWGPNBH' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'"
    ],
    [
     "server",
@@ -156,7 +156,7 @@
    ],
    [
     "server-timing",
-    "chlray;desc=\"a55484e2db5a12b7\""
+    "chlray;desc=\"a555a7dfb9fc398e\""
    ],
    [
     "x-content-type-options",
@@ -168,7 +168,7 @@
    ],
    [
     "set-cookie",
-    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=apnews.com; Expires=Wed, 04 Nov 2026 15:35:49 GMT"
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=apnews.com; Expires=Wed, 04 Nov 2026 18:54:28 GMT"
    ],
    [
     "content-encoding",
@@ -176,14 +176,14 @@
    ],
    [
     "cf-ray",
-    "a55484e2db5a12b7-IAD"
+    "a555a7dfb9fc398e-LAX"
    ],
    [
     "alt-svc",
     "h3=\":443\"; ma=86400"
    ]
   ],
-  "elapsed_ms": 16,
+  "elapsed_ms": 21,
   "truncated": false,
   "body": "001.body.gz"
  }

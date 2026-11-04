@@ -7,7 +7,7 @@
   "embedded": {
     "blobs": [
       {
-        "bytes": 143199,
+        "bytes": 144492,
         "details": {
           "buildId": "ucIVEZCJOb7mWOSdECe6w",
           "page": "/[[...slug]]"
@@ -38,7 +38,7 @@
   "input_url": "https://www.bbc.com/news",
   "max_requests": 10,
   "page": {
-    "bytes": 529022,
+    "bytes": 535014,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.bbc.com/news",
@@ -96,7 +96,7 @@
           "one detail page per record; URLs from the sitemap (~100 per file)"
         ],
         "partial": false,
-        "summary": "script#__NEXT_DATA__ (143,199 bytes)",
+        "summary": "script#__NEXT_DATA__ (144,492 bytes)",
         "urls": [
           "http://www.bbc.co.uk/afrique/institutionelles/2014/09/140924_test.shtml",
           "http://www.bbc.co.uk/afrique/nos_emissions/2014/09/140924_india_arrives_on_mars.shtml",
@@ -114,7 +114,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (11,471 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (11,490 chars of text)",
         "urls": [
           "http://www.bbc.co.uk/afrique/institutionelles/2014/09/140924_test.shtml",
           "http://www.bbc.co.uk/afrique/nos_emissions/2014/09/140924_india_arrives_on_mars.shtml",
@@ -164,15 +164,15 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 529022,
-    "links": 250,
+    "html_bytes": 535014,
+    "links": 251,
     "noscript_warning": false,
     "reasons": [
-      "11,471 characters of text, 250 links",
+      "11,490 characters of text, 251 links",
       "also in script#__NEXT_DATA__"
     ],
-    "script_bytes": 147352,
-    "text_chars": 11471,
+    "script_bytes": 148642,
+    "text_chars": 11490,
     "verdict": "raw_html"
   },
   "requests": [
@@ -185,7 +185,7 @@
       "url": "https://www.bbc.com/robots.txt"
     },
     {
-      "bytes": 529022,
+      "bytes": 535014,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -282,7 +282,7 @@
     "with_lastmod": 100
   },
   "skipped": [],
-  "started_at": "2026-11-04T15:05:37+00:00",
+  "started_at": "2026-11-04T18:24:16+00:00",
   "stopped": null,
   "structured": {
     "items": [],

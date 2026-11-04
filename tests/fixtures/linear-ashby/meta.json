@@ -1,0 +1,11 @@
+{
+  "url": "https://jobs.ashbyhq.com/linear",
+  "recorded_at": "2026-11-04T18:23:08+00:00",
+  "source": "checks/results/007-sites/linear-ashby",
+  "commit": "12bb4602f53bd7a6016d6a9ee81877174a6355a0",
+  "options": {
+    "max_requests": 10,
+    "delay": 1.0,
+    "items": 1000
+  }
+}

@@ -60,7 +60,7 @@
   "input_url": "https://www.allbirds.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 693916,
+    "bytes": 699007,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.allbirds.com/",
@@ -131,7 +131,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (92,664 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (92,727 chars of text)",
         "urls": [
           "https://www.allbirds.com/",
           "https://www.allbirds.com/products/mens-wool-runners",
@@ -184,14 +184,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 693916,
+    "html_bytes": 699007,
     "links": 129,
     "noscript_warning": false,
     "reasons": [
-      "92,664 characters of text, 129 links"
+      "92,727 characters of text, 129 links"
     ],
-    "script_bytes": 80147,
-    "text_chars": 92664,
+    "script_bytes": 80761,
+    "text_chars": 92727,
     "verdict": "raw_html"
   },
   "requests": [
@@ -204,7 +204,7 @@
       "url": "https://www.allbirds.com/robots.txt"
     },
     {
-      "bytes": 693916,
+      "bytes": 699007,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -220,7 +220,7 @@
       "url": "https://www.allbirds.com/sitemap.xml"
     },
     {
-      "bytes": 1816195,
+      "bytes": 1813063,
       "error": null,
       "method": "GET",
       "purpose": "feed:shopify_products_json",
@@ -272,9 +272,9 @@
       "child_sitemaps": null,
       "fetched": true,
       "kind": "urlset",
-      "newest_lastmod": "2026-11-03",
+      "newest_lastmod": "2026-11-04",
       "note": null,
-      "oldest_lastmod": "2026-11-03",
+      "oldest_lastmod": "2026-11-04",
       "sample_urls": [
         "https://www.allbirds.com/",
         "https://www.allbirds.com/products/mens-wool-runners",
@@ -310,7 +310,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T15:04:22+00:00",
+  "started_at": "2026-11-04T18:22:24+00:00",
   "stopped": {
     "detail": "HTTP 429 Too Many Requests",
     "reason": "rate_limited",

@@ -12,7 +12,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:10 GMT"
+    "Wed, 04 Nov 2026 18:22:52 GMT"
    ],
    [
     "content-type",
@@ -75,16 +75,16 @@
     "max-age=300, must-revalidate"
    ],
    [
-    "x-rq",
-    "dca6 0 40 9980"
+    "accept-ranges",
+    "bytes"
    ],
    [
     "x-cache",
-    "STALE"
+    "HIT"
    ],
    [
-    "accept-ranges",
-    "bytes"
+    "x-rq",
+    "bur6 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -95,7 +95,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 68,
+  "elapsed_ms": 84,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -112,7 +112,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:11 GMT"
+    "Wed, 04 Nov 2026 18:22:53 GMT"
    ],
    [
     "content-type",
@@ -180,11 +180,11 @@
    ],
    [
     "x-rq",
-    "dca6 0 40 9980"
+    "bur6 0 40 9980"
    ],
    [
     "x-cache",
-    "STALE"
+    "HIT"
    ],
    [
     "accept-ranges",
@@ -203,7 +203,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 16,
+  "elapsed_ms": 26,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -220,7 +220,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:12 GMT"
+    "Wed, 04 Nov 2026 18:22:54 GMT"
    ],
    [
     "content-type",
@@ -247,20 +247,20 @@
     "gzip"
    ],
    [
-    "cache-control",
-    "max-age=300, must-revalidate"
+    "x-rq",
+    "bur6 0 40 9980"
    ],
    [
     "accept-ranges",
     "bytes"
    ],
    [
-    "x-rq",
-    "dca6 0 40 9980"
+    "cache-control",
+    "max-age=300, must-revalidate"
    ],
    [
     "x-cache",
-    "STALE"
+    "HIT"
    ],
    [
     "strict-transport-security",
@@ -271,7 +271,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 8,
+  "elapsed_ms": 10,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -288,7 +288,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:17 GMT"
+    "Wed, 04 Nov 2026 18:22:55 GMT"
    ],
    [
     "content-type",
@@ -315,20 +315,20 @@
     "gzip"
    ],
    [
-    "x-cache",
-    "EXPIRED"
+    "cache-control",
+    "max-age=300, must-revalidate"
    ],
    [
     "accept-ranges",
     "bytes"
    ],
    [
-    "x-rq",
-    "dca6 0 40 9980"
+    "x-cache",
+    "HIT"
    ],
    [
-    "cache-control",
-    "max-age=300, must-revalidate"
+    "x-rq",
+    "bur6 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -339,7 +339,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 4256,
+  "elapsed_ms": 26,
   "truncated": false,
   "body": "003.body.gz"
  }

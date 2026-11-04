@@ -1,0 +1,11 @@
+{
+  "url": "https://data.cityofnewyork.us/",
+  "recorded_at": "2026-11-04T18:24:07+00:00",
+  "source": "checks/results/007-sites/nyc-open-data",
+  "commit": "12bb4602f53bd7a6016d6a9ee81877174a6355a0",
+  "options": {
+    "max_requests": 10,
+    "delay": 1.0,
+    "items": 1000
+  }
+}

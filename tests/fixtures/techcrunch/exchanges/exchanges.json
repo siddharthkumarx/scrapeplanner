@@ -8,7 +8,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:49 GMT"
+    "Wed, 04 Nov 2026 18:24:28 GMT"
    ],
    [
     "content-type",
@@ -79,20 +79,20 @@
     "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
    ],
    [
-    "cache-control",
-    "public, max-age=14400"
-   ],
-   [
-    "cf-cache-status",
-    "HIT"
+    "x-rq",
+    "bur8 0 30 9980"
    ],
    [
     "x-cache",
     "HIT"
    ],
    [
-    "x-rq",
-    "jfk2 181 253 80"
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "cache-control",
+    "public, max-age=14400"
    ],
    [
     "strict-transport-security",
@@ -103,16 +103,12 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ],
    [
-    "age",
-    "50"
-   ],
-   [
     "last-modified",
-    "Wed, 04 Nov 2026 15:04:59 GMT"
+    "Wed, 04 Nov 2026 18:24:28 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:05:49 GMT"
+    "Wed, 04 Nov 2026 22:24:28 GMT"
    ],
    [
     "content-encoding",
@@ -120,10 +116,10 @@
    ],
    [
     "cf-ray",
-    "a55484e53fd4be87-IAD"
+    "a555a7e1fa0e0fb5-SJC"
    ]
   ],
-  "elapsed_ms": 55,
+  "elapsed_ms": 52,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -136,7 +132,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:50 GMT"
+    "Wed, 04 Nov 2026 18:24:30 GMT"
    ],
    [
     "content-type",
@@ -203,16 +199,16 @@
     "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
    ],
    [
-    "x-cache",
-    "HIT"
+    "x-rq",
+    "sjc4 0 30 9980"
    ],
    [
     "cache-control",
     "max-age=300, must-revalidate"
    ],
    [
-    "x-rq",
-    "dca8 181 253 80"
+    "x-cache",
+    "HIT"
    ],
    [
     "strict-transport-security",
@@ -232,10 +228,10 @@
    ],
    [
     "cf-ray",
-    "a55484eb9eadbe87-IAD"
+    "a555a7e879000fb5-SJC"
    ]
   ],
-  "elapsed_ms": 40,
+  "elapsed_ms": 528,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -248,7 +244,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:51 GMT"
+    "Wed, 04 Nov 2026 18:24:31 GMT"
    ],
    [
     "content-type",
@@ -315,16 +311,16 @@
     "<https://techcrunch.com/wp-json/>; rel=\"https://api.w.org/\""
    ],
    [
+    "x-rq",
+    "sjc4 0 30 9980"
+   ],
+   [
     "cache-control",
     "max-age=300, must-revalidate"
    ],
    [
     "x-cache",
-    "HIT"
-   ],
-   [
-    "x-rq",
-    "dca8 181 249 80"
+    "STALE"
    ],
    [
     "strict-transport-security",
@@ -344,10 +340,10 @@
    ],
    [
     "cf-ray",
-    "a55484f21b6cbe87-IAD"
+    "a555a7f208b50fb5-SJC"
    ]
   ],
-  "elapsed_ms": 15,
+  "elapsed_ms": 516,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -360,7 +356,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:52 GMT"
+    "Wed, 04 Nov 2026 18:24:32 GMT"
    ],
    [
     "content-type",
@@ -384,11 +380,11 @@
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 14:59:15 GMT"
+    "Wed, 04 Nov 2026 18:18:58 GMT"
    ],
    [
     "etag",
-    "W/\"b61c622de01d6df1b5ba39b7da5df9c1\""
+    "W/\"7987d97d6f2cf4a401875adb7b91150c\""
    ],
    [
     "x-hacker",
@@ -439,16 +435,16 @@
     "<https://techcrunch.com/>; rel=\"canonical\""
    ],
    [
+    "x-cache",
+    "HIT"
+   ],
+   [
     "cache-control",
     "max-age=300, must-revalidate"
    ],
    [
     "x-rq",
-    "dca8 181 249 80"
-   ],
-   [
-    "x-cache",
-    "HIT"
+    "sjc4 0 30 9980"
    ],
    [
     "strict-transport-security",
@@ -468,10 +464,10 @@
    ],
    [
     "cf-ray",
-    "a55484f86a25be87-IAD"
+    "a555a7fb79640fb5-SJC"
    ]
   ],
-  "elapsed_ms": 17,
+  "elapsed_ms": 15,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -484,7 +480,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 15:05:53 GMT"
+    "Wed, 04 Nov 2026 18:24:33 GMT"
    ],
    [
     "content-type",
@@ -555,12 +551,12 @@
     "max-age=300, must-revalidate"
    ],
    [
-    "x-rq",
-    "dca8 181 253 80"
+    "x-cache",
+    "STALE"
    ],
    [
-    "x-cache",
-    "HIT"
+    "x-rq",
+    "sjc4 0 30 9980"
    ],
    [
     "strict-transport-security",
@@ -580,10 +576,10 @@
    ],
    [
     "cf-ray",
-    "a55484fecfabbe87-IAD"
+    "a555a801dfed0fb5-SJC"
    ]
   ],
-  "elapsed_ms": 18,
+  "elapsed_ms": 15,
   "truncated": false,
   "body": "004.body.gz"
  }
