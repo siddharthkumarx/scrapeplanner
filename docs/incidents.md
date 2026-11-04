@@ -120,3 +120,16 @@ a truncated response that does not parse now says so in the report. The
 label was not changed after the fact: `scripts/results_notes.yml` adds a
 footnote to the table instead. Run `007-sites` repeats the same targets and
 labels on the fixed code.
+
+## I-009 · 2026-11-04 · Two Shopify stores answered 429 in 007-sites
+
+**What**: `007-sites` ran about eight minutes after `006-sites` from GitHub
+Actions. allbirds.com and ugmonk.com answered the sixth request, the
+`/products/<handle>.js` probe, with 429; in 006 both had answered it with 200.
+The run stopped there as designed, the plan raised its delay to 5 s, and both
+sites are "with care" in the published table.
+
+**Follow-up (not done yet)**: when `/products.json` already answered with
+products, the per-product `.js` probe adds nothing to the plan. Skipping it
+would save one request per Shopify store and avoid this 429. It changes the
+requests of every Shopify fixture, so it needs its own results run.

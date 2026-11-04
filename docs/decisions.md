@@ -154,3 +154,61 @@ one public page, sitemaps, feed probes); cookie values are redacted at
 record time. When a detector changes on purpose, regenerate the golden files
 and review the diff; when the web changes, record a new run instead of
 editing fixtures.
+
+## D-013 · 2026-11-04 · Platform groups, "not checked", job boards and data portals
+
+Platforms are chosen group by group: platforms that decide which public
+feeds exist (commerce; hosted job boards Greenhouse, Lever, Ashby; data
+portals CKAN, Socrata), then site builders and CMSs, then documentation
+generators, then meta-frameworks, then client-side libraries. Libraries a
+platform always brings are not repeated. When no page was served (block,
+challenge, robots.txt) the platform is "not checked", not "unknown": nothing
+was looked at. Job boards and CKAN get their documented public APIs probed,
+because those return every record in one or a few requests.
+
+## D-014 · 2026-11-04 · The public results set and platform labels
+
+The public table holds sites a typical client brings and that are fine to
+name: independent stores, company job boards, open-data portals, news and
+docs sites, and scraping practice sites (I-007). Verdicts are published as
+they come out. To measure platform detection, `expected_platform` is
+written in `checks/request.yml` before a run, only where the platform is
+known independently of this tool (the URL of a hosted board, the software a
+portal publicly runs on, public knowledge). Labels are never edited after a
+run; a wrong label gets a footnote (`scripts/results_notes.yml`). The
+labelled set is small and not held out from development, so the README
+quotes it as "matched N of M", not as an accuracy rate.
+
+## D-015 · 2026-11-04 · README visuals
+
+- Every terminal line in a visual is rendered by the real report renderer
+  from a committed `report.json`; every count is computed from that run
+  (`scripts/visuals/build.py`). The README shows no drawn output, so no
+  "EXAMPLE" label is needed; the ladder is a diagram of the real decision
+  order with real counts and names its run.
+- SVG only, no external fonts or scripts: Instrument Sans and IBM Plex Mono
+  are subset and embedded as WOFF2 (font timestamps pinned so the files are
+  byte-stable). CSS animation, 8 to 10 s loops, final frame held at least
+  2 s. The default style is the final frame; animations apply under
+  `prefers-reduced-motion: no-preference`, and under `reduce` every
+  animated element is given its final-state styles explicitly.
+- Chromium does not pass `prefers-reduced-motion` into an SVG used as an
+  image, so the README wraps each visual in `<picture>` with a
+  `-still.svg` source for reduced motion.
+- 1000-px viewBox, headings 36 px or more, all other text 30 px or more; the
+  terminal report has a stacked layout below 80 columns so it stays readable
+  at 50 columns.
+- A `visual` CI job (Playwright, Chromium) checks the assets are current,
+  self-contained, under 1 MB, use no text under 30 px, and that the
+  reduced-motion render and the still match the final frame (equal up to
+  antialiasing of composited layers).
+
+## D-016 · 2026-11-04 · What a top-tier CLI repository has, and what was added
+
+Added beyond the brief: a JSON Schema of `--json` kept current by a test
+(`docs/report.schema.json`), `docs/output-formats.md`, `CITATION.cff`,
+`.editorconfig`, Dependabot for actions and uv (monthly, grouped), a pull
+request template, `python -m scrapeplanner`, a stacked terminal layout for
+narrow terminals, `docs/repo-settings.md` and `docs/publish-checklist.md`.
+Not added on purpose: a docs website (the README and `docs/` are enough for
+one command), shell completion (one positional argument), telemetry (never).

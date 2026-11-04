@@ -23,3 +23,11 @@ All notable changes are listed here. The format follows
 - Planner: methods cheapest first, polite rate, request and time estimate
   for N items, risks and next steps.
 - `--record DIR` saves every exchange for offline replay.
+- Platforms: WordPress, Drupal, Webflow, Salesforce Commerce Cloud, Greenhouse,
+  Lever, Ashby, CKAN, Socrata, Hugo, Sphinx, Docusaurus, Gatsby, Remix,
+  SvelteKit, Astro, Angular, React, Vue, Lit. "not checked" when no page was
+  served.
+- Feeds: Greenhouse, Lever and Ashby job-board APIs; CKAN `package_search`.
+- Anti-bot: AWS WAF, and a site's own CAPTCHA / "are you a robot" page.
+- Stacked report layout for terminals narrower than 80 columns.
+- JSON Schema of the `--json` output in `docs/report.schema.json`.

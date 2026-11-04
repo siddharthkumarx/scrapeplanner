@@ -81,7 +81,12 @@ uv run python scripts/check_commit_msg.py FILE   # check one message
 ./scripts/check.sh                        # ruff, format, mypy, pytest (run before commits)
 uv run python scripts/make_results.py <id> # docs/results.md from checks/results/<id>
 uv run python scripts/import_fixture.py <id> <target>...  # recorded run -> tests/fixtures
+uv run python scripts/export_schema.py    # docs/report.schema.json
 uv build                                  # sdist + wheel into dist/
+uv sync --group visual && uv run playwright install chromium   # README visuals
+uv run python scripts/visuals/build.py    # assets/*.svg from the results run
+uv run python scripts/visuals/media.py    # social-preview.png, linkedin-demo.mp4
+uv run pytest -m visual                   # visual checks (reduced motion, sizes)
 ```
 
 ## Continue here
@@ -91,6 +96,8 @@ not `done`. Before every commit run `./scripts/check.sh`. After a change that
 moves golden files, run `uv run python scripts/update_golden.py` and review the
 diff. To refresh the results table: new `id` in `checks/request.yml`, push,
 pull, `uv run python scripts/make_results.py <id>`, then re-import fixtures
-with `scripts/import_fixture.py` and update the golden files. Item 27 (README and terminal SVG) waits for the maintainer's
-README rules; keep README notes in `docs/readme-plan.md` until then. Do not
-publish to PyPI until the maintainer says "publish" (D-009).
+with `scripts/import_fixture.py` and update the golden files. After a new results run, also set `RUN` in
+`scripts/visuals/build.py`, rebuild the visuals and update every number in
+README.md from the new docs/results.md. Publishing follows
+docs/publish-checklist.md. Do not publish to PyPI until the maintainer says
+"publish" (D-009).

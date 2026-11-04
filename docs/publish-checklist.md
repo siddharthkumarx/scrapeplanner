@@ -16,11 +16,13 @@ git checkout <the finished branch>
 - [ ] `rm -rf docs/private/` (the maintainer's own explainer).
 - [ ] `git mv CLAUDE.md docs/maintainers.md`, then fix the links to it
       (`grep -rn "CLAUDE.md" .`).
-- [ ] Remove this repository's working notes that only make sense here:
-      `docs/readme-plan.md`, `docs/build-progress.md` (or keep it as history;
-      decide once).
+- [ ] Decide once whether `docs/build-progress.md` stays as history or goes;
+      `docs/incidents.md` and `docs/decisions.md` stay (they explain the
+      results).
 - [ ] Keep `checks/results/001-smoke` and the current results run only
-      (`docs/results.md` names it). Delete any other run directory.
+      (`docs/results.md` names it, e.g. `007-sites`). Delete any other run
+      directory (`006-sites` is referenced only from docs/incidents.md, I-008;
+      reword that line to "an earlier run").
 - [ ] `grep -rn "scrapeplanner-wip" .` returns nothing that a reader would follow.
 - [ ] `./scripts/check.sh` passes; `uv run --group visual pytest -m visual` passes.
 
