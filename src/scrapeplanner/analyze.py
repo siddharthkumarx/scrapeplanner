@@ -60,7 +60,7 @@ from scrapeplanner.record import Recorder
 
 MAX_LINKED_FEED_PROBES = 2
 _CHILD_HINTS = {
-    "commerce": ("product", "item", "catalog"),
+    "commerce": ("sitemap_products", "product-sitemap", "products", "product", "catalog"),
     "jobs": ("job", "career", "position"),
     "articles": ("post", "article", "news", "story"),
 }

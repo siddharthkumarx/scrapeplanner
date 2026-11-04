@@ -23,7 +23,7 @@ PlatformName = Literal[
     "nuxt",
     "unknown",
 ]
-VendorName = Literal["cloudflare", "akamai", "datadome", "human", "imperva", "kasada"]
+VendorName = Literal["cloudflare", "akamai", "datadome", "human", "imperva", "kasada", "aws_waf"]
 MethodName = Literal["feed_api", "structured_data", "embedded_json", "html", "browser"]
 RenderVerdict = Literal["raw_html", "embedded_json", "browser_likely", "unknown"]
 FitVerdict = Literal["good", "caution", "not_a_fit", "unknown"]
@@ -43,9 +43,10 @@ VENDOR_LABELS: dict[str, str] = {
     "cloudflare": "Cloudflare",
     "akamai": "Akamai",
     "datadome": "DataDome",
-    "human": "HUMAN (PerimeterX)",
+    "human": "HUMAN/PerimeterX",
     "imperva": "Imperva",
     "kasada": "Kasada",
+    "aws_waf": "AWS WAF",
 }
 METHOD_LABELS: dict[str, str] = {
     "feed_api": "Public feed / JSON API",
@@ -165,7 +166,7 @@ class VendorHit(_Model):
     vendor: VendorName
     status: Literal["present", "challenge"]
     bot_management: bool = True
-    """False when only CDN headers were seen (Cloudflare cf-ray / server)."""
+    """False when only CDN headers were seen (e.g. Cloudflare cf-ray, server: AkamaiGHost)."""
     evidence: list[str] = Field(default_factory=list)
 
 

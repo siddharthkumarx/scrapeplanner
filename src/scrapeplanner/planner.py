@@ -295,19 +295,37 @@ def build_plan(f: Findings) -> Plan:
     managed = bot_managed_vendors(f.antibot)
 
     verdict: FitVerdict = "unknown"
-    blocked = f.stopped is not None and f.stopped.reason in ("blocked", "challenge", "rate_limited")
+    stop = f.stopped
+    page_url = f.page.final_url or f.page.url
+    # A challenge anywhere, or a block of the page itself, rules the site out. A plain
+    # 403/429 on one optional probe stops the run but the page we already have still counts.
+    fatal = stop is not None and (
+        stop.reason == "challenge"
+        or (
+            stop.reason in ("blocked", "rate_limited")
+            and (stop.url == page_url or not f.page.fetched or not (f.page.status or 0) < 300)
+        )
+    )
     if f.robots.disallow_all:
         verdict = "not_a_fit"
-        risks.append("robots.txt answered with an error: treated as 'disallow everything'")
+        risks.append(
+            f"robots.txt could not be read ({f.robots.note or 'error'}): treated as "
+            "'disallow everything'"
+        )
     if f.robots.paths and not f.robots.paths.get(_path(f.page.url), True):
         verdict = "not_a_fit"
         risks.append("robots.txt disallows the requested page for our user agent")
-    if blocked and f.stopped is not None:
+    if fatal and stop is not None:
         verdict = "not_a_fit"
-        risks.append(f"stopped at the first block: {f.stopped.detail} ({f.stopped.url})")
+        risks.append(f"stopped at the first block: {stop.detail} ({stop.url})")
         steps.append(
             "Ask the site owner for access, an API key or a data export; "
             "do not try to get past the block"
+        )
+    elif stop is not None and stop.reason in ("blocked", "rate_limited"):
+        risks.append(
+            f"the site refused {stop.url} ({stop.detail}); the run stopped there, and a "
+            "collector must stop at any 403 or 429 too"
         )
     if f.stopped is not None and f.stopped.reason == "crawl_delay":
         verdict = "not_a_fit"
@@ -336,7 +354,7 @@ def build_plan(f: Findings) -> Plan:
         if not f.page.fetched:
             verdict = "unknown"
             risks.append("the page could not be fetched; nothing to plan from")
-        elif managed or recommended == "browser":
+        elif managed or recommended == "browser" or stop is not None:
             verdict = "caution"
         else:
             verdict = "good"

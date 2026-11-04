@@ -342,6 +342,8 @@ class PoliteFetcher:
         except httpx.HTTPError as exc:
             entry.error = f"{type(exc).__name__}: {exc}"[:200]
             entry.elapsed_ms = int((self._clock() - started) * 1000)
+            if self.recorder is not None:
+                self.recorder.save_error(url, purpose, exc)
             raise
         finally:
             self._last_request = self._clock()

@@ -227,3 +227,21 @@ def test_record_and_replay_round_trip(tmp_path: Path) -> None:
     assert page.cookie_names == ["_px3"]
     assert missing.status == 599
     assert replay.misses == ["https://site.test/other"]
+
+
+def test_errors_are_recorded_and_replayed(tmp_path: Path) -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        raise httpx.ReadTimeout("timed out", request=request)
+
+    with PoliteFetcher(
+        transport=httpx.MockTransport(handler), recorder=Recorder(tmp_path), sleep=lambda _: None
+    ) as f:
+        state = f.load_robots("https://site.test/")
+    assert state.disallow_all
+    assert load_exchanges(tmp_path)[0]["error"] == "ReadTimeout"
+
+    with PoliteFetcher(transport=ReplayTransport(tmp_path), sleep=lambda _: None) as f:
+        replayed = f.load_robots("https://site.test/")
+    assert replayed.disallow_all
+    assert replayed.note is not None
+    assert "timed out" in replayed.note

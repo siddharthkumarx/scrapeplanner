@@ -111,10 +111,32 @@ SIGNALS: tuple[Signal, ...] = (
     Signal("kasada", "header", "x-kpsdk-r", "header x-kpsdk-r"),
     Signal("kasada", "marker", r"\bKPSDK\b", "Kasada KPSDK script"),
     Signal("kasada", "challenge", r"\bKPSDK\b", "Kasada interstitial"),
+    # AWS WAF (Bot Control). Not one of the big six, but common enough to name.
+    Signal("aws_waf", "cookie", r"^aws-waf-token$", "cookie aws-waf-token"),
+    Signal(
+        "aws_waf",
+        "challenge_header",
+        r"x-amzn-waf-action=challenge|captcha",
+        "header x-amzn-waf-action",
+    ),
+    Signal(
+        "aws_waf",
+        "challenge",
+        r"awsWafCookieDomainList|AwsWafIntegration",
+        "AWS WAF challenge page",
+    ),
 )
 
-CDN_ONLY_EVIDENCE = frozenset({"header cf-ray", "header server: cloudflare"})
-"""Cloudflare signals that show the CDN, not bot management."""
+CDN_ONLY_EVIDENCE = frozenset(
+    {
+        "header cf-ray",
+        "header server: cloudflare",
+        "header server: AkamaiGHost",
+        "header akamai-grn",
+        "header x-akamai-transformed",
+    }
+)
+"""Signals that show a CDN in front of the site, not its bot management."""
 INTERSTITIAL_MAX_CHARS = 30_000
 """Challenge markers in a large 2xx page are an embedded script, not a block."""
 BLOCK_STATUSES = frozenset({401, 403, 429, 503})
@@ -172,7 +194,7 @@ def detect(
 
 
 def _managed(hit: VendorHit) -> bool:
-    if hit.vendor != "cloudflare" or hit.status == "challenge":
+    if hit.status == "challenge":
         return True
     return not set(hit.evidence) <= CDN_ONLY_EVIDENCE
 

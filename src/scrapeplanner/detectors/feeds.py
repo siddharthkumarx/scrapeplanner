@@ -64,7 +64,9 @@ def candidates(platform: PlatformReport, doc: HtmlDoc | None, page_url: str) -> 
                 continue
             kind = _FEED_TYPES.get(link.type)
             if kind and _origin(link.href) == origin:
-                if "/comments/feed" in link.href or "oembed" in link.href:
+                # WordPress links each page's own JSON (/wp-json/wp/v2/pages/<id>) and
+                # oEmbed data as "alternate"; neither is a feed of records.
+                if any(part in link.href for part in ("/comments/feed", "oembed", "/wp-json/")):
                     continue
                 add(kind, link.href, note=link.title or None)
     if is_wordpress and platform.name != "woocommerce":

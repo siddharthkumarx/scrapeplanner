@@ -256,3 +256,28 @@ def test_analyze_module_has_no_bypass_options() -> None:
     fields = set(Options.__dataclass_fields__)
     assert fields == {"items", "max_requests", "delay", "timeout", "record_dir"}
     assert not hasattr(analyze_module, "proxy")
+
+
+def test_refused_probe_stops_but_keeps_page_findings() -> None:
+    routes = shopify_routes()
+    routes["https://shop.test/products.json?limit=250"] = (403, HTML, "Forbidden")
+    report = run(routes)
+    assert report.stopped is not None
+    assert report.stopped.url == "https://shop.test/products.json?limit=250"
+    assert report.requests[-1].purpose == "feed:shopify_products_json"
+    plan = report.plan
+    assert plan.verdict == "caution"
+    assert plan.recommended == "html"
+    assert any("refused" in risk for risk in plan.risks)
+
+
+def test_aws_waf_challenge_stops() -> None:
+    page = "<html><script>window.awsWafCookieDomainList = ['shop.test'];</script></html>"
+    routes: dict[str, Route] = {
+        "https://shop.test/robots.txt": (404, TXT, ""),
+        "https://shop.test/": (202, HTML, page),
+    }
+    report = run(routes)
+    assert report.requests_used == 2
+    assert report.antibot.vendors[0].vendor == "aws_waf"
+    assert report.plan.verdict == "not_a_fit"

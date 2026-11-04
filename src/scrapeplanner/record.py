@@ -6,6 +6,9 @@ Layout of a recording directory::
                         "elapsed_ms", "truncated", "body"}]
     000.body.gz       response body, gzipped (decoded, as the tool saw it)
 
+A request that got no response is stored with ``error`` (the httpx exception
+name) instead of ``status`` and ``body``, and is raised again on replay.
+
 Cookie values in ``set-cookie`` headers are replaced by ``<redacted>``: only
 cookie names matter for detection, and values can be session identifiers.
 """
@@ -67,6 +70,20 @@ class Recorder:
         )
         self._flush()
 
+    def save_error(self, url: str, purpose: str, error: httpx.HTTPError) -> None:
+        """Record a request that got no response (timeout, connection error)."""
+        self.entries.append(
+            {
+                "index": len(self.entries),
+                "method": "GET",
+                "url": url,
+                "purpose": purpose,
+                "error": type(error).__name__,
+                "message": str(error)[:200],
+            }
+        )
+        self._flush()
+
     def _flush(self) -> None:
         path = self.directory / INDEX_FILE
         path.write_text(json.dumps(self.entries, indent=1) + "\n", encoding="utf-8")
@@ -100,6 +117,11 @@ class ReplayTransport(httpx.BaseTransport):
             self.misses.append(url)
             return httpx.Response(599, text=f"not recorded: {url}", request=request)
         entry = queue.pop(0) if len(queue) > 1 else queue[0]
+        if "error" in entry:
+            error_type = getattr(httpx, str(entry["error"]), httpx.TransportError)
+            if not (isinstance(error_type, type) and issubclass(error_type, httpx.TransportError)):
+                error_type = httpx.TransportError
+            raise error_type(str(entry.get("message", "")), request=request)
         headers = [
             (str(key), str(value))
             for key, value in entry["headers"]

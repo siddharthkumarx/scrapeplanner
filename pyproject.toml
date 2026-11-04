@@ -57,8 +57,7 @@ dev = [
 path = "src/scrapeplanner/__init__.py"
 
 [tool.hatch.build.targets.sdist]
-include = ["src/scrapeplanner", "tests", "LICENSE", "README.md", "CHANGELOG.md"]
-exclude = ["tests/fixtures"]
+include = ["src/scrapeplanner", "LICENSE", "README.md", "CHANGELOG.md"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/scrapeplanner"]
