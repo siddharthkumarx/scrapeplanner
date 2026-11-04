@@ -1,0 +1,51 @@
+# Live checks: the only place the project sends requests to real sites
+# during development (docs/decisions.md, D-004).
+name: checks
+
+on:
+  push:
+    paths:
+      - checks/request.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: uv sync --locked --no-dev
+      - name: Run checks
+        run: uv run --no-dev python checks/run_checks.py
+      - name: Commit results
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add checks/results
+          if git diff --cached --quiet; then
+            echo "no new results"
+            exit 0
+          fi
+          id=$(sed -n 's/^id: *//p' checks/request.yml | head -1)
+          git commit -m "checks: results for ${id}"
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            sleep $((attempt * 5))
+          done
+          exit 1

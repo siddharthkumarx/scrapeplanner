@@ -1,0 +1,17 @@
+# Live checks run in GitHub Actions only (docs/architecture.md, "Live checks").
+# Change `id` and push to run; results land in checks/results/<id>/.
+id: 001-smoke
+options:
+  max_requests: 10
+  delay: 1.0
+  items: 1000
+targets:
+  - name: example-com
+    category: docs
+    url: https://example.com/
+  - name: allbirds
+    category: e-commerce
+    url: https://www.allbirds.com/
+  - name: react-dev
+    category: docs
+    url: https://react.dev/
