@@ -200,8 +200,10 @@ quotes it as "matched N of M", not as an accuracy rate.
   at 50 columns.
 - A `visual` CI job (Playwright, Chromium) checks the assets are current,
   self-contained, under 1 MB, use no text under 30 px, and that the
-  reduced-motion render and the still match the final frame (equal up to
-  antialiasing of composited layers).
+  reduced-motion render and the still match the final frame. Renders use
+  grayscale antialiasing and whole-pixel text positions so animated and
+  static layers rasterise alike; the comparison tolerates sub-pixel
+  smoothing only (I-010).
 
 ## D-016 · 2026-11-04 · What a top-tier CLI repository has, and what was added
 

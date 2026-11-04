@@ -133,3 +133,19 @@ sites are "with care" in the published table.
 products, the per-product `.js` probe adds nothing to the plan. Skipping it
 would save one request per Shopify store and avoid this 429. It changes the
 requests of every Shopify fixture, so it needs its own results run.
+
+## I-010 · 2026-11-04 · Visual check green locally, red in CI
+
+**What**: the reduced-motion-equals-final-frame check passed locally and
+failed three times in CI. The uploaded renders showed three separate causes:
+the seek ran before the animations had started (the "final" frame was the
+first one); embedded fonts could still be loading when a render was taken;
+and on the GPU-less runner, text in animated layers was snapped to the pixel
+grid and lost LCD antialiasing, so every glyph edge differed although the
+frames were the same.
+
+**Fix**: seek waits for each animation to be ready and two frames to render;
+every font face is loaded explicitly; Chromium runs with grayscale
+antialiasing; terminal text sits on whole pixels; the comparison ignores
+sub-pixel smoothing (1-pixel blur, 48-level threshold) but still fails on any
+missing or moved element. The failing renders are uploaded as a CI artifact.
