@@ -78,12 +78,19 @@ uv run ruff check . && uv run ruff format --check .
 uv run mypy                               # strict, configured in pyproject
 uv run python scripts/update_golden.py    # regenerate golden files, review diff
 uv run python scripts/check_commit_msg.py FILE   # check one message
+./scripts/check.sh                        # ruff, format, mypy, pytest (run before commits)
+uv run python scripts/make_results.py <id> # docs/results.md from checks/results/<id>
+uv run python scripts/import_fixture.py <id> <target>...  # recorded run -> tests/fixtures
 uv build                                  # sdist + wheel into dist/
 ```
 
 ## Continue here
 
 Next item: see the first row in `docs/build-progress.md` whose status is
-not `done`. Item 27 (README and terminal SVG) waits for the maintainer's
+not `done`. Before every commit run `./scripts/check.sh`. After a change that
+moves golden files, run `uv run python scripts/update_golden.py` and review the
+diff. To refresh the results table: new `id` in `checks/request.yml`, push,
+pull, `uv run python scripts/make_results.py <id>`, then re-import fixtures
+with `scripts/import_fixture.py` and update the golden files. Item 27 (README and terminal SVG) waits for the maintainer's
 README rules; keep README notes in `docs/readme-plan.md` until then. Do not
 publish to PyPI until the maintainer says "publish" (D-009).
