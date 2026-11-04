@@ -55,6 +55,13 @@ jobs:
       - run: uv run playwright install --with-deps chromium
       - name: README visuals are current, self-contained, readable, and honour reduced motion
         run: uv run pytest -m visual
+      - name: Keep the compared renders when the check fails
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: visual-renders
+          path: test-output/visual/
+          if-no-files-found: ignore
 
   commit-policy:
     runs-on: ubuntu-24.04

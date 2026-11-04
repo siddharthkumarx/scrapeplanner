@@ -31,6 +31,21 @@ def _png(data: bytes) -> Image.Image:
     return Image.open(io.BytesIO(data)).convert("RGB")
 
 
+FAILURES = ROOT / "test-output" / "visual"
+
+
+def _keep(name: str, **images: Image.Image) -> None:
+    """Save the compared renders so a CI failure can be inspected (uploaded as artifact)."""
+    FAILURES.mkdir(parents=True, exist_ok=True)
+    for label, image in images.items():
+        image.save(FAILURES / f"{name}-{label}.png")
+
+
+def _diff(a: Image.Image, b: Image.Image) -> str:
+    histogram = ImageChops.difference(a, b).convert("L").histogram()
+    return f"pixels touched {sum(histogram[1:])}, above level 24: {sum(histogram[25:])}"
+
+
 def _same(a: Image.Image, b: Image.Image) -> bool:
     """Equal up to antialiasing: Chromium composites animated layers separately, which
     moves edge pixels by a few levels. Any visible change (a level above 24, or more
@@ -83,6 +98,17 @@ def test_reduced_motion_and_still_match_the_final_frame(name: str) -> None:
         still = chromium_tools.open_svg(browser, ASSETS / f"{name}-still.svg", motion="reduce")
         still_png = _png(still.screenshot())
 
+    ok = (
+        not _same(early, final_png)
+        and _same(reduced_png, final_png)
+        and _same(still_png, final_png)
+    )
+    if not ok:
+        _keep(name, early=early, final=final_png, reduced=reduced_png, still=still_png)
     assert not _same(early, final_png), "the animation should start from a different frame"
-    assert _same(reduced_png, final_png), "reduced motion must show the final frame"
-    assert _same(still_png, final_png), "the still must equal the final frame"
+    assert _same(reduced_png, final_png), (
+        f"reduced motion must show the final frame ({_diff(reduced_png, final_png)})"
+    )
+    assert _same(still_png, final_png), (
+        f"the still must equal the final frame ({_diff(still_png, final_png)})"
+    )

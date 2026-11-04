@@ -17,8 +17,19 @@ from playwright.sync_api import Browser, Page, sync_playwright
 Motion = Literal["reduce", "no-preference"]
 
 # Seek every animation to the same point of its loop. ``at`` is a fraction of the loop.
+# document.fonts.ready can resolve before an embedded font has even been requested:
+# load every face explicitly, then let two frames render.
+SETTLE_JS = """
+async () => {
+  await Promise.all([...document.fonts].map((face) => face.load()));
+  await document.fonts.ready;
+  await new Promise((done) => requestAnimationFrame(() => requestAnimationFrame(done)));
+}
+"""
+
 SEEK_JS = """
 async (at) => {
+  await Promise.all([...document.fonts].map((face) => face.load()));
   await document.fonts.ready;
   const anims = document.getAnimations();
   for (const a of anims) a.pause();
@@ -55,7 +66,7 @@ def open_svg(browser: Browser, path: Path, *, motion: Motion, scale: float = 1.0
         reduced_motion=motion,
     )
     page.goto(path.resolve().as_uri())
-    page.evaluate("async () => { await document.fonts.ready; }")
+    page.evaluate(SETTLE_JS)
     return page
 
 
