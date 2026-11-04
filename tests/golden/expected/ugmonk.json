@@ -58,12 +58,12 @@
       },
       {
         "fields": [],
-        "http_status": 429,
+        "http_status": null,
         "items_seen": null,
         "kind": "shopify_product_js",
-        "note": "HTTP 429",
+        "note": "not requested: /products.json already answered",
         "page_size": null,
-        "status": "blocked",
+        "status": "linked",
         "total_items": null,
         "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js"
       }
@@ -136,7 +136,7 @@
         "usable": false
       },
       {
-        "est_hours": 1.4,
+        "est_hours": 0.28,
         "est_requests": 1007,
         "fields": [],
         "name": "html",
@@ -171,15 +171,13 @@
     ],
     "rate": {
       "concurrency": 1,
-      "delay_seconds": 5.0,
+      "delay_seconds": 1.0,
       "max_requests_per_day": null,
-      "reason": "the site answered 429 during this run at 1s spacing"
+      "reason": "default 1s between requests"
     },
     "recommended": "feed_api",
-    "risks": [
-      "the site refused https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js (HTTP 429 Too Many Requests); the run stopped there, and a collector must stop at any 403 or 429 too"
-    ],
-    "verdict": "caution"
+    "risks": [],
+    "verdict": "good"
   },
   "platform": {
     "checked": true,
@@ -248,17 +246,9 @@
       "purpose": "sitemap-child",
       "status": 200,
       "url": "https://ugmonk.com/sitemap_products_1.xml?from=167050992&to=15398543851670"
-    },
-    {
-      "bytes": 1568,
-      "error": null,
-      "method": "GET",
-      "purpose": "feed:shopify_product_js",
-      "status": 429,
-      "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js"
     }
   ],
-  "requests_used": 6,
+  "requests_used": 5,
   "robots": {
     "crawl_delay": null,
     "disallow_all": false,
@@ -325,11 +315,7 @@
   },
   "skipped": [],
   "started_at": "2026-11-04T18:22:37+00:00",
-  "stopped": {
-    "detail": "HTTP 429 Too Many Requests",
-    "reason": "rate_limited",
-    "url": "https://ugmonk.com/products/ugmonk-utility-tote-field-tan.js"
-  },
+  "stopped": null,
   "structured": {
     "items": [],
     "jsonld_blocks": 1,

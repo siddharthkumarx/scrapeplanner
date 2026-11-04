@@ -66,6 +66,13 @@ _CHILD_HINTS = {
 }
 
 
+def _catalog_answered(probed: list[FeedCandidate]) -> bool:
+    return any(
+        c.kind == "shopify_products_json" and c.status == "ok" and (c.items_seen or 0) > 0
+        for c in probed
+    )
+
+
 class InvalidURL(ValueError):
     pass
 
@@ -301,6 +308,15 @@ def analyze(
                 generic = candidate.kind in ("rss", "atom", "json_feed", "json_link")
                 if generic and linked_probes >= MAX_LINKED_FEED_PROBES:
                     probed.append(candidate)
+                    continue
+                if candidate.kind == "shopify_product_js" and _catalog_answered(probed):
+                    # products.json already returned the products; the per-product JSON
+                    # would add nothing to the plan, so keep the request (I-009).
+                    probed.append(
+                        candidate.model_copy(
+                            update={"note": "not requested: /products.json already answered"}
+                        )
+                    )
                     continue
                 linked_probes += generic
                 probed.append(run.probe(candidate))

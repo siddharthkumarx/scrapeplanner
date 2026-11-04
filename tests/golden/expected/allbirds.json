@@ -46,12 +46,12 @@
       },
       {
         "fields": [],
-        "http_status": 429,
+        "http_status": null,
         "items_seen": null,
         "kind": "shopify_product_js",
-        "note": "HTTP 429",
+        "note": "not requested: /products.json already answered",
         "page_size": null,
-        "status": "blocked",
+        "status": "linked",
         "total_items": null,
         "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
       }
@@ -73,7 +73,7 @@
     "items": 1000,
     "methods": [
       {
-        "est_hours": 0.01,
+        "est_hours": 0.0,
         "est_requests": 4,
         "fields": [
           "id",
@@ -122,7 +122,7 @@
         "usable": false
       },
       {
-        "est_hours": 1.39,
+        "est_hours": 0.28,
         "est_requests": 1004,
         "fields": [],
         "name": "html",
@@ -157,15 +157,13 @@
     ],
     "rate": {
       "concurrency": 1,
-      "delay_seconds": 5.0,
+      "delay_seconds": 1.0,
       "max_requests_per_day": null,
-      "reason": "the site answered 429 during this run at 1s spacing"
+      "reason": "default 1s between requests"
     },
     "recommended": "feed_api",
-    "risks": [
-      "the site refused https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js (HTTP 429 Too Many Requests); the run stopped there, and a collector must stop at any 403 or 429 too"
-    ],
-    "verdict": "caution"
+    "risks": [],
+    "verdict": "good"
   },
   "platform": {
     "checked": true,
@@ -234,17 +232,9 @@
       "purpose": "sitemap-child",
       "status": 200,
       "url": "https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557&to=7369944137808"
-    },
-    {
-      "bytes": 1568,
-      "error": null,
-      "method": "GET",
-      "purpose": "feed:shopify_product_js",
-      "status": 429,
-      "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
     }
   ],
-  "requests_used": 6,
+  "requests_used": 5,
   "robots": {
     "crawl_delay": null,
     "disallow_all": false,
@@ -311,11 +301,7 @@
   },
   "skipped": [],
   "started_at": "2026-11-04T18:22:24+00:00",
-  "stopped": {
-    "detail": "HTTP 429 Too Many Requests",
-    "reason": "rate_limited",
-    "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js"
-  },
+  "stopped": null,
   "structured": {
     "items": [],
     "jsonld_blocks": 0,

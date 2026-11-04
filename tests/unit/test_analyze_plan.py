@@ -88,8 +88,10 @@ def test_shopify_plan() -> None:
         "sitemap",
         "feed:shopify_products_json",
         "sitemap-child",
-        "feed:shopify_product_js",
     ]
+    product_js = report.feeds.candidates[1]
+    assert (product_js.kind, product_js.status) == ("shopify_product_js", "linked")
+    assert product_js.note == "not requested: /products.json already answered"
     assert report.sitemap.child is not None
     assert report.sitemap.child.url_count == 50
     plan = report.plan
@@ -284,12 +286,17 @@ def test_aws_waf_challenge_stops() -> None:
     assert report.plan.verdict == "not_a_fit"
 
 
+def test_product_js_probed_only_when_catalog_is_empty() -> None:
+    report = run(shopify_routes(products=0))
+    assert report.requests[-1].purpose == "feed:shopify_product_js"
+    assert report.feeds.candidates[1].status == "ok"
+
+
 def test_429_on_a_probe_slows_the_plan() -> None:
-    routes = shopify_routes()
+    routes = shopify_routes(products=0)
     routes["https://shop.test/products/red-cap.js"] = (429, JSON, "{}")
     plan = run(routes).plan
     assert plan.verdict == "caution"
-    assert plan.recommended == "feed_api"
     assert plan.rate.delay_seconds == 5.0
     assert "429" in plan.rate.reason
 

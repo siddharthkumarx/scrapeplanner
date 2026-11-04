@@ -45,29 +45,13 @@
         "url": "https://www.deathwishcoffee.com/products.json?limit=250"
       },
       {
-        "fields": [
-          "id",
-          "title",
-          "handle",
-          "description",
-          "published_at",
-          "created_at",
-          "vendor",
-          "type",
-          "tags",
-          "price",
-          "price_min",
-          "price_max",
-          "available",
-          "price_varies",
-          "compare_at_price"
-        ],
-        "http_status": 200,
-        "items_seen": 1,
+        "fields": [],
+        "http_status": null,
+        "items_seen": null,
         "kind": "shopify_product_js",
-        "note": null,
+        "note": "not requested: /products.json already answered",
         "page_size": null,
-        "status": "ok",
+        "status": "linked",
         "total_items": null,
         "url": "https://www.deathwishcoffee.com/products/society-of-strong-coffee-initiation-kit.js"
       }
@@ -250,17 +234,9 @@
       "purpose": "sitemap-child",
       "status": 200,
       "url": "https://www.deathwishcoffee.com/sitemap_products_1.xml?from=171104582&to=15414106357815"
-    },
-    {
-      "bytes": 5684,
-      "error": null,
-      "method": "GET",
-      "purpose": "feed:shopify_product_js",
-      "status": 200,
-      "url": "https://www.deathwishcoffee.com/products/society-of-strong-coffee-initiation-kit.js"
     }
   ],
-  "requests_used": 6,
+  "requests_used": 5,
   "robots": {
     "crawl_delay": null,
     "disallow_all": false,
