@@ -125,7 +125,7 @@ def _discovery(f: Findings, items: int) -> tuple[int, str]:
     if per_file:
         files = math.ceil(items / per_file)
         extra = 1 if sitemap.kind == "sitemapindex" else 0
-        return files + extra, f"URLs from the sitemap (~{per_file} per file)"
+        return files + extra, f"URLs from the sitemap (~{per_file:,} per file)"
     return 0, "URLs from listing pages (count not measured)"
 
 

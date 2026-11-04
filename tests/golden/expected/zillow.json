@@ -107,7 +107,7 @@
         "name": "embedded_json",
         "notes": [
           "buildId changes on every deploy; read it from the page, never hard-code it",
-          "one detail page per record; URLs from the sitemap (~29347 per file)"
+          "one detail page per record; URLs from the sitemap (~29,347 per file)"
         ],
         "partial": false,
         "summary": "script#__NEXT_DATA__ (191,041 bytes)",
@@ -124,7 +124,7 @@
         "fields": [],
         "name": "html",
         "notes": [
-          "one detail page per record; URLs from the sitemap (~29347 per file)",
+          "one detail page per record; URLs from the sitemap (~29,347 per file)",
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
@@ -183,7 +183,7 @@
     "links": 327,
     "noscript_warning": false,
     "reasons": [
-      "8537 characters of text, 327 links",
+      "8,537 characters of text, 327 links",
       "also in script#__NEXT_DATA__"
     ],
     "script_bytes": 261867,

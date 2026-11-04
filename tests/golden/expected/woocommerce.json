@@ -76,7 +76,7 @@
         "fields": [],
         "name": "html",
         "notes": [
-          "one detail page per record; URLs from the sitemap (~1143 per file)",
+          "one detail page per record; URLs from the sitemap (~1,143 per file)",
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
@@ -135,7 +135,7 @@
     "links": 195,
     "noscript_warning": false,
     "reasons": [
-      "15017 characters of text, 195 links"
+      "15,017 characters of text, 195 links"
     ],
     "script_bytes": 95046,
     "text_chars": 15017,

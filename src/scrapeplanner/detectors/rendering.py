@@ -51,13 +51,15 @@ def detect(
             report.verdict = "raw_html"
         else:
             report.verdict = "browser_likely"
-            report.reasons.append(f"only {report.text_chars} characters of text without JavaScript")
+            report.reasons.append(
+                f"only {report.text_chars:,} characters of text without JavaScript"
+            )
     elif thin and data_blobs and not structured.key_types:
         report.verdict = "embedded_json"
         report.reasons.append(f"little visible text; data in {data_blobs[0].locator}")
     else:
         report.verdict = "raw_html"
-        report.reasons.append(f"{report.text_chars} characters of text, {report.links} links")
+        report.reasons.append(f"{report.text_chars:,} characters of text, {report.links:,} links")
         if data_blobs:
             report.reasons.append(f"also in {data_blobs[0].locator}")
     return report

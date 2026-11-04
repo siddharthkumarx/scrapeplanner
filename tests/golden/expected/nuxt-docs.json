@@ -159,7 +159,7 @@
     "noscript_warning": false,
     "reasons": [
       "schema.org records in the HTML: Article, TechArticle",
-      "6441 characters of text, 78 links",
+      "6,441 characters of text, 78 links",
       "also in script#__NUXT_DATA__"
     ],
     "script_bytes": 111611,
