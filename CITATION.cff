@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use scrapeplanner in research or a publication, please cite it."
+title: scrapeplanner
+abstract: >-
+  A command-line tool that reports the cheapest reliable, polite way to collect
+  a website's data: robots.txt and sitemaps, platform, public feeds and APIs,
+  structured data, embedded JSON and anti-bot vendor, then a collection plan.
+type: software
+authors:
+  - given-names: Siddharth
+    family-names: Kumar
+    website: "https://siddharthkumar.com"
+repository-code: "https://github.com/siddharthkumarx/scrapeplanner"
+url: "https://siddharthkumar.com"
+license: MIT
+keywords:
+  - web scraping
+  - robots.txt
+  - structured data
+  - data collection
