@@ -1,0 +1,158 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.indeed.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:58:00 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain;charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=indeed.com; Expires=Wed, 04 Nov 2026 15:28:00 GMT"
+   ],
+   [
+    "set-cookie",
+    "_cfuvid=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=indeed.com"
+   ],
+   [
+    "cf-ua-info-cloudflare-useragent-parser-1.1",
+    "true"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "cf-ray",
+    "a55479732b7eeb39-SEA"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 133,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.indeed.com/",
+  "purpose": "page",
+  "status": 403,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:58:01 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=UTF-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "close"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA"
+   ],
+   [
+    "cf-mitigated",
+    "challenge"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "critical-ch",
+    "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA"
+   ],
+   [
+    "cross-origin-embedder-policy",
+    "require-corp"
+   ],
+   [
+    "cross-origin-opener-policy",
+    "same-origin"
+   ],
+   [
+    "cross-origin-resource-policy",
+    "same-origin"
+   ],
+   [
+    "origin-agent-cluster",
+    "?1"
+   ],
+   [
+    "permissions-policy",
+    "accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=(),xr-spatial-tracking=*"
+   ],
+   [
+    "referrer-policy",
+    "same-origin"
+   ],
+   [
+    "server-timing",
+    "chlray;desc=\"a5547979fcbeeb39\""
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "set-cookie",
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=indeed.com; Expires=Wed, 04 Nov 2026 15:28:01 GMT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a5547979fcbeeb39-SEA"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 25,
+  "truncated": false,
+  "body": "001.body.gz"
+ }
+]

@@ -1,0 +1,318 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://www.walmart.com/",
+  "site": "www.walmart.com",
+  "started_at": "2026-11-04T14:57:38+00:00",
+  "duration_seconds": 3.2,
+  "max_requests": 10,
+  "requests_used": 3,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://www.walmart.com/robots.txt",
+      "purpose": "robots",
+      "status": 200,
+      "elapsed_ms": 281,
+      "bytes": 3479,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.walmart.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 42,
+      "bytes": 502188,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://www.walmart.com/sitemap_category.xml",
+      "purpose": "sitemap",
+      "status": 200,
+      "elapsed_ms": 460,
+      "bytes": 1324850,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://www.walmart.com/",
+    "final_url": "https://www.walmart.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 502188,
+    "title": "Walmart | Save Money. Live better.",
+    "lang": "en-US"
+  },
+  "robots": {
+    "url": "https://www.walmart.com/robots.txt",
+    "fetched": true,
+    "status": 200,
+    "found": true,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap_category.xml": true,
+      "/cp/baseball-socks/8502411": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [
+      "https://www.walmart.com/sitemap_category.xml",
+      "https://www.walmart.com/sitemap_store_main.xml",
+      "https://www.walmart.com/help/sitemap_gm.xml",
+      "https://www.walmart.com/sitemap_browse_fst.xml",
+      "https://www.walmart.com/sitemap_store_dept.xml",
+      "https://www.walmart.com/sitemap_tp_legacy.xml",
+      "https://www.walmart.com/sitemap_tp_at.xml",
+      "https://www.walmart.com/sitemap_tp_br.xml",
+      "https://www.walmart.com/sitemap_tp_kp.xml",
+      "https://www.walmart.com/sitemap_brp_02.xml",
+      "https://www.walmart.com/sitemap_brp_03.xml",
+      "https://www.walmart.com/sitemap_brp_04.xml",
+      "https://www.walmart.com/sitemap_brp_05.xml",
+      "https://www.walmart.com/sitemap_brp_06.xml",
+      "https://www.walmart.com/sitemap_brp_07.xml",
+      "https://www.walmart.com/sitemap_brp_08.xml",
+      "https://www.walmart.com/sitemap_brp_09.xml",
+      "https://www.walmart.com/sitemap_itp_01.xml",
+      "https://www.walmart.com/sitemap_itp_02.xml",
+      "https://www.walmart.com/sitemap_product_03.xml",
+      "https://www.walmart.com/sitemap_rp_01.xml",
+      "https://www.walmart.com/sitemap_rp_02.xml",
+      "https://www.walmart.com/sitemap_rp_03.xml",
+      "https://www.walmart.com/sitemap_rp_04.xml",
+      "https://www.walmart.com/sitemap_rp_05.xml",
+      "https://www.walmart.com/sitemap_auto_dir.xml",
+      "https://www.walmart.com/sitemap_brndshp_brand.xml",
+      "https://www.walmart.com/sitemap_sp.xml",
+      "https://www.walmart.com/sitemap_hi_ip.xml",
+      "https://www.walmart.com/sitemap_hi_tp.xml",
+      "https://www.walmart.com/sitemap_hi_bp.xml",
+      "https://www.walmart.com/sitemap_hi_mp.xml"
+    ],
+    "note": null
+  },
+  "sitemap": {
+    "url": "https://www.walmart.com/sitemap_category.xml",
+    "source": "robots",
+    "fetched": true,
+    "status": 200,
+    "kind": "urlset",
+    "url_count": 12720,
+    "child_sitemaps": null,
+    "newest_lastmod": "2026-11-02",
+    "oldest_lastmod": "2026-11-02",
+    "with_lastmod": 12720,
+    "sample_urls": [
+      "https://www.walmart.com/cp/baseball-socks/8502411",
+      "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+      "https://www.walmart.com/cp/coleman-camping/6320218",
+      "https://www.walmart.com/cp/fall/8378519",
+      "https://www.walmart.com/cp/j-kara/2841770"
+    ],
+    "truncated": false,
+    "note": null,
+    "child": null
+  },
+  "platform": {
+    "name": "nextjs",
+    "confidence": "high",
+    "evidence": [
+      "__NEXT_DATA__ script",
+      "assets under /_next/static/"
+    ],
+    "frameworks": [],
+    "generator": null
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "human",
+        "status": "present",
+        "bot_management": true,
+        "evidence": [
+          "HUMAN sensor script",
+          "HUMAN _pxAppId",
+          "cookie _px* (HUMAN)"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {
+      "Organization": 1,
+      "WebSite": 1,
+      "SearchAction": 1,
+      "EntryPoint": 1
+    },
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": [
+      {
+        "kind": "next_data",
+        "locator": "script#__NEXT_DATA__",
+        "bytes": 304097,
+        "keys": [
+          "initialTempoData",
+          "dimensionData",
+          "countryRegion",
+          "headerObj",
+          "traceparents",
+          "psych",
+          "isomorphicSessionId",
+          "trace",
+          "isCaching",
+          "queryContextCacheId",
+          "bootstrapData",
+          "enableGqlCsrRedirect",
+          "nonce",
+          "persistedQueriesConfig",
+          "errorLoggingConfig"
+        ],
+        "details": {
+          "page": "/",
+          "buildId": "production_20261102T030850131Z-en-US"
+        }
+      }
+    ]
+  },
+  "rendering": {
+    "verdict": "raw_html",
+    "html_bytes": 502188,
+    "text_chars": 3122,
+    "links": 78,
+    "script_bytes": 324143,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "3122 characters of text, 78 links",
+      "also in script#__NEXT_DATA__"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "caution",
+    "recommended": "embedded_json",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 5.0,
+      "concurrency": 1,
+      "max_requests_per_day": 5000,
+      "reason": "HUMAN (PerimeterX) bot management in front of the site: slow and capped"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: EntryPoint, Organization, SearchAction, WebSite)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": true,
+        "summary": "script#__NEXT_DATA__ (304,097 bytes)",
+        "urls": [
+          "https://www.walmart.com/cp/baseball-socks/8502411",
+          "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+          "https://www.walmart.com/cp/coleman-camping/6320218"
+        ],
+        "fields": [
+          "initialTempoData",
+          "dimensionData",
+          "countryRegion",
+          "headerObj",
+          "traceparents",
+          "psych",
+          "isomorphicSessionId",
+          "trace",
+          "isCaching",
+          "queryContextCacheId",
+          "bootstrapData",
+          "enableGqlCsrRedirect",
+          "nonce",
+          "persistedQueriesConfig",
+          "errorLoggingConfig"
+        ],
+        "est_requests": 1001,
+        "est_hours": 1.39,
+        "partial": false,
+        "notes": [
+          "buildId changes on every deploy; read it from the page, never hard-code it",
+          "one detail page per record; URLs from the sitemap (~12720 per file)"
+        ]
+      },
+      {
+        "name": "html",
+        "usable": true,
+        "summary": "CSS selectors on server-rendered HTML (3,122 chars of text)",
+        "urls": [
+          "https://www.walmart.com/cp/baseball-socks/8502411",
+          "https://www.walmart.com/cp/calbee-north-america-llc/5702360",
+          "https://www.walmart.com/cp/coleman-camping/6320218"
+        ],
+        "fields": [],
+        "est_requests": 1001,
+        "est_hours": 1.39,
+        "partial": false,
+        "notes": [
+          "one detail page per record; URLs from the sitemap (~12720 per file)",
+          "selectors break on redesigns; prefer the methods above when usable"
+        ]
+      },
+      {
+        "name": "browser",
+        "usable": false,
+        "summary": "not needed: data is available without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "partial": false,
+        "notes": []
+      }
+    ],
+    "risks": [
+      "HUMAN (PerimeterX) bot management is in front of the site: keep to the rate below and stop at the first challenge",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it",
+      "If you need volume, ask the owner for an API or a feed"
+    ]
+  }
+}

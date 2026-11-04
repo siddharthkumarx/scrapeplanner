@@ -1,0 +1,598 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.airbnb.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "content-type",
+    "text/plain;charset=utf-8"
+   ],
+   [
+    "x-instrumentation",
+    "airbnb"
+   ],
+   [
+    "x-server-lifecycle-phase",
+    "running"
+   ],
+   [
+    "status",
+    "200 OK"
+   ],
+   [
+    "x-kraken-loop-name",
+    "seo-loop"
+   ],
+   [
+    "etag",
+    "W/\"51c2-/U2Lay+PpYv9hrpFPuIG96en9SU\""
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "33"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-airbnb-internal-trace-id",
+    "hiYnhL_fxu8EpHFG_ul36w=="
+   ],
+   [
+    "server-timing",
+    "ingress;dur=33, upstream;dur=33"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-server-name",
+    "www.airbnb.com"
+   ],
+   [
+    "content-length",
+    "2061"
+   ],
+   [
+    "cache-control",
+    "public, max-age=52247"
+   ],
+   [
+    "expires",
+    "Thu, 05 Nov 2026 05:31:20 GMT"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:00:33 GMT"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "set-cookie",
+    "everest_cookie=<redacted>; expires=Sat, 03-Nov-2029 15:00:33 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "bev=<redacted>; expires=Fri, 03-Nov-2028 15:00:33 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "country=<redacted>; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=93600"
+   ],
+   [
+    "akamai-request-bc",
+    "[a=23.34.83.82,b=1217298405,c=g,n=US_WA_SEATTLE,o=20940]"
+   ],
+   [
+    "x-airbnb-client-tls-version",
+    "tls1.3"
+   ],
+   [
+    "cachestatus",
+    "cache"
+   ],
+   [
+    "x-airbnb-sureride",
+    "c1a1c.0.52532217.1793804433.488e7fe5%%h1"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=HIT, edge; dur=0, origin; dur=UNSET"
+   ],
+   [
+    "x-browser-type",
+    "unknown"
+   ],
+   [
+    "x-erf-bev-bev-is-generated",
+    "1"
+   ],
+   [
+    "x-erf-bev-bev",
+    "1793804433_EANzI3OTZiMDk4Nj"
+   ],
+   [
+    "x-airbnb-everest-device-id",
+    "1793804433.EAMTEzOTVmNTJmNDhhOD.ZVOqXNcOmLfAKTctU0aZc90s9VPt5DmKkxXEN4P3zO8"
+   ]
+  ],
+  "elapsed_ms": 97,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.airbnb.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "server",
+    "nginx"
+   ],
+   [
+    "content-type",
+    "text/html;charset=utf-8"
+   ],
+   [
+    "x-instrumentation",
+    "airbnb"
+   ],
+   [
+    "x-server-lifecycle-phase",
+    "running"
+   ],
+   [
+    "status",
+    "200 OK"
+   ],
+   [
+    "expires",
+    "Thu, 01 Jan 1970 00:00:00 GMT"
+   ],
+   [
+    "x-kraken-loop-name",
+    "core-guest-loop"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-Device-Memory, Sec-CH-DPR, ECT, Sec-CH-UA-Platform-Version, Sec-CH-Viewport-Width, Sec-CH-Device-Memory, Sec-CH-DPR, ECT, Sec-CH-UA-Platform-Version, Sec-CH-Viewport-Width"
+   ],
+   [
+    "accept-ch-lifetime",
+    "31536000"
+   ],
+   [
+    "cache-control",
+    "no-store, max-age=0, private, must-revalidate"
+   ],
+   [
+    "content-security-policy",
+    "child-src blob:; connect-src 'self' https: wss://ws.airbnb.com wss://ws.airbnb.com https://netverify.com https://*.netverify.com wss: *.amap.com https://*.mapbox.com; default-src 'self' https: blob:; font-src 'self' data: https://*.muscache.com fonts.gstatic.com https://use.typekit.net https:; frame-src * https://*.cardinalcommerce.com; img-src 'self' https: data: https://*.mapbox.com blob:; media-src 'self' https: blob:; script-src 'self' 'unsafe-eval' https://a0.muscache.com https://cdn.siftscience.com https://ss.musthird.com https://t1.musthird.com https://bat.bing.com https://connect.facebook.net https://www.google-analytics.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.googletagmanager.com https://maps.googleapis.com https://ajax.googleapis.com https://*.g.doubleclick.net https://www.google.com https://www.gstatic.com https://smartlock.google.com https://accounts.google.com https://app.link https://cdn.branch.io https://api.branch.io https://bam.nr-data.net https://js-agent.newrelic.com https://ethn.io https://s.yimg.jp https://api.geetest.com https://monitor.geetest.com https://api.geevisit.com https://cdn.ampproject.org https://storage.googleapis.com/workbox-cdn/ https://tagmanager.google.com https://pay.google.com https://songbird.cardinalcommerce.com/ https://www.recaptcha.net https://www.gstatic.cn https://airbnb-api.arkoselabs.com https://h.online-metrix.net 'sha256-rAm9O8JPZLtQmd84zMDzhsG5q35JscESxxcaFL7+DDc=' 'sha256-UyK/XBtZoFyQQOBAr1hmw2FP2Qaybdf4IyhWW0l2X+g=' 'sha256-CZnW0hvLQpXhjRl/rvattFn8GcIhxi8fcsCstVugtsI=' 'sha256-9jboJcALeftUTV/MuGjkJB5HDvqsPbm7/gTjfpkHiYc=' 'sha256-hBwLRkfdEtkEOoOVa52xEJQQCRJ0qPPJ8MRI3fhejrE=' 'sha256-dEQLydru3z2yuRGS/8VzaalU2wY48xuXdoO1zDPmT/A=' 'sha256-jhpHTyypc46kfr10/bvvFfjxyJNZcDvM0XsDAD5PJ2k=' 'sha256-sM4TCqADHMBZKYgE9fgtWACAry8C6tqaPljxMeTJ+w4=' https: 'sha256-5Tl1cMvpowm216MNWitZcm6dh1Ufik1QFyA6KadNiAY=' 'sha256-rvARxjbuUxilxb9RkOEv8RtqGIsmGYKyxv2IIH4MsrA=' 'sha256-hlaumtWL6YXbATpvURLyKaWUWs/apEDvcs19lYsGwsU=' 'sha256-WN2aiDPIBwBxhoVjMemOYgECjT6LzuFTAdA/DMR7T3A=' 'sha256-QrtzfXzemhvC/0Mz4p5MTgyHZ11cOMx/iKBQ2QfQoYU=' 'sha256-hVPsqt8jazJS/0O76JubiA90S0KG9ImECF/df+CNljI=' 'sha256-RAgBnM0wf+EU6GLC4DAwrlPlxaWbSFOv9fEZHb22Zqc=' 'sha256-q7LfTX8CemAjvalJEQZ5S+i7nuNEVbFaU6xkHvEAOeQ=' 'sha256-Hn02be8UsaO1J728ZDxGZlZGXBd85lEw3JklFYpfGPQ=' 'sha256-69KvOim8N1PE+6rP6TRe0P6GgFBZdTuNV9Lrr9y8KMc=' 'sha256-AcTLk9SPBTCpOP4TyHDG+Id7/GS/5o3fNLVi6oMU5NM=' https://netverify.com https://*.netverify.com https://icm.aexp-static.com https://qicm.americanexpress.com https://qwww435.americanexpress.com https://checkout.americanexpress.com https://www.paypalobjects.com https://c.paypal.com https://www.paypal.com https://*.klarnacdn.net blob: https://vdata.amap.com https://webapi.amap.com https://restapi.amap.com https://*.mapbox.com https://cardinaltrusted.com https://songbird.cardinalcommerce.com https://songbirdstag.cardinalcommerce.com https://includes.ccdc02.com https://includestest.ccdc02.com https://client-api.arkoselabs.com https://cdn.plaid.com/link/v2/stable/link-initialize.js https://js.stripe.com https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js https://pagead2.googlesyndication.com; style-src 'self' https: 'unsafe-inline' https://*.mapbox.com; worker-src 'self' https: blob:; report-uri /tracking/csp?controller=core-guest-loop&action=%2F&req_uuid=85812efb-e665-4823-5a71-e372a680828f&version=sha%3Dd2b819536102&report_only=false; report-to /tracking/csp?controller=core-guest-loop&action=%2F&req_uuid=85812efb-e665-4823-5a71-e372a680828f&version=sha%3Dd2b819536102&report_only=false"
+   ],
+   [
+    "link",
+    "<https://a0.muscache.com/airbnb/static/packages/web/common/frontend/core-guest-spa/entrypoints/client.af032c2285.css>;rel=preload;as=style;crossorigin=anonymous;media=print,<https://a0.muscache.com/airbnb/static/airbnb-dls-web/build/fonts/cereal-variable/AirbnbCerealVF_W_Wght.8816d9e5c3b6a860636193e36b6ac4e4.woff2>;rel=preload;as=font;type=font/woff2;crossorigin=anonymous,<https://a0.muscache.com/airbnb>;rel=preconnect;crossorigin=anonymous"
+   ],
+   [
+    "x-airbnb-kraken-flush-body",
+    "1"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-envoy-upstream-service-time",
+    "44"
+   ],
+   [
+    "x-frame-options",
+    "SAMEORIGIN"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "x-airbnb-internal-trace-id",
+    "MJE3F083l2QxW5nf4D-w8A=="
+   ],
+   [
+    "server-timing",
+    "ingress;dur=44, upstream;dur=44"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000; includeSubDomains; preload"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "x-server-name",
+    "www.airbnb.com"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:00:35 GMT"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "connection",
+    "Transfer-Encoding"
+   ],
+   [
+    "set-cookie",
+    "_user_attributes=<redacted>; Path=/; Domain=.airbnb.com; Expires=Tue, 04-May-2027 15:00:33 GMT; Max-Age=15638399; Secure"
+   ],
+   [
+    "set-cookie",
+    "bev=<redacted>; Path=/; Domain=.airbnb.com; Expires=Fri, 03-Nov-2028 15:00:33 GMT; Max-Age=63071999; Secure"
+   ],
+   [
+    "set-cookie",
+    "_user_attributes=<redacted>; Path=/; Domain=.airbnb.com; Expires=Tue, 04-May-2027 15:00:33 GMT; Max-Age=15638399; Secure"
+   ],
+   [
+    "set-cookie",
+    "_user_attributes=<redacted>; Path=/; Domain=.airbnb.com; Expires=Tue, 04-May-2027 15:00:33 GMT; Max-Age=15638399; Secure"
+   ],
+   [
+    "set-cookie",
+    "everest_cookie=<redacted>; expires=Sat, 03-Nov-2029 15:00:35 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "bev=<redacted>; expires=Fri, 03-Nov-2028 15:00:35 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "country=<redacted>; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=93600"
+   ],
+   [
+    "akamai-request-bc",
+    "[a=23.34.83.82,b=1217298416,c=g,n=US_WA_SEATTLE,o=20940],[c=c,n=US_WA_SEATTLE,o=20940],[a=247,c=o]"
+   ],
+   [
+    "x-airbnb-client-tls-version",
+    "tls1.3"
+   ],
+   [
+    "x-airbnb-sureride",
+    "c1a1o.0.52532217.1793804434.488e7ff0%%i1c1o%%t1d1o.MJE3F083l2QxW5nf4D-w8A==%%e1f1o.E2IHEUl1EAUJMgtdDycGChQwFlwXegYeDXFGTg%%t1d1o.MJE3F083l2QxW5nf4D-w8A==%%h1"
+   ],
+   [
+    "cachestatus",
+    "on"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=MISS, edge; dur=14, origin; dur=105"
+   ],
+   [
+    "x-browser-type",
+    "unknown"
+   ],
+   [
+    "x-erf-bev-bev-is-generated",
+    "1"
+   ],
+   [
+    "x-erf-bev-bev",
+    "1793804434_EAMjkzNzk4YTNkY2"
+   ],
+   [
+    "x-airbnb-everest-device-id",
+    "1793804434.EAZjVlNGE5YzlmODY0NW.COQ2yxDMkPpTU2eUU5-izdNw2RUy1Dhgt86uEesUz0Q"
+   ]
+  ],
+  "elapsed_ms": 546,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.airbnb.com/sitemap-master-index.xml.gz",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "x-amz-id-2",
+    "4OphHpKVSqasYQJ1jVb+CJyKP6PuQIIzNUmFRbVi50n9qAw7sV3itvXTqXCI1mzPZVtx5KYW+J8="
+   ],
+   [
+    "x-amz-request-id",
+    "6MRDT2BAQFN94ENX"
+   ],
+   [
+    "server",
+    "AmazonS3"
+   ],
+   [
+    "x-amz-replication-status",
+    "COMPLETED"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 12:25:30 GMT"
+   ],
+   [
+    "etag",
+    "\"b7da3655775f973d77865116a70f2fe8\""
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "x-amz-version-id",
+    "eoECM_9aZW27GsQAy9peyxkYPHGJQ3Da"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:00:37 GMT"
+   ],
+   [
+    "content-length",
+    "923"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "everest_cookie=<redacted>; expires=Sat, 03-Nov-2029 15:00:37 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "bev=<redacted>; expires=Fri, 03-Nov-2028 15:00:37 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "country=<redacted>; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=93600"
+   ],
+   [
+    "akamai-request-bc",
+    "[a=23.34.83.82,b=1217299992,c=g,n=US_WA_SEATTLE,o=20940],[c=p,n=US_WA_SEATTLE,o=20940],[c=c,n=US_WA_SEATTLE,o=20940],[a=234,c=o]"
+   ],
+   [
+    "x-airbnb-client-tls-version",
+    "tls1.3"
+   ],
+   [
+    "x-airbnb-sureride",
+    "c1a1o.0.52532217.1793804436.488e8618%%h1"
+   ],
+   [
+    "cachestatus",
+    "on"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=MISS, edge; dur=140, origin; dur=232"
+   ],
+   [
+    "x-browser-type",
+    "unknown"
+   ],
+   [
+    "x-erf-bev-bev-is-generated",
+    "1"
+   ],
+   [
+    "x-erf-bev-bev",
+    "1793804436_EAZTc2MzNlZDUyYz"
+   ],
+   [
+    "cache-control",
+    "public, max-age=1800"
+   ],
+   [
+    "content-type",
+    "application/gzip"
+   ],
+   [
+    "x-airbnb-everest-device-id",
+    "1793804436.EAYWFjNzE0ZDNhOTgzNz.ucwsDFblOv8NZQQ68lYIXyZrtmWWZTTRy88ykbjd6FI"
+   ]
+  ],
+  "elapsed_ms": 909,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.airbnb.com/sitemap-airbnb_friendly_apartment_geomarket-urls-1.xml.gz",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "x-amz-id-2",
+    "K/0L8xuH6qot4u+o3Kz1zEI0kPSGILOVYGxp2XyqbxbYc9BzIAbhLZH7dTZScCijzxJkozGFEulOlzdDs71dX0tYtIpqGohL"
+   ],
+   [
+    "x-amz-request-id",
+    "GRWEPNK0MJVGRSMQ"
+   ],
+   [
+    "server",
+    "AmazonS3"
+   ],
+   [
+    "x-amz-replication-status",
+    "COMPLETED"
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 12:25:25 GMT"
+   ],
+   [
+    "etag",
+    "\"675a4e418453ce591b1bf921ede70b86\""
+   ],
+   [
+    "x-amz-server-side-encryption",
+    "AES256"
+   ],
+   [
+    "x-amz-version-id",
+    "kLY5uKlQW0f_bklgNtqChIp50hUP6_ue"
+   ],
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 15:00:40 GMT"
+   ],
+   [
+    "content-length",
+    "1314"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "set-cookie",
+    "everest_cookie=<redacted>; expires=Sat, 03-Nov-2029 15:00:40 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "bev=<redacted>; expires=Fri, 03-Nov-2028 15:00:40 GMT; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "set-cookie",
+    "country=<redacted>; path=/; domain=.airbnb.com; secure"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=93600"
+   ],
+   [
+    "akamai-request-bc",
+    "[a=23.34.83.82,b=1217301983,c=g,n=US_WA_SEATTLE,o=20940],[c=c,n=US_WA_SEATTLE,o=20940]"
+   ],
+   [
+    "x-airbnb-client-tls-version",
+    "tls1.3"
+   ],
+   [
+    "x-airbnb-sureride",
+    "c1a1o.0.52532217.1793804440.488e8ddf%%h1"
+   ],
+   [
+    "cachestatus",
+    "cache"
+   ],
+   [
+    "server-timing",
+    "cdn-cache; desc=HIT, edge; dur=207, origin; dur=UNSET"
+   ],
+   [
+    "x-browser-type",
+    "unknown"
+   ],
+   [
+    "x-erf-bev-bev-is-generated",
+    "1"
+   ],
+   [
+    "x-erf-bev-bev",
+    "1793804440_EANTgyYTQyYzA2MG"
+   ],
+   [
+    "cache-control",
+    "public, max-age=1800"
+   ],
+   [
+    "content-type",
+    "application/gzip"
+   ],
+   [
+    "x-airbnb-everest-device-id",
+    "1793804440.EANmRiNjRkZTA1ZmZiOD.p-bCd-6EbPtwc7IuwEpFeXSG5Z-Qh9ZRRd2l4zPlPDE"
+   ]
+  ],
+  "elapsed_ms": 2194,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]
