@@ -1,0 +1,116 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GITLEAKS_VERSION: "8.28.0"
+
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run ruff check --output-format=github .
+      - run: uv run ruff format --check .
+
+  types:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run mypy
+
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked
+      - run: uv run pytest
+
+  commit-policy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: No trailers except Signed-off-by, no "Generated with" footer
+        run: python3 scripts/check_commit_msg.py --git HEAD
+
+  gitleaks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks ${{ env.GITLEAKS_VERSION }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="$GITLEAKS_VERSION"
+          tarball="gitleaks_${v}_linux_x64.tar.gz"
+          gh release download "v${v}" --repo gitleaks/gitleaks \
+            --pattern "$tarball" --pattern "gitleaks_${v}_checksums.txt" --dir /tmp/gitleaks
+          cd /tmp/gitleaks
+          grep " ${tarball}\$" "gitleaks_${v}_checksums.txt" | sha256sum --check -
+          sha256sum "$tarball"
+          tar -xzf "$tarball" gitleaks
+          sudo install gitleaks /usr/local/bin/gitleaks
+      - name: Scan full history
+        run: gitleaks git --redact --verbose --exit-code 1 .
+
+  pip-audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - name: Export locked runtime and dev dependencies
+        run: uv export --locked --all-groups --no-emit-project --no-hashes -o /tmp/requirements.txt
+      - name: Audit
+        run: uvx pip-audit==2.10.1 --strict --requirement /tmp/requirements.txt --no-deps --disable-pip
+
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - run: uvx twine check --strict dist/*
+      - name: Smoke-test the wheel in a clean environment
+        run: |
+          uv venv /tmp/wheel-env
+          uv pip install --python /tmp/wheel-env/bin/python dist/*.whl
+          /tmp/wheel-env/bin/scrapeplanner --version
+          /tmp/wheel-env/bin/scrapeplanner --help
+          /tmp/wheel-env/bin/python -c "import scrapeplanner, pathlib; assert (pathlib.Path(scrapeplanner.__file__).parent / 'py.typed').exists()"
+
+  # Temporary: print commit SHAs of the action tags so they can be pinned.
+  action-pins:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          for spec in actions/checkout:v5 astral-sh/setup-uv:v6 pypa/gh-action-pypi-publish:release/v1 actions/upload-artifact:v4 actions/download-artifact:v4; do
+            repo=${spec%%:*}; ref=${spec#*:}
+            echo "$repo $ref"; git ls-remote "https://github.com/$repo" "refs/tags/$ref" "refs/tags/$ref^{}" "refs/heads/$ref"
+          done
+          for repo in actions/checkout astral-sh/setup-uv; do
+            echo "latest tags of $repo:"; git ls-remote --tags --sort=-v:refname "https://github.com/$repo" | grep -v '\^{}' | head -5
+          done
