@@ -1,45 +1,51 @@
 # Live checks run in GitHub Actions only (docs/architecture.md, "Live checks").
 # Change `id` and push to run; results land in checks/results/<id>/.
-# One homepage or public listing page per site. The tool itself reads
-# robots.txt first and skips anything it disallows.
-id: 005-sites
+# One homepage or public listing page per site. The tool reads robots.txt
+# first and skips anything it disallows.
+#
+# expected_platform is written BEFORE the run, only where the platform is known
+# independently of this tool: from the URL itself (hosted job boards), from the
+# software a portal publicly runs on, or from public knowledge of the site.
+# docs/results.md compares it with what the tool found.
+id: 006-sites
 options:
   max_requests: 10
   delay: 1.0
   items: 1000
 targets:
-  # e-commerce
-  - {name: allbirds, category: e-commerce, url: "https://www.allbirds.com/"}
-  - {name: gymshark, category: e-commerce, url: "https://www.gymshark.com/"}
-  - {name: amazon, category: e-commerce, url: "https://www.amazon.com/"}
-  - {name: ebay, category: e-commerce, url: "https://www.ebay.com/"}
-  - {name: etsy, category: e-commerce, url: "https://www.etsy.com/"}
-  - {name: walmart, category: e-commerce, url: "https://www.walmart.com/"}
-  - {name: bestbuy, category: e-commerce, url: "https://www.bestbuy.com/"}
-  - {name: woocommerce, category: e-commerce, url: "https://woocommerce.com/products/"}
-  # job boards
-  - {name: indeed, category: jobs, url: "https://www.indeed.com/"}
-  - {name: linkedin-jobs, category: jobs, url: "https://www.linkedin.com/jobs/"}
-  - {name: glassdoor, category: jobs, url: "https://www.glassdoor.com/"}
+  # e-commerce: independent stores
+  - {name: allbirds, category: e-commerce, url: "https://www.allbirds.com/", expected_platform: shopify}
+  - {name: gymshark, category: e-commerce, url: "https://www.gymshark.com/", expected_platform: shopify}
+  - {name: ugmonk, category: e-commerce, url: "https://ugmonk.com/", expected_platform: shopify}
+  - {name: deathwish-coffee, category: e-commerce, url: "https://www.deathwishcoffee.com/", expected_platform: shopify}
+  - {name: porter-york, category: e-commerce, url: "https://porterandyork.com/"}
+  - {name: woocommerce, category: e-commerce, url: "https://woocommerce.com/products/", expected_platform: woocommerce}
+  # jobs: company boards and job sites
+  - {name: gitlab-greenhouse, category: jobs, url: "https://job-boards.greenhouse.io/gitlab", expected_platform: greenhouse}
+  - {name: palantir-lever, category: jobs, url: "https://jobs.lever.co/palantir", expected_platform: lever}
+  - {name: linear-ashby, category: jobs, url: "https://jobs.ashbyhq.com/linear", expected_platform: ashby}
   - {name: remoteok, category: jobs, url: "https://remoteok.com/"}
   - {name: weworkremotely, category: jobs, url: "https://weworkremotely.com/"}
   - {name: himalayas, category: jobs, url: "https://himalayas.app/jobs"}
+  # open data
+  - {name: data-gov, category: open-data, url: "https://catalog.data.gov/dataset", expected_platform: ckan}
+  - {name: nyc-open-data, category: open-data, url: "https://data.cityofnewyork.us/", expected_platform: socrata}
   # news
   - {name: bbc-news, category: news, url: "https://www.bbc.com/news"}
   - {name: guardian, category: news, url: "https://www.theguardian.com/international"}
   - {name: reuters, category: news, url: "https://www.reuters.com/"}
   - {name: apnews, category: news, url: "https://apnews.com/"}
-  - {name: techcrunch, category: news, url: "https://techcrunch.com/"}
+  - {name: techcrunch, category: news, url: "https://techcrunch.com/", expected_platform: wordpress}
   - {name: hacker-news, category: news, url: "https://news.ycombinator.com/"}
   # docs
-  - {name: python-docs, category: docs, url: "https://docs.python.org/3/"}
+  - {name: python-docs, category: docs, url: "https://docs.python.org/3/", expected_platform: sphinx}
   - {name: mdn, category: docs, url: "https://developer.mozilla.org/en-US/"}
-  - {name: react-dev, category: docs, url: "https://react.dev/"}
-  - {name: nuxt-docs, category: docs, url: "https://nuxt.com/docs"}
-  - {name: kubernetes-docs, category: docs, url: "https://kubernetes.io/docs/home/"}
-  # listings
+  - {name: react-dev, category: docs, url: "https://react.dev/", expected_platform: nextjs}
+  - {name: nuxt-docs, category: docs, url: "https://nuxt.com/docs", expected_platform: nuxt}
+  - {name: kubernetes-docs, category: docs, url: "https://kubernetes.io/docs/home/", expected_platform: hugo}
+  # listings and scraping practice sites
   - {name: craigslist-sf, category: listings, url: "https://sfbay.craigslist.org/"}
-  - {name: zillow, category: listings, url: "https://www.zillow.com/"}
-  - {name: airbnb, category: listings, url: "https://www.airbnb.com/"}
-  - {name: booking, category: listings, url: "https://www.booking.com/"}
-  - {name: producthunt, category: listings, url: "https://www.producthunt.com/"}
+  - {name: books-toscrape, category: practice, url: "https://books.toscrape.com/"}
+  - {name: quotes-toscrape, category: practice, url: "https://quotes.toscrape.com/"}
+  - {name: webscraper-io, category: practice, url: "https://webscraper.io/test-sites/e-commerce/allinone"}
+  - {name: scrapethissite, category: practice, url: "https://www.scrapethissite.com/pages/simple/"}
