@@ -292,3 +292,19 @@ def test_429_on_a_probe_slows_the_plan() -> None:
     assert plan.recommended == "feed_api"
     assert plan.rate.delay_seconds == 5.0
     assert "429" in plan.rate.reason
+
+
+def test_narrow_terminal_layout() -> None:
+    import io
+
+    from rich.console import Console
+
+    from scrapeplanner.output.terminal import render
+
+    report = run(shopify_routes())
+    out = io.StringIO()
+    render(report, Console(file=out, width=50, color_system=None))
+    text = out.getvalue()
+    assert max(len(line) for line in text.splitlines()) <= 50
+    assert "1 Feed / API  recommended" in text
+    assert "requests for 1,000" in text

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from rich import box
 from rich.console import Console, Group, RenderableType
+from rich.padding import Padding
 from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
@@ -27,8 +28,8 @@ RENDER_LABELS = {
 
 def _kv(rows: list[tuple[str, RenderableType | str]]) -> Table:
     table = Table.grid(padding=(0, 2))
-    table.add_column(style="dim", no_wrap=True)
-    table.add_column(overflow="fold")
+    table.add_column(style="dim", no_wrap=True, max_width=28, overflow="ellipsis")
+    table.add_column(overflow="fold", min_width=12)
     for key, value in rows:
         table.add_row(key, value)
     return table
@@ -111,6 +112,38 @@ def _methods(report: Report) -> Table:
     return table
 
 
+def _methods_compact(report: Report) -> Group:
+    """The plan as a list, for terminals narrower than ``NARROW`` columns."""
+    plan = report.plan
+    lines: list[RenderableType] = []
+    for index, method in enumerate(plan.methods, 1):
+        if method.name == plan.recommended:
+            status = Text("recommended", style="bold green")
+        elif method.usable:
+            status = Text("usable", style="green")
+        else:
+            status = Text("no", style="dim")
+        head = Text.assemble(
+            (f"{index} ", "dim"), (METHOD_SHORT[method.name], "bold"), "  ", status
+        )
+        lines.append(head)
+        if method.est_requests is not None:
+            lines.append(
+                _indent(
+                    f"{method.est_requests:,} requests for {plan.items:,} · "
+                    f"{_fmt_hours(method.est_hours)}"
+                )
+            )
+        lines.append(_indent(method.summary, "" if method.usable else "dim"))
+        for note in method.notes:
+            lines.append(_indent(f"- {note}", "dim"))
+    return Group(*lines)
+
+
+def _indent(text: str, style: str = "", left: int = 2) -> Padding:
+    return Padding(Text(text, style=style, overflow="fold"), (0, 0, 0, left))
+
+
 def _robots(report: Report) -> Table:
     robots = report.robots
     if not robots.fetched:
@@ -180,14 +213,28 @@ def _data(report: Report) -> Table:
 def _list(items: list[str], style: str) -> RenderableType:
     if not items:
         return Text("none", style="dim")
-    return Group(*(Text(f"- {item}", style=style) for item in items))
+    return Group(*(_hanging(f"- {item}", style) for item in items))
+
+
+def _hanging(text: str, style: str) -> Text:
+    """A list item whose wrapped lines start under the first word."""
+    return Text(text, style=style, overflow="fold")
+
+
+NARROW = 80
+"""Below this many columns the report switches to a stacked layout."""
 
 
 def render(report: Report, console: Console) -> None:
-    title = f"[bold]scrapeplanner[/] {report.tool.version}  ·  {report.input_url}"
+    narrow = console.width < NARROW
+    if narrow:
+        title = f"[bold]scrapeplanner[/] · {report.site}"
+    else:
+        title = f"[bold]scrapeplanner[/] {report.tool.version}  ·  {report.input_url}"
     console.print(Panel(_summary(report), title=title, title_align="left", box=box.ROUNDED))
+    plan_view: RenderableType = _methods_compact(report) if narrow else _methods(report)
     console.print(
-        Panel(_methods(report), title="Plan (cheapest first)", title_align="left", box=box.ROUNDED)
+        Panel(plan_view, title="Plan (cheapest first)", title_align="left", box=box.ROUNDED)
     )
     console.print(Panel(_robots(report), title="Rules", title_align="left", box=box.ROUNDED))
     console.print(Panel(_data(report), title="Data found", title_align="left", box=box.ROUNDED))
@@ -203,6 +250,17 @@ def render(report: Report, console: Console) -> None:
             box=box.ROUNDED,
         )
     )
+    if narrow:
+        console.print(Text("Requests", style="bold"))
+        for index, entry in enumerate(report.requests, 1):
+            status = str(entry.status) if entry.status is not None else "error"
+            console.print(
+                Text.assemble(
+                    (f"{index:>2} ", "dim"), (f"{status} ", ""), (f"{entry.purpose}", "dim")
+                )
+            )
+            console.print(_indent(entry.url, "dim", left=3))
+        return
     log = Table(box=box.SIMPLE, pad_edge=False, show_header=True, header_style="dim")
     log.add_column("#", justify="right", style="dim")
     log.add_column("Status", justify="right")
