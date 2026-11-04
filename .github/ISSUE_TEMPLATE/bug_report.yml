@@ -1,0 +1,34 @@
+name: Bug report
+description: The report or the plan is wrong, or the tool misbehaves.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `scrapeplanner --version`.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL analysed
+      description: A public page only. No URLs that need a login.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: json
+    attributes:
+      label: Relevant part of `--json` output
+      render: json
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This is not a request to get past an anti-bot system, CAPTCHA or login.
+          required: true

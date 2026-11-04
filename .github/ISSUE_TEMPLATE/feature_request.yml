@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an improvement to detection, planning or output.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to plan or decide?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+  - type: markdown
+    attributes:
+      value: >
+        Out of scope: anything that bypasses anti-bot systems, CAPTCHAs or logins,
+        uses proxies, or collects personal data (see CONTRIBUTING.md).

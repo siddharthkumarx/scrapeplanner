@@ -1,0 +1,24 @@
+name: Wrong or missing detection
+description: A platform, feed, structured-data type or anti-bot vendor was missed or misnamed.
+labels: [detection]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+    validations:
+      required: true
+  - type: dropdown
+    id: detector
+    attributes:
+      label: Detector
+      options: [platform, anti-bot vendor, feeds, structured data, embedded state, rendering, robots / sitemap]
+    validations:
+      required: true
+  - type: textarea
+    id: signal
+    attributes:
+      label: Signal
+      description: The header, cookie name, script URL or markup that shows it.
+    validations:
+      required: true
