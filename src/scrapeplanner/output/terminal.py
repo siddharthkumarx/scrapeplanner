@@ -130,7 +130,8 @@ def _methods_compact(report: Report) -> Group:
         if method.est_requests is not None:
             lines.append(
                 _indent(
-                    f"{method.est_requests:,} requests for {plan.items:,} · "
+                    f"{method.est_requests:,} {_plural(method.est_requests, 'request')} "
+                    f"for {plan.items:,} · "
                     f"{_fmt_hours(method.est_hours)}"
                 )
             )
@@ -138,6 +139,10 @@ def _methods_compact(report: Report) -> Group:
         for note in method.notes:
             lines.append(_indent(f"- {note}", "dim"))
     return Group(*lines)
+
+
+def _plural(count: int, word: str) -> str:
+    return word if count == 1 else f"{word}s"
 
 
 def _indent(text: str, style: str = "", left: int = 2) -> Padding:
