@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-still.svg">
-    <img src="assets/hero.svg" width="720" alt="A terminal runs 'scrapeplanner https://www.deathwishcoffee.com/'. The report says GOOD FIT, best method Public feed / JSON API, platform Shopify, anti-bot Cloudflare (CDN only), polite rate 1 request every 1s, 6 of 10 requests used. It then scrolls to the plan, which recommends Shopify /products.json: 1 request returns all 163 products, against 1,008 requests for HTML parsing. Recorded run 007-sites.">
+    <img src="assets/hero.svg" width="720" alt="A terminal runs 'scrapeplanner https://www.deathwishcoffee.com/'. The report says GOOD FIT, best method Public feed / JSON API, platform Shopify, anti-bot Cloudflare (CDN only), polite rate 1 request every 1s, 5 of 10 requests used. It then scrolls to the plan, which recommends Shopify /products.json: 1 request returns all 163 products, against 1,008 requests for HTML parsing. Recorded run 008-sites.">
   </picture>
 </p>
 
@@ -35,7 +35,7 @@ automated request anyway. Those answers are usually on the first page.
 platform is known to have, names any anti-bot vendor, and prints a plan:
 methods from cheapest to most expensive, a polite rate, and how many requests
 N records will take. On 30 public sites it needed 1 to 8 requests per site
-(125 in total, never more than its cap of 10) and a median of 4.5 seconds
+(122 in total, never more than its cap of 10) and a median of 4.5 seconds
 ([results](docs/results.md)).
 
 It is a planning tool. It detects and recommends; it never tries to get past
@@ -64,7 +64,7 @@ scrapeplanner https://www.deathwishcoffee.com/ --profile profile.yaml  # starter
 ```
 
 The outputs below come from the recorded run of that site in
-[`checks/results/007-sites/deathwish-coffee/`](checks/results/007-sites/deathwish-coffee/).
+[`checks/results/008-sites/deathwish-coffee/`](checks/results/008-sites/deathwish-coffee/).
 
 **Report** (first panel; the full report is in the hero above and in the [example](#example-report)):
 
@@ -76,7 +76,7 @@ The outputs below come from the recorded run of that site in
 │ Anti-bot     Cloudflare (CDN only)                                                               │
 │ Rendering    data in the raw HTML                                                                │
 │ Polite rate  1 request every 1s                                                                  │
-│ This run     6/10 requests, 6.5s                                                                 │
+│ This run     5/10 requests, 5.2s                                                                 │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
@@ -93,7 +93,7 @@ scrapeplanner https://www.deathwishcoffee.com/ --json \
   "platform": "shopify",
   "verdict": "good",
   "recommended": "feed_api",
-  "requests_used": 6,
+  "requests_used": 5,
   "feed": {
     "kind": "shopify_products_json",
     "status": "ok",
@@ -110,7 +110,7 @@ scrapeplanner https://www.deathwishcoffee.com/ --json \
 # Every value comes from one analysis run; re-run to refresh it.
 profile_version: 1
 generated_by: scrapeplanner 0.1.0.dev0
-generated_at: '2026-11-04T18:22:44+00:00'
+generated_at: '2026-11-04T20:52:19+00:00'
 site: https://www.deathwishcoffee.com
 verdict: good
 method: feed_api
@@ -147,7 +147,7 @@ Useful options: `--items N` (records to estimate for, default 1000),
 ## Example report
 
 GitLab's public job board on Greenhouse, from the recorded run
-[`checks/results/007-sites/gitlab-greenhouse/report.txt`](checks/results/007-sites/gitlab-greenhouse/report.txt)
+[`checks/results/008-sites/gitlab-greenhouse/report.txt`](checks/results/008-sites/gitlab-greenhouse/report.txt)
 (100-column terminal; scroll sideways on a phone):
 
 ```text
@@ -158,7 +158,7 @@ GitLab's public job board on Greenhouse, from the recorded run
 │ Anti-bot     none seen                                                                           │
 │ Rendering    data in the raw HTML                                                                │
 │ Polite rate  1 request every 1s                                                                  │
-│ This run     5/10 requests, 4.5s                                                                 │
+│ This run     5/10 requests, 4.7s                                                                 │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 ╭─ Plan (cheapest first) ──────────────────────────────────────────────────────────────────────────╮
 │                                                                                                  │
@@ -166,14 +166,14 @@ GitLab's public job board on Greenhouse, from the recorded run
 │  ──────────────────────────────────────────────────────────────────────────────────────────────  │
 │   1   Feed / API        recommended                1   < 1 min   Greenhouse job-board API:       │
 │                                                                  every open job with its fields  │
-│                                                                  - one request returns all 245   │
+│                                                                  - one request returns all 244   │
 │                                                                  open jobs; the board lists no   │
 │                                                                  more                            │
 │   2   Structured data   no                         -         -   no schema.org records on this   │
 │                                                                  page (types seen: none)         │
 │   3   Embedded JSON     no                         -         -   no large inline state           │
 │   4   HTML              usable                 1,000    17 min   CSS selectors on                │
-│                                                                  server-rendered HTML (3,934     │
+│                                                                  server-rendered HTML (3,931     │
 │                                                                  chars of text)                  │
 │                                                                  - one detail page per record;   │
 │                                                                  URLs from listing pages (count  │
@@ -194,9 +194,9 @@ GitLab's public job board on Greenhouse, from the recorded run
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 ╭─ Data found ─────────────────────────────────────────────────────────────────────────────────────╮
 │ Structured      none                                                                             │
-│ greenhouse_api  ok, 245 items of 245                                                             │
+│ greenhouse_api  ok, 244 items of 244                                                             │
 │                 https://boards-api.greenhouse.io/v1/boards/gitlab/jobs                           │
-│ Rendering       3,934 characters of text, 52 links                                               │
+│ Rendering       3,931 characters of text, 52 links                                               │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
 │ Risks                                                                                            │
@@ -207,13 +207,13 @@ GitLab's public job board on Greenhouse, from the recorded run
 │ - Write a starter profile with --profile profile.yaml and review it                              │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
 
- #   Status   Purpose               ms   URL
- ──────────────────────────────────────────────────────────────────────────────────────────────
- 1      200   robots                54   https://job-boards.greenhouse.io/robots.txt
- 2      200   page                  92   https://job-boards.greenhouse.io/gitlab
- 3      404   sitemap               53   https://job-boards.greenhouse.io/sitemap.xml
- 4      200   robots                62   https://boards-api.greenhouse.io/robots.txt
- 5      200   feed:greenhouse_api   50   https://boards-api.greenhouse.io/v1/boards/gitlab/jobs
+ #   Status   Purpose                ms   URL
+ ───────────────────────────────────────────────────────────────────────────────────────────────
+ 1      200   robots                 92   https://job-boards.greenhouse.io/robots.txt
+ 2      200   page                   80   https://job-boards.greenhouse.io/gitlab
+ 3      404   sitemap                66   https://job-boards.greenhouse.io/sitemap.xml
+ 4      200   robots                290   https://boards-api.greenhouse.io/robots.txt
+ 5      200   feed:greenhouse_api    63   https://boards-api.greenhouse.io/v1/boards/gitlab/jobs
 ```
 
 **How to read it**
@@ -224,7 +224,7 @@ GitLab's public job board on Greenhouse, from the recorded run
 - **Plan**: every method, cheapest first. *Recommended* is the first one that
   can reach all N records; *usable* ones are fallbacks. "Req. for 1,000" is the
   number of requests for 1,000 records (`--items`); here one API call returns
-  all 245 open jobs, against about 1,000 page requests for HTML parsing.
+  all 244 open jobs, against about 1,000 page requests for HTML parsing.
 - **Rules**: what robots.txt allows for the paths the plan would use, plus the
   sitemap it found. A disallowed path is never requested.
 - **Data found**: the evidence: feeds that answered, schema.org records,
@@ -252,7 +252,7 @@ GitLab's public job board on Greenhouse, from the recorded run
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/ladder-still.svg">
-    <img src="assets/ladder.svg" width="640" alt="The method ladder, cheapest first: 1 Feed / API (products.json, job-board APIs, RSS), best on 5 of 30 sites; 2 Structured data (JSON-LD and microdata), best on 3; 3 Embedded JSON (__NEXT_DATA__, Nuxt state), best on 2; 4 HTML (CSS selectors on the raw page), best on 13; 5 Browser (headless, last resort), best on 1. 6 of 30 were not a fit. Counts from run 007-sites.">
+    <img src="assets/ladder.svg" width="640" alt="The method ladder, cheapest first: 1 Feed / API (products.json, job-board APIs, RSS), best on 5 of 30 sites; 2 Structured data (JSON-LD and microdata), best on 3; 3 Embedded JSON (__NEXT_DATA__, Nuxt state), best on 2; 4 HTML (CSS selectors on the raw page), best on 13; 5 Browser (headless, last resort), best on 1. 6 of 30 were not a fit. Counts from run 008-sites.">
   </picture>
 </p>
 
@@ -267,7 +267,7 @@ GitLab's public job board on Greenhouse, from the recorded run
 3. **Request estimate.** Pages needed for N records at the method's page size
    (250 per Shopify `products.json` page, 100 per WooCommerce or WordPress page,
    1,000 per CKAN page), plus the sitemap files needed to find detail pages.
-   Time is requests × delay. When a feed reports its total (163 products, 245
+   Time is requests × delay. When a feed reports its total (163 products, 244
    jobs), the estimate stops there.
 
 The rules and thresholds are in [docs/architecture.md](docs/architecture.md)
@@ -276,21 +276,21 @@ and the reasons behind them in [docs/decisions.md](docs/decisions.md).
 ## Results on 30 public sites
 
 One homepage or public listing page per site, run from GitHub Actions on
-2026-11-04 (run [`007-sites`](checks/results/007-sites/)): independent stores,
+2026-11-04 (run [`008-sites`](checks/results/008-sites/)): independent stores,
 company job boards, open-data portals, news, docs, and scraping practice sites.
 
-| Measure | Run `007-sites` |
+| Measure | Run `008-sites` |
 |---|---|
-| Verdicts | **19** good fit · **5** with care · **6** not a fit |
+| Verdicts | **21** good fit · **3** with care · **6** not a fit |
 | Recommended method | HTML 13 · Feed / API 5 · Structured data 3 · Embedded JSON 2 · Browser 1 |
 | Platform named | 15 of the 24 sites that served a page |
 | Platform vs labels written before the run | 13 of 14 matched (the miss is an outdated label, see the [FAQ](#faq)) |
 | Anti-bot vendor seen | Cloudflare on 13 sites (challenge page on 4) · Akamai on 1 |
-| Requests per site | 1 to 8, 125 in total; median time 4.5 s |
+| Requests per site | 1 to 8, 122 in total; median time 4.5 s |
 
 Full table, per-site evidence and notes: **[docs/results.md](docs/results.md)**.
 Every report and every HTTP exchange of that run is committed under
-`checks/results/007-sites/` and replayed offline by the test suite.
+`checks/results/008-sites/` and replayed offline by the test suite.
 
 ## Rules it follows
 
@@ -342,7 +342,7 @@ export. In the results run, 6 of 30 sites were not a fit: 5 served a block or
 challenge page and 1 disallows the page in robots.txt.
 
 **How accurate is platform detection?**
-In run `007-sites` it named a platform on 15 of the 24 sites that served a
+In run `008-sites` it named a platform on 15 of the 24 sites that served a
 page. 15 sites had an expected platform written down before the run; 14 of
 them served a page and 13 matched. The one miss was a wrong label: Data.gov's
 catalog was expected to be CKAN, but the page served shows no CKAN markers
