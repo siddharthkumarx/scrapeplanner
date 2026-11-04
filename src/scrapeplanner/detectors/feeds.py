@@ -17,6 +17,7 @@ from scrapeplanner.models import FeedCandidate, PlatformReport
 SHOPIFY_PAGE_SIZE = 250
 WOO_PAGE_SIZE = 100
 WP_PAGE_SIZE = 100
+CKAN_PAGE_SIZE = 1000
 MAX_FIELDS = 15
 
 _FEED_TYPES = {
@@ -41,6 +42,41 @@ def shopify_handle(doc: HtmlDoc) -> str | None:
     return None
 
 
+_BOARD_PATH = re.compile(r"^/(?:embed/job_board\?for=)?([A-Za-z0-9][A-Za-z0-9._-]*)")
+_EMBED_TOKEN = {
+    "greenhouse": re.compile(
+        r"boards\.greenhouse\.io/embed/job_board(?:/js)?\?for=([A-Za-z0-9._-]+)"
+    ),
+    "lever": re.compile(r"jobs\.(?:eu\.)?lever\.co/([A-Za-z0-9._-]+)"),
+    "ashby": re.compile(r"jobs\.ashbyhq\.com/([A-Za-z0-9._%-]+)"),
+}
+BOARD_APIS = {
+    "greenhouse": ("greenhouse_api", "https://boards-api.greenhouse.io/v1/boards/{token}/jobs"),
+    "lever": ("lever_api", "https://api.lever.co/v0/postings/{token}?mode=json"),
+    "ashby": ("ashby_api", "https://api.ashbyhq.com/posting-api/job-board/{token}"),
+}
+"""The documented public job-board APIs of each hosted board."""
+
+
+def job_board_token(name: str, page_url: str, doc: HtmlDoc | None) -> tuple[str, str] | None:
+    """(feed kind, API URL) for a Greenhouse, Lever or Ashby board, from its URL or embed."""
+    if name not in BOARD_APIS:
+        return None
+    parts = urlsplit(page_url)
+    token = None
+    hosted = ("greenhouse.io", "lever.co", "ashbyhq.com")
+    if parts.netloc.endswith(hosted):
+        match = _BOARD_PATH.match(parts.path)
+        token = match.group(1) if match else None
+    if token is None and doc is not None:
+        match = _EMBED_TOKEN[name].search(doc.html)
+        token = match.group(1) if match else None
+    if not token:
+        return None
+    kind, template = BOARD_APIS[name]
+    return kind, template.format(token=token)
+
+
 def candidates(platform: PlatformReport, doc: HtmlDoc | None, page_url: str) -> list[FeedCandidate]:
     """Feeds worth probing, best first. All start as ``linked`` (not requested)."""
     origin = _origin(page_url)
@@ -60,6 +96,11 @@ def candidates(platform: PlatformReport, doc: HtmlDoc | None, page_url: str) -> 
             add("shopify_product_js", f"{origin}/products/{handle}.js")
     if platform.name == "woocommerce":
         add("woo_store_api", f"{origin}/wp-json/wc/store/v1/products?per_page=1")
+    board = job_board_token(platform.name, page_url, doc)
+    if board is not None:
+        add(*board)
+    if platform.name == "ckan":
+        add("ckan_api", f"{origin}/api/3/action/package_search?rows=1")
     if doc is not None:
         for link in doc.links:
             if "alternate" not in link.rel.split():
@@ -125,6 +166,42 @@ def evaluate(
         return result
 
     lowered = {key.lower(): value for key, value in headers.items()}
+    if kind in ("greenhouse_api", "ashby_api"):
+        jobs = data.get("jobs") if isinstance(data, dict) else None
+        if isinstance(jobs, list):
+            result.status = "ok"
+            result.items_seen = len(jobs)
+            result.total_items = len(jobs)
+            result.fields = _fields(jobs[0]) if jobs else []
+            result.note = "every open job in one response"
+        else:
+            result.status = "invalid"
+            result.note = "no 'jobs' list"
+        return result
+    if kind == "lever_api":
+        if isinstance(data, list):
+            result.status = "ok"
+            result.items_seen = len(data)
+            result.total_items = len(data)
+            result.fields = _fields(data[0]) if data else []
+            result.note = "every open posting in one response"
+        else:
+            result.status = "invalid"
+            result.note = "expected a JSON list"
+        return result
+    if kind == "ckan_api":
+        found = data.get("result") if isinstance(data, dict) else None
+        if isinstance(found, dict) and isinstance(found.get("count"), int):
+            result.status = "ok"
+            rows = found.get("results")
+            result.items_seen = len(rows) if isinstance(rows, list) else 0
+            result.total_items = found["count"]
+            result.page_size = CKAN_PAGE_SIZE
+            result.fields = _fields(rows[0]) if isinstance(rows, list) and rows else []
+        else:
+            result.status = "invalid"
+            result.note = "no CKAN package_search result"
+        return result
     if kind == "shopify_products_json":
         products = data.get("products") if isinstance(data, dict) else None
         if isinstance(products, list):

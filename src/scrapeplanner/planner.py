@@ -46,6 +46,10 @@ BOT_MANAGED_DAILY_CAP = 5_000
 STALE_SITEMAP_DAYS = 365
 MIN_DATA_BLOB_BYTES = 5_000
 _FEED_RANK = {
+    "greenhouse_api": 0,
+    "lever_api": 0,
+    "ashby_api": 0,
+    "ckan_api": 0,
     "shopify_products_json": 0,
     "woo_store_api": 1,
     "wp_rest": 2,
@@ -169,6 +173,21 @@ def _feed_method(f: Findings, items: int, delay: float) -> MethodPlan:
             if feed.kind == "woo_store_api"
             else "WordPress REST API: posts"
         )
+    elif feed.kind in ("greenhouse_api", "lever_api", "ashby_api"):
+        est = 1
+        total = feed.total_items or 0
+        notes.append(f"one request returns all {total} open jobs; the board lists no more")
+        name = {"greenhouse_api": "Greenhouse", "lever_api": "Lever", "ashby_api": "Ashby"}
+        summary = f"{name[feed.kind]} job-board API: every open job with its fields"
+    elif feed.kind == "ckan_api":
+        size = feed.page_size or 1000
+        wanted = min(items, feed.total_items) if feed.total_items is not None else items
+        est = max(1, math.ceil(wanted / size))
+        if feed.total_items is not None:
+            notes.append(f"the catalog reports {feed.total_items:,} datasets in total")
+        base = feed.url.split("?")[0]
+        urls = [f"{base}?rows={size}&start={{offset}}"]
+        summary = "CKAN API (package_search): dataset metadata and resource links"
     elif feed.kind == "shopify_product_js":
         discovery, how = _discovery(f, items)
         est = items + discovery

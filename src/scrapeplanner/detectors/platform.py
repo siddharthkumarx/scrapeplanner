@@ -18,7 +18,7 @@ from typing import Literal
 from scrapeplanner.html import HtmlDoc
 from scrapeplanner.models import Confidence, PlatformName, PlatformReport
 
-Where = Literal["header", "header_value", "cookie", "html", "generator"]
+Where = Literal["header", "header_value", "cookie", "html", "generator", "url"]
 
 
 @dataclass(frozen=True)
@@ -101,6 +101,44 @@ SIGNALS: tuple[Signal, ...] = (
         "squarespace", "html", r"images\.squarespace-cdn\.com", 1, "images on squarespace-cdn.com"
     ),
     Signal("squarespace", "cookie", r"^ss_cv[rt]$", 2, "cookie ss_cvr/ss_cvt"),
+    # Hosted job boards (the board URL itself, or the embed on a company careers page)
+    Signal(
+        "greenhouse",
+        "url",
+        r"^https?://(?:job-)?boards\.greenhouse\.io/",
+        3,
+        "page on boards.greenhouse.io",
+    ),
+    Signal(
+        "greenhouse",
+        "html",
+        r"boards\.greenhouse\.io/embed/job_board|grnhse_app",
+        3,
+        "Greenhouse job-board embed",
+    ),
+    Signal("lever", "url", r"^https?://jobs\.(?:eu\.)?lever\.co/", 3, "page on jobs.lever.co"),
+    Signal(
+        "lever",
+        "html",
+        r"""["']https?://jobs\.(?:eu\.)?lever\.co/[^"'/]+""",
+        2,
+        "links to jobs.lever.co",
+    ),
+    Signal("ashby", "url", r"^https?://jobs\.ashbyhq\.com/", 3, "page on jobs.ashbyhq.com"),
+    Signal(
+        "ashby",
+        "html",
+        r"jobs\.ashbyhq\.com/[^\"'/]+/embed|__ashbyBaseJobBoardUrl",
+        3,
+        "Ashby job-board embed",
+    ),
+    # Open-data portals
+    Signal("ckan", "generator", r"^ckan", 3, "meta generator CKAN"),
+    Signal("ckan", "html", r"/api/3/action/", 2, "links to the CKAN action API"),
+    Signal("ckan", "html", r"/webassets/(?:base|vendor|ckanext)|ckanext-", 2, "CKAN web assets"),
+    Signal("socrata", "header", "x-socrata-requestid", 3, "header x-socrata-requestid"),
+    Signal("socrata", "html", r"/api/views/[a-z0-9]{4}-[a-z0-9]{4}", 2, "Socrata dataset views"),
+    Signal("socrata", "html", r"socrata", 1, "mentions Socrata"),
     # Wix (re-checked: Thunderbolt renderer and its cookies)
     Signal("wix", "header", "x-wix-renderer-server", 3, "header x-wix-renderer-server"),
     Signal("wix", "html", r"wix-thunderbolt|thunderbolt-commons", 3, "Wix Thunderbolt renderer"),
@@ -230,8 +268,10 @@ SIGNALS: tuple[Signal, ...] = (
 )
 
 GROUPS: tuple[tuple[PlatformName, ...], ...] = (
-    # 1. commerce platforms: they decide which public feeds exist
+    # 1. platforms that decide which public feeds exist: commerce, job boards, data portals
     ("shopify", "woocommerce", "magento", "bigcommerce", "sfcc"),
+    ("greenhouse", "lever", "ashby"),
+    ("ckan", "socrata"),
     # 2. site builders and CMSs
     ("wix", "squarespace", "webflow", "wordpress", "drupal"),
     # 3. documentation generators
@@ -279,6 +319,8 @@ def detect(headers: Mapping[str, str], cookie_names: Sequence[str], doc: HtmlDoc
             fired = any(regex.search(name) for name in cookie_names)
         elif signal.where == "generator":
             fired = generator is not None and bool(regex.search(generator))
+        elif signal.where == "url":
+            fired = bool(regex.search(doc.base_url))
         else:
             fired = bool(regex.search(doc.html))
         if fired:

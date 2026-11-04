@@ -429,3 +429,67 @@ def test_captcha_widget_in_a_normal_page_is_ignored() -> None:
     body = '<form class="newsletter"><div class="g-recaptcha"></div></form>' + "<p>x</p>" * 8000
     assert antibot.detect(200, {}, [], body) == []
     assert antibot.classify_block(200, {}, [], body) is None
+
+
+@pytest.mark.parametrize(
+    ("url", "html", "name", "api"),
+    [
+        (
+            "https://job-boards.greenhouse.io/acme",
+            "",
+            "greenhouse",
+            "https://boards-api.greenhouse.io/v1/boards/acme/jobs",
+        ),
+        (
+            "https://acme.test/careers",
+            '<script src="https://boards.greenhouse.io/embed/job_board/js?for=acme"></script>',
+            "greenhouse",
+            "https://boards-api.greenhouse.io/v1/boards/acme/jobs",
+        ),
+        (
+            "https://jobs.lever.co/acme",
+            "",
+            "lever",
+            "https://api.lever.co/v0/postings/acme?mode=json",
+        ),
+        (
+            "https://jobs.ashbyhq.com/acme",
+            "",
+            "ashby",
+            "https://api.ashbyhq.com/posting-api/job-board/acme",
+        ),
+    ],
+)
+def test_job_boards_and_their_apis(url: str, html: str, name: str, api: str) -> None:
+    page = doc(html, url)
+    report = platform.detect({}, [], page)
+    assert report.name == name
+    found = feeds.candidates(report, page, url)
+    assert found[0].url == api
+
+
+def test_ckan_portal() -> None:
+    html = '<meta name="generator" content="ckan 2.10.4"><a href="/api/3/action/package_list">'
+    page = doc(html, "https://data.test/dataset")
+    report = platform.detect({}, [], page)
+    assert report.name == "ckan"
+    found = feeds.candidates(report, page, "https://data.test/dataset")
+    assert found[0].url == "https://data.test/api/3/action/package_search?rows=1"
+    body = json.dumps({"success": True, "result": {"count": 4321, "results": [{"name": "x"}]}})
+    ok = feeds.evaluate(found[0], 200, "application/json", body, {})
+    assert (ok.status, ok.total_items, ok.page_size) == ("ok", 4321, 1000)
+
+
+def test_wordpress_data_module_is_not_ckan() -> None:
+    html = '<meta name="generator" content="WordPress 6.9"><div data-module="x"></div>'
+    assert platform.detect({}, [], doc(html)).name == "wordpress"
+
+
+def test_job_board_api_shapes() -> None:
+    gh = feeds.evaluate(
+        _cand("greenhouse_api"), 200, "application/json", '{"jobs":[{"id":1},{"id":2}]}', {}
+    )
+    assert (gh.status, gh.total_items) == ("ok", 2)
+    lever = feeds.evaluate(_cand("lever_api"), 200, "application/json", '[{"id":"a"}]', {})
+    assert (lever.status, lever.total_items) == ("ok", 1)
+    assert feeds.evaluate(_cand("ashby_api"), 200, "application/json", "[]", {}).status == "invalid"

@@ -308,3 +308,23 @@ def test_narrow_terminal_layout() -> None:
     assert max(len(line) for line in text.splitlines()) <= 50
     assert "1 Feed / API  recommended" in text
     assert "requests for 1,000" in text
+
+
+def test_greenhouse_board_plan() -> None:
+    jobs = {"jobs": [{"id": i, "title": "t"} for i in range(42)], "meta": {"total": 42}}
+    routes: dict[str, Route] = {
+        "https://job-boards.greenhouse.io/robots.txt": (404, TXT, ""),
+        "https://job-boards.greenhouse.io/acme": (
+            200,
+            HTML,
+            f"<html><body>{BODY_TEXT}</body></html>",
+        ),
+        "https://boards-api.greenhouse.io/robots.txt": (404, TXT, ""),
+        "https://boards-api.greenhouse.io/v1/boards/acme/jobs": (200, JSON, json.dumps(jobs)),
+    }
+    report = run(routes, url="https://job-boards.greenhouse.io/acme")
+    assert report.platform.name == "greenhouse"
+    plan = report.plan
+    assert plan.recommended == "feed_api"
+    assert plan.methods[0].est_requests == 1
+    assert "42 open jobs" in plan.methods[0].notes[0]

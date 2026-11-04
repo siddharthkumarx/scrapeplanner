@@ -75,6 +75,9 @@ def load_request(path: Path) -> dict[str, Any]:
     for target in targets:
         if not SLUG.match(str(target.get("name", ""))) or not target.get("url"):
             raise SystemExit(f"request.yml: bad target {target!r}")
+        expected = target.get("expected_platform")
+        if expected is not None and expected not in PLATFORM_LABELS:
+            raise SystemExit(f"request.yml: unknown expected_platform {expected!r}")
         if target["name"] in names:
             raise SystemExit(f"request.yml: duplicate target {target['name']}")
         names.add(target["name"])
@@ -106,6 +109,7 @@ def summary_row(
         "name": target["name"],
         "category": target.get("category", ""),
         "url": target["url"],
+        "expected_platform": target.get("expected_platform"),
         "exit_code": run["exit_code"],
         "wall_seconds": run["wall_seconds"],
     }
