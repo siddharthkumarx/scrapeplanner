@@ -214,3 +214,9 @@ request template, `python -m scrapeplanner`, a stacked terminal layout for
 narrow terminals, `docs/repo-settings.md` and `docs/publish-checklist.md`.
 Not added on purpose: a docs website (the README and `docs/` are enough for
 one command), shell completion (one positional argument), telemetry (never).
+
+## D-017 · 2026-11-04 · Fewer probes when one answer is enough
+
+A probe is sent only when its answer can change the plan. The first case:
+the Shopify per-product `.js` probe is skipped once `/products.json` has
+returned products (I-009). The budget of 10 is a ceiling, not a target.

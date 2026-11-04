@@ -35,4 +35,4 @@ that is not `done`.
 | 27 | README and animated terminal SVG of a real run | done | README per the maintainer's rules; hero and ladder SVGs with stills, social preview, LinkedIn MP4, built by `scripts/visuals/` from `007-sites` (D-015) |
 | 28 | Platform detection extended; public results set replaced | done | D-013, D-014; runs 006 and 007 (I-007, I-008) |
 | 29 | Repo polish | done | JSON Schema, output-formats, CITATION, editorconfig, Dependabot, PR template, repo settings, publish checklist (D-016) |
-| 30 | Skip the Shopify `.js` probe when `products.json` answered | todo | I-009; needs a new results run |
+| 30 | Skip the Shopify `.js` probe when `products.json` answered | done | I-009; results run `008-sites`: the three stores whose catalog answered used 5 requests each, no 429 |

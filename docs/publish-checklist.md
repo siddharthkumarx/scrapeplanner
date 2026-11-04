@@ -20,9 +20,9 @@ git checkout <the finished branch>
       `docs/incidents.md` and `docs/decisions.md` stay (they explain the
       results).
 - [ ] Keep `checks/results/001-smoke` and the current results run only
-      (`docs/results.md` names it, e.g. `007-sites`). Delete any other run
-      directory (`006-sites` is referenced only from docs/incidents.md, I-008;
-      reword that line to "an earlier run").
+      (`docs/results.md` names it, e.g. `008-sites`). Delete any other run
+      directory (`006-sites` and `007-sites` are referenced only from
+      docs/incidents.md, I-008 and I-009; reword those to "an earlier run").
 - [ ] `grep -rn "scrapeplanner-wip" .` returns nothing that a reader would follow.
 - [ ] `./scripts/check.sh` passes; `uv run --group visual pytest -m visual` passes.
 

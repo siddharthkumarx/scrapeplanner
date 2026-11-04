@@ -129,10 +129,12 @@ Actions. allbirds.com and ugmonk.com answered the sixth request, the
 The run stopped there as designed, the plan raised its delay to 5 s, and both
 sites are "with care" in the published table.
 
-**Follow-up (not done yet)**: when `/products.json` already answered with
-products, the per-product `.js` probe adds nothing to the plan. Skipping it
-would save one request per Shopify store and avoid this 429. It changes the
-requests of every Shopify fixture, so it needs its own results run.
+**Fix**: when `/products.json` already answered with products, the
+per-product `.js` probe adds nothing to the plan, so it is no longer sent
+(listed as "not requested"); it is still probed when the catalog is empty or
+refused. In `008-sites` allbirds.com, ugmonk.com and deathwishcoffee.com
+used 5 requests each instead of 6 and were all a good fit; no site answered
+429.
 
 ## I-010 · 2026-11-04 · Visual check green locally, red in CI
 
