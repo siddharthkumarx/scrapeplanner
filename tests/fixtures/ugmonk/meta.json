@@ -1,8 +1,8 @@
 {
   "url": "https://ugmonk.com/",
-  "recorded_at": "2026-11-04T18:22:37+00:00",
-  "source": "checks/results/007-sites/ugmonk",
-  "commit": "12bb4602f53bd7a6016d6a9ee81877174a6355a0",
+  "recorded_at": "2026-11-04T20:52:13+00:00",
+  "source": "checks/results/008-sites/ugmonk",
+  "commit": "b3278bba25614f761b1aad618ff4e590f7ba634a",
   "options": {
     "max_requests": 10,
     "delay": 1.0,

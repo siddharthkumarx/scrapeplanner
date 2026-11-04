@@ -12,7 +12,7 @@
    ],
    [
     "age",
-    "5015"
+    "0"
    ],
    [
     "cache-control",
@@ -20,7 +20,7 @@
    ],
    [
     "cache-status",
-    "\"Netlify Edge\"; hit; ttl=31530985"
+    "\"Netlify Edge\"; fwd=stale; fwd-status=304; stored"
    ],
    [
     "content-length",
@@ -32,7 +32,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:21 GMT"
+    "Wed, 04 Nov 2026 20:55:51 GMT"
    ],
    [
     "etag",
@@ -48,10 +48,10 @@
    ],
    [
     "x-nf-request-id",
-    "01M6KWZRN2VNDGDZ3DQF6SMP08"
+    "01M6M5HG1VYW96M7PAD8TZWEAR"
    ]
   ],
-  "elapsed_ms": 45,
+  "elapsed_ms": 254,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -68,7 +68,7 @@
    ],
    [
     "age",
-    "5837"
+    "0"
    ],
    [
     "cache-control",
@@ -76,15 +76,11 @@
    ],
    [
     "cache-status",
-    "\"Netlify Edge\"; hit; ttl=31530163"
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
    ],
    [
     "content-encoding",
     "gzip"
-   ],
-   [
-    "content-length",
-    "47484"
    ],
    [
     "content-type",
@@ -92,11 +88,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:22 GMT"
+    "Wed, 04 Nov 2026 20:55:52 GMT"
    ],
    [
     "etag",
-    "\"74af6894a57976573e423f057521b12e-ssl-df\""
+    "\"62dbc25a03ebc880812897d0824cc3b4-ssl-df\""
    ],
    [
     "server",
@@ -112,10 +108,14 @@
    ],
    [
     "x-nf-request-id",
-    "01M6KWZSMHJ5WE6EQQ6EYWQESR"
+    "01M6M5HH41EZAAZHXKN4E8H894"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
    ]
   ],
-  "elapsed_ms": 9,
+  "elapsed_ms": 462,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -140,7 +140,7 @@
    ],
    [
     "cache-status",
-    "\"Netlify Edge\"; fwd=stale; fwd-status=304; stored"
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
    ],
    [
     "content-encoding",
@@ -148,7 +148,7 @@
    ],
    [
     "content-length",
-    "426"
+    "427"
    ],
    [
     "content-type",
@@ -156,11 +156,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:23 GMT"
+    "Wed, 04 Nov 2026 20:55:53 GMT"
    ],
    [
     "etag",
-    "\"13b070a1be31b9b142b827bdbfd749e3-ssl-df\""
+    "\"3e28a6b9e293d54d97cf05390cb2f2a1-ssl-df\""
    ],
    [
     "server",
@@ -171,11 +171,15 @@
     "max-age=31536000"
    ],
    [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
     "x-nf-request-id",
-    "01M6KWZTM2CEYD6S2XNZZAEBSR"
+    "01M6M5HJHQ20DXFRGS6YXV4E1P"
    ]
   ],
-  "elapsed_ms": 127,
+  "elapsed_ms": 195,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -200,15 +204,11 @@
    ],
    [
     "cache-status",
-    "\"Netlify Edge\"; fwd=stale; fwd-status=304; stored"
+    "\"Netlify Edge\"; fwd=stale; fwd-status=200; stored"
    ],
    [
     "content-encoding",
     "gzip"
-   ],
-   [
-    "content-length",
-    "64968"
    ],
    [
     "content-type",
@@ -216,11 +216,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:24 GMT"
+    "Wed, 04 Nov 2026 20:55:54 GMT"
    ],
    [
     "etag",
-    "\"8971d086ee18d4daf504c991a643a8d0-ssl-df\""
+    "\"ef7c6854b380d63e5ce53061c69b832e-ssl-df\""
    ],
    [
     "server",
@@ -231,11 +231,19 @@
     "max-age=31536000"
    ],
    [
+    "vary",
+    "Accept-Encoding"
+   ],
+   [
     "x-nf-request-id",
-    "01M6KWZVQ93Q9H4KMQFHJG072C"
+    "01M6M5HKQ2Z4ND89SEKVD46C9W"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
    ]
   ],
-  "elapsed_ms": 74,
+  "elapsed_ms": 166,
   "truncated": false,
   "body": "003.body.gz"
  }

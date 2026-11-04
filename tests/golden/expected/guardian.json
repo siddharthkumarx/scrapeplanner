@@ -12,10 +12,10 @@
       {
         "fields": [],
         "http_status": 200,
-        "items_seen": 122,
+        "items_seen": 118,
         "kind": "rss",
         "note": null,
-        "page_size": 122,
+        "page_size": 118,
         "status": "ok",
         "total_items": null,
         "url": "https://www.theguardian.com/international/rss"
@@ -25,7 +25,7 @@
   "input_url": "https://www.theguardian.com/international",
   "max_requests": 10,
   "page": {
-    "bytes": 1489472,
+    "bytes": 1507180,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.theguardian.com/international",
@@ -43,7 +43,7 @@
         "fields": [],
         "name": "feed_api",
         "notes": [
-          "a feed returns only its latest 122 entries; poll it for new ones"
+          "a feed returns only its latest 118 entries; poll it for new ones"
         ],
         "partial": true,
         "summary": "rss feed",
@@ -80,15 +80,15 @@
         "fields": [],
         "name": "html",
         "notes": [
-          "one detail page per record; URLs from the sitemap (~529 per file)",
+          "one detail page per record; URLs from the sitemap (~534 per file)",
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (22,384 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (21,231 chars of text)",
         "urls": [
-          "https://www.theguardian.com/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live",
-          "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates",
-          "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows"
+          "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
+          "https://www.theguardian.com/sport/2026/nov/04/baltimore-ravens-arizona-cardinals-trade-jacoby-brissett",
+          "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates"
         ],
         "usable": true
       },
@@ -131,14 +131,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 1489472,
-    "links": 379,
+    "html_bytes": 1507180,
+    "links": 364,
     "noscript_warning": false,
     "reasons": [
-      "22,384 characters of text, 379 links"
+      "21,231 characters of text, 364 links"
     ],
     "script_bytes": 21085,
-    "text_chars": 22384,
+    "text_chars": 21231,
     "verdict": "raw_html"
   },
   "requests": [
@@ -151,7 +151,7 @@
       "url": "https://www.theguardian.com/robots.txt"
     },
     {
-      "bytes": 1489472,
+      "bytes": 1507180,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -183,7 +183,7 @@
       "url": "http://www.theguardian.com/sitemaps/news.xml"
     },
     {
-      "bytes": 557688,
+      "bytes": 562733,
       "error": null,
       "method": "GET",
       "purpose": "sitemap",
@@ -191,7 +191,7 @@
       "url": "https://www.theguardian.com/sitemaps/news.xml"
     },
     {
-      "bytes": 416848,
+      "bytes": 401128,
       "error": null,
       "method": "GET",
       "purpose": "feed:rss",
@@ -207,7 +207,7 @@
     "found": true,
     "note": null,
     "paths": {
-      "/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live": true,
+      "/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live": true,
       "/international": true,
       "/international/rss": true
     },
@@ -230,21 +230,21 @@
     "note": null,
     "oldest_lastmod": "2026-11-04",
     "sample_urls": [
-      "https://www.theguardian.com/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live",
+      "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
+      "https://www.theguardian.com/sport/2026/nov/04/baltimore-ravens-arizona-cardinals-trade-jacoby-brissett",
       "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates",
-      "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows",
-      "https://www.theguardian.com/commentisfree/2026/nov/04/donald-trump-billionaire-coalition-class-politics-tech-us-democrats",
-      "https://www.theguardian.com/thefilter-us/2026/oct/29/products-you-loved-in-october"
+      "https://www.theguardian.com/uk-news/2026/nov/04/uk-government-considers-smart-glasses-ban-over-secret-filming-concerns",
+      "https://www.theguardian.com/world/2026/nov/04/serbia-officers-protesters"
     ],
     "source": "robots",
     "status": 200,
     "truncated": false,
     "url": "http://www.theguardian.com/sitemaps/news.xml",
-    "url_count": 529,
-    "with_lastmod": 529
+    "url_count": 534,
+    "with_lastmod": 534
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:24:18+00:00",
+  "started_at": "2026-11-04T20:53:48+00:00",
   "stopped": null,
   "structured": {
     "items": [],

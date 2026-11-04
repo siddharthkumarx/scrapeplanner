@@ -8,7 +8,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:51 GMT"
+    "Wed, 04 Nov 2026 20:52:24 GMT"
    ],
    [
     "content-type",
@@ -36,7 +36,7 @@
    ],
    [
     "cf-cache-status",
-    "REVALIDATED"
+    "HIT"
    ],
    [
     "etag",
@@ -48,7 +48,7 @@
    ],
    [
     "set-cookie",
-    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=porterandyork.com; Expires=Wed, 04 Nov 2026 18:52:51 GMT"
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=porterandyork.com; Expires=Wed, 04 Nov 2026 21:22:24 GMT"
    ],
    [
     "content-encoding",
@@ -56,14 +56,14 @@
    ],
    [
     "cf-ray",
-    "a555a581beb0cf97-SJC"
+    "a55680961d2827ec-LAX"
    ],
    [
     "alt-svc",
     "h3=\":443\"; ma=86400"
    ]
   ],
-  "elapsed_ms": 254,
+  "elapsed_ms": 194,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -76,7 +76,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:52 GMT"
+    "Wed, 04 Nov 2026 20:52:25 GMT"
    ],
    [
     "content-type",
@@ -100,7 +100,7 @@
    ],
    [
     "content-security-policy",
-    "default-src 'none'; script-src 'nonce-E6NVPYsoPkMdV08c2HRWLK' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'"
+    "default-src 'none'; script-src 'nonce-a5cuIOSPS0ZT2lbjlLpIJe' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'"
    ],
    [
     "server",
@@ -136,7 +136,7 @@
    ],
    [
     "server-timing",
-    "chlray;desc=\"a555a5892babcf97\""
+    "chlray;desc=\"a556809d0cb027ec\""
    ],
    [
     "x-content-type-options",
@@ -152,7 +152,7 @@
    ],
    [
     "set-cookie",
-    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=porterandyork.com; Expires=Wed, 04 Nov 2026 18:52:52 GMT"
+    "__cf_bm=<redacted>; HttpOnly; SameSite=None; Secure; Path=/; Domain=porterandyork.com; Expires=Wed, 04 Nov 2026 21:22:25 GMT"
    ],
    [
     "content-encoding",
@@ -160,14 +160,14 @@
    ],
    [
     "cf-ray",
-    "a555a5892babcf97-SJC"
+    "a556809d0cb027ec-LAX"
    ],
    [
     "alt-svc",
     "h3=\":443\"; ma=86400"
    ]
   ],
-  "elapsed_ms": 17,
+  "elapsed_ms": 20,
   "truncated": false,
   "body": "001.body.gz"
  }

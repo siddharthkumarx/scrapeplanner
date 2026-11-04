@@ -20,7 +20,7 @@
    ],
    [
     "x-amzn-requestid",
-    "1b03f574-e9ae-4adb-af2e-63e8e3ff7b2e"
+    "3dfaaa83-220a-4978-8304-c9c024c73d5a"
    ],
    [
     "content-encoding",
@@ -28,7 +28,7 @@
    ],
    [
     "x-amz-apigw-id",
-    "GU-ONFbbjoEFfJQ="
+    "GVKR9FV-DoEFYlA="
    ],
    [
     "cache-control",
@@ -36,7 +36,7 @@
    ],
    [
     "x-amzn-trace-id",
-    "Root=1-6aeb7727-6772f355116425e32958358c"
+    "Root=1-6aeb8a72-d4d2c2f165ef3efbef2d21a1"
    ],
    [
     "origin-agent-cluster",
@@ -56,11 +56,7 @@
    ],
    [
     "x-bbc-edge-cache-status",
-    "MISS"
-   ],
-   [
-    "x-bbc-origin-response-status",
-    "200"
+    "HIT"
    ],
    [
     "report-to",
@@ -88,7 +84,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:16 GMT"
+    "Wed, 04 Nov 2026 20:53:46 GMT"
    ],
    [
     "x-fastly-cache-status",
@@ -96,7 +92,7 @@
    ],
    [
     "x-served-by",
-    "cache-pao-kpao1770083-PAO"
+    "cache-bur-kbur8200040-BUR"
    ],
    [
     "x-cache",
@@ -108,7 +104,7 @@
    ],
    [
     "x-timer",
-    "S1793816656.216530,VS0,VE59"
+    "S1793825626.976396,VS0,VE68"
    ],
    [
     "x-fastly-pre-flight-cache",
@@ -120,7 +116,7 @@
    ],
    [
     "x-cache-age",
-    "297"
+    "3239"
    ],
    [
     "vary",
@@ -131,7 +127,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 77,
+  "elapsed_ms": 140,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -148,7 +144,7 @@
    ],
    [
     "content-length",
-    "85471"
+    "86653"
    ],
    [
     "content-type",
@@ -164,7 +160,7 @@
    ],
    [
     "brequestid",
-    "5ff4d9113f9b41a4b52f506ccd1843ae"
+    "857487d787d242fdabb6d4f62b1eb27c"
    ],
    [
     "bsig",
@@ -176,7 +172,7 @@
    ],
    [
     "etag",
-    "\"5mywcs0hubbgg2\""
+    "\"klg0fmjyo4bmv0\""
    ],
    [
     "referrer-policy",
@@ -184,7 +180,7 @@
    ],
    [
     "req-svc-chain",
-    "FASTLY,GTM,BELFRAGE,BBCX"
+    "GTM,BELFRAGE,BBCX"
    ],
    [
     "via",
@@ -196,7 +192,7 @@
    ],
    [
     "x-correlation-id",
-    "f23de257-9649-4769-9cfb-04c68c831621"
+    "e291e5cc-40b5-44c5-93d9-1ae4f0b9a9f8"
    ],
    [
     "x-frame-options",
@@ -240,15 +236,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:17 GMT"
+    "Wed, 04 Nov 2026 20:53:47 GMT"
    ],
    [
     "x-fastly-cache-status",
-    "HIT-STALE-CLUSTER"
+    "HIT-CLUSTER"
    ],
    [
     "x-served-by",
-    "cache-pao-kpao1770083-PAO"
+    "cache-bur-kbur8200040-BUR"
    ],
    [
     "x-cache",
@@ -260,7 +256,7 @@
    ],
    [
     "x-timer",
-    "S1793816657.278672,VS0,VE3"
+    "S1793825627.054241,VS0,VE8"
    ],
    [
     "x-fastly-pre-flight-cache",
@@ -272,7 +268,7 @@
    ],
    [
     "x-cache-age",
-    "48"
+    "2"
    ],
    [
     "x-lb-nocache",
@@ -291,7 +287,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 7,
+  "elapsed_ms": 28,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -324,7 +320,7 @@
    ],
    [
     "brequestid",
-    "1a309a62257a464095e4ec5e0018044a"
+    "8b35ef868f2f4b3ea998a7de9afcaa8e"
    ],
    [
     "bsig",
@@ -340,7 +336,7 @@
    ],
    [
     "moz-cache-status",
-    "HIT"
+    "MISS"
    ],
    [
     "req-svc-chain",
@@ -412,19 +408,19 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:18 GMT"
+    "Wed, 04 Nov 2026 20:53:48 GMT"
    ],
    [
     "x-fastly-cache-status",
-    "HIT-STALE-CLUSTER"
+    "MISS-CLUSTER"
    ],
    [
     "x-served-by",
-    "cache-pao-kpao1770083-PAO"
+    "cache-bur-kbur8200040-BUR"
    ],
    [
     "x-cache",
-    "HIT"
+    "MISS"
    ],
    [
     "x-cache-hits",
@@ -432,7 +428,7 @@
    ],
    [
     "x-timer",
-    "S1793816658.286521,VS0,VE2"
+    "S1793825628.082540,VS0,VE285"
    ],
    [
     "x-fastly-pre-flight-cache",
@@ -444,7 +440,7 @@
    ],
    [
     "x-cache-age",
-    "4881"
+    "0"
    ],
    [
     "x-lb-nocache",
@@ -459,7 +455,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 3,
+  "elapsed_ms": 294,
   "truncated": false,
   "body": "002.body.gz"
  }

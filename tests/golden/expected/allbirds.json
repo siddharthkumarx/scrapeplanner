@@ -60,7 +60,7 @@
   "input_url": "https://www.allbirds.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 699007,
+    "bytes": 699297,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.allbirds.com/",
@@ -131,7 +131,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (92,727 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (92,664 chars of text)",
         "urls": [
           "https://www.allbirds.com/",
           "https://www.allbirds.com/products/mens-wool-runners",
@@ -182,14 +182,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 699007,
+    "html_bytes": 699297,
     "links": 129,
     "noscript_warning": false,
     "reasons": [
-      "92,727 characters of text, 129 links"
+      "92,664 characters of text, 129 links"
     ],
-    "script_bytes": 80761,
-    "text_chars": 92727,
+    "script_bytes": 81410,
+    "text_chars": 92664,
     "verdict": "raw_html"
   },
   "requests": [
@@ -202,7 +202,7 @@
       "url": "https://www.allbirds.com/robots.txt"
     },
     {
-      "bytes": 699007,
+      "bytes": 699297,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -218,7 +218,7 @@
       "url": "https://www.allbirds.com/sitemap.xml"
     },
     {
-      "bytes": 1813063,
+      "bytes": 1809590,
       "error": null,
       "method": "GET",
       "purpose": "feed:shopify_products_json",
@@ -300,7 +300,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:22:24+00:00",
+  "started_at": "2026-11-04T20:52:01+00:00",
   "stopped": null,
   "structured": {
     "items": [],

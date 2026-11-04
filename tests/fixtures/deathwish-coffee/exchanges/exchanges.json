@@ -8,7 +8,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:44 GMT"
+    "Wed, 04 Nov 2026 20:52:19 GMT"
    ],
    [
     "content-type",
@@ -32,7 +32,7 @@
    ],
    [
     "etag",
-    "W/\"sfr:computation:v2:d9e6e67ba4216ff188d293a840d811b6c47f90c6ab7d7228083c098ba3ce8ad7\""
+    "W/\"sfr:computation:v2:f30537fcf3ceca4ae179494132e6830c0563b6341ff79b3ddaf6c33bc0e71acc\""
    ],
    [
     "x-xss-protection",
@@ -52,11 +52,11 @@
    ],
    [
     "set-cookie",
-    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 18:22:44 GMT; secure; SameSite=None"
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:19 GMT; secure; SameSite=None"
    ],
    [
     "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:44 GMT; secure; SameSite=None"
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:19 GMT; secure; SameSite=None"
    ],
    [
     "x-frame-options",
@@ -72,11 +72,11 @@
    ],
    [
     "shopify-complexity-score",
-    "310"
+    "330"
    ],
    [
     "shopify-complexity-score-v2",
-    "31"
+    "33"
    ],
    [
     "content-language",
@@ -100,7 +100,7 @@
    ],
    [
     "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mCz%2BSfFcYMRqDc3mLRqzvmy1KKazG0fGkrIq3fP472xnIvIGhRkLZxa4kOL%2B%2FZae627MuOqaiADgLrsWhs48WUrPKdl5bT2YP7QgUyfRoxlbBebVBCYSK%2BhDQffXfKcOriZC8pTVO3FZ\"}]}"
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yGkCfnfCn4Pq951uh9r4UYFyPc70Fog5%2FebyeT%2FbkaSGOYWzArw%2FMv1JtjeeWYJSwSUdfaEC6dngZAaCSAVPi2UDJFLoZXC8wcoClolM7HK4ecZaxM7P49jxL%2FiRCEUy5o5Aot5n48rB\"}]}"
    ],
    [
     "cdn-cache-control",
@@ -116,11 +116,11 @@
    ],
    [
     "server-timing",
-    "processing;dur=33, db;dur=18, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", servedBy;desc=\"f9jk\", requestID;desc=\"dc764997-d319-48e2-afa4-94dfb0df43c4-1793816564\", _y;desc=\"2a72f367-c779-4a1f-bf07-13d15b0bd60f\", _s;desc=\"999ba7e2-0fec-4b05-86e6-8b2c616f4c4c\", _cmp;desc=\"3.AMPS_USCA_f_t_drTwr8DGSuOfV9oJU2nQ*w\", _ye;desc=\"1825374164\", _se;desc=\"1793818364\", compressionLevel;desc=\"5\", compressionTime;dur=0.988"
+    "processing;dur=34, db;dur=20, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"46pd\", requestID;desc=\"6d107946-4612-47d6-9d16-437188bf31e0-1793825539\", _y;desc=\"a8de6901-181d-454d-b475-15f1af4e0a4c\", _s;desc=\"d8abada8-50b8-4131-80f4-61ad687f07f3\", _cmp;desc=\"3.AMPS_USAZ_f_t_UizeF-OJQVeIwpDvU6ni7A\", _ye;desc=\"1825383139\", _se;desc=\"1793827339\", compressionLevel;desc=\"5\", compressionTime;dur=0.794"
    ],
    [
     "x-request-id",
-    "dc764997-d319-48e2-afa4-94dfb0df43c4-1793816564"
+    "6d107946-4612-47d6-9d16-437188bf31e0-1793825539"
    ],
    [
     "x-content-type-options",
@@ -144,10 +144,10 @@
    ],
    [
     "cf-ray",
-    "a555a556d9311666-SJC"
+    "a5568073fbde2ae3-LAX"
    ]
   ],
-  "elapsed_ms": 193,
+  "elapsed_ms": 227,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -160,7 +160,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:45 GMT"
+    "Wed, 04 Nov 2026 20:52:20 GMT"
    ],
    [
     "content-type",
@@ -188,7 +188,7 @@
    ],
    [
     "etag",
-    "W/\"sfr:computation:v2:f715f83bccce883adbb7777cf4a4fdc37458ceacda310b96577728e1223875d1:e320ea459b8eee2399fd0de61dcfc90b\""
+    "W/\"sfr:computation:v2:5ff897fc3258d0cb911d7e1656850a12b9ab36ce46ac2bba27f4cd4681c50b8b:7f2d2fe11b2cd726a995817776e71744\""
    ],
    [
     "x-xss-protection",
@@ -208,11 +208,11 @@
    ],
    [
     "set-cookie",
-    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 18:22:45 GMT; secure; SameSite=None"
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:20 GMT; secure; SameSite=None"
    ],
    [
     "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:45 GMT; secure; SameSite=None"
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:20 GMT; secure; SameSite=None"
    ],
    [
     "content-security-policy",
@@ -224,11 +224,11 @@
    ],
    [
     "shopify-complexity-score",
-    "2720"
+    "1660"
    ],
    [
     "shopify-complexity-score-v2",
-    "272"
+    "166"
    ],
    [
     "content-language",
@@ -260,7 +260,7 @@
    ],
    [
     "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JXiUiMzFV2GZl3SNj0LYrePwyWhuev87UtMaqNoRR6MAY3wQ%2FIkwM91l0oLGoUB9%2BkW4T8heDmxM%2B9IE%2BcQXVuBEUfyGXCYS5I3YCCN92NWYuSLZExliNHHBBOL4Gmj0KnysQKNOmEx5\"}]}"
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cGG9LXmyfS3ZidCVhyw7bkl177LIPjbSfUTZAeO6phAn5Uu9r%2F4iHHL7%2FLyAK%2BzqpRaJEUtfCr5QSf6JbwtCoJYoDyIim%2B3kwPDSdg9yqA4b8UTQP1XUP9QxAT8TzR7XQ6J2yrRl1I0P\"}]}"
    ],
    [
     "cdn-cache-control",
@@ -276,11 +276,11 @@
    ],
    [
     "server-timing",
-    "processing;dur=274, db;dur=144, render;dur=103, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", theme;desc=\"133466587191\", pageType;desc=\"index\", servedBy;desc=\"97gv\", requestID;desc=\"a487a394-52c4-4e41-9cc7-de184e5ffe24-1793816565\", _y;desc=\"5ba75b8d-c887-4c32-9808-6591ceb4f84f\", _s;desc=\"7010724b-82b5-4b6f-a6ef-ff8d42b344c7\", _cmp;desc=\"3.AMPS_USCA_f_t_RvSxnkeTRMWcV3ujUXpAyw\", _ye;desc=\"1825374165\", _se;desc=\"1793818365\", compressionLevel;desc=\"5\", compressionTime;dur=15.44"
+    "processing;dur=167, db;dur=68, render;dur=71, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", theme;desc=\"133466587191\", pageType;desc=\"index\", servedBy;desc=\"6452\", requestID;desc=\"8484e39a-a118-428c-815e-78bf83fe06c2-1793825540\", _y;desc=\"4235c183-0830-4fde-9ed6-34da9f9814e1\", _s;desc=\"303476a7-2c4c-43c5-800c-e14d54310dec\", _cmp;desc=\"3.AMPS_USAZ_f_t_KneKUje*RgKSNOasDw*JkQ\", _ye;desc=\"1825383140\", _se;desc=\"1793827340\", compressionLevel;desc=\"5\", compressionTime;dur=12.398"
    ],
    [
     "x-request-id",
-    "a487a394-52c4-4e41-9cc7-de184e5ffe24-1793816565"
+    "8484e39a-a118-428c-815e-78bf83fe06c2-1793825540"
    ],
    [
     "x-content-type-options",
@@ -304,10 +304,10 @@
    ],
    [
     "cf-ray",
-    "a555a55e0ead1666-SJC"
+    "a556807afaaf2ae3-LAX"
    ]
   ],
-  "elapsed_ms": 405,
+  "elapsed_ms": 286,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -320,7 +320,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:46 GMT"
+    "Wed, 04 Nov 2026 20:52:21 GMT"
    ],
    [
     "content-type",
@@ -336,7 +336,7 @@
    ],
    [
     "x-request-id",
-    "7dae4211-f278-4a2c-9fba-2568a4327a76-1793816566"
+    "342f0915-d5ba-41d1-b167-a75e07cea699-1793825541"
    ],
    [
     "etag",
@@ -348,11 +348,11 @@
    ],
    [
     "set-cookie",
-    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 18:22:46 GMT"
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:21 GMT"
    ],
    [
     "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:46 GMT"
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:21 GMT"
    ],
    [
     "set-cookie",
@@ -372,11 +372,11 @@
    ],
    [
     "shopify-complexity-score",
-    "230"
+    "240"
    ],
    [
     "shopify-complexity-score-v2",
-    "23"
+    "24"
    ],
    [
     "x-frame-options",
@@ -420,7 +420,7 @@
    ],
    [
     "server-timing",
-    "processing;dur=27;desc=\"gc:2\", db;dur=6, db_async;dur=2.307, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", servedBy;desc=\"lllr\", requestID;desc=\"7dae4211-f278-4a2c-9fba-2568a4327a76-1793816566\", _y;desc=\"fcac041b-40d5-42a3-8cf3-82b1af263d5c\", _s;desc=\"34b667dc-51ee-45a9-adfe-cf562ad40a46\", _cmp;desc=\"3.AMPS_USCA_f_t_Uxg2h3wpS8uxdPrnPTBYbA\", _ye;desc=\"1825374166\", _se;desc=\"1793818366\", compressionLevel;desc=\"5\""
+    "processing;dur=29;desc=\"gc:1\", db;dur=7, db_async;dur=3.261, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"7d8f\", requestID;desc=\"342f0915-d5ba-41d1-b167-a75e07cea699-1793825541\", _y;desc=\"71a4eca7-8c1e-43a1-b704-107812b2a43b\", _s;desc=\"80528ec5-963c-4ca1-a9e2-ef6d00ac9de0\", _cmp;desc=\"3.AMPS_USAZ_f_t_IIclgTk8Skyo1522Br9Usw\", _ye;desc=\"1825383141\", _se;desc=\"1793827341\", compressionLevel;desc=\"5\""
    ],
    [
     "x-dc",
@@ -440,7 +440,7 @@
    ],
    [
     "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=nQdLkWaN2qZgPCtozXS56KRIUOW7A6qEDI4LBd8H%2Fvc5FpZBW9OsqANOCrGf8ncxEJO9829mc3E4pu%2FLbZ4f3aB6fmzPnYajehe09q8GFVJgrnyaKnWim0soSUdsQo4ROb2kPCG2HDIW\"}]}"
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RzGqCfWkjquaSqzVIjWDKoUm96%2B7dxK0FoIEiCZ9GedQxC7T2hYBH6vD%2BS3mFV4iFy4V9CJhs7mqbiGd2yQ8RtkZLclEkan74iYqHmEUAGDqKtzxJ1OccvkDjUJ95VxLqVJtu7NDuSF%2F\"}]}"
    ],
    [
     "x-content-type-options",
@@ -456,10 +456,10 @@
    ],
    [
     "cf-ray",
-    "a555a566cd661666-SJC"
+    "a55680830a752ae3-LAX"
    ]
   ],
-  "elapsed_ms": 111,
+  "elapsed_ms": 110,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -472,7 +472,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:48 GMT"
+    "Wed, 04 Nov 2026 20:52:22 GMT"
    ],
    [
     "content-type",
@@ -492,7 +492,7 @@
    ],
    [
     "etag",
-    "W/\"sfr:computation:v2:c1baa17a339726bb92ff45e00da456144ec7587282ad2453c33bf339ab6d73c7\""
+    "W/\"sfr:computation:v2:30a1ff0b2801441b173f8a558cbba6eb64b3418cd6300fdcb0dcf8e5933a277c\""
    ],
    [
     "x-xss-protection",
@@ -512,7 +512,7 @@
    ],
    [
     "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:48 GMT; secure; SameSite=None"
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:22 GMT; secure; SameSite=None"
    ],
    [
     "content-security-policy",
@@ -528,11 +528,11 @@
    ],
    [
     "shopify-complexity-score",
-    "780"
+    "1020"
    ],
    [
     "shopify-complexity-score-v2",
-    "78"
+    "102"
    ],
    [
     "content-language",
@@ -560,7 +560,7 @@
    ],
    [
     "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5zFm66C83gR%2BF%2FiDIvFB%2FlULPm6SZ4RIvjC2VjPRuaJfz%2BLPFgkma1el0EiZMIY2z1geNd%2Bb5wM1gHA5nefSmxnx%2FgYdgdtvP57TCZfbm%2Be54%2FyOzEhdWfaBLfduG3ES3XV7Fnxh0SAM\"}]}"
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=j8IgVjP79PgD7vX5KtoS1Cil7HUJmPwHrCQmBsqNnfRtVtqF2f1EGymhQRBKIv7ghYeYCE8t8dXlJGfhYsa7IXtR2wG9R7KRVv%2BESJO%2BpjApjhyya3YaEJ03bj7LxMea1Hl2Li%2FFJBBG\"}]}"
    ],
    [
     "cdn-cache-control",
@@ -576,11 +576,11 @@
    ],
    [
     "server-timing",
-    "processing;dur=79, db;dur=30, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", servedBy;desc=\"6w5s\", requestID;desc=\"0d3aaaa0-4276-42e6-818d-dcd0ab295bd5-1793816567\", _y;desc=\"93c61dfd-fb35-446e-acbc-225bd04d4962\", _s;desc=\"a840d459-5eee-4a9b-a6f1-78ac40ea6fbf\", _cmp;desc=\"3.AMPS_USCA_f_t_hEq37HvfTHWz2wIu*1nbSA\", _ye;desc=\"1825374168\", _se;desc=\"1793818368\", compressionLevel;desc=\"5\", compressionTime;dur=18.763"
+    "processing;dur=103, db;dur=85, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"gztq\", requestID;desc=\"26a5dc43-1a73-4044-acee-bbe1504d3647-1793825542\", _y;desc=\"0bf5b60d-9efc-441d-98d0-24021ac7480a\", _s;desc=\"f9499d68-dc8c-443a-bdd5-4a6c4bf2a9f0\", _cmp;desc=\"3.AMPS_USAZ_f_t_waO4qIlHQ7WC6mU5UvAWXg\", _ye;desc=\"1825383142\", _se;desc=\"1793827342\", compressionLevel;desc=\"5\", compressionTime;dur=15.032"
    ],
    [
     "x-request-id",
-    "0d3aaaa0-4276-42e6-818d-dcd0ab295bd5-1793816567"
+    "26a5dc43-1a73-4044-acee-bbe1504d3647-1793825542"
    ],
    [
     "x-content-type-options",
@@ -604,10 +604,10 @@
    ],
    [
     "cf-ray",
-    "a555a56dcb6e1666-SJC"
+    "a5568089f9092ae3-LAX"
    ]
   ],
-  "elapsed_ms": 232,
+  "elapsed_ms": 192,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -620,7 +620,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:49 GMT"
+    "Wed, 04 Nov 2026 20:52:24 GMT"
    ],
    [
     "content-type",
@@ -635,16 +635,24 @@
     "keep-alive"
    ],
    [
+    "x-request-id",
+    "69c8c981-368e-4a9d-9b5b-b3e9e7435105-1793825543"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:2717209:SitemapProductsController:d662fe7acbe1700e0ec2f38092313973\""
+   ],
+   [
     "cf-cache-status",
     "DYNAMIC"
    ],
    [
     "set-cookie",
-    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 18:22:49 GMT; secure; SameSite=None"
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 20:52:23 GMT"
    ],
    [
     "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:49 GMT; secure; SameSite=None"
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 20:52:23 GMT"
    ],
    [
     "set-cookie",
@@ -659,24 +667,16 @@
     "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
    ],
    [
-    "x-request-id",
-    "c0eb062b-627e-4ee2-a00f-d7321cdc676d-1793816569"
-   ],
-   [
-    "etag",
-    "W/\"page_cache:2717209:SitemapProductsController:d662fe7acbe1700e0ec2f38092313973\""
-   ],
-   [
     "nel",
     "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
    ],
    [
     "shopify-complexity-score",
-    "420"
+    "290"
    ],
    [
     "shopify-complexity-score-v2",
-    "42"
+    "29"
    ],
    [
     "x-frame-options",
@@ -720,7 +720,7 @@
    ],
    [
     "server-timing",
-    "processing;dur=47;desc=\"gc:1\", db;dur=7, db_async;dur=16.494, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", servedBy;desc=\"77dk\", requestID;desc=\"c0eb062b-627e-4ee2-a00f-d7321cdc676d-1793816569\", _y;desc=\"20e641a9-d3ef-4d39-b1bc-628a406c0468\", _s;desc=\"340f6ce8-b09e-4879-ada2-2e71f7d90af1\", _cmp;desc=\"3.AMPS_USCA_f_t_OSTEFDIkQX202snozJRp5Q\", _ye;desc=\"1825374169\", _se;desc=\"1793818369\", compressionLevel;desc=\"5\", compressionTime;dur=1.396"
+    "processing;dur=36;desc=\"gc:1\", db;dur=9, db_async;dur=3.847, asn;desc=\"8075\", edge;desc=\"LAX\", country;desc=\"US\", servedBy;desc=\"ghlg\", requestID;desc=\"69c8c981-368e-4a9d-9b5b-b3e9e7435105-1793825543\", _y;desc=\"649ca464-464a-4171-a24c-423c21963a02\", _s;desc=\"a62bddce-b775-43b7-af70-3ae8c1c14fa2\", _cmp;desc=\"3.AMPS_USAZ_f_t_bHTdky-8R8WyuY42wxtqCA\", _ye;desc=\"1825383143\", _se;desc=\"1793827343\", compressionLevel;desc=\"5\""
    ],
    [
     "x-dc",
@@ -740,7 +740,7 @@
    ],
    [
     "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GPUGBWSHE%2BtQY88yHR4Ljx9CAtJnPMtvIJtM7ITqSmdd01spzvN8m%2FXLEnQzOcuhJnGkMJ1PO6iIo8wdWgWHX%2Bg3n71q%2B8BzUQWE1XtNPtmejg1RJyWmNloX2WLgjhgvzQiHt3CcqRAK\"}]}"
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yRdiK8IYeMWFqr4amt%2FMuGFYfKP2aktLO%2BuECssuZMkNdIGcyVgyBzkr64VYle6iCLknjdPKF70m%2FFlEW1FRk1WLl5WFFKJdAaudQGuVKP57V2HRA3gt511vJUfQZfzz5bjl2mB7MQwB\"}]}"
    ],
    [
     "x-content-type-options",
@@ -756,159 +756,11 @@
    ],
    [
     "cf-ray",
-    "a555a57579f41666-SJC"
+    "a5568091689f2ae3-LAX"
    ]
   ],
-  "elapsed_ms": 120,
+  "elapsed_ms": 124,
   "truncated": false,
   "body": "004.body.gz"
- },
- {
-  "index": 5,
-  "method": "GET",
-  "url": "https://www.deathwishcoffee.com/products/society-of-strong-coffee-initiation-kit.js",
-  "purpose": "feed:shopify_product_js",
-  "status": 200,
-  "headers": [
-   [
-    "date",
-    "Wed, 04 Nov 2026 18:22:50 GMT"
-   ],
-   [
-    "content-type",
-    "text/javascript; charset=utf-8"
-   ],
-   [
-    "transfer-encoding",
-    "chunked"
-   ],
-   [
-    "connection",
-    "keep-alive"
-   ],
-   [
-    "x-permitted-cross-domain-policies",
-    "none"
-   ],
-   [
-    "etag",
-    "W/\"sfr:computation:v2:0df25fce3b88c5947a874c4646d2067bf4b85793b4b9e93874b2b96b5516a819\""
-   ],
-   [
-    "x-xss-protection",
-    "1; mode=block"
-   ],
-   [
-    "set-cookie",
-    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
-   ],
-   [
-    "set-cookie",
-    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
-   ],
-   [
-    "set-cookie",
-    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=None"
-   ],
-   [
-    "set-cookie",
-    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 18:22:50 GMT; secure; SameSite=None"
-   ],
-   [
-    "content-security-policy",
-    "block-all-mixed-content; frame-ancestors *; upgrade-insecure-requests;"
-   ],
-   [
-    "access-control-allow-origin",
-    "*"
-   ],
-   [
-    "strict-transport-security",
-    "max-age=7889238"
-   ],
-   [
-    "shopify-complexity-score",
-    "200"
-   ],
-   [
-    "shopify-complexity-score-v2",
-    "20"
-   ],
-   [
-    "content-language",
-    "en-US"
-   ],
-   [
-    "link",
-    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
-   ],
-   [
-    "powered-by",
-    "Shopify"
-   ],
-   [
-    "alt-svc",
-    "h3=\":443\"; ma=86400"
-   ],
-   [
-    "cf-cache-status",
-    "DYNAMIC"
-   ],
-   [
-    "x-download-options",
-    "noopen"
-   ],
-   [
-    "report-to",
-    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xmPdYIq5LIIJXlZLwBw19O4YggQwg31xeNU8FjczyhsAFe7CAkhdZO2LBc9CZPfEYHpAWvPLy%2F3NGrdc5IUGL0L4UekQJjuFTHpKR4TnJyQHxiYWd2naMKSkxcOyb5lHGJUvuWjJl4Gu\"}]}"
-   ],
-   [
-    "cdn-cache-control",
-    "no-cache, no-store"
-   ],
-   [
-    "vary",
-    "Accept"
-   ],
-   [
-    "vary",
-    "accept-encoding"
-   ],
-   [
-    "server-timing",
-    "processing;dur=21, db;dur=16, asn;desc=\"8075\", edge;desc=\"SJC\", country;desc=\"US\", servedBy;desc=\"6w5s\", requestID;desc=\"b6ea6a6b-fc93-4174-8de5-1b6924715653-1793816570\", _y;desc=\"414a656a-5d07-4330-bb65-2d178116fd6a\", _s;desc=\"2bd7cc17-40a3-471c-95c4-e70018c0d340\", _cmp;desc=\"3.AMPS_USCA_f_t_59cjEc27RWW-5rvxtCwyXA\", _ye;desc=\"1825374170\", _se;desc=\"1793818370\", compressionLevel;desc=\"5\", compressionTime;dur=1.338"
-   ],
-   [
-    "x-request-id",
-    "b6ea6a6b-fc93-4174-8de5-1b6924715653-1793816570"
-   ],
-   [
-    "x-content-type-options",
-    "nosniff"
-   ],
-   [
-    "nel",
-    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
-   ],
-   [
-    "x-dc",
-    "gcp-us-west1,gcp-us-west1,gcp-us-west1"
-   ],
-   [
-    "server",
-    "cloudflare"
-   ],
-   [
-    "content-encoding",
-    "gzip"
-   ],
-   [
-    "cf-ray",
-    "a555a57c7f291666-SJC"
-   ]
-  ],
-  "elapsed_ms": 109,
-  "truncated": false,
-  "body": "005.body.gz"
  }
 ]

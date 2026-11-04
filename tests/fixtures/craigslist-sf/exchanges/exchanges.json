@@ -32,15 +32,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:00:03 GMT"
+    "Wed, 04 Nov 2026 20:02:26 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:00:03 GMT"
+    "Wed, 04 Nov 2026 21:02:26 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:00:03 GMT"
+    "Wed, 04 Nov 2026 20:02:26 GMT"
    ],
    [
     "vary",
@@ -55,7 +55,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 243,
+  "elapsed_ms": 632,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -84,11 +84,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:26 GMT"
+    "Wed, 04 Nov 2026 20:55:57 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:26:26 GMT"
+    "Wed, 04 Nov 2026 20:55:57 GMT"
    ],
    [
     "location",
@@ -96,7 +96,7 @@
    ],
    [
     "set-cookie",
-    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:31:26 GMT; secure"
+    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 21:00:57 GMT; secure"
    ],
    [
     "vary",
@@ -111,7 +111,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 13,
+  "elapsed_ms": 233,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -148,15 +148,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:28 GMT"
+    "Wed, 04 Nov 2026 20:55:59 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:26:28 GMT"
+    "Wed, 04 Nov 2026 21:55:59 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:26:28 GMT"
+    "Wed, 04 Nov 2026 20:55:59 GMT"
    ],
    [
     "vary",
@@ -171,7 +171,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 447,
+  "elapsed_ms": 432,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -196,7 +196,7 @@
    ],
    [
     "content-length",
-    "10042"
+    "10051"
    ],
    [
     "content-security-policy",
@@ -208,27 +208,27 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:04:30 GMT"
+    "Wed, 04 Nov 2026 20:04:32 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:04:30 GMT"
+    "Wed, 04 Nov 2026 21:04:32 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:04:30 GMT"
+    "Wed, 04 Nov 2026 20:04:32 GMT"
    ],
    [
     "set-cookie",
-    "cl_def_hp_www=<redacted>; domain=.craigslist.org; path=/; expires=Thu, 04-Nov-2027 18:04:30 GMT; secure"
+    "cl_def_hp_www=<redacted>; domain=.craigslist.org; path=/; expires=Thu, 04-Nov-2027 20:04:32 GMT; secure"
    ],
    [
     "set-cookie",
-    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:04:30 GMT; secure"
+    "cl_def_hp=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 20:04:32 GMT; secure"
    ],
    [
     "set-cookie",
-    "cl_def_hp=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 18:04:30 GMT; secure"
+    "cl_homepage_redirected=<redacted>; domain=.craigslist.org; path=/; expires=Wed, 04-Nov-2026 20:04:32 GMT; secure"
    ],
    [
     "vary",
@@ -243,7 +243,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 7,
+  "elapsed_ms": 22,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -280,15 +280,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:30 GMT"
+    "Wed, 04 Nov 2026 20:56:01 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:26:30 GMT"
+    "Wed, 04 Nov 2026 21:56:01 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:26:30 GMT"
+    "Wed, 04 Nov 2026 20:56:01 GMT"
    ],
    [
     "vary",
@@ -303,7 +303,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 45,
+  "elapsed_ms": 36,
   "truncated": false,
   "body": "004.body.gz"
  },
@@ -340,15 +340,15 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:04:53 GMT"
+    "Wed, 04 Nov 2026 20:56:02 GMT"
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 19:04:53 GMT"
+    "Wed, 04 Nov 2026 21:56:02 GMT"
    ],
    [
     "last-modified",
-    "Wed, 04 Nov 2026 18:04:53 GMT"
+    "Wed, 04 Nov 2026 20:56:02 GMT"
    ],
    [
     "vary",
@@ -363,7 +363,7 @@
     "max-age=63072000"
    ]
   ],
-  "elapsed_ms": 12,
+  "elapsed_ms": 897,
   "truncated": false,
   "body": "005.body.gz"
  }

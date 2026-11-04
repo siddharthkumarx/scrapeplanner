@@ -64,11 +64,11 @@
    ],
    [
     "via",
-    "1.1 594aaf7fc75f90b0c38ad7166cc419ea.cloudfront.net (CloudFront)"
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P9"
+    "PHX50-P2"
    ],
    [
     "alt-svc",
@@ -76,14 +76,14 @@
    ],
    [
     "x-amz-cf-id",
-    "fml1ZXB3FfGB4Cx3_zU9tTWkSmipIfeYDpFm1Hds1W_F33qyjTzgmg=="
+    "utDulzXC6XzensGPvcB2Lv7mKlEG6LfRmCt7UWMR1jLI2KBv6LQxnA=="
    ],
    [
     "age",
-    "70996"
+    "79968"
    ]
   ],
-  "elapsed_ms": 173,
+  "elapsed_ms": 47,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -108,7 +108,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:26:38 GMT"
+    "Wed, 04 Nov 2026 20:56:10 GMT"
    ],
    [
     "cross-origin-opener-policy",
@@ -124,7 +124,7 @@
    ],
    [
     "content-security-policy",
-    "report-uri /report-csp;default-src 'self';connect-src 'self' https: https://app.termly.io https://us.consent.api.termly.io https://eu.consent.api.termly.io;script-src 'self' https://*.googletagmanager.com https://beacon-v2.helpscout.net https://app.termly.io/ 'nonce-uv5G911PgPpr8Nf8rXQAk2GkudSv0HHK';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css https://beacon-v2.helpscout.net https://app.termly.io;font-src 'self' https://fonts.gstatic.com https://beacon-v2.helpscout.net;frame-src 'self' https://www.youtube-nocookie.com https://*.googletagmanager.com https://d1exrvfwzmo830.cloudfront.net/ https://beacon-v2.helpscout.net https://app.termly.io;img-src 'self' data: https: https://app.termly.io;report-to report-to-csp-group"
+    "report-uri /report-csp;default-src 'self';connect-src 'self' https: https://app.termly.io https://us.consent.api.termly.io https://eu.consent.api.termly.io;script-src 'self' https://*.googletagmanager.com https://beacon-v2.helpscout.net https://app.termly.io/ 'nonce-eCO8rMU57617KFcEKt5wWBMd2E6zfTQ5';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css https://beacon-v2.helpscout.net https://app.termly.io;font-src 'self' https://fonts.gstatic.com https://beacon-v2.helpscout.net;frame-src 'self' https://www.youtube-nocookie.com https://*.googletagmanager.com https://d1exrvfwzmo830.cloudfront.net/ https://beacon-v2.helpscout.net https://app.termly.io;img-src 'self' data: https: https://app.termly.io;report-to report-to-csp-group"
    ],
    [
     "report-to",
@@ -160,11 +160,11 @@
    ],
    [
     "via",
-    "1.1 594aaf7fc75f90b0c38ad7166cc419ea.cloudfront.net (CloudFront)"
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P9"
+    "PHX50-P2"
    ],
    [
     "alt-svc",
@@ -172,10 +172,10 @@
    ],
    [
     "x-amz-cf-id",
-    "sjuYN5U4BqIB6MtkV5FvjkwJegvukspOyDiV4GtXTuVE6fko0WONwg=="
+    "oJ-zAFNVIyPHblvh2TiwsAYeyhVF1-dafCY-QkyIgIr1YHmMw9zoaA=="
    ]
   ],
-  "elapsed_ms": 200,
+  "elapsed_ms": 228,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -248,11 +248,11 @@
    ],
    [
     "via",
-    "1.1 594aaf7fc75f90b0c38ad7166cc419ea.cloudfront.net (CloudFront)"
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P9"
+    "PHX50-P2"
    ],
    [
     "alt-svc",
@@ -260,14 +260,14 @@
    ],
    [
     "x-amz-cf-id",
-    "YBDn_G1xTLqv4hEB6Uu7uJz62Vkrggeto-zvVc6tyf_hbTuq4Jeo4g=="
+    "1q_Lpmd4Xqb8RgHS2iOTOgRLqNSgycJiyFg0GE9sUM7pZr8O-Lndyw=="
    ],
    [
     "age",
-    "4454"
+    "13426"
    ]
   ],
-  "elapsed_ms": 3,
+  "elapsed_ms": 25,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -307,10 +307,6 @@
     "Tue, 27 Oct 2026 12:57:20 GMT"
    ],
    [
-    "etag",
-    "W/\"6ae09fb0-3668\""
-   ],
-   [
     "x-frame-options",
     "SAMEORIGIN"
    ],
@@ -331,6 +327,10 @@
     "camera=(), geolocation=(), microphone=()"
    ],
    [
+    "etag",
+    "W/\"6ae09fb0-3668\""
+   ],
+   [
     "vary",
     "Accept-Encoding"
    ],
@@ -340,11 +340,11 @@
    ],
    [
     "via",
-    "1.1 594aaf7fc75f90b0c38ad7166cc419ea.cloudfront.net (CloudFront)"
+    "1.1 d271ae42a90c964f044b45ab273be490.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P9"
+    "PHX50-P2"
    ],
    [
     "alt-svc",
@@ -352,14 +352,14 @@
    ],
    [
     "x-amz-cf-id",
-    "aZkZQDjKRG77WFtPvstjseMBT3Fk7gU6_kl7CwDPKsbcpclglib1tA=="
+    "Kkn2w_x7Ko4OOTWqr4m5nZYQvcUwMgmmDPVt8V1gvCWRzzsaPkzeNQ=="
    ],
    [
     "age",
-    "60618"
+    "69590"
    ]
   ],
-  "elapsed_ms": 4,
+  "elapsed_ms": 26,
   "truncated": false,
   "body": "003.body.gz"
  }

@@ -40,7 +40,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:57 GMT"
+    "Wed, 04 Nov 2026 20:52:30 GMT"
    ],
    [
     "x-envoy-upstream-service-time",
@@ -56,7 +56,7 @@
    ],
    [
     "x-sigsci-request-id",
-    "6aeb780139d12fca6b3212ab"
+    "6aeb9b0edc1143bbdf0bebb5"
    ],
    [
     "server",
@@ -64,7 +64,7 @@
    ],
    [
     "x-request-id",
-    "d2ebb027-5262-4722-bf84-96b3392c0cd8"
+    "1a9693e3-ac57-48f9-b3e3-09a3f9521dec"
    ],
    [
     "x-cache",
@@ -72,18 +72,18 @@
    ],
    [
     "via",
-    "1.1 3d4a6e7eb738ddcd8d810f8af7dc83ca.cloudfront.net (CloudFront)"
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P6"
+    "PHX50-P2"
    ],
    [
     "x-amz-cf-id",
-    "FDF9fvPKW7GRj4LixKjU6Zul_wBSd3uZ5gJuHL-Z5xJ06FbAtf84bA=="
+    "Wvwmji3PrKtHbIy8Y9UvNCej5qEV7ZaRWbZNbo0ZDbks2h_OD1EaPg=="
    ]
   ],
-  "elapsed_ms": 54,
+  "elapsed_ms": 92,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -136,11 +136,11 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:58 GMT"
+    "Wed, 04 Nov 2026 20:52:31 GMT"
    ],
    [
     "x-envoy-upstream-service-time",
-    "54"
+    "33"
    ],
    [
     "strict-transport-security",
@@ -148,7 +148,7 @@
    ],
    [
     "x-sigsci-request-id",
-    "6aeb7802dc1143bbdfff2d3e"
+    "6aeb9b0ff09cee6d0b3f120d"
    ],
    [
     "server",
@@ -156,7 +156,7 @@
    ],
    [
     "x-request-id",
-    "dd881284-c8e2-43ec-b072-bf344a3c55fa"
+    "5c10cb8e-e356-4360-aeff-5f107c72fb41"
    ],
    [
     "x-cache",
@@ -164,18 +164,18 @@
    ],
    [
     "via",
-    "1.1 3d4a6e7eb738ddcd8d810f8af7dc83ca.cloudfront.net (CloudFront)"
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P6"
+    "PHX50-P2"
    ],
    [
     "x-amz-cf-id",
-    "xMZGP5apPnon3nKukzsUq9iT0QhCXXuagDtVQ65fq1uJQ8E_NDLK_g=="
+    "st_8XzQIQ0FrqY8a9EMqyAXwpIaDMn6kkCPii1oNH775Gx90hEW6mA=="
    ]
   ],
-  "elapsed_ms": 92,
+  "elapsed_ms": 80,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -228,7 +228,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:59 GMT"
+    "Wed, 04 Nov 2026 20:52:32 GMT"
    ],
    [
     "x-envoy-upstream-service-time",
@@ -240,7 +240,7 @@
    ],
    [
     "x-sigsci-request-id",
-    "6aeb7803e114c2eebd55f48b"
+    "6aeb9b10f09cee6d0b3f12c4"
    ],
    [
     "server",
@@ -248,7 +248,7 @@
    ],
    [
     "x-request-id",
-    "a6acd686-8def-4d65-b5cf-6beff1703469"
+    "ef72c820-49e9-4426-a965-0ce0f6e0a3a9"
    ],
    [
     "x-cache",
@@ -256,18 +256,18 @@
    ],
    [
     "via",
-    "1.1 3d4a6e7eb738ddcd8d810f8af7dc83ca.cloudfront.net (CloudFront)"
+    "1.1 6bfb1833062fb090100ec2406acfab4c.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P6"
+    "PHX50-P2"
    ],
    [
     "x-amz-cf-id",
-    "FXc8kbgxIsq62GeXHXOi8BbmEiPotBkvkXdpSzmuZCjzldXbAKtjKA=="
+    "lIZA19qouAbGl7hdhK7ZxnLteREtfRXtlhNuJuEFocvkRuph6WtcBw=="
    ]
   ],
-  "elapsed_ms": 53,
+  "elapsed_ms": 66,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -304,7 +304,7 @@
    ],
    [
     "x-envoy-upstream-service-time",
-    "3"
+    "2"
    ],
    [
     "strict-transport-security",
@@ -320,11 +320,11 @@
    ],
    [
     "x-sigsci-request-id",
-    "6aeb7804c368527573b5ba90"
+    "6aeb9b11dc1143bbdf0bee36"
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:23:00 GMT"
+    "Wed, 04 Nov 2026 20:52:33 GMT"
    ],
    [
     "server",
@@ -332,7 +332,7 @@
    ],
    [
     "x-request-id",
-    "b9076508-b393-47d7-9d6e-5634612f2309"
+    "dd7f4b4b-0756-457a-9961-14450b8a1ff0"
    ],
    [
     "x-cache",
@@ -340,18 +340,18 @@
    ],
    [
     "via",
-    "1.1 2166c412779de19c5bc1ca7b21f6a6d8.cloudfront.net (CloudFront)"
+    "1.1 8c3a327cfabf4b41ac8516033c03dfcc.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P3"
+    "PHX50-P2"
    ],
    [
     "x-amz-cf-id",
-    "HHYfD93yyIDGPLOHUJu2Q42iYmVrQKCe97DPk4WPga_HO7I_qy5InA=="
+    "ZAexUvXgMs_mcRExlmWCEJG9cJz3zotLIux1ZRtz80jA5tlObUHr_A=="
    ]
   ],
-  "elapsed_ms": 62,
+  "elapsed_ms": 290,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -384,7 +384,7 @@
    ],
    [
     "etag",
-    "W/\"23ba0f62f3214e66a5ed1f33a550ed23\""
+    "W/\"fbce035a28988e8994f50db64786f722\""
    ],
    [
     "cache-control",
@@ -392,11 +392,11 @@
    ],
    [
     "x-request-id",
-    "2884e81e-a675-4afe-b735-3c125a12349c"
+    "f7cf619b-5341-43e7-bcaa-8a1686f85e03"
    ],
    [
     "x-runtime",
-    "0.017000"
+    "0.014723"
    ],
    [
     "x-xss-protection",
@@ -408,7 +408,7 @@
    ],
    [
     "x-envoy-upstream-service-time",
-    "20"
+    "17"
    ],
    [
     "strict-transport-security",
@@ -420,11 +420,11 @@
    ],
    [
     "x-sigsci-request-id",
-    "6aeb7805c368527573b5baf8"
+    "6aeb9b12dc1143bbdf0beef5"
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:23:01 GMT"
+    "Wed, 04 Nov 2026 20:52:34 GMT"
    ],
    [
     "server",
@@ -436,18 +436,18 @@
    ],
    [
     "via",
-    "1.1 2166c412779de19c5bc1ca7b21f6a6d8.cloudfront.net (CloudFront)"
+    "1.1 8c3a327cfabf4b41ac8516033c03dfcc.cloudfront.net (CloudFront)"
    ],
    [
     "x-amz-cf-pop",
-    "SFO53-P3"
+    "PHX50-P2"
    ],
    [
     "x-amz-cf-id",
-    "2w-yLfXs3sxpzEhi_k310dqYYU_h2XC6ye5S51HrPhGl71zmTvoRZw=="
+    "EOrqFDDro6wW9go9_J1nfB34KEhQ4Ehf8WuDi35yAeusSGlshLNASQ=="
    ]
   ],
-  "elapsed_ms": 50,
+  "elapsed_ms": 63,
   "truncated": false,
   "body": "004.body.gz"
  }

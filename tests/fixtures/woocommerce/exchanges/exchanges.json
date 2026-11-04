@@ -12,7 +12,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:52 GMT"
+    "Wed, 04 Nov 2026 20:52:26 GMT"
    ],
    [
     "content-type",
@@ -71,20 +71,20 @@
     "gzip"
    ],
    [
+    "x-rq",
+    "bur5 0 40 9980"
+   ],
+   [
     "cache-control",
     "max-age=300, must-revalidate"
    ],
    [
+    "x-cache",
+    "STALE"
+   ],
+   [
     "accept-ranges",
     "bytes"
-   ],
-   [
-    "x-cache",
-    "HIT"
-   ],
-   [
-    "x-rq",
-    "bur6 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -95,7 +95,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 84,
+  "elapsed_ms": 103,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -112,7 +112,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:53 GMT"
+    "Wed, 04 Nov 2026 20:52:27 GMT"
    ],
    [
     "content-type",
@@ -179,20 +179,20 @@
     "gzip"
    ],
    [
-    "x-rq",
-    "bur6 0 40 9980"
-   ],
-   [
-    "x-cache",
-    "HIT"
+    "cache-control",
+    "max-age=300, must-revalidate"
    ],
    [
     "accept-ranges",
     "bytes"
    ],
    [
-    "cache-control",
-    "max-age=300, must-revalidate"
+    "x-cache",
+    "HIT"
+   ],
+   [
+    "x-rq",
+    "bur5 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -203,7 +203,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 26,
+  "elapsed_ms": 24,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -220,7 +220,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:54 GMT"
+    "Wed, 04 Nov 2026 20:52:28 GMT"
    ],
    [
     "content-type",
@@ -247,20 +247,20 @@
     "gzip"
    ],
    [
-    "x-rq",
-    "bur6 0 40 9980"
+    "cache-control",
+    "max-age=300, must-revalidate"
    ],
    [
     "accept-ranges",
     "bytes"
    ],
    [
-    "cache-control",
-    "max-age=300, must-revalidate"
-   ],
-   [
     "x-cache",
     "HIT"
+   ],
+   [
+    "x-rq",
+    "bur5 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -288,7 +288,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:22:55 GMT"
+    "Wed, 04 Nov 2026 20:52:29 GMT"
    ],
    [
     "content-type",
@@ -328,7 +328,7 @@
    ],
    [
     "x-rq",
-    "bur6 0 40 9980"
+    "bur5 0 40 9980"
    ],
    [
     "strict-transport-security",
@@ -339,7 +339,7 @@
     "Eric Binnion <https://friendsofericbinnion.wordpress.com/>"
    ]
   ],
-  "elapsed_ms": 26,
+  "elapsed_ms": 23,
   "truncated": false,
   "body": "003.body.gz"
  }

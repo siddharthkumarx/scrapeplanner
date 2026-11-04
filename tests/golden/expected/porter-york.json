@@ -187,7 +187,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:22:51+00:00",
+  "started_at": "2026-11-04T20:52:24+00:00",
   "stopped": {
     "detail": "cloudflare challenge page (HTTP 403: challenge script _cf_chl_opt)",
     "reason": "challenge",

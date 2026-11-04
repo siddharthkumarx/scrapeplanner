@@ -60,7 +60,7 @@
   "input_url": "https://www.deathwishcoffee.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 641576,
+    "bytes": 642752,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://www.deathwishcoffee.com/",
@@ -184,13 +184,13 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 641576,
+    "html_bytes": 642752,
     "links": 317,
     "noscript_warning": false,
     "reasons": [
       "7,794 characters of text, 317 links"
     ],
-    "script_bytes": 130608,
+    "script_bytes": 131707,
     "text_chars": 7794,
     "verdict": "raw_html"
   },
@@ -204,7 +204,7 @@
       "url": "https://www.deathwishcoffee.com/robots.txt"
     },
     {
-      "bytes": 641576,
+      "bytes": 642752,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -302,7 +302,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:22:44+00:00",
+  "started_at": "2026-11-04T20:52:19+00:00",
   "stopped": null,
   "structured": {
     "items": [],

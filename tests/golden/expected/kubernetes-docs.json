@@ -152,7 +152,7 @@
       "url": "https://kubernetes.io/sitemap.xml"
     },
     {
-      "bytes": 1013736,
+      "bytes": 1018759,
       "error": null,
       "method": "GET",
       "purpose": "sitemap-child",
@@ -225,7 +225,7 @@
     "with_lastmod": 17
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:26:21+00:00",
+  "started_at": "2026-11-04T20:55:50+00:00",
   "stopped": null,
   "structured": {
     "items": [],

@@ -13,7 +13,7 @@
   "input_url": "https://webscraper.io/test-sites/e-commerce/allinone",
   "max_requests": 10,
   "page": {
-    "bytes": 30302,
+    "bytes": 30199,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://webscraper.io/test-sites/e-commerce/allinone",
@@ -78,7 +78,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (1,288 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (1,346 chars of text)",
         "urls": [
           "https://webscraper.io/",
           "https://webscraper.io/web-scraper-extension",
@@ -124,15 +124,15 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 30302,
+    "html_bytes": 30199,
     "links": 52,
     "noscript_warning": false,
     "reasons": [
       "schema.org records in the HTML: Product",
-      "1,288 characters of text, 52 links"
+      "1,346 characters of text, 52 links"
     ],
     "script_bytes": 2259,
-    "text_chars": 1288,
+    "text_chars": 1346,
     "verdict": "raw_html"
   },
   "requests": [
@@ -145,7 +145,7 @@
       "url": "https://webscraper.io/robots.txt"
     },
     {
-      "bytes": 30302,
+      "bytes": 30199,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -232,7 +232,7 @@
     "with_lastmod": 3
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:26:37+00:00",
+  "started_at": "2026-11-04T20:56:09+00:00",
   "stopped": null,
   "structured": {
     "items": [
@@ -246,8 +246,8 @@
           "offers.priceCurrency"
         ],
         "sample": {
-          "name": "/test-sites/e-commerce/allinone/product/102",
-          "offers.price": "$1114.55",
+          "name": "/test-sites/e-commerce/allinone/product/22",
+          "offers.price": "$107.99",
           "offers.priceCurrency": "USD"
         },
         "source": "microdata",

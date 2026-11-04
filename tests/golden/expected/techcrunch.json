@@ -57,7 +57,7 @@
   "input_url": "https://techcrunch.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 448299,
+    "bytes": 451664,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://techcrunch.com/",
@@ -116,7 +116,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (12,598 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (12,717 chars of text)",
         "urls": [
           "https://techcrunch.com",
           "https://techcrunch.com/contributor-content/revekka-palaiologou-wants-dion-to-be-your-gateway-to-people-places-and-experiences/",
@@ -169,14 +169,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 448299,
-    "links": 325,
+    "html_bytes": 451664,
+    "links": 328,
     "noscript_warning": false,
     "reasons": [
-      "12,598 characters of text, 325 links"
+      "12,717 characters of text, 328 links"
     ],
-    "script_bytes": 23057,
-    "text_chars": 12598,
+    "script_bytes": 23015,
+    "text_chars": 12717,
     "verdict": "raw_html"
   },
   "requests": [
@@ -189,7 +189,7 @@
       "url": "https://techcrunch.com/robots.txt"
     },
     {
-      "bytes": 448299,
+      "bytes": 451664,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -205,7 +205,7 @@
       "url": "https://techcrunch.com/sitemap.xml"
     },
     {
-      "bytes": 17219,
+      "bytes": 17619,
       "error": null,
       "method": "GET",
       "purpose": "feed:rss",
@@ -294,7 +294,7 @@
       "url": "https://techcrunch.com/wp-json/wp/v2/posts?per_page=1"
     }
   ],
-  "started_at": "2026-11-04T18:24:28+00:00",
+  "started_at": "2026-11-04T20:53:59+00:00",
   "stopped": null,
   "structured": {
     "items": [],

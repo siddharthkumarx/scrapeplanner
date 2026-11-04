@@ -40,7 +40,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:18 GMT"
+    "Wed, 04 Nov 2026 20:53:49 GMT"
    ],
    [
     "x-robots-tag",
@@ -60,15 +60,15 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:18 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:49 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "set-cookie",
-    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 18:24:18 GMT; path=/; domain=.theguardian.com; Secure"
+    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 20:53:49 GMT; path=/; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816659.762545,VS0,VE148"
+    "S1793825629.821507,VS0,VE400"
    ],
    [
     "strict-transport-security",
@@ -116,7 +116,7 @@
    ],
    [
     "x-request-id",
-    "9603913e-9d24-409f-9f19-07d213b83aa8"
+    "a8be3773-223d-4cc4-9429-78c7a0c4e496"
    ],
    [
     "vary",
@@ -135,7 +135,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 162,
+  "elapsed_ms": 491,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -152,7 +152,7 @@
    ],
    [
     "content-length",
-    "164606"
+    "166717"
    ],
    [
     "content-type",
@@ -160,7 +160,7 @@
    ],
    [
     "etag",
-    "W/\"hash4078385600335279525\""
+    "W/\"hash7849877386040519551\""
    ],
    [
     "link",
@@ -192,7 +192,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:19 GMT"
+    "Wed, 04 Nov 2026 20:53:50 GMT"
    ],
    [
     "x-robots-tag",
@@ -212,15 +212,15 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:19 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:50 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "set-cookie",
-    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 18:24:19 GMT; path=/; domain=.theguardian.com; Secure"
+    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 20:53:50 GMT; path=/; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816660.913821,VS0,VE2"
+    "S1793825630.231984,VS0,VE140"
    ],
    [
     "strict-transport-security",
@@ -268,7 +268,7 @@
    ],
    [
     "x-request-id",
-    "fa80663c-549f-407f-a578-284bd7841d93"
+    "9211d913-7341-4737-b511-fe8492330bc3"
    ],
    [
     "vary",
@@ -287,7 +287,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 10,
+  "elapsed_ms": 169,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -320,7 +320,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:21 GMT"
+    "Wed, 04 Nov 2026 20:53:51 GMT"
    ],
    [
     "x-robots-tag",
@@ -332,11 +332,11 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:21 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:51 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816661.317834,VS0,VE0"
+    "S1793825632.540243,VS0,VE0"
    ],
    [
     "x-frame-options",
@@ -376,7 +376,7 @@
    ],
    [
     "x-request-id",
-    "f47f2c3b-b635-4553-bdbd-334c67e8bf11"
+    "a9bf3785-421f-4f5c-94a3-1fa319aa537b"
    ],
    [
     "set-cookie",
@@ -387,7 +387,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 4,
+  "elapsed_ms": 20,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -432,7 +432,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:22 GMT"
+    "Wed, 04 Nov 2026 20:53:52 GMT"
    ],
    [
     "x-robots-tag",
@@ -452,15 +452,15 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:22 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:52 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "set-cookie",
-    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 18:24:22 GMT; path=/; domain=.theguardian.com; Secure"
+    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 20:53:52 GMT; path=/; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816662.320369,VS0,VE7"
+    "S1793825633.550442,VS0,VE1"
    ],
    [
     "strict-transport-security",
@@ -508,7 +508,7 @@
    ],
    [
     "x-request-id",
-    "a649fd36-4886-41bf-ac9f-a2450c36dab4"
+    "cd188941-31c4-40cb-a17a-539ba6b56c18"
    ],
    [
     "vary",
@@ -527,7 +527,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 8,
+  "elapsed_ms": 10,
   "truncated": false,
   "body": "003.body.gz"
  },
@@ -560,7 +560,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:23 GMT"
+    "Wed, 04 Nov 2026 20:53:53 GMT"
    ],
    [
     "x-robots-tag",
@@ -572,11 +572,11 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:23 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:53 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816663.332736,VS0,VE0"
+    "S1793825634.571015,VS0,VE0"
    ],
    [
     "x-frame-options",
@@ -616,7 +616,7 @@
    ],
    [
     "x-request-id",
-    "4b116a90-a7a1-484c-80a1-30c2be352f81"
+    "16d51c96-10f7-4278-b6d6-74852f24bfae"
    ],
    [
     "set-cookie",
@@ -627,7 +627,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 5,
+  "elapsed_ms": 20,
   "truncated": false,
   "body": "004.body.gz"
  },
@@ -644,7 +644,7 @@
    ],
    [
     "content-length",
-    "100375"
+    "100595"
    ],
    [
     "content-type",
@@ -652,7 +652,7 @@
    ],
    [
     "etag",
-    "W/\"hash-8047405986990859693\""
+    "W/\"hash4210684847283478999\""
    ],
    [
     "content-encoding",
@@ -660,7 +660,7 @@
    ],
    [
     "x-gu-server-ab-tests",
-    "articles-and-publishing-revamped-immersive-layout:control,fronts-and-curation-editorial-test:a"
+    "fronts-and-curation-editorial-test:a"
    ],
    [
     "x-gu-frontend-git-commit-id",
@@ -676,7 +676,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:24 GMT"
+    "Wed, 04 Nov 2026 20:53:55 GMT"
    ],
    [
     "x-robots-tag",
@@ -696,15 +696,15 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:24 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:55 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "set-cookie",
-    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 18:24:24 GMT; path=/; domain=.theguardian.com; Secure"
+    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 20:53:55 GMT; path=/; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816664.336059,VS0,VE143"
+    "S1793825635.582083,VS0,VE552"
    ],
    [
     "strict-transport-security",
@@ -752,7 +752,7 @@
    ],
    [
     "x-request-id",
-    "556f0a9f-28fa-4903-81bb-17af90aecf48"
+    "57ba1058-cdd7-4f3c-b1aa-774fd50cc465"
    ],
    [
     "vary",
@@ -771,7 +771,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 147,
+  "elapsed_ms": 563,
   "truncated": false,
   "body": "005.body.gz"
  },
@@ -788,7 +788,7 @@
    ],
    [
     "content-length",
-    "96354"
+    "93191"
    ],
    [
     "content-type",
@@ -796,7 +796,7 @@
    ],
    [
     "etag",
-    "W/\"hash-8238410573219609413\""
+    "W/\"hash-251753121943316310\""
    ],
    [
     "content-encoding",
@@ -820,7 +820,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:25 GMT"
+    "Wed, 04 Nov 2026 20:53:56 GMT"
    ],
    [
     "x-robots-tag",
@@ -840,15 +840,15 @@
    ],
    [
     "set-cookie",
-    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 18:24:25 GMT; domain=.theguardian.com; Secure"
+    "gu_v2_mvt_id=<redacted>; path=/; expires=Tue, 02 Feb 2027 20:53:56 GMT; domain=.theguardian.com; Secure"
    ],
    [
     "set-cookie",
-    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 18:24:25 GMT; path=/; domain=.theguardian.com; Secure"
+    "GU_mvt_id=<redacted>; expires=Tue, 02 Feb 2027 20:53:56 GMT; path=/; domain=.theguardian.com; Secure"
    ],
    [
     "x-timer",
-    "S1793816665.483353,VS0,VE155"
+    "S1793825636.145508,VS0,VE288"
    ],
    [
     "strict-transport-security",
@@ -896,7 +896,7 @@
    ],
    [
     "x-request-id",
-    "61213eff-e17c-4323-938a-a3294fed3af3"
+    "860cf40f-2194-462d-a7e5-a888df60fe21"
    ],
    [
     "vary",
@@ -915,7 +915,7 @@
     "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
    ]
   ],
-  "elapsed_ms": 159,
+  "elapsed_ms": 299,
   "truncated": false,
   "body": "006.body.gz"
  }

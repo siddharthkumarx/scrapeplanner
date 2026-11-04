@@ -25,7 +25,7 @@
   "input_url": "https://news.ycombinator.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 34285,
+    "bytes": 34455,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://news.ycombinator.com/",
@@ -84,7 +84,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (4,020 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (4,068 chars of text)",
         "urls": [
           "https://news.ycombinator.com/"
         ],
@@ -130,14 +130,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 34285,
+    "html_bytes": 34455,
     "links": 226,
     "noscript_warning": false,
     "reasons": [
-      "4,020 characters of text, 226 links"
+      "4,068 characters of text, 226 links"
     ],
     "script_bytes": 0,
-    "text_chars": 4020,
+    "text_chars": 4068,
     "verdict": "raw_html"
   },
   "requests": [
@@ -150,7 +150,7 @@
       "url": "https://news.ycombinator.com/robots.txt"
     },
     {
-      "bytes": 34285,
+      "bytes": 34455,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -166,7 +166,7 @@
       "url": "https://news.ycombinator.com/sitemap.xml"
     },
     {
-      "bytes": 11389,
+      "bytes": 11502,
       "error": null,
       "method": "GET",
       "purpose": "feed:rss",
@@ -210,7 +210,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:24:34+00:00",
+  "started_at": "2026-11-04T20:54:03+00:00",
   "stopped": null,
   "structured": {
     "items": [],

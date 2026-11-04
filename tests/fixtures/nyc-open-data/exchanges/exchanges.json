@@ -12,7 +12,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:12 GMT"
+    "Wed, 04 Nov 2026 20:53:42 GMT"
    ],
    [
     "content-type",
@@ -64,7 +64,7 @@
    ],
    [
     "x-runtime",
-    "0.040473"
+    "0.040711"
    ],
    [
     "content-encoding",
@@ -76,14 +76,14 @@
    ],
    [
     "x-socrata-requestid",
-    "6c49b9ba6bb9721a6f3dbbef98b61a5c"
+    "2f21f158f8476d9c4acf1d8dd3e81059"
    ],
    [
     "strict-transport-security",
     "max-age=31536000; includeSubDomains"
    ]
   ],
-  "elapsed_ms": 5092,
+  "elapsed_ms": 399,
   "truncated": false,
   "body": "000.body.gz"
  },
@@ -100,7 +100,7 @@
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:13 GMT"
+    "Wed, 04 Nov 2026 20:53:43 GMT"
    ],
    [
     "content-type",
@@ -152,7 +152,7 @@
    ],
    [
     "x-runtime",
-    "0.065368"
+    "0.053873"
    ],
    [
     "x-socrata-region",
@@ -160,14 +160,14 @@
    ],
    [
     "x-socrata-requestid",
-    "77e84166a33b224b0417d7ee7fbf60b3"
+    "d9d2258797f343ce51e6d17565175621"
    ],
    [
     "strict-transport-security",
     "max-age=31536000; includeSubDomains"
    ]
   ],
-  "elapsed_ms": 196,
+  "elapsed_ms": 128,
   "truncated": false,
   "body": "001.body.gz"
  },
@@ -180,7 +180,7 @@
   "headers": [
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:14 GMT"
+    "Wed, 04 Nov 2026 20:53:44 GMT"
    ],
    [
     "content-type",
@@ -208,7 +208,7 @@
    ],
    [
     "set-cookie",
-    "__cf_bm=<redacted>; HttpOnly; Path=/; Domain=opendata.cityofnewyork.us; Expires=Wed, 04 Nov 2026 18:54:14 GMT"
+    "__cf_bm=<redacted>; HttpOnly; Path=/; Domain=opendata.cityofnewyork.us; Expires=Wed, 04 Nov 2026 21:23:44 GMT"
    ],
    [
     "cf-cache-status",
@@ -216,14 +216,14 @@
    ],
    [
     "cf-ray",
-    "a555a78bed9d8bdb-SJC"
+    "a5568288c98cf472-LAX"
    ],
    [
     "alt-svc",
     "h3=\":443\"; ma=86400"
    ]
   ],
-  "elapsed_ms": 152,
+  "elapsed_ms": 237,
   "truncated": false,
   "body": "002.body.gz"
  },
@@ -252,11 +252,11 @@
    ],
    [
     "expires",
-    "Wed, 04 Nov 2026 18:24:15 GMT"
+    "Wed, 04 Nov 2026 20:53:45 GMT"
    ],
    [
     "date",
-    "Wed, 04 Nov 2026 18:24:15 GMT"
+    "Wed, 04 Nov 2026 20:53:45 GMT"
    ],
    [
     "connection",
@@ -276,10 +276,10 @@
    ],
    [
     "server-timing",
-    "ak_p; desc=\"1793816655855_386648406_926369768_18_9662_2_11_-\";dur=1"
+    "ak_p; desc=\"1793825625635_389967234_846991351_10_4549_1_4_-\";dur=1"
    ]
   ],
-  "elapsed_ms": 106,
+  "elapsed_ms": 124,
   "truncated": false,
   "body": "003.body.gz"
  }

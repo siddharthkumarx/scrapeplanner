@@ -26,12 +26,12 @@
           "application_deadline"
         ],
         "http_status": 200,
-        "items_seen": 245,
+        "items_seen": 244,
         "kind": "greenhouse_api",
         "note": "every open job in one response",
         "page_size": null,
         "status": "ok",
-        "total_items": 245,
+        "total_items": 244,
         "url": "https://boards-api.greenhouse.io/v1/boards/gitlab/jobs"
       }
     ]
@@ -39,7 +39,7 @@
   "input_url": "https://job-boards.greenhouse.io/gitlab",
   "max_requests": 10,
   "page": {
-    "bytes": 75576,
+    "bytes": 75570,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://job-boards.greenhouse.io/gitlab",
@@ -71,7 +71,7 @@
         ],
         "name": "feed_api",
         "notes": [
-          "one request returns all 245 open jobs; the board lists no more"
+          "one request returns all 244 open jobs; the board lists no more"
         ],
         "partial": false,
         "summary": "Greenhouse job-board API: every open job with its fields",
@@ -112,7 +112,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (3,934 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (3,931 chars of text)",
         "urls": [
           "https://job-boards.greenhouse.io/gitlab"
         ],
@@ -158,14 +158,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 75576,
+    "html_bytes": 75570,
     "links": 52,
     "noscript_warning": false,
     "reasons": [
-      "3,934 characters of text, 52 links"
+      "3,931 characters of text, 52 links"
     ],
-    "script_bytes": 42137,
-    "text_chars": 3934,
+    "script_bytes": 42134,
+    "text_chars": 3931,
     "verdict": "raw_html"
   },
   "requests": [
@@ -178,7 +178,7 @@
       "url": "https://job-boards.greenhouse.io/robots.txt"
     },
     {
-      "bytes": 75576,
+      "bytes": 75570,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -202,7 +202,7 @@
       "url": "https://boards-api.greenhouse.io/robots.txt"
     },
     {
-      "bytes": 172638,
+      "bytes": 171913,
       "error": null,
       "method": "GET",
       "purpose": "feed:greenhouse_api",
@@ -245,7 +245,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:22:57+00:00",
+  "started_at": "2026-11-04T20:52:30+00:00",
   "stopped": null,
   "structured": {
     "items": [],

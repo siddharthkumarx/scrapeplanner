@@ -38,7 +38,7 @@
   "input_url": "https://remoteok.com/",
   "max_requests": 10,
   "page": {
-    "bytes": 59366,
+    "bytes": 59337,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://remoteok.com/",
@@ -156,7 +156,7 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 59366,
+    "html_bytes": 59337,
     "links": 44,
     "noscript_warning": false,
     "reasons": [
@@ -177,7 +177,7 @@
       "url": "https://remoteok.com/robots.txt"
     },
     {
-      "bytes": 59366,
+      "bytes": 59337,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -299,7 +299,7 @@
     "with_lastmod": 0
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:23:12+00:00",
+  "started_at": "2026-11-04T20:52:47+00:00",
   "stopped": null,
   "structured": {
     "items": [

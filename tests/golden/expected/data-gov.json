@@ -13,7 +13,7 @@
   "input_url": "https://catalog.data.gov/dataset",
   "max_requests": 10,
   "page": {
-    "bytes": 217924,
+    "bytes": 219640,
     "content_type": "text/html",
     "fetched": true,
     "final_url": "https://catalog.data.gov/",
@@ -68,7 +68,7 @@
           "selectors break on redesigns; prefer the methods above when usable"
         ],
         "partial": false,
-        "summary": "CSS selectors on server-rendered HTML (12,079 chars of text)",
+        "summary": "CSS selectors on server-rendered HTML (12,159 chars of text)",
         "urls": [
           "https://catalog.data.gov/",
           "https://catalog.data.gov/organization",
@@ -117,14 +117,14 @@
   },
   "rendering": {
     "app_shell": false,
-    "html_bytes": 217924,
-    "links": 138,
+    "html_bytes": 219640,
+    "links": 143,
     "noscript_warning": false,
     "reasons": [
-      "12,079 characters of text, 138 links"
+      "12,159 characters of text, 143 links"
     ],
     "script_bytes": 81649,
-    "text_chars": 12079,
+    "text_chars": 12159,
     "verdict": "raw_html"
   },
   "requests": [
@@ -145,7 +145,7 @@
       "url": "https://catalog.data.gov/dataset"
     },
     {
-      "bytes": 217924,
+      "bytes": 219640,
       "error": null,
       "method": "GET",
       "purpose": "page",
@@ -233,7 +233,7 @@
     "with_lastmod": 108
   },
   "skipped": [],
-  "started_at": "2026-11-04T18:23:26+00:00",
+  "started_at": "2026-11-04T20:53:00+00:00",
   "stopped": null,
   "structured": {
     "items": [],
