@@ -115,3 +115,22 @@ check them, smoke-test the wheel. The `pypi` job uses Trusted Publishing
 It is switched off (`if: false`) until the maintainer says publish. A
 manual `workflow_dispatch` run can publish to TestPyPI once a TestPyPI
 trusted publisher is registered for this repo.
+
+## D-010 · 2026-11-04 · Actions pinned to commit SHAs
+
+Every `uses:` names a full commit SHA with the tag in a comment. Versions
+current on 2026-11-04, read with `git ls-remote` from a CI job (the dev
+sandbox cannot reach other repositories), and checked to be commits, not
+annotated-tag objects:
+
+| Action / tool | Version | Commit |
+|---|---|---|
+| actions/checkout | v7.0.1 | `3d3c42e5aac5ba805825da76410c181273ba90b1` |
+| astral-sh/setup-uv | v10.3.3 | `68559e99cc807c1eb7e9238fd43a15bba460eec2` |
+| actions/upload-artifact | v7.0.2 | `cf430e030ddbb5b0abf93d22962f4752f3646cd9` |
+| actions/download-artifact | v8.0.2 | `9000827ccba6bdab643e8b6fd33ac0654aef8333` |
+| pypa/gh-action-pypi-publish | v1.14.3 | `7245906fb61fa33a13554f9d5fb856fe61758086` |
+| gitleaks (binary) | 8.30.1 | release tarball verified against its checksums file |
+
+gitleaks runs as the released binary, not the gitleaks GitHub Action, so no
+license key is needed if the repository moves to an organisation.

@@ -101,14 +101,3 @@ jobs:
           /tmp/wheel-env/bin/scrapeplanner --version
           /tmp/wheel-env/bin/scrapeplanner --help
           /tmp/wheel-env/bin/python -c "import scrapeplanner, pathlib; assert (pathlib.Path(scrapeplanner.__file__).parent / 'py.typed').exists()"
-
-  # Temporary: confirm pinned SHAs are commits (annotated tags print a ^{} line).
-  action-pins:
-    runs-on: ubuntu-24.04
-    steps:
-      - run: |
-          git ls-remote https://github.com/pypa/gh-action-pypi-publish refs/tags/v1.14.3 'refs/tags/v1.14.3^{}'
-          git ls-remote https://github.com/actions/upload-artifact refs/tags/v7.0.2 'refs/tags/v7.0.2^{}'
-          git ls-remote https://github.com/actions/download-artifact refs/tags/v8.0.2 'refs/tags/v8.0.2^{}'
-          git ls-remote https://github.com/actions/checkout refs/tags/v7.0.1 'refs/tags/v7.0.1^{}'
-          git ls-remote https://github.com/astral-sh/setup-uv refs/tags/v10.3.3 'refs/tags/v10.3.3^{}'
