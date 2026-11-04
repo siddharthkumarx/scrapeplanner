@@ -1,0 +1,294 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://react.dev/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "accept-ranges",
+    "bytes"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "age",
+    "42544"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-disposition",
+    "inline; filename=\"robots.txt\""
+   ],
+   [
+    "content-length",
+    "24"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:31 GMT"
+   ],
+   [
+    "etag",
+    "\"b6216d61c03e6ce0c9aea6ca7808f7ca\""
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 03:04:26 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-matched-path",
+    "/robots.txt"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "cle1::c29tk-1793804011562-baac4d227102"
+   ]
+  ],
+  "elapsed_ms": 221,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://react.dev/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "age",
+    "43011"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-disposition",
+    "inline"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:32 GMT"
+   ],
+   [
+    "etag",
+    "W/\"30d5f8c79842c43cbfa81a907d284b16\""
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "vary",
+    "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch"
+   ],
+   [
+    "x-matched-path",
+    "/"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "cle1::52znz-1793804012621-9a7890bb108b"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 143,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://react.dev/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "age",
+    "42994"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-disposition",
+    "inline; filename=\"404\""
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:33 GMT"
+   ],
+   [
+    "etag",
+    "W/\"63377aa04aae09d74d2f78d9a34e2470\""
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 02:56:59 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-matched-path",
+    "/404"
+   ],
+   [
+    "x-next-error-status",
+    "404"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "cle1::69kw9-1793804013780-11882be493c9"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 79,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://react.dev/rss.xml",
+  "purpose": "feed:rss",
+  "status": 200,
+  "headers": [
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "age",
+    "43002"
+   ],
+   [
+    "cache-control",
+    "public, max-age=0, must-revalidate"
+   ],
+   [
+    "content-disposition",
+    "inline; filename=\"rss.xml\""
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "content-type",
+    "application/xml"
+   ],
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:34 GMT"
+   ],
+   [
+    "etag",
+    "W/\"8482ad97413633a92fbe32a2cead5f7b\""
+   ],
+   [
+    "last-modified",
+    "Wed, 04 Nov 2026 02:56:52 GMT"
+   ],
+   [
+    "server",
+    "Vercel"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=63072000"
+   ],
+   [
+    "x-matched-path",
+    "/rss.xml"
+   ],
+   [
+    "x-vercel-cache",
+    "HIT"
+   ],
+   [
+    "x-vercel-id",
+    "cle1::7bbj5-1793804014811-5e8198ecd82b"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ]
+  ],
+  "elapsed_ms": 53,
+  "truncated": false,
+  "body": "003.body.gz"
+ }
+]

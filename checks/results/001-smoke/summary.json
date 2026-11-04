@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "id": "001-smoke",
+    "version": "0.1.0.dev0",
+    "commit": "f29911cd2bc3c06318f9917f90c919a5ca9a3fe3",
+    "runner": "Linux 7.0.0-1017-azure (Linux)",
+    "python": "3.12.3",
+    "started_at": "2026-11-04T14:53:21+00:00",
+    "finished_at": "2026-11-04T14:53:34+00:00",
+    "options": {
+      "max_requests": 10,
+      "delay": 1.0,
+      "items": 1000
+    }
+  },
+  "rows": [
+    {
+      "name": "example-com",
+      "category": "docs",
+      "url": "https://example.com/",
+      "exit_code": 0,
+      "wall_seconds": 2.55,
+      "verdict": "caution",
+      "platform": "unknown",
+      "frameworks": [],
+      "method": "Browser",
+      "antibot": [
+        "Cloudflare (present)"
+      ],
+      "rendering": "browser_likely",
+      "page_status": 200,
+      "requests_used": 3,
+      "duration_seconds": 2.15,
+      "stopped": null
+    },
+    {
+      "name": "allbirds",
+      "category": "e-commerce",
+      "url": "https://www.allbirds.com/",
+      "exit_code": 0,
+      "wall_seconds": 7.02,
+      "verdict": "good",
+      "platform": "Shopify",
+      "frameworks": [],
+      "method": "Feed / API",
+      "antibot": [
+        "Cloudflare (present)"
+      ],
+      "rendering": "raw_html",
+      "page_status": 200,
+      "requests_used": 6,
+      "duration_seconds": 6.76,
+      "stopped": null
+    },
+    {
+      "name": "react-dev",
+      "category": "docs",
+      "url": "https://react.dev/",
+      "exit_code": 0,
+      "wall_seconds": 3.88,
+      "verdict": "good",
+      "platform": "Next.js",
+      "frameworks": [],
+      "method": "Feed / API",
+      "antibot": [],
+      "rendering": "raw_html",
+      "page_status": 200,
+      "requests_used": 4,
+      "duration_seconds": 3.62,
+      "stopped": null
+    }
+  ]
+}

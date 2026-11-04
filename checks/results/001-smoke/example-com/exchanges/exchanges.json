@@ -1,0 +1,166 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://example.com/robots.txt",
+  "purpose": "robots",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:21 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472a43d6feb56-ORD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 27,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://example.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:22 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "last-modified",
+    "Sun, 01 Nov 2026 22:43:12 GMT"
+   ],
+   [
+    "allow",
+    "GET, HEAD"
+   ],
+   [
+    "age",
+    "10065"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472aa8d52eb56-ORD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 16,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://example.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 404,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:23 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "age",
+    "0"
+   ],
+   [
+    "cf-cache-status",
+    "HIT"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472b0efa9eb56-ORD"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ]
+  ],
+  "elapsed_ms": 13,
+  "truncated": false,
+  "body": "002.body.gz"
+ }
+]

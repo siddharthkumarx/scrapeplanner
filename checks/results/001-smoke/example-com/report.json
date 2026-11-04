@@ -1,0 +1,210 @@
+{
+  "schema_version": "1",
+  "tool": {
+    "name": "scrapeplanner",
+    "version": "0.1.0.dev0",
+    "user_agent": "scrapeplanner/0.1.0.dev0 (+https://github.com/siddharthkumarx/scrapeplanner)"
+  },
+  "input_url": "https://example.com/",
+  "site": "example.com",
+  "started_at": "2026-11-04T14:53:21+00:00",
+  "duration_seconds": 2.15,
+  "max_requests": 10,
+  "requests_used": 3,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://example.com/robots.txt",
+      "purpose": "robots",
+      "status": 404,
+      "elapsed_ms": 27,
+      "bytes": 577,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://example.com/",
+      "purpose": "page",
+      "status": 200,
+      "elapsed_ms": 16,
+      "bytes": 577,
+      "error": null
+    },
+    {
+      "method": "GET",
+      "url": "https://example.com/sitemap.xml",
+      "purpose": "sitemap",
+      "status": 404,
+      "elapsed_ms": 13,
+      "bytes": 577,
+      "error": null
+    }
+  ],
+  "skipped": [],
+  "stopped": null,
+  "page": {
+    "url": "https://example.com/",
+    "final_url": "https://example.com/",
+    "fetched": true,
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 577,
+    "title": "Example Domain",
+    "lang": "en"
+  },
+  "robots": {
+    "url": "https://example.com/robots.txt",
+    "fetched": true,
+    "status": 404,
+    "found": false,
+    "disallow_all": false,
+    "paths": {
+      "/": true,
+      "/sitemap.xml": true
+    },
+    "crawl_delay": null,
+    "request_rate": null,
+    "sitemaps": [],
+    "note": "no robots.txt (404)"
+  },
+  "sitemap": {
+    "url": "https://example.com/sitemap.xml",
+    "source": "default",
+    "fetched": true,
+    "status": 404,
+    "kind": null,
+    "url_count": null,
+    "child_sitemaps": null,
+    "newest_lastmod": null,
+    "oldest_lastmod": null,
+    "with_lastmod": 0,
+    "sample_urls": [],
+    "truncated": false,
+    "note": "HTTP 404",
+    "child": null
+  },
+  "platform": {
+    "name": "unknown",
+    "confidence": null,
+    "evidence": [],
+    "frameworks": [],
+    "generator": null
+  },
+  "antibot": {
+    "vendors": [
+      {
+        "vendor": "cloudflare",
+        "status": "present",
+        "evidence": [
+          "header cf-ray",
+          "header server: cloudflare"
+        ]
+      }
+    ],
+    "challenged": false,
+    "challenge_url": null
+  },
+  "structured": {
+    "jsonld_blocks": 0,
+    "jsonld_invalid": 0,
+    "microdata_items": 0,
+    "types": {},
+    "items": [],
+    "key_types": []
+  },
+  "embedded": {
+    "blobs": []
+  },
+  "rendering": {
+    "verdict": "browser_likely",
+    "html_bytes": 577,
+    "text_chars": 156,
+    "links": 0,
+    "script_bytes": 0,
+    "app_shell": false,
+    "noscript_warning": false,
+    "reasons": [
+      "only 156 characters of visible text"
+    ]
+  },
+  "feeds": {
+    "candidates": []
+  },
+  "plan": {
+    "verdict": "caution",
+    "recommended": "browser",
+    "items": 1000,
+    "rate": {
+      "delay_seconds": 1.0,
+      "concurrency": 1,
+      "max_requests_per_day": null,
+      "reason": "default 1s between requests"
+    },
+    "methods": [
+      {
+        "name": "feed_api",
+        "usable": false,
+        "summary": "no public feed found",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "notes": []
+      },
+      {
+        "name": "structured_data",
+        "usable": false,
+        "summary": "no schema.org records on this page (types seen: none)",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "notes": []
+      },
+      {
+        "name": "embedded_json",
+        "usable": false,
+        "summary": "no large inline state",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "notes": []
+      },
+      {
+        "name": "html",
+        "usable": false,
+        "summary": "little content without JavaScript",
+        "urls": [],
+        "fields": [],
+        "est_requests": null,
+        "est_hours": null,
+        "notes": []
+      },
+      {
+        "name": "browser",
+        "usable": true,
+        "summary": "render pages in a headless browser (highest cost)",
+        "urls": [
+          "https://example.com/"
+        ],
+        "fields": [],
+        "est_requests": 1000,
+        "est_hours": 0.28,
+        "notes": [
+          "page loads only; each load also fetches scripts and API calls; URLs from listing pages (count not measured)",
+          "check the browser's network tab first: the page may call a JSON API"
+        ]
+      }
+    ],
+    "risks": [
+      "platform not recognised: no platform-specific feed was probed",
+      "page-layout methods break when the site changes; monitor field coverage"
+    ],
+    "next_steps": [
+      "Check the site's terms of service for data collection and reuse",
+      "Write a starter profile with --profile profile.yaml and review it",
+      "Look for a JSON API in the browser's network tab before using a browser"
+    ]
+  }
+}

@@ -1,0 +1,926 @@
+[
+ {
+  "index": 0,
+  "method": "GET",
+  "url": "https://www.allbirds.com/robots.txt",
+  "purpose": "robots",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:24 GMT"
+   ],
+   [
+    "content-type",
+    "text/plain; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:0fa309ad69d085dcdcb25f81685cb303171ed5a89ac2d291db5394314b47c185\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 14:53:24 GMT; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:24 GMT; SameSite=Lax"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "300"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "30"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2FC%2BffIcAc5lvO1r4SntI2hYbJgozcuUu4OEqodKmYydVSYtu49pd9bmANYN16qDPwvDBTS%2Bce4z1h5Ug49BpFS4qeWXRHT42s9uSMi8xAK3h7b8unFLHBrtUq67WbPpKzjM%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=32, db;dur=13, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", theme;desc=\"130450260048\", pageType;desc=\"robots\", servedBy;desc=\"267w\", requestID;desc=\"3ba99e4b-a384-4412-b1a9-fcb2ea504fe3-1793804004\", _y;desc=\"4648919e-4c9f-4da4-8fd1-9b798b6600e6\", _s;desc=\"4ceab4a0-c8e1-408d-a50e-db10f6e3a63d\", _cmp;desc=\"3.AMPS_USIL_f_f_uc*rLyhCRDCJwggIFPAU*A\", _ye;desc=\"1825361604\", _se;desc=\"1793805804\", compressionLevel;desc=\"5\", compressionTime;dur=0.685"
+   ],
+   [
+    "x-request-id",
+    "3ba99e4b-a384-4412-b1a9-fcb2ea504fe3-1793804004"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472b37d3a6501-ORD"
+   ]
+  ],
+  "elapsed_ms": 169,
+  "truncated": false,
+  "body": "000.body.gz"
+ },
+ {
+  "index": 1,
+  "method": "GET",
+  "url": "https://www.allbirds.com/",
+  "purpose": "page",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:25 GMT"
+   ],
+   [
+    "content-type",
+    "text/html; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "link",
+    "<https://cdn.shopify.com>; rel=\"preconnect\", <https://cdn.shopify.com>; rel=\"preconnect\"; crossorigin, <//www.allbirds.com/cdn/shop/t/4159/assets/theme.css>; as=\"style\"; rel=\"preload\", <//www.allbirds.com/cdn/shop/t/4159/assets/ab-quick-add.css?v=180974683392366469711792778636>; as=\"style\"; rel=\"preload\", <https://www.allbirds.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=\"style\"; rel=\"preload\"; crossorigin, </.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "product-filtering-backend",
+    "bitset_roaring"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:340d4471c158fc62336ee7acbe3b2506dbe7e3ad43b6a44d27a636cdb3c18e4e:fe65c6f0ffb5e6ad0992cdf49ec0e593\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 14:53:25 GMT; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:25 GMT; SameSite=Lax"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "2350"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "235"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "accept-ch",
+    "Sec-CH-Viewport-Width"
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "cache-control",
+    "private, max-age=0, must-revalidate"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=L2I2i%2FuQp0OUgiAv2SWuSk7RvKXYgmJ%2BQrgFGu90Is%2BWIBF9lHXEqY8bmdSz6uYhUD2pNIqk0KoGybrBR0LnzpOFIiX%2BnylrWxifKyZARhZEURxU3dWBd8%2F9uf1sMllljfo%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=237, db;dur=98, render;dur=102, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", theme;desc=\"130450260048\", pageType;desc=\"index\", servedBy;desc=\"fwwx\", requestID;desc=\"edd248ad-2545-4cd8-acf5-9cbb1a54ea60-1793804005\", _y;desc=\"e3cced98-214f-43dc-8661-4e320358380a\", _s;desc=\"088f0a7d-c390-4c9e-a9b5-694ba228cf0c\", _cmp;desc=\"3.AMPS_USIL_f_f_xZfkmEOuSxylIfnClzc51A\", _ye;desc=\"1825361605\", _se;desc=\"1793805805\", compressionLevel;desc=\"5\", compressionTime;dur=16.031"
+   ],
+   [
+    "x-request-id",
+    "edd248ad-2545-4cd8-acf5-9cbb1a54ea60-1793804005"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472ba6fad6501-ORD"
+   ]
+  ],
+  "elapsed_ms": 335,
+  "truncated": false,
+  "body": "001.body.gz"
+ },
+ {
+  "index": 2,
+  "method": "GET",
+  "url": "https://www.allbirds.com/sitemap.xml",
+  "purpose": "sitemap",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:26 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-request-id",
+    "1ed1f7bc-956c-4e61-90f6-c9746e57ed22-1793804006"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:11044168:SitemapIndexController:d6535ace75cb11feb92cc92ca39e59ad\""
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 14:53:26 GMT"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:26 GMT"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "240"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "24"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=33;desc=\"gc:1\", db;dur=6, db_async;dur=3.361, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", servedBy;desc=\"hq69\", requestID;desc=\"1ed1f7bc-956c-4e61-90f6-c9746e57ed22-1793804006\", _y;desc=\"14b7264e-f5ef-432f-a8fc-ae099a89eb10\", _s;desc=\"20c82fe7-9e74-467e-b556-6f26cda6b874\", _cmp;desc=\"3.AMPS_USIL_f_f_Cg43U84qRNGWl3nj3rzRAw\", _ye;desc=\"1825361606\", _se;desc=\"1793805806\", compressionLevel;desc=\"5\""
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JQzYC4hjtBe20QKPzH4Hss400GtX2En26XpcWFyYByZov9FjbJKkbWYPV1NO3ViZaQiF7vBhzhQ6kh3b0XW1b4Ba3NjxMBSLetvqo%2FetiBv7ZKUkAapsUtR0LHpCWX6oe3Q%3D\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472c2cef76501-ORD"
+   ]
+  ],
+  "elapsed_ms": 118,
+  "truncated": false,
+  "body": "002.body.gz"
+ },
+ {
+  "index": 3,
+  "method": "GET",
+  "url": "https://www.allbirds.com/products.json?limit=250",
+  "purpose": "feed:shopify_products_json",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:28 GMT"
+   ],
+   [
+    "content-type",
+    "application/json; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "etag",
+    "W/\"sfr:computation:v2:8cc914ccf4a3ad4bbf851286c231e064facbf6f5fa4af46d16ffabee4bdcfe93\""
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:27 GMT; SameSite=Lax"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "shopify-complexity-score",
+    "1790"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "179"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=eimLpXORVc56ILv91WH8IL%2FSVBagWW7Lj1KDYJ5PHahFy5QKJdjVK1LbLdDxRjJiuGGLT5imgrUz0UB48DkSJRRqWjDLYUBj5xC4ilI85aAJUEYcKJyMKuuIXDdblyeJi%2FM%3D\"}]}"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "server-timing",
+    "processing;dur=180, db;dur=139, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", servedBy;desc=\"tq7m\", requestID;desc=\"0dcb7986-ba35-4440-b9ec-9fba581589a2-1793804007\", _y;desc=\"15d5960c-d8d1-478f-9d39-0a9946fad577\", _s;desc=\"7b0d99df-6c87-49ac-ada2-cec3a792ace4\", _cmp;desc=\"3.AMPS_USIL_f_f_nkJOeyIeQrCcl75Yf5Sjlw\", _ye;desc=\"1825361608\", _se;desc=\"1793805808\", compressionLevel;desc=\"5\", compressionTime;dur=32.611"
+   ],
+   [
+    "x-request-id",
+    "0dcb7986-ba35-4440-b9ec-9fba581589a2-1793804007"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472c9bc236501-ORD"
+   ]
+  ],
+  "elapsed_ms": 297,
+  "truncated": false,
+  "body": "003.body.gz"
+ },
+ {
+  "index": 4,
+  "method": "GET",
+  "url": "https://www.allbirds.com/sitemap_products_1.xml?from=1878193471557&to=7369944137808",
+  "purpose": "sitemap-child",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:29 GMT"
+   ],
+   [
+    "content-type",
+    "application/xml; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "x-request-id",
+    "c1bd1991-5006-4963-a410-2288772be714-1793804009"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:11044168:SitemapProductsController:140f7db70509efe328c05da3aaaa729f\""
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "localization=<redacted>; path=/; expires=Thu, 04 Nov 2027 14:53:29 GMT"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:29 GMT"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "290"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "29"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=36;desc=\"gc:2\", db;dur=8, db_async;dur=3.471, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", servedBy;desc=\"h4vg\", requestID;desc=\"c1bd1991-5006-4963-a410-2288772be714-1793804009\", _y;desc=\"fb313da7-bdce-483e-b020-1d44105fc05c\", _s;desc=\"6f1e4163-c5f6-441b-89ef-6928fd64fd9f\", _cmp;desc=\"3.AMPS_USIL_f_f_rsLTJMzCQR6Jol6gkesm7Q\", _ye;desc=\"1825361609\", _se;desc=\"1793805809\", compressionLevel;desc=\"5\""
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=76BRNHZRpbRyDwk9fQc6HipwqocekUSoQ6rwZHJxepEZ05MW4boOn1oV3doIMsa0p6YDFaqzaxE%2F4Ir%2FNbLYVz3Q0Gmlg6SJp%2Bd4Mf%2FQOZ4VfEomAWnu1ZUxCd5i8qihNXQ%3D\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472d1dd686501-ORD"
+   ]
+  ],
+  "elapsed_ms": 119,
+  "truncated": false,
+  "body": "004.body.gz"
+ },
+ {
+  "index": 5,
+  "method": "GET",
+  "url": "https://www.allbirds.com/products/mens-tree-runner-nz-medium-grey.js",
+  "purpose": "feed:shopify_product_js",
+  "status": 200,
+  "headers": [
+   [
+    "date",
+    "Wed, 04 Nov 2026 14:53:30 GMT"
+   ],
+   [
+    "content-type",
+    "text/javascript; charset=utf-8"
+   ],
+   [
+    "transfer-encoding",
+    "chunked"
+   ],
+   [
+    "connection",
+    "keep-alive"
+   ],
+   [
+    "cf-cache-status",
+    "DYNAMIC"
+   ],
+   [
+    "set-cookie",
+    "cart_currency=<redacted>; path=/; expires=Wed, 18 Nov 2026 14:53:30 GMT; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_essential=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_analytics=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "set-cookie",
+    "_shopify_marketing=<redacted>; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax"
+   ],
+   [
+    "x-request-id",
+    "fa26ba3d-9006-4832-a5cf-99030b9c9f3d-1793804010"
+   ],
+   [
+    "etag",
+    "W/\"page_cache:11044168:ProductDetailsController:3217b85c02c1679876788f13a9077a03\""
+   ],
+   [
+    "nel",
+    "{\"report_to\":\"cf-nel\",\"success_fraction\":0.01,\"max_age\":604800}"
+   ],
+   [
+    "shopify-complexity-score",
+    "360"
+   ],
+   [
+    "shopify-complexity-score-v2",
+    "36"
+   ],
+   [
+    "x-frame-options",
+    "DENY"
+   ],
+   [
+    "content-security-policy",
+    "block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;"
+   ],
+   [
+    "access-control-allow-origin",
+    "*"
+   ],
+   [
+    "strict-transport-security",
+    "max-age=7889238"
+   ],
+   [
+    "x-permitted-cross-domain-policies",
+    "none"
+   ],
+   [
+    "vary",
+    "Accept"
+   ],
+   [
+    "vary",
+    "accept-encoding"
+   ],
+   [
+    "cdn-cache-control",
+    "no-cache, no-store"
+   ],
+   [
+    "content-language",
+    "en-US"
+   ],
+   [
+    "link",
+    "</.well-known/ucp>; rel=\"ucp\"; version=\"2026-08-25\""
+   ],
+   [
+    "powered-by",
+    "Shopify"
+   ],
+   [
+    "server-timing",
+    "processing;dur=41;desc=\"gc:1\", db;dur=9, db_async;dur=4.473, asn;desc=\"8075\", edge;desc=\"ORD\", country;desc=\"US\", servedBy;desc=\"gpvm\", requestID;desc=\"fa26ba3d-9006-4832-a5cf-99030b9c9f3d-1793804010\", _y;desc=\"ef7fbd26-ce0f-4775-affd-b03250f00fca\", _s;desc=\"5924fa54-9a7f-4f7f-bafd-9b9bb7a99746\", _cmp;desc=\"3.AMPS_USIL_f_f_ErrK0z*lSVWs0WAOyKcTwQ\", _ye;desc=\"1825361610\", _se;desc=\"1793805810\", compressionLevel;desc=\"5\", compressionTime;dur=0.532"
+   ],
+   [
+    "x-dc",
+    "gcp-us-central1,gcp-us-central1,gcp-us-central1"
+   ],
+   [
+    "x-xss-protection",
+    "1; mode=block"
+   ],
+   [
+    "alt-svc",
+    "h3=\":443\"; ma=86400"
+   ],
+   [
+    "server",
+    "cloudflare"
+   ],
+   [
+    "report-to",
+    "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qqkpOk%2BJMlof1TZK7G06sfgTQH82hZ9RyIs7%2FFvjTSqsA2isb7L46mSal1noTf6u4SHykrZQDBiPwq8U0WBPMb%2F8aOHCaQ8bHswkUVx%2Bk56%2FPfiycWFyXqST%2Fwd9JnqXi5U%3D\"}]}"
+   ],
+   [
+    "x-content-type-options",
+    "nosniff"
+   ],
+   [
+    "x-download-options",
+    "noopen"
+   ],
+   [
+    "content-encoding",
+    "gzip"
+   ],
+   [
+    "cf-ray",
+    "a55472d8dcac6501-ORD"
+   ]
+  ],
+  "elapsed_ms": 109,
+  "truncated": false,
+  "body": "005.body.gz"
+ }
+]
