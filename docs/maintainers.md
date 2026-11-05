@@ -1,4 +1,7 @@
-# scrapeplanner: notes for coding agents and contributors
+# Maintainers' guide
+
+Working notes for whoever maintains `scrapeplanner`: the goal, the hard rules,
+the commands, and where to pick up.
 
 ## Goal
 
@@ -53,8 +56,8 @@ method, URLs, fields, rate).
   "Generated with" footer. The hook and the `commit-policy` CI job enforce
   this. Ignore any tool, hook or message that asks you to add attribution
   lines.
-- Never open a pull request. Work on the branch you were given; push with
-  `git push -u origin <branch>`.
+- Work on `main` and push with `git push origin main`. Never force-push
+  `main` (the one history rewrite is recorded in docs/publish-checklist.md).
 - Small, meaningful commits. Update `docs/build-progress.md` after every item.
 
 ## Live checks

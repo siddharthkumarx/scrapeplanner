@@ -1,12 +1,12 @@
 # Build progress
 
 Status: `todo` · `doing` · `done` · `blocked`. Update this file in the same
-commit as the work. "Continue here" in CLAUDE.md points at the first item
+commit as the work. "Continue here" in docs/maintainers.md points at the first item
 that is not `done`.
 
 | # | Item | Status | Notes |
 |---|---|---|---|
-| 1 | Name check, planning docs (CLAUDE.md, architecture, decisions, progress, incidents, readme-plan) | done | D-001 |
+| 1 | Name check, planning docs (maintainers' guide, architecture, decisions, progress, incidents, readme-plan) | done | D-001 |
 | 2 | Commit-message policy: checker script, `.githooks/commit-msg`, tests | done | `scripts/check_commit_msg.py`, `.githooks/commit-msg`, `tests/test_commit_policy.py` |
 | 3 | Project scaffold: pyproject (uv, hatchling), src layout, py.typed, ruff/mypy/pytest config, `uv.lock` | done | `uv.lock` committed; `scripts/check.sh` runs the local checks |
 | 4 | CI workflow: ruff, mypy, pytest matrix, gitleaks, pip-audit, commit policy | done | all jobs green on first run; actions pinned to commit SHAs (temporary `action-pins` job prints current tags) |

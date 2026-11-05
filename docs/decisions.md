@@ -15,7 +15,7 @@ Checked on 2026-11-04 (14:31 UTC):
 | `https://pypi.org/pypi/scrape.planner/json` | 404 (free) |
 | `https://pypi.org/simple/scrapeplanner/` and `/scrape-planner/` | 404 (free) |
 | `https://test.pypi.org/simple/` for the same three spellings | 404 (free) |
-| GitHub repository search `scrapeplanner` | only `siddharthkumarx/scrapeplanner-wip` (this repo) |
+| GitHub repository search `scrapeplanner` | only this repository (then private, under a work-in-progress name) |
 | GitHub repository search `scrape-planner in:name` (17 hits) | none named exactly `scrape-planner` / `scrape_planner` |
 | GitHub user/org search `scrapeplanner`, `scrape-planner` | 0 |
 

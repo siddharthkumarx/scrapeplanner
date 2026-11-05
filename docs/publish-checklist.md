@@ -1,56 +1,27 @@
 # Publish checklist
 
-How this work-in-progress repository becomes the public repository
-`siddharthkumarx/scrapeplanner`. **Never make `scrapeplanner-wip` public**: its
-history holds earlier runs and private notes. The public repository starts
-from a clean `main` with a single initial commit.
+## Done: published in place (2026-11-05)
 
-## 1. Prepare a clean tree (locally)
+The private work-in-progress repository was made public and renamed to
+`siddharthkumarx/scrapeplanner`; its default branch is `main`. Its history
+was rewritten once with `git filter-repo` and force-pushed once, with the
+maintainer's approval:
 
-```bash
-git clone https://github.com/siddharthkumarx/scrapeplanner-wip scrapeplanner-src
-cd scrapeplanner-src
-git checkout <the finished branch>
-```
+- `docs/private/` (the maintainer's own notes) removed from every commit;
+- the maintainers' guide moved to `docs/maintainers.md` in every commit;
+- commit signatures dropped; authors, committers, dates, messages and the
+  data commits of the checks workflow kept unchanged.
 
-- [ ] `rm -rf docs/private/` (the maintainer's own explainer).
-- [ ] `git mv CLAUDE.md docs/maintainers.md`, then fix the links to it
-      (`grep -rn "CLAUDE.md" .`).
-- [ ] Decide once whether `docs/build-progress.md` stays as history or goes;
-      `docs/incidents.md` and `docs/decisions.md` stay (they explain the
-      results).
-- [ ] Keep `checks/results/001-smoke` and the current results run only
-      (`docs/results.md` names it, e.g. `008-sites`). Delete any other run
-      directory (`006-sites` and `007-sites` are referenced only from
-      docs/incidents.md, I-008 and I-009; reword those to "an earlier run").
-- [ ] `grep -rn "scrapeplanner-wip" .` returns nothing that a reader would follow.
-- [ ] `./scripts/check.sh` passes; `uv run --group visual pytest -m visual` passes.
+Do not rewrite or force-push `main` again: clones, forks and links to
+commits depend on it.
 
-## 2. Create the public repository
+## Still to do in GitHub settings
 
-- [ ] On GitHub create `siddharthkumarx/scrapeplanner`, **empty** (no README,
-      no license: they come from the tree).
-- [ ] Fresh history:
-
-```bash
-rm -rf .git
-git init -b main
-git config user.name "Siddharth Kumar"
-git config user.email 273157498+siddharthkumarx@users.noreply.github.com
-git config core.hooksPath .githooks
-git add -A
-git commit -m "Initial public release of scrapeplanner"
-git remote add origin https://github.com/siddharthkumarx/scrapeplanner.git
-git push -u origin main
-```
-
-- [ ] Settings as in `docs/repo-settings.md`: About text, website, topics,
-      social preview (`assets/social-preview.png`).
-- [ ] Settings → Code security: enable private vulnerability reporting,
-      secret scanning and Dependabot alerts.
+- [ ] About, website, topics and social preview, as in `docs/repo-settings.md`.
+- [ ] Settings → Code security: private vulnerability reporting (SECURITY.md
+      relies on it), secret scanning, Dependabot alerts.
 - [ ] Settings → Branches: protect `main` (require the `ci` checks, no force
       pushes).
-- [ ] Actions → `ci` is green on `main`. The CI badge in the README now resolves.
 
 ## 3. Check every link
 
