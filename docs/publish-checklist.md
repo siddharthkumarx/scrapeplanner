@@ -33,19 +33,22 @@ commits depend on it.
 
 ## 4. PyPI (only when the maintainer says "publish")
 
-- [ ] Re-check that the name `scrapeplanner` is still free on PyPI (D-001).
-- [ ] On PyPI: *Your account → Publishing → Add a pending publisher*:
+Released: `v0.1.0` on 2026-11-22 (D-018), https://pypi.org/project/scrapeplanner/.
+
+- [x] Re-check that the name `scrapeplanner` is still free on PyPI (D-001).
+- [x] On PyPI: *Your account → Publishing → Add a pending publisher*:
       owner `siddharthkumarx`, repository `scrapeplanner`, workflow
-      `release.yml`, environment `pypi`. Same on TestPyPI with environment
-      `testpypi` for a dry run.
+      `release.yml`, environment `pypi`.
+- [ ] Same on TestPyPI with environment `testpypi` for a dry run.
 - [ ] GitHub → Settings → Environments: create `pypi` (and `testpypi`);
       require the maintainer's approval for `pypi`.
 - [ ] Dry run: Actions → release → Run workflow with "Upload to TestPyPI";
       `pipx install --index-url https://test.pypi.org/simple/ scrapeplanner`.
-- [ ] In `.github/workflows/release.yml` change the `pypi` job's `if: false`
+- [x] In `.github/workflows/release.yml` change the `pypi` job's `if: false`
       to `if: startsWith(github.ref, 'refs/tags/v')`.
-- [ ] Set `__version__` (e.g. `0.1.0`), move the CHANGELOG entries under that
+- [x] Set `__version__` (e.g. `0.1.0`), move the CHANGELOG entries under that
       version, commit, tag `v0.1.0`, push the tag. The workflow builds, tests
       and publishes through Trusted Publishing; no token is stored anywhere.
-- [ ] Add the PyPI version and Python versions badges to the README and the
+- [x] Add the PyPI version badge to the README; the
       `pipx install scrapeplanner` line loses its "after the first release" note.
+- [ ] Add a Python versions badge to the README.
