@@ -36,3 +36,4 @@ that is not `done`.
 | 28 | Platform detection extended; public results set replaced | done | D-013, D-014; runs 006 and 007 (I-007, I-008) |
 | 29 | Repo polish | done | JSON Schema, output-formats, CITATION, editorconfig, Dependabot, PR template, repo settings, publish checklist (D-016) |
 | 30 | Skip the Shopify `.js` probe when `products.json` answered | done | I-009; results run `008-sites`: the three stores whose catalog answered used 5 requests each, no 429 |
+| 31 | First release: `pypi` job switched on, v0.1.0 tagged and published | done | D-018; README install and PyPI badge, CHANGELOG 0.1.0 |

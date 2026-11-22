@@ -10,6 +10,7 @@
 <p align="center"><b>Point it at a URL. It tells you the cheapest polite way to get the data.</b></p>
 
 <p align="center">
+  <a href="https://pypi.org/project/scrapeplanner/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/scrapeplanner?style=flat&label=PyPI"></a>
   <a href="https://github.com/siddharthkumarx/scrapeplanner/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/siddharthkumarx/scrapeplanner/ci.yml?branch=main&style=flat&label=CI"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2FBFAE?style=flat"></a>
 </p>
@@ -43,15 +44,19 @@ anything.
 
 ## Install
 
-Python 3.11 or newer.
+`scrapeplanner` is on [PyPI](https://pypi.org/project/scrapeplanner/) and
+needs Python 3.11 or newer. Install it as a standalone command with pipx or
+uv, or into an environment with pip:
 
 ```bash
-# After the first release on PyPI:
 pipx install scrapeplanner
 uv tool install scrapeplanner
 pip install scrapeplanner
+```
 
-# Today, from source:
+The latest development version, from source:
+
+```bash
 pipx install git+https://github.com/siddharthkumarx/scrapeplanner
 ```
 

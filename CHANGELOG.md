@@ -7,6 +7,14 @@ All notable changes are listed here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-22
+
+First release on PyPI. `scrapeplanner URL` reads a site's robots.txt and
+first page, probes the public feeds its platform is known to have, names any
+anti-bot vendor, and prints a collection plan: methods from cheapest to most
+expensive, a polite rate, and the number of requests N records will take. It
+detects and recommends only; it never tries to get past a block.
+
 ### Added
 
 - `scrapeplanner URL`: terminal report, `--json`, `--profile PATH`.
@@ -31,3 +39,6 @@ All notable changes are listed here. The format follows
 - Anti-bot: AWS WAF, and a site's own CAPTCHA / "are you a robot" page.
 - Stacked report layout for terminals narrower than 80 columns.
 - JSON Schema of the `--json` output in `docs/report.schema.json`.
+
+[Unreleased]: https://github.com/siddharthkumarx/scrapeplanner/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/siddharthkumarx/scrapeplanner/tree/v0.1.0

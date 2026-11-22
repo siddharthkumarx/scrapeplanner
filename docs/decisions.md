@@ -220,3 +220,17 @@ one command), shell completion (one positional argument), telemetry (never).
 A probe is sent only when its answer can change the plan. The first case:
 the Shopify per-product `.js` probe is skipped once `/products.json` has
 returned products (I-009). The budget of 10 is a ceiling, not a target.
+
+## D-018 · 2026-11-22 · Release switched on, v0.1.0
+
+The maintainer said publish and registered a PyPI pending trusted publisher
+(project `scrapeplanner`, owner `siddharthkumarx`, repository
+`scrapeplanner`, workflow `release.yml`, environment `pypi`). The `pypi` job
+in `release.yml` now runs on every `v*` tag
+(`if: startsWith(github.ref, 'refs/tags/v')`); it still uses Trusted
+Publishing only, so no token exists anywhere. The `testpypi` job is
+unchanged (manual dry run). The first release is `v0.1.0`, an annotated tag
+on a commit whose CI on `main` is green. Right after the tag, `main` moves
+to the next development version (`0.1.1.dev0`), so `main` never carries a
+released version number. A failed publish is not fixed by deleting or moving
+a tag or by skipping to a new version; the error is reported first.
